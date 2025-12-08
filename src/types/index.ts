@@ -87,8 +87,23 @@ export interface LearningPathRecommendations {
   created_at: string;
 }
 
-export interface PersonalizeChapterRequest {
+// Translation types
+export interface TranslateChapterRequest {
+  content: string;
+  target_language: string;
+  chapter_title?: string;
+}
+
+export interface TranslatedContent {
+  original_content: string;
+  translated_content: string;
+  target_language: string;
   chapter_id: string;
+}
+
+export interface PersonalizeChapterRequest {
+  content: string;
+  chapter_title: string;
 }
 
 export interface PersonalizedContent {

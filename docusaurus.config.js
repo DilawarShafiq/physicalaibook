@@ -11,12 +11,12 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://DilawarShafiq.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/physicalaibook/',
 
   // GitHub pages deployment config
-  organizationName: 'your-username',
+  organizationName: 'dilawarshafiq',
   projectName: 'physicalaibook',
 
   onBrokenLinks: 'throw',
@@ -42,6 +42,10 @@ const config = {
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
   ],
 
   themeConfig:

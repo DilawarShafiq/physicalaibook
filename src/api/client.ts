@@ -145,13 +145,24 @@ class APIClient {
     );
   }
 
-  async personalizeChapter(chapterId: string): Promise<PersonalizedContent> {
+  async personalizeChapter(chapterId: string, data: { content: string, chapter_title: string }): Promise<PersonalizedContent> {
     return this.request<PersonalizedContent>(
       `/personalization/chapters/${chapterId}/personalize`,
       {
         method: 'POST',
+        body: JSON.stringify(data),
       }
     );
+  }
+
+  async translateChapter(content: string, targetLanguage: string = 'Urdu'): Promise<TranslatedContent> {
+    return this.request<TranslatedContent>('/personalization/chapters/translate', {
+      method: 'POST',
+      body: JSON.stringify({
+        content,
+        target_language: targetLanguage
+      }),
+    });
   }
 }
 

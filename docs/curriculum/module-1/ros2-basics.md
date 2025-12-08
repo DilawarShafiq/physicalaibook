@@ -1,5 +1,7 @@
 # ROS 2 Basics
 
+<chapter-tools chapterId="module-1/ros2-basics" title="ROS 2 Basics" />
+
 This section covers fundamental ROS 2 concepts you'll use throughout the course.
 
 ## What is ROS 2?

@@ -1,0 +1,235 @@
+.container {
+  margin: 2rem 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.greeting {
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 40px;
+}
+
+.personalizeBtn {
+  background: linear-gradient(135deg, #1a73e8, #0d6efd);
+}
+
+.translateBtn {
+  background: linear-gradient(135deg, #34a853, #1e884a);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.resetButton {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-500);
+  background: white;
+  color: var(--ifm-color-emphasis-800);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 40px;
+}
+
+.resetButton:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.buttonIcon {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.translateContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.languageSelect {
+  padding: 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-500);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 180px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.languageSelect:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.error {
+  margin: 1rem;
+  padding: 0.75rem;
+  background-color: #fee;
+  color: #d32f2f;
+  border-radius: 8px;
+  border-left: 4px solid #f44336;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.errorIcon {
+  font-size: 1.2rem;
+}
+
+.personalizedSection {
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  border-left: 4px solid var(--ifm-color-primary);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.personalizedHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resultTitle {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experienceInfo {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  background: rgba(26, 115, 232, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content ul, .content ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.content li {
+  margin-bottom: 0.25rem;
+}
+
+.content code {
+  background-color: var(--ifm-color-emphasis-200);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.content pre {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.75rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  font-size: 0.875em;
+}

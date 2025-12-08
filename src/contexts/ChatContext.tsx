@@ -14,6 +14,8 @@ interface ChatContextType {
   messages: ChatMessage[];
   isLoading: boolean;
   isSending: boolean;
+  selectedText: string | null;
+  setSelectedText: (text: string | null) => void;
   createConversation: () => Promise<string>;
   selectConversation: (id: string) => Promise<void>;
   sendMessage: (content: string, selectedText?: string) => Promise<void>;
@@ -29,6 +31,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [selectedText, setSelectedText] = useState<string | null>(null);
 
   // Load conversations on mount or user change
   useEffect(() => {
@@ -105,14 +108,16 @@ export function ChatProvider({ children }: { children: ReactNode }) {
 
     try {
       const responseMsg = await apiClient.sendMessage(convId, { content, selected_text: selectedText });
-      
+
       // Replace optimistic message with real one (if we wanted to be strict) or just append response
-      // Actually, we should reload messages or append response. 
+      // Actually, we should reload messages or append response.
       // Appending response is better.
       setMessages(prev => [...prev, responseMsg]);
-      
+
       // Refresh conversation list to update message count/order
       refreshConversations();
+      // Clear selected text after sending
+      setSelectedText(null);
     } catch (error) {
       console.error("Failed to send message", error);
       // Remove optimistic message on error?
@@ -129,6 +134,8 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     messages,
     isLoading,
     isSending,
+    selectedText,
+    setSelectedText,
     createConversation,
     selectConversation,
     sendMessage,
