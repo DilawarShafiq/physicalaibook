@@ -14,10 +14,35 @@ import type {
   SendMessageRequest,
   LearningPathRecommendations,
   PersonalizedContent,
+  TranslatedContent,
   APIErrorResponse,
 } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000/api/v1';
+// Use window.ENV for client-side configuration
+declare global {
+  interface Window {
+    ENV?: {
+      REACT_APP_API_BASE_URL?: string;
+    };
+  }
+}
+
+const getBaseUrl = () => {
+  // Check if we're in browser and have window.ENV
+  if (typeof window !== 'undefined' && window.ENV?.REACT_APP_API_BASE_URL) {
+    return window.ENV.REACT_APP_API_BASE_URL;
+  }
+
+  // Check if we're in node environment
+  if (typeof process !== 'undefined' && process.env?.REACT_APP_API_BASE_URL) {
+    return process.env.REACT_APP_API_BASE_URL;
+  }
+
+  // Fallback URL
+  return 'http://localhost:8000/api/v1';
+};
+
+const API_BASE_URL = getBaseUrl();
 
 class APIClient {
   private baseURL: string;
@@ -25,7 +50,8 @@ class APIClient {
 
   constructor(baseURL: string = API_BASE_URL) {
     this.baseURL = baseURL;
-    this.token = localStorage.getItem('access_token');
+    // Only access localStorage in browser environment
+    this.token = typeof window !== 'undefined' ? localStorage.getItem('access_token') : null;
   }
 
   private getHeaders(): HeadersInit {
@@ -65,12 +91,18 @@ class APIClient {
 
   setToken(token: string) {
     this.token = token;
-    localStorage.setItem('access_token', token);
+    // Only access localStorage in browser environment
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('access_token', token);
+    }
   }
 
   clearToken() {
     this.token = null;
-    localStorage.removeItem('access_token');
+    // Only access localStorage in browser environment
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('access_token');
+    }
   }
 
   // Auth endpoints

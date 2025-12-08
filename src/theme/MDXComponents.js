@@ -72,7 +72,7 @@ const MDXComponents = {
 
   // Admonition components
   'admonition-note': ({ children, ...props }) => (
-    <div 
+    <div
       className="admonition admonition-note"
       {...props}
     >
@@ -81,7 +81,7 @@ const MDXComponents = {
   ),
 
   'admonition-tip': ({ children, ...props }) => (
-    <div 
+    <div
       className="admonition admonition-tip"
       {...props}
     >
@@ -90,12 +90,25 @@ const MDXComponents = {
   ),
 
   'admonition-caution': ({ children, ...props }) => (
-    <div 
+    <div
       className="admonition admonition-caution"
       {...props}
     >
       {children}
     </div>
+  ),
+
+  // HTML details component
+  Details: ({ children, ...props }) => (
+    <details {...props}>
+      {children}
+    </details>
+  ),
+
+  Summary: ({ children, ...props }) => (
+    <summary {...props}>
+      {children}
+    </summary>
   ),
 };
 

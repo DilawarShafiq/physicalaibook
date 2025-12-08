@@ -42,43 +42,6 @@ const sidebars = {
         'curriculum/module-1/ros2-basics',
       ],
     },
-    {
-      type: 'category',
-      label: 'Module 2: Digital Twin & Gazebo',
-      items: [
-        'curriculum/module-2/index',
-        'curriculum/module-2/gazebo-intro',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Module 3: AI-Robot Brain & NVIDIA Isaac',
-      items: [
-        'curriculum/module-3/index',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Module 4: VLA & LLMs for Robotics',
-      items: [
-        'curriculum/module-4/index',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Hardware Requirements',
-      items: [
-        'hardware/workstation',
-        'hardware/edge-kit',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'System Architecture',
-      items: [
-        'architecture/system-overview',
-      ],
-    },
   ],
 };
 

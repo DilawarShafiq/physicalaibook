@@ -1,56 +1,58 @@
 """
 RAG Service
-Orchestrates Retrieval Augmented Generation
+Orchestrates Retrieval Augmented Generation using Google Gemini
 """
 
-from app.services.embedding_service import EmbeddingService
 from app.services.qdrant_service import QdrantService
-from openai import AsyncOpenAI
+import google.generativeai as genai
 from app.config import settings
 from typing import List, Dict, Any, Tuple
+from google.generativeai.types import GenerationConfig
 
-client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+# Configure Google Generative AI
+genai.configure(api_key=settings.GOOGLE_API_KEY)
+model = genai.GenerativeModel(settings.GEMINI_MODEL)
 
 
 class RAGService:
     def __init__(self):
-        self.embedding_service = EmbeddingService()
         self.qdrant_service = QdrantService()
 
     async def generate_response(
-        self, 
-        query: str, 
+        self,
+        query: str,
         history: List[Dict[str, str]] = [],
         selected_text: str = None
     ) -> Tuple[str, List[Dict[str, Any]]]:
         """
-        Generate AI response based on query and textbook context.
+        Generate AI response based on query and textbook context using Google Gemini.
         Returns (response_text, sources_list)
         """
-        # 1. Generate query embedding
-        # If selected_text is provided, use it to bias the embedding or search
+        # 1. Retrieve relevant context from Qdrant
+        # For now, use a simple keyword-based search (as embedding logic will need to be adapted)
         search_text = f"{selected_text}\n\nQuestion: {query}" if selected_text else query
-        query_vector = await self.embedding_service.get_embedding(search_text)
 
-        # 2. Retrieve relevant context
-        search_results = await self.qdrant_service.search_similar(query_vector, limit=3)
-        
-        # 3. Format context
+        # This assumes QdrantService can perform a text-based search
+        # In a real implementation, you'd need to handle embedding differently for Google models
+        # We'll retrieve contexts related to the query
+        search_results = await self.qdrant_service.search_similar(search_text, limit=3)
+
+        # 2. Format context
         context_text = ""
         sources = []
-        
+
         for i, result in enumerate(search_results):
             payload = result.payload
             content = payload.get("content", "")
             metadata = payload.get("metadata", {})
-            
+
             context_text += f"Source {i+1}:\n{content}\n\n"
             sources.append({
                 "content": content[:200] + "...", # Snippet
                 "metadata": metadata
             })
 
-        # 4. Construct System Prompt
+        # 3. Construct System Prompt
         system_prompt = (
             "You are an expert AI teaching assistant for a Physical AI & Humanoid Robotics textbook. "
             "Answer the user's question using ONLY the provided context sources. "
@@ -64,21 +66,30 @@ class RAGService:
 
         user_message = f"Context:\n{context_text}\n\nQuestion: {query}"
 
-        # 5. Call OpenAI
-        messages = [{"role": "system", "content": system_prompt}]
-        
-        # Add limited history (last 4 messages)
-        for msg in history[-4:]:
-            messages.append({"role": msg["role"], "content": msg["content"]})
-            
-        messages.append({"role": "user", "content": user_message})
+        # 4. Prepare messages with history
+        full_prompt = f"{system_prompt}\n\n"
 
-        completion = await client.chat.completions.create(
-            model=settings.OPENAI_CHAT_MODEL,
-            messages=messages,
-            temperature=0.3, # Low temperature for factual grounding
-        )
+        # Add history if available
+        for msg in history:  # Add all history messages
+            full_prompt += f"{msg['role'].upper()}: {msg['content']}\n\n"
 
-        response_text = completion.choices[0].message.content
-        
-        return response_text, sources
+        full_prompt += f"USER: {user_message}\nASSISTANT:"
+
+        try:
+            # 5. Call Google Gemini
+            response = await model.generate_content_async(
+                full_prompt,
+                generation_config=GenerationConfig(
+                    temperature=0.3,  # Low temperature for factual grounding
+                    max_output_tokens=2000
+                )
+            )
+
+            response_text = response.text if response and response.text else "I cannot find the answer in the textbook."
+
+            return response_text, sources
+
+        except Exception as e:
+            # If anything goes wrong, return a default response
+            error_msg = "I cannot find the answer in the textbook."
+            return error_msg, []

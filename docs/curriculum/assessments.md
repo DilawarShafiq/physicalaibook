@@ -81,7 +81,7 @@ Create a Gazebo digital twin of a real environment, validate sim-to-real transfe
 | Criterion | Points | Description |
 |-----------|--------|-------------|
 | Simulation Fidelity | 30 | Realistic physics and sensor models |
-| Sim-to-Real Transfer | 30 | <20% performance drop on real hardware |
+| Sim-to-Real Transfer | 30 | {'<'}20% performance drop on real hardware |
 | Domain Randomization | 20 | Effective randomization strategy |
 | Analysis Report | 20 | Thorough comparison and insights |
 
@@ -95,18 +95,18 @@ Create a Gazebo digital twin of a real environment, validate sim-to-real transfe
 Deploy an end-to-end AI pipeline where a robot detects objects, plans grasps, and executes manipulation using vision models and learned policies.
 
 ### Requirements
-- **Vision Model**: Real-time object detection (≥10 FPS on Jetson)
+- **Vision Model**: Real-time object detection (>= 10 FPS on Jetson)
 - **Manipulation**: Pick-and-place 3+ object types
-- **RL Training**: Policy trained in Isaac Gym with ≥80% success rate
+- **RL Training**: Policy trained in Isaac Gym with >= 80% success rate
 - **Edge Deployment**: Entire pipeline runs on Jetson Orin
 - **Failure Recovery**: Handles at least 2 failure modes gracefully
 
 ### Grading Rubric
 | Criterion | Points | Description |
 |-----------|--------|-------------|
-| Perception Accuracy | 25 | Detection mAP ≥0.75 on test set |
-| Manipulation Success | 30 | ≥80% pick-place success on 20 trials |
-| Real-Time Performance | 20 | End-to-end latency <500ms |
+| Perception Accuracy | 25 | Detection mAP >= 0.75 on test set |
+| Manipulation Success | 30 | >= 80% pick-place success on 20 trials |
+| Real-Time Performance | 20 | End-to-end latency {'<'}500ms |
 | Edge Optimization | 15 | Efficient use of Jetson resources |
 | Robustness | 10 | Handles occlusion, lighting changes |
 
@@ -196,7 +196,7 @@ Violations result in zero credit and referral to academic misconduct office.
 | C | 73-76% | Minimal acceptable work |
 | C- | 70-72% | Below expectations |
 | D | 60-69% | Failing work, major deficiencies |
-| F | <60% | Unacceptable work |
+| F | {'<'}60% | Unacceptable work |
 
 ---
 

@@ -1,19 +1,22 @@
 """
 LLM Service
-Handles interactions with LLMs for content generation and personalization
+Handles interactions with Google's Generative AI for content generation and personalization
 """
 
-from openai import AsyncOpenAI
+import google.generativeai as genai
 from app.config import settings
 from typing import Optional
 import logging
+import asyncio
+from google.generativeai.types import GenerationConfig
 
 logger = logging.getLogger(__name__)
 
 
 class LLMService:
     def __init__(self):
-        self.client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+        genai.configure(api_key=settings.GOOGLE_API_KEY)
+        self.model = genai.GenerativeModel(settings.GEMINI_MODEL)
 
     async def personalize_content(
         self,
@@ -22,7 +25,7 @@ class LLMService:
         hardware_experience: str = "none"
     ) -> str:
         """
-        Personalize content based on user experience levels
+        Personalize content based on user experience levels using Google Gemini
         """
         system_prompt = f"""
         You are an expert educator for the Physical AI & Humanoid Robotics textbook.
@@ -50,17 +53,23 @@ class LLMService:
         """
 
         try:
-            response = await self.client.chat.completions.create(
-                model=settings.OPENAI_CHAT_MODEL,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_message}
-                ],
-                temperature=0.5,
-                max_tokens=2000
+            # Create prompt combining system instructions and user content
+            full_prompt = f"{system_prompt}\n\nUser Message: {user_message}"
+
+            # Generate content using Gemini
+            response = await self.model.generate_content_async(
+                full_prompt,
+                generation_config=GenerationConfig(
+                    temperature=0.5,
+                    max_output_tokens=2000
+                )
             )
 
-            return response.choices[0].message.content
+            if response and response.text:
+                return response.text
+            else:
+                logger.warning("Gemini returned empty response, returning original content")
+                return content
 
         except Exception as e:
             logger.error(f"Error personalizing content: {e}")
@@ -73,7 +82,7 @@ class LLMService:
         target_language: str = "Urdu"
     ) -> str:
         """
-        Translate content to target language
+        Translate content to target language using Google Gemini
         """
         system_prompt = f"""
         You are a professional translator specializing in technical content.
@@ -93,17 +102,23 @@ class LLMService:
         """
 
         try:
-            response = await self.client.chat.completions.create(
-                model=settings.OPENAI_CHAT_MODEL,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_message}
-                ],
-                temperature=0.3,  # Lower temperature for more consistent translation
-                max_tokens=3000
+            # Create prompt combining system instructions and user content
+            full_prompt = f"{system_prompt}\n\nUser Message: {user_message}"
+
+            # Generate content using Gemini
+            response = await self.model.generate_content_async(
+                full_prompt,
+                generation_config=GenerationConfig(
+                    temperature=0.3,  # Lower temperature for more consistent translation
+                    max_output_tokens=3000
+                )
             )
 
-            return response.choices[0].message.content
+            if response and response.text:
+                return response.text
+            else:
+                logger.warning("Gemini returned empty response, returning original content")
+                return content
 
         except Exception as e:
             logger.error(f"Error translating content: {e}")

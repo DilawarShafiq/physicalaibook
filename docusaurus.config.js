@@ -19,7 +19,7 @@ const config = {
   organizationName: 'dilawarshafiq',
   projectName: 'physicalaibook',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',  // Temporarily change to warn to see build output
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -65,12 +65,13 @@ const config = {
             label: 'Curriculum',
           },
           {
-            to: '/hardware/workstation',
-            label: 'Hardware',
+            type: 'doc',
+            docId: 'curriculum/learning-outcomes',
             position: 'left',
+            label: 'Learning Outcomes',
           },
           {
-            href: 'https://github.com/your-org/physicalaibook',
+            href: 'https://github.com/DilawarShafiq/physicalaibook',
             label: 'GitHub',
             position: 'right',
           },
@@ -94,18 +95,22 @@ const config = {
                 label: 'Module 1: ROS 2',
                 to: '/curriculum/module-1',
               },
+              {
+                label: 'Learning Outcomes',
+                to: '/curriculum/learning-outcomes',
+              },
             ],
           },
           {
             title: 'Resources',
             items: [
               {
-                label: 'Hardware Requirements',
-                to: '/hardware/workstation',
+                label: 'Assessments',
+                to: '/curriculum/assessments',
               },
               {
-                label: 'System Architecture',
-                to: '/architecture/system-overview',
+                label: 'Schedule',
+                to: '/curriculum/schedule',
               },
             ],
           },

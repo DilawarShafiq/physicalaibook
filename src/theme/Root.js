@@ -1,5 +1,6 @@
 import React from 'react';
 import { AuthProvider } from '../contexts/AuthContext';
+import { ChatProvider } from '../contexts/ChatContext';
 import ChatBot from '../components/ChatBot/ChatBot';
 import TextSelectionHandler from '../components/TextSelectionHandler';
 
@@ -7,9 +8,11 @@ import TextSelectionHandler from '../components/TextSelectionHandler';
 export default function Root({children}) {
   return (
     <AuthProvider>
-      {children}
-      <ChatBot />
-      <TextSelectionHandler />
+      <ChatProvider>
+        {children}
+        <ChatBot />
+        <TextSelectionHandler />
+      </ChatProvider>
     </AuthProvider>
   );
 }
