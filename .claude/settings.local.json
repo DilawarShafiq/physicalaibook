@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "SlashCommand(/sp.specify)",
+      "Bash(git fetch:*)",
+      "Bash(ls:*)",
+      "Bash(bash .specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(bash:*)",
+      "SlashCommand(/sp.plan)",
+      "WebSearch",
+      "SlashCommand(/sp.tasks)",
+      "Bash(npx create-docusaurus@latest:*)",
+      "Bash(npm install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

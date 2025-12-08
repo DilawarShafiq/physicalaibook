@@ -1,0 +1,641 @@
+openapi: 3.1.0
+info:
+  title: Physical AI Textbook API
+  description: |
+    Backend API for the Physical AI & Humanoid Robotics Interactive Textbook platform.
+
+    Features:
+    - User authentication and profile management
+    - RAG-powered chatbot for Q&A
+    - Personalized learning path recommendations
+    - Content adaptation based on user background
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@physicalai-textbook.com
+
+servers:
+  - url: https://api.physicalai-textbook.com/v1
+    description: Production server
+  - url: http://localhost:8000/v1
+    description: Local development server
+
+tags:
+  - name: auth
+    description: Authentication and user management
+  - name: chat
+    description: RAG chatbot Q&A endpoints
+  - name: personalization
+    description: Learning path recommendations and content personalization
+  - name: health
+    description: API health and status
+
+paths:
+  /health:
+    get:
+      summary: Health check
+      description: Check if the API is running and healthy
+      tags: [health]
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: healthy
+                  version:
+                    type: string
+                    example: 1.0.0
+                  timestamp:
+                    type: string
+                    format: date-time
+
+  /auth/signup:
+    post:
+      summary: Create new user account
+      description: Register a new user with email, password, and background information
+      tags: [auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreate'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/User'
+                  access_token:
+                    type: string
+                    description: JWT access token
+                  token_type:
+                    type: string
+                    example: bearer
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          description: Email already registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/signin:
+    post:
+      summary: Sign in existing user
+      description: Authenticate user with email and password
+      tags: [auth]
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [username, password]
+              properties:
+                username:
+                  type: string
+                  description: User email address
+                password:
+                  type: string
+                  format: password
+      responses:
+        '200':
+          description: Sign in successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+                    example: bearer
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /auth/me:
+    get:
+      summary: Get current user profile
+      description: Retrieve authenticated user's profile information
+      tags: [auth]
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /auth/profile:
+    patch:
+      summary: Update user profile
+      description: Update user background information (software/hardware experience)
+      tags: [auth]
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUpdate'
+      responses:
+        '200':
+          description: Profile updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /chat/conversations:
+    get:
+      summary: List user's chat conversations
+      description: Get all active chat conversations for the authenticated user
+      tags: [chat]
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+            minimum: 1
+            maximum: 100
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+      responses:
+        '200':
+          description: List of conversations
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ChatConversation'
+                  total:
+                    type: integer
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    post:
+      summary: Create new chat conversation
+      description: Start a new chat conversation
+      tags: [chat]
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Optional conversation title
+      responses:
+        '201':
+          description: Conversation created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatConversation'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /chat/conversations/{conversation_id}/messages:
+    get:
+      summary: Get conversation messages
+      description: Retrieve all messages in a conversation
+      tags: [chat]
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: conversation_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Conversation messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversation_id:
+                    type: string
+                    format: uuid
+                  messages:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ChatMessage'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    post:
+      summary: Send chat message
+      description: Send a message in a conversation and get AI response
+      tags: [chat]
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: conversation_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatMessageCreate'
+      responses:
+        '200':
+          description: AI response generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user_message:
+                    $ref: '#/components/schemas/ChatMessage'
+                  assistant_message:
+                    $ref: '#/components/schemas/ChatMessage'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /personalization/recommendations:
+    get:
+      summary: Get learning path recommendations
+      description: Get personalized chapter recommendations based on user background
+      tags: [personalization]
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Learning path recommendations
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningPathRecommendation'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    post:
+      summary: Regenerate recommendations
+      description: Force regeneration of learning path recommendations
+      tags: [personalization]
+      security:
+        - BearerAuth: []
+      responses:
+        '201':
+          description: New recommendations generated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningPathRecommendation'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /personalization/chapters/{chapter_id}/personalize:
+    post:
+      summary: Get personalized chapter content
+      description: Adapt chapter content based on user's background (uses LLM, cached)
+      tags: [personalization]
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: chapter_id
+          in: path
+          required: true
+          schema:
+            type: string
+            description: Chapter identifier (e.g., "curriculum/module-1/ros2-basics")
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                original_content:
+                  type: string
+                  description: Original chapter content to personalize
+      responses:
+        '200':
+          description: Personalized content (from cache or newly generated)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  personalized_content:
+                    type: string
+                    description: Adapted content for user's experience level
+                  from_cache:
+                    type: boolean
+                    description: Whether content was served from cache
+                  cache_age_hours:
+                    type: number
+                    description: Age of cached content in hours (if from cache)
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    UserCreate:
+      type: object
+      required: [email, password, software_experience, hardware_experience]
+      properties:
+        email:
+          type: string
+          format: email
+          example: learner@example.com
+        password:
+          type: string
+          format: password
+          minLength: 8
+          example: SecurePass123!
+        software_experience:
+          type: string
+          enum: [beginner, intermediate, advanced]
+          example: intermediate
+        hardware_experience:
+          type: string
+          enum: [none, hobbyist, professional]
+          example: hobbyist
+
+    UserUpdate:
+      type: object
+      properties:
+        software_experience:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        hardware_experience:
+          type: string
+          enum: [none, hobbyist, professional]
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: 550e8400-e29b-41d4-a716-446655440000
+        email:
+          type: string
+          format: email
+          example: learner@example.com
+        software_experience:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        hardware_experience:
+          type: string
+          enum: [none, hobbyist, professional]
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        last_login_at:
+          type: string
+          format: date-time
+        is_active:
+          type: boolean
+
+    ChatConversation:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          example: "Question about ROS 2 publishers"
+        created_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: string
+          format: date-time
+          description: Conversation will be deleted after this timestamp (24h from creation)
+        last_message_at:
+          type: string
+          format: date-time
+        message_count:
+          type: integer
+          example: 5
+        is_active:
+          type: boolean
+
+    ChatMessageCreate:
+      type: object
+      required: [content]
+      properties:
+        content:
+          type: string
+          minLength: 1
+          maxLength: 5000
+          example: "What are the main differences between ROS 1 and ROS 2?"
+        selected_text:
+          type: string
+          description: User-selected text for context (optional)
+          example: "ROS 2 uses DDS for communication..."
+        selected_context:
+          type: object
+          description: Metadata about selected text
+          properties:
+            chapter_id:
+              type: string
+            section_title:
+              type: string
+            start_offset:
+              type: integer
+            end_offset:
+              type: integer
+
+    ChatMessage:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        conversation_id:
+          type: string
+          format: uuid
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+        selected_text:
+          type: string
+          nullable: true
+        selected_context:
+          type: object
+          nullable: true
+        sources:
+          type: array
+          description: RAG source citations (only for assistant messages)
+          items:
+            type: object
+            properties:
+              chapter_id:
+                type: string
+              section_title:
+                type: string
+              chunk_id:
+                type: string
+              relevance_score:
+                type: number
+                format: float
+        created_at:
+          type: string
+          format: date-time
+        sequence_number:
+          type: integer
+
+    LearningPathRecommendation:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        recommended_chapters:
+          type: array
+          items:
+            type: object
+            properties:
+              chapter_id:
+                type: string
+                example: "curriculum/module-1/ros2-basics"
+              module:
+                type: string
+                example: "module-1"
+              priority:
+                type: integer
+                example: 1
+              reason:
+                type: string
+                example: "Beginner-friendly ROS 2 introduction"
+        rationale:
+          type: string
+          example: "Based on your intermediate software background and hobbyist hardware experience..."
+        software_experience:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        hardware_experience:
+          type: string
+          enum: [none, hobbyist, professional]
+        created_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: string
+          format: date-time
+        is_active:
+          type: boolean
+
+    Error:
+      type: object
+      properties:
+        detail:
+          type: string
+          description: Error message
+        code:
+          type: string
+          description: Error code (optional)
+
+  responses:
+    BadRequest:
+      description: Invalid request data
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            detail: "Invalid email format"
+
+    Unauthorized:
+      description: Authentication required or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            detail: "Not authenticated"
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            detail: "Conversation not found"
