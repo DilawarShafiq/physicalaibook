@@ -11,8 +11,9 @@ asyncpg==0.29.0
 # Database - Qdrant Vector DB
 qdrant-client==1.7.0
 
-# AI/ML - OpenAI and LlamaIndex
+# AI/ML - OpenAI Agents SDK with Gemini
 openai==1.10.0
+google-genai==0.2.2
 llama-index==0.9.48
 llama-index-vector-stores-qdrant==0.1.3
 

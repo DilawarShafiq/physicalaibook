@@ -1,22 +1,24 @@
 """
 LLM Service
-Handles interactions with Google's Generative AI for content generation and personalization
+Handles interactions with Gemini via OpenAI Agents SDK
 """
 
-import google.generativeai as genai
+from openai import OpenAI
 from app.config import settings
 from typing import Optional
 import logging
-import asyncio
-from google.generativeai.types import GenerationConfig
 
 logger = logging.getLogger(__name__)
 
 
 class LLMService:
     def __init__(self):
-        genai.configure(api_key=settings.GOOGLE_API_KEY)
-        self.model = genai.GenerativeModel(settings.GEMINI_MODEL)
+        # Configure OpenAI client to use Gemini API
+        self.client = OpenAI(
+            api_key=settings.GOOGLE_API_KEY,
+            base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+        )
+        self.model = settings.GEMINI_MODEL
 
     async def personalize_content(
         self,
@@ -53,20 +55,19 @@ class LLMService:
         """
 
         try:
-            # Create prompt combining system instructions and user content
-            full_prompt = f"{system_prompt}\n\nUser Message: {user_message}"
-
-            # Generate content using Gemini
-            response = await self.model.generate_content_async(
-                full_prompt,
-                generation_config=GenerationConfig(
-                    temperature=0.5,
-                    max_output_tokens=2000
-                )
+            # Use OpenAI chat completions with Gemini
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_message}
+                ],
+                temperature=0.5,
+                max_tokens=2000
             )
 
-            if response and response.text:
-                return response.text
+            if response and response.choices:
+                return response.choices[0].message.content
             else:
                 logger.warning("Gemini returned empty response, returning original content")
                 return content
@@ -102,20 +103,19 @@ class LLMService:
         """
 
         try:
-            # Create prompt combining system instructions and user content
-            full_prompt = f"{system_prompt}\n\nUser Message: {user_message}"
-
-            # Generate content using Gemini
-            response = await self.model.generate_content_async(
-                full_prompt,
-                generation_config=GenerationConfig(
-                    temperature=0.3,  # Lower temperature for more consistent translation
-                    max_output_tokens=3000
-                )
+            # Use OpenAI chat completions with Gemini
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_message}
+                ],
+                temperature=0.3,  # Lower temperature for more consistent translation
+                max_tokens=3000
             )
 
-            if response and response.text:
-                return response.text
+            if response and response.choices:
+                return response.choices[0].message.content
             else:
                 logger.warning("Gemini returned empty response, returning original content")
                 return content
