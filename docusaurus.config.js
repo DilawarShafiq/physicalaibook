@@ -45,7 +45,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          // Remove routeBasePath to use default '/docs' path
         },
         blog: false,
         theme: {
@@ -70,14 +70,12 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'curriculum/introduction',
+            to: '/docs/curriculum/introduction',
             position: 'left',
             label: 'Curriculum',
           },
           {
-            type: 'doc',
-            docId: 'curriculum/learning-outcomes',
+            to: '/docs/curriculum/learning-outcomes',
             position: 'left',
             label: 'Learning Outcomes',
           },
