@@ -13,15 +13,24 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "auth:server": "tsx server.ts",
+    "dev": "concurrently \"npm run auth:server\" \"npm start\""
   },
   "dependencies": {
     "@docusaurus/core": "^3.0.1",
     "@docusaurus/preset-classic": "^3.0.1",
     "@mdx-js/react": "^3.0.0",
     "@tanstack/react-query": "^5.17.19",
-    "better-auth": "^1.4.5",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "better-auth": "^1.4.6",
+    "better-sqlite3": "^12.5.0",
     "clsx": "^2.0.0",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.45.0",
+    "express": "^5.2.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -31,6 +40,8 @@
     "@docusaurus/module-type-aliases": "^3.0.1",
     "@docusaurus/tsconfig": "^3.0.1",
     "@docusaurus/types": "^3.0.1",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.21.0",
     "typescript": "~5.3.3"
   },
   "browserslist": {

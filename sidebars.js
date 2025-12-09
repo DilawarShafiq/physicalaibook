@@ -40,6 +40,46 @@ const sidebars = {
       items: [
         'curriculum/module-1/index',
         'curriculum/module-1/ros2-basics',
+        'curriculum/module-1/ros2-communication',
+        'curriculum/module-1/navigation-tf',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Module 2: Digital Twin & Gazebo',
+      items: [
+        'curriculum/module-2/index',
+        'curriculum/module-2/gazebo-fundamentals',
+        'curriculum/module-2/sim-to-real',
+        'curriculum/module-2/multi-robot',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Module 3: AI-Robot Brain & Isaac',
+      items: [
+        'curriculum/module-3/index',
+        'curriculum/module-3/computer-vision',
+        'curriculum/module-3/isaac-sim',
+        'curriculum/module-3/rl-manipulation',
+        'curriculum/module-3/perception-action',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Module 4: VLA & LLMs',
+      items: [
+        'curriculum/module-4/index',
+        'curriculum/module-4/llms-robotics',
+        'curriculum/module-4/vla-models',
+        'curriculum/module-4/capstone',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Hardware',
+      items: [
+        'hardware/requirements',
       ],
     },
   ],

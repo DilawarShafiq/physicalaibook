@@ -1,43 +1,39 @@
 import React from 'react';
-import { useAuth } from '../../contexts/AuthContext';
-import Link from '@docusaurus/Link';
+import { useAuth } from './client';
 
-export default function UserMenu() {
-  const { user, signout } = useAuth();
+const UserMenu: React.FC = () => {
+  const { state, signOut } = useAuth();
 
-  if (!user) {
-    return (
-      <div className="navbar__item">
-        <Link to="/signin" className="button button--secondary button--sm margin-right--sm">Sign In</Link>
-        <Link to="/signup" className="button button--primary button--sm">Sign Up</Link>
-      </div>
-    );
+  if (state.loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!state.user) {
+    return null; // This component should only be used when user is authenticated
   }
 
   return (
-    <div className="navbar__item dropdown dropdown--hoverable">
-      <a className="navbar__link" href="#">{user.email}</a>
-      <ul className="dropdown__menu">
-        <li>
-          <Link className="dropdown__link" to="/profile">My Profile</Link>
-        </li>
-        <li>
-          <button 
-            className="dropdown__link" 
-            onClick={signout} 
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer', 
-              width: '100%', 
-              textAlign: 'left',
-              padding: '0.25rem 0.5rem'
-            }}
-          >
-            Sign Out
-          </button>
-        </li>
-      </ul>
+    <div className="user-menu" style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '1rem'
+    }}>
+      <span>Hello, {state.user.name}!</span>
+      <button 
+        onClick={signOut}
+        style={{
+          padding: '0.5rem 1rem',
+          backgroundColor: '#007cba',
+          color: 'white',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer'
+        }}
+      >
+        Sign Out
+      </button>
     </div>
   );
-}
+};
+
+export default UserMenu;

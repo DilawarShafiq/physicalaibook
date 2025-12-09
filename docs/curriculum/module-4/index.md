@@ -305,10 +305,10 @@ VLA models require significant compute but can run on edge platforms:
 
 ### Latency Requirements
 
-- **Reactive behaviors**: < 10ms (collision avoidance, emergency stops)
-- **Perception updates**: < 33ms (30 FPS for vision)
-- **Action planning**: < 500ms (acceptable for most tasks)
-- **Complex reasoning**: < 2s (for high-level commands)
+- **Reactive behaviors**: Less than 10ms (collision avoidance, emergency stops)
+- **Perception updates**: Less than 33ms (30 FPS for vision)
+- **Action planning**: Less than 500ms (acceptable for most tasks)
+- **Complex reasoning**: Less than 2s (for high-level commands)
 
 ## Challenges & Limitations
 

@@ -3,7 +3,7 @@ Database models
 """
 
 from app.models.user import User, SoftwareExperience, HardwareExperience
-from app.models.chat import ChatConversation, ChatMessage, MessageRole
+from app.models.chat import ChatConversation, ChatMessage
 from app.models.personalization import LearningPathRecommendation, PersonalizedContentCache
 
 __all__ = [
@@ -12,7 +12,6 @@ __all__ = [
     "HardwareExperience",
     "ChatConversation",
     "ChatMessage",
-    "MessageRole",
     "LearningPathRecommendation",
     "PersonalizedContentCache",
 ]

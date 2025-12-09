@@ -10,7 +10,18 @@
       "WebSearch",
       "SlashCommand(/sp.tasks)",
       "Bash(npx create-docusaurus@latest:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(del docscurriculummodule-2physics-tuning.md)",
+      "Bash(npm run build:*)",
+      "Bash(cat:*)",
+      "Bash(npm start)",
+      "Bash(taskkill:*)",
+      "Bash(openssl rand:*)",
+      "Bash(npx @better-auth/cli migrate)",
+      "mcp__better-auth__search",
+      "Bash(npx tsx:*)"
     ],
     "deny": [],
     "ask": []
