@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import SignIn from '../components/Auth/SignIn';
+import SignIn from '../components/auth/SignIn';
 
 export default function SignInPage() {
   return (

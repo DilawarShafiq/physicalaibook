@@ -76,7 +76,13 @@ const config = {
             position: 'right',
           },
           {
-            type: 'custom-userMenu',
+            to: '/signin',
+            label: 'Sign In',
+            position: 'right',
+          },
+          {
+            to: '/signup',
+            label: 'Sign Up',
             position: 'right',
           },
         ],
