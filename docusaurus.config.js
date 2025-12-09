@@ -19,7 +19,7 @@ const config = {
   organizationName: 'dilawarshafiq',
   projectName: 'physicalaibook',
 
-  onBrokenLinks: 'warn',  // Temporarily change to warn to see build output
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {

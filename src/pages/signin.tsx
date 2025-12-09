@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import SignIn from '../components/auth/SignIn';
+import SignInComponent from '../components/auth/SignIn';
 
 export default function SignInPage() {
   return (
     <Layout title="Sign In" description="Sign in to your account">
       <div className="container margin-vert--lg">
-        <SignIn />
+        <SignInComponent />
       </div>
     </Layout>
   );
