@@ -176,7 +176,6 @@ class ActionMapper:
 
 ## Hands-On Lab: Natural Language Command Interface
 
-:::lab-container
 <div class="lab-title">
     <span class="lab-title-icon">🎯</span>
     <strong>Lab: LLM-Powered Robot Commander</strong>

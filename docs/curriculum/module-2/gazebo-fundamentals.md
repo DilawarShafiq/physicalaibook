@@ -273,7 +273,6 @@ def generate_launch_description():
     return ld
 ```
 
-:::lab-container
 <div class="lab-title">
     <span class="lab-title-icon">🎯</span>
     <strong>Lab Exercise: Navigation in Gazebo</strong>
