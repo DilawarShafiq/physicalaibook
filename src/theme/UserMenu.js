@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavbarSecondaryMenuFiller } from '@docusaurus/theme-common';
 import { useLocation } from '@docusaurus/router';
-import { useAuth } from '../components/auth/client';
-import LoginModal from '../components/auth/LoginModal';
+import { useAuth } from '../components/Auth/client';
+import LoginModal from '../components/Auth/LoginModal';
 
 const UserMenu = () => {
   const { state, signOut } = useAuth();

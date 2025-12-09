@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import SignUpComponent from '../components/auth/SignUp';
+import SignUpComponent from '../components/Auth/SignUp';
 
 export default function SignUpPage() {
   return (
