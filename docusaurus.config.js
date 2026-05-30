@@ -11,9 +11,9 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://DilawarShafiq.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/physicalaibook/',
+  url: 'https://academy.autosapien.com',
+  // Served at the domain root (custom domain), not a /subdir
+  baseUrl: '/',
 
   // GitHub pages deployment config
   organizationName: 'dilawarshafiq',
