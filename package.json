@@ -18,8 +18,8 @@
     "dev": "concurrently \"npm run auth:server\" \"npm start\""
   },
   "dependencies": {
-    "@docusaurus/core": "^3.0.1",
-    "@docusaurus/preset-classic": "^3.0.1",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
     "@mdx-js/react": "^3.0.0",
     "@tanstack/react-query": "^5.17.19",
     "@types/better-sqlite3": "^7.6.13",
@@ -37,9 +37,9 @@
     "react-markdown": "^10.1.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.0.1",
-    "@docusaurus/tsconfig": "^3.0.1",
-    "@docusaurus/types": "^3.0.1",
+    "@docusaurus/module-type-aliases": "^3.10.1",
+    "@docusaurus/tsconfig": "^3.10.1",
+    "@docusaurus/types": "^3.10.1",
     "concurrently": "^9.2.1",
     "tsx": "^4.21.0",
     "typescript": "~5.3.3"

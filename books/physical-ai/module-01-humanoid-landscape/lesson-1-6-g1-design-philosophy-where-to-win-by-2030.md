@@ -1,0 +1,90 @@
+---
+title: "G1 Design Philosophy — Where to Win by 2030"
+sidebar_label: "1.6 G1 Design Philosophy — Where to Win by 2030"
+sidebar_position: 7
+description: "With the competitive landscape mapped, this lesson defines the design principles for Autosapien G1"
+tags: ["strategy", "g1", "design", "roadmap"]
+---
+
+# G1 Design Philosophy — Where to Win by 2030
+
+**Duration:** 45 min · **Level:** Foundational · **Module:** 1. The Humanoid Landscape · **Focus:** `strategy`, `g1`, `design`, `roadmap`
+
+:::info Learning objectives
+
+By the end of this lesson you will be able to explain and apply:
+
+- Healthcare gap
+- G1 target differentiation
+- The dexterity ceiling
+- On-board intelligence
+- Platform bets for 2030 readiness
+:::
+
+## Why this matters
+
+With the competitive landscape mapped, this lesson defines the design principles for Autosapien G1.
+
+## Overview
+
+With the competitive landscape mapped, this lesson defines the design principles for Autosapien G1. The 2030 market will reward humanoids that combine genuine physical capability with safe, trustworthy operation in proximity to humans. The window is open: no incumbent has locked in the healthcare or eldercare market.
+
+## Key concepts
+
+:::note Key idea
+
+Healthcare gap: Figure/Tesla/BD are focused on manufacturing; home healthcare and eldercare remain wide open for a safety-first humanoid
+
+:::
+
+- G1 target differentiation: highest safety margin in the industry (compliant actuators + force limits + collision prediction), 8+ hour battery for full shift operation
+- The dexterity ceiling: 22-DOF hands (matching Figure 02) with fingertip tactile sensing is the minimum for healthcare tasks (medication handling, patient positioning)
+- On-board intelligence: proprietary foundation model for physical reasoning (no cloud dependency) is a competitive moat and a healthcare compliance requirement (HIPAA)
+- Platform bets for 2030 readiness: (1) RL-based locomotion for real-world terrain, (2) VLA-based manipulation policies, (3) compliance-first actuators, (4) multimodal foundation model on NVIDIA AGX Orin
+- Open challenge: no humanoid has yet demonstrated reliable household operation for 8 hours without human supervision — this is G1's target capability
+
+## Check your understanding
+
+Try to recall each answer before expanding it.
+
+<details>
+<summary>Q1. What do you know about Healthcare gap?</summary>
+
+Figure/Tesla/BD are focused on manufacturing; home healthcare and eldercare remain wide open for a safety-first humanoid
+
+</details>
+
+<details>
+<summary>Q2. What do you know about G1 target differentiation?</summary>
+
+highest safety margin in the industry (compliant actuators + force limits + collision prediction), 8+ hour battery for full shift operation
+
+</details>
+
+<details>
+<summary>Q3. What do you know about The dexterity ceiling?</summary>
+
+22-DOF hands (matching Figure 02) with fingertip tactile sensing is the minimum for healthcare tasks (medication handling, patient positioning)
+
+</details>
+
+<details>
+<summary>Q4. What do you know about On-board intelligence?</summary>
+
+proprietary foundation model for physical reasoning (no cloud dependency) is a competitive moat and a healthcare compliance requirement (HIPAA)
+
+</details>
+
+<details>
+<summary>Q5. What do you know about Platform bets for 2030 readiness?</summary>
+
+(1) RL-based locomotion for real-world terrain, (2) VLA-based manipulation policies, (3) compliance-first actuators, (4) multimodal foundation model on NVIDIA AGX Orin
+
+</details>
+
+---
+
+← Previous: **1.5 Unitree G1 & the Open Research Ecosystem**
+
+*Part of Module 1: The Humanoid Landscape.*
+

@@ -4,6 +4,72 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
+type BookCard = {
+  eyebrow: string;
+  badge: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  hook: string;
+  totalHours: string;
+  modules: number;
+  lessons: number;
+  to: string;
+  startLabel: string;
+  color: string;
+};
+
+const BOOKS: BookCard[] = [
+  {
+    eyebrow: 'Book 1',
+    badge: 'ROBOTICS',
+    title: 'Physical AI & Humanoid Robotics',
+    subtitle: 'The Technology Behind Autosapien G1',
+    description:
+      'Research-grade curriculum covering the 2024–2026 frontier. From QDD actuators to π0 VLA foundation models — every module informs a design decision in G1.',
+    hook:
+      'No humanoid has yet demonstrated 8-hour unsupervised household operation. G1 will. This is the curriculum that gets us there.',
+    totalHours: '68+',
+    modules: 10,
+    lessons: 42,
+    to: '/physical-ai',
+    startLabel: 'Start with the Humanoid Landscape',
+    color: '#6366f1',
+  },
+  {
+    eyebrow: 'Book 2',
+    badge: 'CERTIFICATION PREP',
+    title: 'CEHRS Certification Prep',
+    subtitle: 'NHA Certified Electronic Health Records Specialist',
+    description:
+      'Complete preparation for the 130-question NHA CEHRS exam. All 6 domains, real exam content, and a 10-day countdown study plan.',
+    hook:
+      '22% of the exam is documentation. 21% is medical terminology. 17% is HIPAA. You need to know exactly which 130 facts appear — this book tells you.',
+    totalHours: '44+',
+    modules: 10,
+    lessons: 36,
+    to: '/cehrs',
+    startLabel: 'Start with the Exam Blueprint',
+    color: '#06b6d4',
+  },
+  {
+    eyebrow: 'Book 3',
+    badge: 'AGENTIC AI',
+    title: 'AI Healthcare Employees',
+    subtitle: 'Building Personal Medical Billers at Scale',
+    description:
+      'Build, deploy, and scale AI agents that automate US healthcare administration. RCM, prior auth, medical coding, denial management, and the complete Personal Medical Biller — on the Autosapien stack.',
+    hook:
+      'US healthcare spends $500B/year on admin paperwork. One engineer with the right agent framework can automate what a team of 20 used to do manually.',
+    totalHours: '52+',
+    modules: 8,
+    lessons: 22,
+    to: '/agentic-healthcare',
+    startLabel: 'Start with the $500B Problem',
+    color: '#a855f7',
+  },
+];
+
 function HeroSection() {
   return (
     <header className={styles.heroBanner}>
@@ -11,23 +77,17 @@ function HeroSection() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              Physical AI & <br />
-              <span className={styles.gradient}>Humanoid Robotics</span>
+              Autosapien <br />
+              <span className={styles.gradient}>Academy</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Master the convergence of AI, robotics, and embodied intelligence.
-              Build intelligent systems that perceive, reason, and act in the physical world.
+              Three research-grade books — Physical AI &amp; Humanoid Robotics,
+              CEHRS Certification Prep, and Agentic Healthcare. Built for
+              engineers, researchers, and healthcare technologists.
             </p>
             <div className={styles.buttons}>
-              <Link
-                className={styles.primaryButton}
-                to="/curriculum/introduction">
-                Start Learning →
-              </Link>
-              <Link
-                className={styles.secondaryButton}
-                to="/curriculum/schedule">
-                View Schedule
+              <Link className={styles.primaryButton} to="/physical-ai">
+                Explore the Books →
               </Link>
             </div>
           </div>
@@ -44,162 +104,46 @@ function HeroSection() {
   );
 }
 
-function FeatureCard({ icon, title, description }) {
-  return (
-    <div className={styles.featureCard}>
-      <div className={styles.featureIcon}>{icon}</div>
-      <h3 className={styles.featureTitle}>{title}</h3>
-      <p className={styles.featureDescription}>{description}</p>
-    </div>
-  );
-}
-
-function FeaturesSection() {
-  const features = [
-    {
-      icon: '🤖',
-      title: 'ROS 2 Mastery',
-      description: 'Learn the industry-standard framework for building modular, distributed robotics systems with hands-on projects.'
-    },
-    {
-      icon: '🎮',
-      title: 'Digital Twin Simulation',
-      description: 'Master Gazebo and NVIDIA Isaac Sim for high-fidelity robot simulation and sim-to-real transfer.'
-    },
-    {
-      icon: '👁️',
-      title: 'AI Perception',
-      description: 'Implement computer vision, sensor fusion, and real-time perception with state-of-the-art models.'
-    },
-    {
-      icon: '🧠',
-      title: 'LLM Integration',
-      description: 'Connect GPT-4, Claude, and Gemini to robotic systems for natural language command interfaces.'
-    },
-    {
-      icon: '🎯',
-      title: 'VLA Models',
-      description: 'Deploy Vision-Language-Action models like RT-2 and OpenVLA for end-to-end robot control.'
-    },
-    {
-      icon: '⚡',
-      title: 'Edge Deployment',
-      description: 'Optimize and deploy AI models to NVIDIA Jetson edge devices for real-time robotics.'
-    }
-  ];
-
-  return (
-    <section className={styles.featuresSection}>
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>What You'll Learn</h2>
-        <div className={styles.featuresGrid}>
-          {features.map((feature, idx) => (
-            <FeatureCard key={idx} {...feature} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ModulesSection() {
-  const modules = [
-    {
-      number: '01',
-      title: 'ROS 2 Fundamentals',
-      weeks: 'Weeks 1-3',
-      topics: ['Nodes & Topics', 'Services & Actions', 'Navigation2', 'Transform (tf2)'],
-      color: '#6366f1'
-    },
-    {
-      number: '02',
-      title: 'Digital Twin & Gazebo',
-      weeks: 'Weeks 4-6',
-      topics: ['Gazebo Simulation', 'Sim-to-Real Transfer', 'Multi-Robot Systems', 'Domain Randomization'],
-      color: '#06b6d4'
-    },
-    {
-      number: '03',
-      title: 'AI-Robot Brain & Isaac',
-      weeks: 'Weeks 7-10',
-      topics: ['Computer Vision', 'NVIDIA Isaac Sim', 'Reinforcement Learning', 'Perception Pipelines'],
-      color: '#a855f7'
-    },
-    {
-      number: '04',
-      title: 'VLA & LLMs',
-      weeks: 'Weeks 11-13',
-      topics: ['LLM Integration', 'VLA Models (RT-2)', 'Voice Control', 'Capstone Project'],
-      color: '#f97316'
-    }
-  ];
-
+function BooksSection() {
   return (
     <section className={styles.modulesSection}>
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Course Modules</h2>
+        <h2 className={styles.sectionTitle}>The Three Books</h2>
         <p className={styles.sectionSubtitle}>
-          A comprehensive 13-week journey from fundamentals to cutting-edge Physical AI
+          Each book is a complete, self-contained curriculum. Start anywhere.
         </p>
         <div className={styles.modulesGrid}>
-          {modules.map((module, idx) => (
-            <div key={idx} className={styles.moduleCard} style={{ borderColor: module.color }}>
-              <div className={styles.moduleNumber} style={{ color: module.color }}>
-                {module.number}
+          {BOOKS.map((book) => (
+            <div
+              key={book.to}
+              className={styles.moduleCard}
+              style={{ borderColor: book.color }}>
+              <div className={styles.moduleNumber} style={{ color: book.color }}>
+                {book.eyebrow}
               </div>
-              <h3 className={styles.moduleTitle}>{module.title}</h3>
-              <p className={styles.moduleWeeks}>{module.weeks}</p>
-              <ul className={styles.moduleTopics}>
-                {module.topics.map((topic, i) => (
-                  <li key={i}>{topic}</li>
-                ))}
-              </ul>
+              <h3 className={styles.moduleTitle}>{book.title}</h3>
+              <p className={styles.moduleWeeks}>{book.subtitle}</p>
+              <p
+                style={{
+                  fontStyle: 'italic',
+                  color: 'var(--ifm-color-emphasis-700)',
+                  marginBottom: '0.75rem',
+                }}>
+                “{book.hook}”
+              </p>
+              <p>{book.description}</p>
+              <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>
+                {book.modules} modules · {book.lessons} lessons ·{' '}
+                {book.totalHours} hours
+              </p>
+              <Link
+                className={styles.primaryButton}
+                style={{ marginTop: '0.5rem', display: 'inline-block' }}
+                to={book.to}>
+                {book.startLabel} →
+              </Link>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function StatsSection() {
-  const stats = [
-    { number: '13', label: 'Weeks of Content' },
-    { number: '4', label: 'Complete Modules' },
-    { number: '30+', label: 'Hands-On Labs' },
-    { number: '100%', label: 'Project-Based' }
-  ];
-
-  return (
-    <section className={styles.statsSection}>
-      <div className={styles.container}>
-        <div className={styles.statsGrid}>
-          {stats.map((stat, idx) => (
-            <div key={idx} className={styles.statCard}>
-              <div className={styles.statNumber}>{stat.number}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function CTASection() {
-  return (
-    <section className={styles.ctaSection}>
-      <div className={styles.container}>
-        <div className={styles.ctaContent}>
-          <h2 className={styles.ctaTitle}>Ready to Build Intelligent Robots?</h2>
-          <p className={styles.ctaSubtitle}>
-            Start your journey into Physical AI and humanoid robotics today.
-          </p>
-          <Link
-            className={styles.ctaButton}
-            to="/curriculum/introduction">
-            Begin Course →
-          </Link>
         </div>
       </div>
     </section>
@@ -207,16 +151,13 @@ function CTASection() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title="Home"
-      description="Master Physical AI & Humanoid Robotics - A comprehensive course covering ROS 2, simulation, AI perception, LLMs, and VLA models">
+      description="Autosapien Academy — three research-grade books on Physical AI & Humanoid Robotics, CEHRS Certification Prep, and Agentic Healthcare.">
       <HeroSection />
-      <FeaturesSection />
-      <StatsSection />
-      <ModulesSection />
-      <CTASection />
+      <BooksSection />
     </Layout>
   );
 }

@@ -6,27 +6,22 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Physical AI & Humanoid Robotics',
-  tagline: 'Interactive Textbook for Learning Physical AI',
+  title: 'Autosapien Academy',
+  tagline: 'Three research-grade books on Physical AI, EHR certification, and Agentic Healthcare',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://DilawarShafiq.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/physicalaibook/',
+  url: 'https://academy.autosapien.com',
+  // Served at the domain root (custom domain), not a /subdir
+  baseUrl: '/',
 
   // GitHub pages deployment config
   organizationName: 'dilawarshafiq',
   projectName: 'physicalaibook',
 
   onBrokenLinks: 'warn',
+  onBrokenAnchors: 'warn',
   markdown: {
-    mermaid: true,
-    mdx1Compat: {
-      comments: true,
-      admonitions: true,
-      headingIds: true,
-    },
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -43,14 +38,45 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Remove routeBasePath to use default '/docs' path
-        },
+        // Docs are provided as three dedicated plugin instances below.
+        docs: false,
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'physical-ai',
+        path: 'books/physical-ai',
+        routeBasePath: 'physical-ai',
+        sidebarPath: require.resolve('./sidebarsPhysicalAi.js'),
+      }),
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'cehrs',
+        path: 'books/cehrs',
+        routeBasePath: 'cehrs',
+        sidebarPath: require.resolve('./sidebarsCehrs.js'),
+      }),
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'agentic-healthcare',
+        path: 'books/agentic-healthcare',
+        routeBasePath: 'agentic-healthcare',
+        sidebarPath: require.resolve('./sidebarsAgenticHealthcare.js'),
       }),
     ],
   ],
@@ -63,21 +89,26 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Physical AI Textbook',
+        title: 'Autosapien Academy',
         logo: {
-          alt: 'Physical AI Logo',
+          alt: 'Autosapien Academy Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            to: '/docs/curriculum/introduction',
+            to: '/physical-ai',
+            label: 'Physical AI',
             position: 'left',
-            label: 'Curriculum',
           },
           {
-            to: '/docs/curriculum/learning-outcomes',
+            to: '/cehrs',
+            label: 'CEHRS Prep',
             position: 'left',
-            label: 'Learning Outcomes',
+          },
+          {
+            to: '/agentic-healthcare',
+            label: 'Agentic Healthcare',
+            position: 'left',
           },
           {
             href: 'https://github.com/DilawarShafiq/physicalaibook',
@@ -100,37 +131,31 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Curriculum',
+            title: 'Books',
             items: [
-              {
-                label: 'Introduction',
-                to: '/curriculum/introduction',
-              },
-              {
-                label: 'Module 1: ROS 2',
-                to: '/curriculum/module-1',
-              },
-              {
-                label: 'Learning Outcomes',
-                to: '/curriculum/learning-outcomes',
-              },
+              { label: 'Physical AI & Humanoid Robotics', to: '/physical-ai' },
+              { label: 'CEHRS Certification Prep', to: '/cehrs' },
+              { label: 'AI Healthcare Employees', to: '/agentic-healthcare' },
             ],
           },
           {
-            title: 'Resources',
+            title: 'Account',
+            items: [
+              { label: 'Sign In', to: '/signin' },
+              { label: 'Sign Up', to: '/signup' },
+            ],
+          },
+          {
+            title: 'More',
             items: [
               {
-                label: 'Assessments',
-                to: '/curriculum/assessments',
-              },
-              {
-                label: 'Schedule',
-                to: '/curriculum/schedule',
+                label: 'GitHub',
+                href: 'https://github.com/DilawarShafiq/physicalaibook',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI Textbook. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Autosapien Academy. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

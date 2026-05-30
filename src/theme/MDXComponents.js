@@ -1,8 +1,15 @@
 import React from 'react';
+// Preserve Docusaurus' default MDX component mapping (headings -> theme Heading
+// for anchor links + broken-anchor collection, admonitions, code, etc.). Without
+// spreading these, ejected MDXComponents silently drop heading anchors and
+// admonition theming.
+import OriginalMDXComponents from '@theme-original/MDXComponents';
 import ChapterTools from '../components/ChapterTools/ChapterTools';
 
 // Custom MDX components for the textbook
 const MDXComponents = {
+  ...OriginalMDXComponents,
+
   // Custom card component
   card: ({ children, ...props }) => (
     <div 
