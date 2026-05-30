@@ -23,6 +23,11 @@ Complete preparation for the 130-question NHA CEHRS exam. All 6 domains, real ex
 - Medical Records Staff
 - HIM Professionals
 
+:::tip How to use this book
+
+Each lesson opens with **learning objectives**, builds the ideas in **Overview** and **Key concepts**, then asks you to apply them in a **hands-on lab** and test recall with **Check your understanding**. Work the labs — they are where the learning sticks.
+:::
+
 ## Modules
 
 ### [Module 1: The EHR Ecosystem](./module-01-ehr-ecosystem/index.md)

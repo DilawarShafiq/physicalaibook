@@ -17,17 +17,22 @@ Insurance verification and prior authorization are the highest-volume, most auto
 
 - [Module 1: The US Healthcare Admin Crisis](../module-01-us-healthcare-admin-crisis/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Build a real-time eligibility verification agent using HIPAA 270/271 EDI
 - Design a prior authorization submission and follow-up agent
 - Implement multi-payer support with graceful fallback to portal scraping
+:::
 
-## Lessons
+## Lessons in this module
 
-- [H2.1 — Real-Time Eligibility: The 270/271 EDI Transaction](./lesson-h2-1-real-time-eligibility-the-270-271-edi-transaction.md) · *55 min*
-- [H2.2 — Prior Authorization Automation: From Request to Approval](./lesson-h2-2-prior-authorization-automation-from-request-to-approval.md) · *60 min*
-- [H2.3 — Portal Scraping & Browser Automation as Fallback](./lesson-h2-3-portal-scraping-browser-automation-as-fallback.md) · *50 min*
+1. [H2.1 — Real-Time Eligibility: The 270/271 EDI Transaction](./lesson-h2-1-real-time-eligibility-the-270-271-edi-transaction.md) · *55 min*
+2. [H2.2 — Prior Authorization Automation: From Request to Approval](./lesson-h2-2-prior-authorization-automation-from-request-to-approval.md) · *60 min*
+3. [H2.3 — Portal Scraping & Browser Automation as Fallback](./lesson-h2-3-portal-scraping-browser-automation-as-fallback.md) · *50 min*
+
+---
+
+👉 **Start here:** [H2.1 — Real-Time Eligibility: The 270/271 EDI Transaction](./lesson-h2-1-real-time-eligibility-the-270-271-edi-transaction.md)
 

@@ -22,17 +22,22 @@ Everything you need to sit the NHA CEHRS exam with confidence. Domain-by-domain 
 - [Module 6: HIPAA Security Rule & Access Control](../module-06-hipaa-security-rule/index.md)
 - [Module 7: Revenue Cycle & Coding Basics](../module-07-revenue-cycle-coding/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Execute a 10-day targeted study plan for the CEHRS exam
 - Apply elimination strategies for challenging multiple-choice questions
 - Review every high-yield topic across all 6 CEHRS domains
+:::
 
-## Lessons
+## Lessons in this module
 
-- [C10.1 — Exam Format Deep Dive & Question Strategy](./lesson-c10-1-exam-format-deep-dive-question-strategy.md) · *40 min*
-- [C10.2 — High-Yield Review: Domains 1-3 (Documentation, Terminology, HIM)](./lesson-c10-2-high-yield-review-domains-1-3-documentation-terminology-him.md) · *55 min*
-- [C10.3 — High-Yield Review: Domains 4-6 (Regulations, Revenue Cycle, IT)](./lesson-c10-3-high-yield-review-domains-4-6-regulations-revenue-cycle-it.md) · *55 min*
+1. [C10.1 — Exam Format Deep Dive & Question Strategy](./lesson-c10-1-exam-format-deep-dive-question-strategy.md) · *40 min*
+2. [C10.2 — High-Yield Review: Domains 1-3 (Documentation, Terminology, HIM)](./lesson-c10-2-high-yield-review-domains-1-3-documentation-terminology-him.md) · *55 min*
+3. [C10.3 — High-Yield Review: Domains 4-6 (Regulations, Revenue Cycle, IT)](./lesson-c10-3-high-yield-review-domains-4-6-regulations-revenue-cycle-it.md) · *55 min*
+
+---
+
+👉 **Start here:** [C10.1 — Exam Format Deep Dive & Question Strategy](./lesson-c10-1-exam-format-deep-dive-question-strategy.md)
 

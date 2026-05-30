@@ -17,19 +17,24 @@ From ZMP to reinforcement learning: build a deep understanding of how modern hum
 
 - [Module 2: Actuator Architecture](../module-02-actuator-architecture/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Understand ZMP, MPC, and RL-based locomotion in depth
 - Implement whole-body control (WBC) for combined loco-manipulation
 - Design terrain-adaptive locomotion policies for real-world deployment
+:::
 
-## Lessons
+## Lessons in this module
 
-- [3.1 — Locomotion Foundations: ZMP, CoM, and Linear Inverted Pendulum](./lesson-3-1-locomotion-foundations-zmp-com-and-linear-inverted-pendulum.md) · *60 min*
-- [3.2 — Model Predictive Control for Dynamic Walking](./lesson-3-2-model-predictive-control-for-dynamic-walking.md) · *65 min*
-- [3.3 — Reinforcement Learning for Locomotion](./lesson-3-3-reinforcement-learning-for-locomotion.md) · *70 min*
-- [3.4 — Whole-Body Control: Moving & Working Simultaneously](./lesson-3-4-whole-body-control-moving-working-simultaneously.md) · *60 min*
-- [3.5 — Terrain Adaptation & Push Recovery](./lesson-3-5-terrain-adaptation-push-recovery.md) · *50 min*
+1. [3.1 — Locomotion Foundations: ZMP, CoM, and Linear Inverted Pendulum](./lesson-3-1-locomotion-foundations-zmp-com-and-linear-inverted-pendulum.md) · *60 min*
+2. [3.2 — Model Predictive Control for Dynamic Walking](./lesson-3-2-model-predictive-control-for-dynamic-walking.md) · *65 min*
+3. [3.3 — Reinforcement Learning for Locomotion](./lesson-3-3-reinforcement-learning-for-locomotion.md) · *70 min*
+4. [3.4 — Whole-Body Control: Moving & Working Simultaneously](./lesson-3-4-whole-body-control-moving-working-simultaneously.md) · *60 min*
+5. [3.5 — Terrain Adaptation & Push Recovery](./lesson-3-5-terrain-adaptation-push-recovery.md) · *50 min*
+
+---
+
+👉 **Start here:** [3.1 — Locomotion Foundations: ZMP, CoM, and Linear Inverted Pendulum](./lesson-3-1-locomotion-foundations-zmp-com-and-linear-inverted-pendulum.md)
 

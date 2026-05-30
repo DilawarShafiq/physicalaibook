@@ -17,16 +17,21 @@ Building a Personal Medical Biller for one practice is a proof of concept. Deplo
 
 - [Module 6: HIPAA-Compliant AI Agent Deployment](../module-06-hipaa-compliant-ai-deployment/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Design a multi-tenant HIPAA-compliant SaaS architecture for healthcare AI agents
 - Implement per-tenant data isolation, billing, and model customization
 - Build onboarding automation that deploys a configured Personal Medical Biller for a new practice in &lt;24 hours
+:::
 
-## Lessons
+## Lessons in this module
 
-- [H7.1 — Multi-Tenant HIPAA SaaS Architecture](./lesson-h7-1-multi-tenant-hipaa-saas-architecture.md) · *55 min*
-- [H7.2 — Practice Onboarding Automation: Live in 24 Hours](./lesson-h7-2-practice-onboarding-automation-live-in-24-hours.md) · *50 min*
+1. [H7.1 — Multi-Tenant HIPAA SaaS Architecture](./lesson-h7-1-multi-tenant-hipaa-saas-architecture.md) · *55 min*
+2. [H7.2 — Practice Onboarding Automation: Live in 24 Hours](./lesson-h7-2-practice-onboarding-automation-live-in-24-hours.md) · *50 min*
+
+---
+
+👉 **Start here:** [H7.1 — Multi-Tenant HIPAA SaaS Architecture](./lesson-h7-1-multi-tenant-hipaa-saas-architecture.md)
 

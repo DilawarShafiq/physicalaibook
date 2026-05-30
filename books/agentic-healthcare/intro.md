@@ -24,6 +24,11 @@ Build, deploy, and scale AI agents that automate US healthcare administration. R
 - Practice Managers
 - Health IT Engineers
 
+:::tip How to use this book
+
+Each lesson opens with **learning objectives**, builds the ideas in **Overview** and **Key concepts**, then asks you to apply them in a **hands-on lab** and test recall with **Check your understanding**. Work the labs — they are where the learning sticks.
+:::
+
 ## Modules
 
 ### [Module 1: The US Healthcare Admin Crisis](./module-01-us-healthcare-admin-crisis/index.md)

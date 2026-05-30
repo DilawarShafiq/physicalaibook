@@ -2,19 +2,13 @@
  * gen-books.ts
  *
  * Faithfully converts the Autosapien Academy book data (TypeScript) into
- * Docusaurus markdown docs in the Panaversity "Agent Factory" textbook style —
- * one doc per lesson, grouped into per-module folders, with a module index
- * page and a per-book intro page.
+ * Docusaurus markdown docs — one doc per lesson, grouped into per-module
+ * folders, with a module index page and a per-book intro page.
  *
- * Each lesson page follows a consistent pedagogical structure:
- *   1. Learning objectives (info admonition)
- *   2. Why this matters
- *   3. Overview
- *   4. Key concepts (first concept highlighted as a note)
- *   5. Hands-on lab (tip admonition)
- *   6. Check your understanding (active-recall flashcards)
- *   7. References
- *   8. Module footer / navigation context
+ * Output is styled after the Panaversity "Agent Factory" book format:
+ * every lesson opens with Learning Objectives, frames Why It Matters,
+ * presents Core Concepts, a Hands-on Lab, an active-recall Knowledge Check,
+ * and References. Module and book pages carry learning paths and outcomes.
  *
  * Source of truth: ../../autosapien/src/data/allBooks.ts
  * Output:          ./books/<book-id>/...
@@ -67,27 +61,10 @@ function slugifyTitle(title: string): string {
     .slice(0, 60)
 }
 
-function lessonFileName(lesson: Lesson): string {
-  return `lesson-${lessonIdSlug(lesson.id)}-${slugifyTitle(lesson.title)}.md`
-}
-
-/**
- * Derive a short topic "cue" from a key insight. Insights are typically
- * formatted "Topic: detail" or "Topic — detail"; we use the left side as a
- * recall cue. Falls back to a truncated prefix.
- */
-function deriveCue(insight: string): string {
-  const m = insight.match(/^(.{4,72}?)(:\s| — | - | – )/)
-  if (m) return m[1].trim().replace(/[.,;]$/, '')
-  const words = insight.split(/\s+/).slice(0, 9).join(' ')
-  return words.length < insight.length ? words + '…' : words
-}
-
-/** Split an insight into a (cue, detail) pair for flashcards. */
-function splitInsight(insight: string): { cue: string; detail: string } {
-  const m = insight.match(/^(.{4,72}?)(:\s| — | - | – )(.*)$/)
-  if (m) return { cue: m[1].trim().replace(/[.,;]$/, ''), detail: m[3].trim() }
-  return { cue: deriveCue(insight), detail: insight }
+/** First sentence of a block of prose (best-effort), trimmed. */
+function firstSentence(text: string): string {
+  const m = text.match(/^(.*?[.!?])(\s|$)/)
+  return (m ? m[1] : text).trim()
 }
 
 function renderPapers(papers: Paper[]): string {
@@ -97,24 +74,42 @@ function renderPapers(papers: Paper[]): string {
   return ['## References', '', ...lines, ''].join('\n')
 }
 
-/** First sentence of a block of prose, for "why this matters" framing. */
-function firstSentence(text: string): string {
-  const idx = text.search(/\.\s/)
-  return idx === -1 ? text : text.slice(0, idx + 1)
+/**
+ * Build an active-recall Knowledge Check from a lesson's own key insights.
+ * We quote the lesson's verbatim claims and ask the learner to reconstruct
+ * them — a faithful study technique that invents no new facts.
+ */
+function renderKnowledgeCheck(lesson: Lesson): string {
+  const insights = (lesson.keyInsights || []).slice(0, 4)
+  if (!insights.length && !lesson.lab) return ''
+
+  const body: string[] = []
+  body.push(':::note Knowledge Check')
+  body.push('')
+  body.push('Test your understanding before moving on. For each prompt, answer from memory, then scroll up to verify.')
+  body.push('')
+  insights.forEach((insight, i) => {
+    body.push(`${i + 1}. In your own words, explain and justify: *"${mdxSafe(insight)}"*`)
+  })
+  if (lesson.lab) {
+    body.push(`${insights.length + 1}. Complete the hands-on lab above and write a short paragraph on what your result demonstrates.`)
+  }
+  body.push('')
+  body.push(':::')
+  body.push('')
+  return body.join('\n')
 }
 
 function renderLesson(
   lesson: Lesson,
   module: AcademyModule,
   position: number,
-  prev: Lesson | null,
-  next: Lesson | null,
 ): string {
   const fm: string[] = ['---']
   fm.push(`title: ${yamlString(lesson.title)}`)
   fm.push(`sidebar_label: ${yamlString(`${lesson.id} ${lesson.title}`)}`)
   fm.push(`sidebar_position: ${position}`)
-  fm.push(`description: ${yamlString(lesson.overview.split('. ')[0].slice(0, 180))}`)
+  fm.push(`description: ${yamlString(firstSentence(lesson.overview).slice(0, 180))}`)
   if (lesson.tags && lesson.tags.length) {
     fm.push(`tags: ${yamlArray(lesson.tags)}`)
   }
@@ -124,7 +119,6 @@ function renderLesson(
   body.push('')
   body.push(`# ${mdxSafe(lesson.title)}`)
   body.push('')
-
   // Metadata line (duration + level + module + tags surfaced visibly)
   const meta = [
     `**Duration:** ${mdxSafe(lesson.duration)}`,
@@ -132,73 +126,53 @@ function renderLesson(
     `**Module:** ${module.number}. ${mdxSafe(module.title)}`,
   ]
   if (lesson.tags && lesson.tags.length) {
-    meta.push(`**Focus:** ${lesson.tags.map((t) => `\`${mdxSafe(t)}\``).join(', ')}`)
+    meta.push(`**Tags:** ${lesson.tags.map((t) => `\`${mdxSafe(t)}\``).join(', ')}`)
   }
   body.push(meta.join(' · '))
   body.push('')
 
-  // Learning objectives — derived from the topics covered by the key insights.
+  // Learning Objectives (front-loaded, Panaversity style)
+  body.push(':::info Learning Objectives')
+  body.push('')
+  body.push('By the end of this lesson you will be able to:')
+  body.push('')
+  body.push(`- Explain the core ideas behind **${mdxSafe(lesson.title)}**`)
   if (lesson.keyInsights && lesson.keyInsights.length) {
-    const cues: string[] = []
-    const seen = new Set<string>()
-    for (const insight of lesson.keyInsights) {
-      const cue = deriveCue(insight)
-      const key = cue.toLowerCase()
-      if (!seen.has(key)) {
-        seen.add(key)
-        cues.push(cue)
-      }
-      if (cues.length >= 5) break
-    }
-    body.push(':::info Learning objectives')
-    body.push('')
-    body.push('By the end of this lesson you will be able to explain and apply:')
-    body.push('')
-    for (const cue of cues) {
-      body.push(`- ${mdxSafe(cue)}`)
-    }
-    if (lesson.lab) {
-      body.push('')
-      body.push('You will then consolidate these ideas in the hands-on lab below.')
-    }
-    body.push(':::')
-    body.push('')
+    body.push(`- Recall and reason about ${lesson.keyInsights.length} key facts that drive real engineering and business decisions`)
   }
-
-  // Why this matters — short framing pulled from the overview opener.
-  body.push('## Why this matters')
+  body.push(`- Connect this lesson to the goals of *${mdxSafe(module.title)}*`)
+  if (lesson.lab) {
+    body.push('- Apply the concepts in a hands-on lab')
+  }
   body.push('')
-  body.push(mdxSafe(firstSentence(lesson.overview)))
+  body.push(':::')
   body.push('')
 
-  // Overview as the main exposition.
+  // Why It Matters — surfaced hook from the first sentence of the overview
+  body.push('## Why It Matters')
+  body.push('')
+  body.push(`> ${mdxSafe(firstSentence(lesson.overview))}`)
+  body.push('')
+
+  // Overview as intro prose
   body.push('## Overview')
   body.push('')
   body.push(mdxSafe(lesson.overview))
   body.push('')
 
-  // Key concepts — first insight highlighted as a "key idea" note.
+  // Key insights as the Core Concepts section
   if (lesson.keyInsights && lesson.keyInsights.length) {
-    body.push('## Key concepts')
+    body.push('## Core Concepts')
     body.push('')
-    const [first, ...rest] = lesson.keyInsights
-    body.push(':::note Key idea')
-    body.push('')
-    body.push(mdxSafe(first))
-    body.push('')
-    body.push(':::')
-    body.push('')
-    if (rest.length) {
-      for (const insight of rest) {
-        body.push(`- ${mdxSafe(insight)}`)
-      }
-      body.push('')
+    for (const insight of lesson.keyInsights) {
+      body.push(`- ${mdxSafe(insight)}`)
     }
+    body.push('')
   }
 
-  // Hands-on lab as a tip admonition.
+  // Lab as a tip admonition (Hands-on)
   if (lesson.lab) {
-    body.push(':::tip Hands-on lab')
+    body.push(':::tip Hands-on Lab')
     body.push('')
     body.push(mdxSafe(lesson.lab))
     body.push('')
@@ -206,41 +180,14 @@ function renderLesson(
     body.push('')
   }
 
-  // Check your understanding — active-recall flashcards built from insights.
-  if (lesson.keyInsights && lesson.keyInsights.length) {
-    body.push('## Check your understanding')
-    body.push('')
-    body.push('Try to recall each answer before expanding it.')
-    body.push('')
-    lesson.keyInsights.slice(0, 5).forEach((insight, i) => {
-      const { cue, detail } = splitInsight(insight)
-      body.push('<details>')
-      body.push(`<summary>Q${i + 1}. What do you know about ${mdxSafe(cue)}?</summary>`)
-      body.push('')
-      body.push(mdxSafe(detail))
-      body.push('')
-      body.push('</details>')
-      body.push('')
-    })
-  }
+  // Active-recall Knowledge Check derived from this lesson's own content
+  const kc = renderKnowledgeCheck(lesson)
+  if (kc) body.push(kc)
 
-  // Papers as a References list.
+  // Papers as a References list
   if (lesson.papers && lesson.papers.length) {
     body.push(renderPapers(lesson.papers))
   }
-
-  // Navigation context footer.
-  body.push('---')
-  body.push('')
-  const navBits: string[] = []
-  if (prev) navBits.push(`← Previous: **${mdxSafe(prev.id)} ${mdxSafe(prev.title)}**`)
-  if (next) navBits.push(`Next: **${mdxSafe(next.id)} ${mdxSafe(next.title)}** →`)
-  if (navBits.length) {
-    body.push(navBits.join(' · '))
-    body.push('')
-  }
-  body.push(`*Part of Module ${module.number}: ${mdxSafe(module.title)}.*`)
-  body.push('')
 
   return fm.join('\n') + '\n' + body.join('\n') + '\n'
 }
@@ -294,34 +241,33 @@ function renderModuleIndex(module: AcademyModule, book: Book): string {
   }
 
   if (module.outcomes && module.outcomes.length) {
-    body.push(':::info Learning outcomes')
+    body.push('## Learning Outcomes')
     body.push('')
     body.push('By the end of this module you will be able to:')
     body.push('')
     for (const out of module.outcomes) {
       body.push(`- ${mdxSafe(out)}`)
     }
-    body.push(':::')
     body.push('')
   }
 
   body.push('## Lessons in this module')
   body.push('')
-  module.lessons.forEach((lesson, idx) => {
-    const file = lessonFileName(lesson)
-    body.push(
-      `${idx + 1}. [${mdxSafe(lesson.id)} — ${mdxSafe(lesson.title)}](./${file}) · *${mdxSafe(lesson.duration)}*`,
-    )
+  body.push('| # | Lesson | Duration |')
+  body.push('| :-- | :-- | :-- |')
+  module.lessons.forEach((lesson) => {
+    const file = `lesson-${lessonIdSlug(lesson.id)}-${slugifyTitle(lesson.title)}.md`
+    body.push(`| ${mdxSafe(lesson.id)} | [${mdxSafe(lesson.title)}](./${file}) | ${mdxSafe(lesson.duration)} |`)
   })
   body.push('')
 
-  const firstLesson = module.lessons[0]
-  if (firstLesson) {
+  // Direct learners to the first lesson
+  const first = module.lessons[0]
+  if (first) {
+    const file = `lesson-${lessonIdSlug(first.id)}-${slugifyTitle(first.title)}.md`
     body.push('---')
     body.push('')
-    body.push(
-      `👉 **Start here:** [${mdxSafe(firstLesson.id)} — ${mdxSafe(firstLesson.title)}](./${lessonFileName(firstLesson)})`,
-    )
+    body.push(`👉 **Start here:** [${mdxSafe(first.title)}](./${file})`)
     body.push('')
   }
 
@@ -366,25 +312,32 @@ function renderBookIntro(book: Book): string {
   }
   body.push('')
 
-  body.push(':::tip How to use this book')
+  // How to use this book — Panaversity-style study guidance
+  body.push('## How to use this book')
   body.push('')
-  body.push(
-    'Each lesson opens with **learning objectives**, builds the ideas in **Overview** and **Key concepts**, then asks you to apply them in a **hands-on lab** and test recall with **Check your understanding**. Work the labs — they are where the learning sticks.',
-  )
-  body.push(':::')
+  body.push('Each lesson follows the same rhythm so you always know where you are:')
+  body.push('')
+  body.push('- **Learning Objectives** — what you will be able to do afterwards.')
+  body.push('- **Why It Matters** — the one-line reason this lesson exists.')
+  body.push('- **Overview & Core Concepts** — the substance, with the key facts called out.')
+  body.push('- **Hands-on Lab** — apply it; learning sticks when you build.')
+  body.push('- **Knowledge Check** — active recall before you move on.')
+  body.push('- **References** — go deeper with primary sources.')
+  body.push('')
+  body.push('Work the modules in order — each builds on the last. Do every Knowledge Check from memory; if you can teach it, you know it.')
   body.push('')
 
-  body.push('## Modules')
+  body.push('## Learning path')
   body.push('')
+  body.push('| Module | Focus | Level | Lessons |')
+  body.push('| :-- | :-- | :-- | :-- |')
   book.modules.forEach((m) => {
     const dir = `module-${pad2(m.number)}-${m.slug}`
-    body.push(`### [Module ${m.number}: ${mdxSafe(m.title)}](./${dir}/index.md)`)
-    body.push('')
-    body.push(`*${mdxSafe(m.subtitle)}* — ${mdxSafe(m.description)}`)
-    body.push('')
-    body.push(`\`${mdxSafe(m.duration)}\` · \`${mdxSafe(m.level)}\` · ${m.lessons.length} lessons`)
-    body.push('')
+    body.push(
+      `| [${m.number}. ${mdxSafe(m.title)}](./${dir}/index.md) | ${mdxSafe(m.subtitle)} | ${mdxSafe(m.level)} | ${m.lessons.length} |`,
+    )
   })
+  body.push('')
 
   const qs = book.quickStart
   const qsModule = book.modules.find((m) => m.slug === qs.slug)
@@ -434,12 +387,8 @@ function generateBook(book: Book) {
 
     // lessons
     module.lessons.forEach((lesson, idx) => {
-      const prev = idx > 0 ? module.lessons[idx - 1] : null
-      const next = idx < module.lessons.length - 1 ? module.lessons[idx + 1] : null
-      writeFile(
-        path.join(dir, lessonFileName(lesson)),
-        renderLesson(lesson, module, idx + 2, prev, next),
-      )
+      const file = `lesson-${lessonIdSlug(lesson.id)}-${slugifyTitle(lesson.title)}.md`
+      writeFile(path.join(dir, file), renderLesson(lesson, module, idx + 2))
       lessonCount++
     })
   }

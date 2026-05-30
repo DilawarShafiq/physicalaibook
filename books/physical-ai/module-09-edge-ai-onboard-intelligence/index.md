@@ -17,17 +17,22 @@ G1 cannot depend on the cloud. Build a complete on-board AI stack that runs foun
 
 - [Module 5: Foundation Models & VLA Architecture](../module-05-foundation-models-vla/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Design the compute architecture for on-board VLA inference
 - Apply quantization and model compression for edge deployment
 - Understand neuromorphic computing for ultra-low power sensing
+:::
 
-## Lessons
+## Lessons in this module
 
-- [9.1 — NVIDIA Jetson AGX Orin: The Humanoid Brain](./lesson-9-1-nvidia-jetson-agx-orin-the-humanoid-brain.md) · *50 min*
-- [9.2 — Model Compression for Edge Deployment](./lesson-9-2-model-compression-for-edge-deployment.md) · *55 min*
-- [9.3 — Neuromorphic Computing & Event Cameras](./lesson-9-3-neuromorphic-computing-event-cameras.md) · *55 min*
+1. [9.1 — NVIDIA Jetson AGX Orin: The Humanoid Brain](./lesson-9-1-nvidia-jetson-agx-orin-the-humanoid-brain.md) · *50 min*
+2. [9.2 — Model Compression for Edge Deployment](./lesson-9-2-model-compression-for-edge-deployment.md) · *55 min*
+3. [9.3 — Neuromorphic Computing & Event Cameras](./lesson-9-3-neuromorphic-computing-event-cameras.md) · *55 min*
+
+---
+
+👉 **Start here:** [9.1 — NVIDIA Jetson AGX Orin: The Humanoid Brain](./lesson-9-1-nvidia-jetson-agx-orin-the-humanoid-brain.md)
 

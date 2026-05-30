@@ -20,13 +20,8 @@ const config = {
   projectName: 'physicalaibook',
 
   onBrokenLinks: 'warn',
+  onBrokenAnchors: 'warn',
   markdown: {
-    mermaid: true,
-    mdx1Compat: {
-      comments: true,
-      admonitions: true,
-      headingIds: true,
-    },
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },

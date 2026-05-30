@@ -17,17 +17,22 @@ Train G1's locomotion and manipulation policies in simulation before deployment.
 
 - [Module 3: Bipedal Locomotion & Whole-Body Control](../module-03-bipedal-locomotion/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Set up a complete G1 simulation in Isaac Sim
 - Apply domain randomization for robust sim-to-real transfer
 - Train locomotion and manipulation policies at scale using Isaac Lab
+:::
 
-## Lessons
+## Lessons in this module
 
-- [7.1 — The Simulation Stack: MuJoCo, Isaac Gym, and Isaac Lab](./lesson-7-1-the-simulation-stack-mujoco-isaac-gym-and-isaac-lab.md) · *50 min*
-- [7.2 — Domain Randomization: The Bridge from Sim to Real](./lesson-7-2-domain-randomization-the-bridge-from-sim-to-real.md) · *55 min*
-- [7.3 — Building a Physics-Accurate Digital Twin of G1](./lesson-7-3-building-a-physics-accurate-digital-twin-of-g1.md) · *60 min*
+1. [7.1 — The Simulation Stack: MuJoCo, Isaac Gym, and Isaac Lab](./lesson-7-1-the-simulation-stack-mujoco-isaac-gym-and-isaac-lab.md) · *50 min*
+2. [7.2 — Domain Randomization: The Bridge from Sim to Real](./lesson-7-2-domain-randomization-the-bridge-from-sim-to-real.md) · *55 min*
+3. [7.3 — Building a Physics-Accurate Digital Twin of G1](./lesson-7-3-building-a-physics-accurate-digital-twin-of-g1.md) · *60 min*
+
+---
+
+👉 **Start here:** [7.1 — The Simulation Stack: MuJoCo, Isaac Gym, and Isaac Lab](./lesson-7-1-the-simulation-stack-mujoco-isaac-gym-and-isaac-lab.md)
 

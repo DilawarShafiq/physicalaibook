@@ -8,18 +8,83 @@ tags: ["retention", "destruction", "legal-hold", "compliance", "HIPAA"]
 
 # Record Retention, Destruction & Legal Holds
 
-**Duration:** 45 min · **Level:** Advanced · **Module:** 9. Quality Reporting & Compliance · **Tags:** `retention`, `destruction`, `legal-hold`, `compliance`, `HIPAA`
+**Duration:** 45 min · **Level:** Advanced · **Module:** 9. Quality Reporting & Compliance · **Focus:** `retention`, `destruction`, `legal-hold`, `compliance`, `HIPAA`
+
+:::info Learning objectives
+
+By the end of this lesson you will be able to explain and apply:
+
+- Federal minimum
+- HIPAA minimum
+- State law
+- Record destruction
+- Certificate of destruction
+:::
+
+## Why this matters
+
+Health records must be retained for defined periods — then properly destroyed.
 
 ## Overview
 
 Health records must be retained for defined periods — then properly destroyed. Federal and state laws set minimum retention requirements that often conflict (keep the longer requirement). Legal holds override all retention schedules. CEHRS specialists implement and monitor retention programs.
 
-## Key Insights
+## Key concepts
 
-- Federal minimum: CMS requires retention of medical records for 5 years from the date of service (or 5 years after a minor reaches the age of majority); Medicare cost reports must be retained 5 years from the date of settlement
+:::note Key idea
+
+Federal minimum: CMS requires retention of medical records for 5 years from the date of service (or 5 years after a minor reaches the age of majority); Medicare cost reports must be retained 5 years from the date of settlement
+
+:::
+
 - HIPAA minimum: covered entities must retain documentation of policies and procedures (not the records themselves) for 6 years
 - State law: states have their own retention requirements that often exceed federal minimums; California requires 7 years (adult) and until age 19 or 7 years from service (minor); always follow the longer requirement
 - Record destruction: must be performed in a manner that prevents reconstruction; paper = shredding (NAID AAA certified vendor); electronic = secure overwriting or physical destruction of media; must be documented
 - Certificate of destruction: document retained permanently showing what records were destroyed, when, by whom, and how; proves due diligence if records later requested
 - Legal hold: suspends routine destruction when litigation is reasonably anticipated; issued by legal counsel; all potentially relevant records preserved indefinitely during the hold; CEHRS notified immediately to halt destruction
+
+## Check your understanding
+
+Try to recall each answer before expanding it.
+
+<details>
+<summary>Q1. What do you know about Federal minimum?</summary>
+
+CMS requires retention of medical records for 5 years from the date of service (or 5 years after a minor reaches the age of majority); Medicare cost reports must be retained 5 years from the date of settlement
+
+</details>
+
+<details>
+<summary>Q2. What do you know about HIPAA minimum?</summary>
+
+covered entities must retain documentation of policies and procedures (not the records themselves) for 6 years
+
+</details>
+
+<details>
+<summary>Q3. What do you know about State law?</summary>
+
+states have their own retention requirements that often exceed federal minimums; California requires 7 years (adult) and until age 19 or 7 years from service (minor); always follow the longer requirement
+
+</details>
+
+<details>
+<summary>Q4. What do you know about Record destruction?</summary>
+
+must be performed in a manner that prevents reconstruction; paper = shredding (NAID AAA certified vendor); electronic = secure overwriting or physical destruction of media; must be documented
+
+</details>
+
+<details>
+<summary>Q5. What do you know about Certificate of destruction?</summary>
+
+document retained permanently showing what records were destroyed, when, by whom, and how; proves due diligence if records later requested
+
+</details>
+
+---
+
+← Previous: **C9.1 HEDIS, MIPS & Quality Measure Documentation** · Next: **C9.3 Clinical Decision Support & Alert Fatigue** →
+
+*Part of Module 9: Quality Reporting & Compliance.*
 

@@ -17,17 +17,22 @@ Healthcare organizations are measured by the quality of care they provide. CEHRS
 
 - [Module 3: Health Record Documentation](../module-03-health-record-documentation/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Identify HEDIS and CMS quality measures relevant to CEHRS work
 - Apply record retention schedules by patient type and regulatory requirement
 - Use clinical decision support tools and understand their documentation implications
+:::
 
-## Lessons
+## Lessons in this module
 
-- [C9.1 — HEDIS, MIPS & Quality Measure Documentation](./lesson-c9-1-hedis-mips-quality-measure-documentation.md) · *50 min*
-- [C9.2 — Record Retention, Destruction & Legal Holds](./lesson-c9-2-record-retention-destruction-legal-holds.md) · *45 min*
-- [C9.3 — Clinical Decision Support & Alert Fatigue](./lesson-c9-3-clinical-decision-support-alert-fatigue.md) · *45 min*
+1. [C9.1 — HEDIS, MIPS & Quality Measure Documentation](./lesson-c9-1-hedis-mips-quality-measure-documentation.md) · *50 min*
+2. [C9.2 — Record Retention, Destruction & Legal Holds](./lesson-c9-2-record-retention-destruction-legal-holds.md) · *45 min*
+3. [C9.3 — Clinical Decision Support & Alert Fatigue](./lesson-c9-3-clinical-decision-support-alert-fatigue.md) · *45 min*
+
+---
+
+👉 **Start here:** [C9.1 — HEDIS, MIPS & Quality Measure Documentation](./lesson-c9-1-hedis-mips-quality-measure-documentation.md)
 

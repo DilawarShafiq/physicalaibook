@@ -17,17 +17,22 @@ description: "12% of the CEHRS exam. Trace a patient encounter from registration
 
 - [Module 4: Patient Registration & Data Management](../module-04-patient-registration-data/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Trace the complete revenue cycle from registration to payment
 - Interpret ICD-10-CM and CPT code structures for documentation purposes
 - Identify common claim denial reasons and their documentation root causes
+:::
 
-## Lessons
+## Lessons in this module
 
-- [C7.1 — The Revenue Cycle: Registration to Remittance](./lesson-c7-1-the-revenue-cycle-registration-to-remittance.md) · *50 min*
-- [C7.2 — ICD-10-CM: Structure, Guidelines & High-Yield Codes](./lesson-c7-2-icd-10-cm-structure-guidelines-high-yield-codes.md) · *55 min*
-- [C7.3 — CPT/HCPCS: Procedure Codes, E&M, and Modifiers](./lesson-c7-3-cpt-hcpcs-procedure-codes-e-m-and-modifiers.md) · *50 min*
+1. [C7.1 — The Revenue Cycle: Registration to Remittance](./lesson-c7-1-the-revenue-cycle-registration-to-remittance.md) · *50 min*
+2. [C7.2 — ICD-10-CM: Structure, Guidelines & High-Yield Codes](./lesson-c7-2-icd-10-cm-structure-guidelines-high-yield-codes.md) · *55 min*
+3. [C7.3 — CPT/HCPCS: Procedure Codes, E&M, and Modifiers](./lesson-c7-3-cpt-hcpcs-procedure-codes-e-m-and-modifiers.md) · *50 min*
+
+---
+
+👉 **Start here:** [C7.1 — The Revenue Cycle: Registration to Remittance](./lesson-c7-1-the-revenue-cycle-registration-to-remittance.md)
 

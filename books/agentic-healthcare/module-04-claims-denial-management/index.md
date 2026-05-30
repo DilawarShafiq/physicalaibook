@@ -17,17 +17,22 @@ A claim denied is revenue at risk. Build agents that submit clean claims the fir
 
 - [Module 3: AI Medical Coding & CDI](../module-03-ai-medical-coding/index.md)
 
-## Learning Outcomes
+:::info Learning outcomes
 
 By the end of this module you will be able to:
 
 - Build a pre-submission claim scrubbing agent that catches edits before payer rejection
 - Automate standard denial appeals with clinical evidence retrieval
 - Design an A/R follow-up agent with payer-specific rule logic
+:::
 
-## Lessons
+## Lessons in this module
 
-- [H4.1 — Pre-Submission Claim Scrubbing: Stop Denials Before They Happen](./lesson-h4-1-pre-submission-claim-scrubbing-stop-denials-before-they-happ.md) · *55 min*
-- [H4.2 — Automated Denial Appeals: Clinical Evidence + Regulatory Citations](./lesson-h4-2-automated-denial-appeals-clinical-evidence-regulatory-citati.md) · *60 min*
-- [H4.3 — A/R Follow-Up Agents: Working Every Dollar](./lesson-h4-3-a-r-follow-up-agents-working-every-dollar.md) · *50 min*
+1. [H4.1 — Pre-Submission Claim Scrubbing: Stop Denials Before They Happen](./lesson-h4-1-pre-submission-claim-scrubbing-stop-denials-before-they-happ.md) · *55 min*
+2. [H4.2 — Automated Denial Appeals: Clinical Evidence + Regulatory Citations](./lesson-h4-2-automated-denial-appeals-clinical-evidence-regulatory-citati.md) · *60 min*
+3. [H4.3 — A/R Follow-Up Agents: Working Every Dollar](./lesson-h4-3-a-r-follow-up-agents-working-every-dollar.md) · *50 min*
+
+---
+
+👉 **Start here:** [H4.1 — Pre-Submission Claim Scrubbing: Stop Denials Before They Happen](./lesson-h4-1-pre-submission-claim-scrubbing-stop-denials-before-they-happ.md)
 

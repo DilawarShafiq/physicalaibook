@@ -8,22 +8,87 @@ tags: ["OpenVLA", "open-source", "fine-tuning", "VLA"]
 
 # OpenVLA — The Open-Source VLA Ecosystem
 
-**Duration:** 60 min · **Level:** Advanced · **Module:** 5. Foundation Models & VLA Architecture · **Tags:** `OpenVLA`, `open-source`, `fine-tuning`, `VLA`
+**Duration:** 60 min · **Level:** Advanced · **Module:** 5. Foundation Models & VLA Architecture · **Focus:** `OpenVLA`, `open-source`, `fine-tuning`, `VLA`
+
+:::info Learning objectives
+
+By the end of this lesson you will be able to explain and apply:
+
+- OpenVLA architecture
+- Performance
+- Fine-tuning
+- Action tokenization
+- OpenVLA-OFT (2025 follow-up)
+:::
+
+## Why this matters
+
+OpenVLA (June 2024, Stanford + Berkeley) is the first fully open-source VLA that matches RT-2-X performance on standard benchmarks.
 
 ## Overview
 
 OpenVLA (June 2024, Stanford + Berkeley) is the first fully open-source VLA that matches RT-2-X performance on standard benchmarks. Its release democratized VLA research: any lab can fine-tune a state-of-the-art general-purpose robot policy on their own hardware.
 
-## Key Insights
+## Key concepts
 
-- OpenVLA architecture: 7.5B parameters based on Prismatic VLM (SigLIP vision encoder + Llama 2 language model); actions tokenized as discrete language tokens
+:::note Key idea
+
+OpenVLA architecture: 7.5B parameters based on Prismatic VLM (SigLIP vision encoder + Llama 2 language model); actions tokenized as discrete language tokens
+
+:::
+
 - Performance: matches RT-2-X on BridgeV2 benchmark, outperforms on several manipulation tasks; runs at 6 Hz on single A100 GPU, 1.5 Hz on NVIDIA Orin AGX
 - Fine-tuning: LoRA fine-tuning on 200-500 demonstrations converges in 2-4 hours on single GPU; makes task-specific adaptation practical for small labs
 - Action tokenization: continuous actions discretized to 256 bins per dimension, encoded as language tokens; allows use of LLM training infrastructure directly
 - OpenVLA-OFT (2025 follow-up): parallel decoding + action chunking reduces latency to 25+ Hz; enables contact-rich, high-frequency manipulation
 - Available at: github.com/openvla/openvla with pre-trained checkpoints on HuggingFace; Apache 2.0 license
 
+## Check your understanding
+
+Try to recall each answer before expanding it.
+
+<details>
+<summary>Q1. What do you know about OpenVLA architecture?</summary>
+
+7.5B parameters based on Prismatic VLM (SigLIP vision encoder + Llama 2 language model); actions tokenized as discrete language tokens
+
+</details>
+
+<details>
+<summary>Q2. What do you know about Performance?</summary>
+
+matches RT-2-X on BridgeV2 benchmark, outperforms on several manipulation tasks; runs at 6 Hz on single A100 GPU, 1.5 Hz on NVIDIA Orin AGX
+
+</details>
+
+<details>
+<summary>Q3. What do you know about Fine-tuning?</summary>
+
+LoRA fine-tuning on 200-500 demonstrations converges in 2-4 hours on single GPU; makes task-specific adaptation practical for small labs
+
+</details>
+
+<details>
+<summary>Q4. What do you know about Action tokenization?</summary>
+
+continuous actions discretized to 256 bins per dimension, encoded as language tokens; allows use of LLM training infrastructure directly
+
+</details>
+
+<details>
+<summary>Q5. What do you know about OpenVLA-OFT (2025 follow-up)?</summary>
+
+parallel decoding + action chunking reduces latency to 25+ Hz; enables contact-rich, high-frequency manipulation
+
+</details>
+
 ## References
 
 - **OpenVLA: An Open-Source Vision-Language-Action Model** — Kim et al. (2024). *arXiv 2406.09246*
+
+---
+
+← Previous: **5.2 π0 — Diffusion-Based Whole-Body Control** · Next: **5.4 Diffusion Policy — Visuomotor Control via Denoising** →
+
+*Part of Module 5: Foundation Models & VLA Architecture.*
 
