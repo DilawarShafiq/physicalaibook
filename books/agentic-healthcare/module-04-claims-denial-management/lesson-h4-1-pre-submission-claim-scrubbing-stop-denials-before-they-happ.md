@@ -1,0 +1,25 @@
+---
+title: "Pre-Submission Claim Scrubbing: Stop Denials Before They Happen"
+sidebar_label: "H4.1 Pre-Submission Claim Scrubbing: Stop Denials Before They Happen"
+sidebar_position: 2
+description: "A \"clean claim\" is one that passes all payer edits and adjudicates on first submission — no rework needed"
+tags: ["claim-scrubbing", "clean-claim", "CCI", "denial-prediction", "837"]
+---
+
+# Pre-Submission Claim Scrubbing: Stop Denials Before They Happen
+
+**Duration:** 55 min · **Level:** Advanced · **Module:** 4. Claims Submission & Denial Management AI · **Tags:** `claim-scrubbing`, `clean-claim`, `CCI`, `denial-prediction`, `837`
+
+## Overview
+
+A "clean claim" is one that passes all payer edits and adjudicates on first submission — no rework needed. The average US hospital has an 85-90% clean claim rate; best-in-class systems achieve 98%+. The gap is worth millions annually. AI-powered claim scrubbing catches the errors that clearinghouses miss.
+
+## Key Insights
+
+- Claim scrubbing layers: (1) front-end edits (registration data completeness), (2) coding edits (ICD-10/CPT validity, modifier appropriateness), (3) payer-specific edits (payer contract rules, covered services, PA required), (4) clinical edits (diagnosis supports procedure)
+- CCI (Correct Coding Initiative): CMS edits that prevent billing certain code combinations together; automated in all clearinghouses; LLM can pre-check CCI edits before claim submission
+- Payer-specific edits: each payer has proprietary edits beyond CCI; UnitedHealth LocalPlus network restrictions, Aetna secondary diagnosis requirements, Medicare Advance Beneficiary Notices (ABN); AI model trained on payer-specific denial history predicts these
+- Clearinghouse integration: Waystar, Availity, Change Healthcare (now Optum) process claims before payer submission; EDI 837P/I format; AI agent integrates with clearinghouse API to pre-validate and receive clearinghouse acknowledgment
+- Denial prediction model: train XGBoost or LSTM on historical claim data (features: payer, CPT, ICD-10, provider, patient demographics, service date) with labels (paid/denied/adjusted); predict denial probability before submission; route high-risk claims for human review
+- Proactive fix workflow: when pre-submission scrub identifies an issue, agent auto-corrects if confidence &gt;95% (adding modifier, correcting diagnosis sequence), escalates to human coder if confidence &lt;95%; tracks fix-to-clean conversion rate
+

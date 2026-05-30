@@ -1,0 +1,25 @@
+---
+title: "Ethical AI & Trust in Humanoid Systems"
+sidebar_label: "8.4 Ethical AI & Trust in Humanoid Systems"
+sidebar_position: 5
+description: "A humanoid robot in a hospital operates in the most trust-sensitive environment imaginable"
+tags: ["ethics", "trust", "HIPAA", "AI-Act"]
+---
+
+# Ethical AI & Trust in Humanoid Systems
+
+**Duration:** 40 min · **Level:** Intermediate · **Module:** 8. Safety & Human-Robot Interaction · **Tags:** `ethics`, `trust`, `HIPAA`, `AI-Act`
+
+## Overview
+
+A humanoid robot in a hospital operates in the most trust-sensitive environment imaginable. Patients are vulnerable, stakes are high, and errors have immediate consequences. This lesson addresses the ethical framework, transparency requirements, and trust-building strategies for G1's deployment.
+
+## Key Insights
+
+- EU AI Act (2024): classifies robots in healthcare as "high-risk AI systems" requiring conformity assessment, human oversight, and explainability of automated decisions
+- HIPAA compliance: any robot that handles patient data (names, conditions, medication info) or PHI must implement HIPAA-compliant data handling; no PHI in model training data
+- Explainability: G1 should communicate its intent before acting — "I am going to hand you this medication" — and confirm understanding before proceeding; reduces startlement
+- Fail-safe design: G1 must default to safe state on any system failure — drop to minimal motion, audible alert, wait for human intervention; never a "frozen at full torque" failure
+- Bias and fairness: manipulation policies trained on limited demographics may perform worse on different body types, skin tones, or clothing; evaluate across diverse populations
+- Public trust: OpenAI and Figure demonstrate tasks publicly before deployment; transparency in capabilities and limitations builds trust faster than secrecy
+
