@@ -82,7 +82,7 @@ const config = {
   ],
 
   stylesheets: [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap',
   ],
 
   themeConfig:
@@ -156,7 +156,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Autosapien Academy. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Autosapien. All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,

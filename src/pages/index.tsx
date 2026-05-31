@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
-type BookCard = {
-  eyebrow: string;
+type BookCover = {
+  vol: string;
+  code: string;
   badge: string;
   title: string;
   subtitle: string;
@@ -16,87 +16,101 @@ type BookCard = {
   lessons: number;
   to: string;
   startLabel: string;
-  color: string;
+  author: string;
 };
 
-const BOOKS: BookCard[] = [
+const BOOKS: BookCover[] = [
   {
-    eyebrow: 'Book 1',
-    badge: 'ROBOTICS',
+    vol: '01',
+    code: 'PAI',
+    badge: 'Robotics',
     title: 'Physical AI & Humanoid Robotics',
     subtitle: 'The Technology Behind Autosapien G1',
     description:
-      'Research-grade curriculum covering the 2024–2026 frontier. From QDD actuators to π0 VLA foundation models — every module informs a design decision in G1.',
+      'Research-grade curriculum covering the 2024–2026 frontier — from QDD actuators to π0 VLA foundation models. Every module informs a design decision in G1.',
     hook:
       'No humanoid has yet demonstrated 8-hour unsupervised household operation. G1 will. This is the curriculum that gets us there.',
     totalHours: '68+',
     modules: 10,
     lessons: 42,
     to: '/physical-ai',
-    startLabel: 'Start with the Humanoid Landscape',
-    color: '#6366f1',
+    startLabel: 'Open the book',
+    author: 'Dilawar Gopang',
   },
   {
-    eyebrow: 'Book 2',
-    badge: 'CERTIFICATION PREP',
+    vol: '02',
+    code: 'CEHRS',
+    badge: 'Certification Prep',
     title: 'CEHRS Certification Prep',
     subtitle: 'NHA Certified Electronic Health Records Specialist',
     description:
-      'Complete preparation for the 130-question NHA CEHRS exam. All 6 domains, real exam content, and a 10-day countdown study plan.',
+      'Complete preparation for the 130-question NHA CEHRS exam. All six domains, real exam content, and a 10-day countdown study plan.',
     hook:
-      '22% of the exam is documentation. 21% is medical terminology. 17% is HIPAA. You need to know exactly which 130 facts appear — this book tells you.',
+      '22% of the exam is documentation, 21% medical terminology, 17% HIPAA. You need the exact 130 facts that appear — this book tells you which.',
     totalHours: '44+',
     modules: 10,
     lessons: 36,
     to: '/cehrs',
-    startLabel: 'Start with the Exam Blueprint',
-    color: '#06b6d4',
+    startLabel: 'Open the book',
+    author: 'Dilawar Gopang',
   },
   {
-    eyebrow: 'Book 3',
-    badge: 'AGENTIC AI',
+    vol: '03',
+    code: 'AHE',
+    badge: 'Agentic AI',
     title: 'AI Healthcare Employees',
     subtitle: 'Building Personal Medical Billers at Scale',
     description:
-      'Build, deploy, and scale AI agents that automate US healthcare administration. RCM, prior auth, medical coding, denial management, and the complete Personal Medical Biller — on the Autosapien stack.',
+      'Build, deploy, and scale AI agents that automate US healthcare administration — RCM, prior auth, coding, denial management — on the Autosapien stack.',
     hook:
-      'US healthcare spends $500B/year on admin paperwork. One engineer with the right agent framework can automate what a team of 20 used to do manually.',
+      'US healthcare spends $500B a year on admin paperwork. One engineer with the right agent framework automates what a team of 20 once did by hand.',
     totalHours: '52+',
     modules: 8,
     lessons: 22,
     to: '/agentic-healthcare',
-    startLabel: 'Start with the $500B Problem',
-    color: '#a855f7',
+    startLabel: 'Open the book',
+    author: 'Dilawar Gopang',
   },
 ];
 
+function Hairline() {
+  return <span className={styles.hairline} aria-hidden="true" />;
+}
+
 function HeroSection() {
   return (
-    <header className={styles.heroBanner}>
+    <header className={styles.hero}>
+      <div className={styles.heroGlow} aria-hidden="true" />
       <div className={styles.container}>
-        <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <h1 className={styles.heroTitle}>
-              Autosapien <br />
-              <span className={styles.gradient}>Academy</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Three research-grade books — Physical AI &amp; Humanoid Robotics,
-              CEHRS Certification Prep, and Agentic Healthcare. Built for
-              engineers, researchers, and healthcare technologists.
-            </p>
-            <div className={styles.buttons}>
-              <Link className={styles.primaryButton} to="/physical-ai">
-                Explore the Books →
-              </Link>
-            </div>
+        <div className={styles.heroEyebrow}>
+          <Hairline />
+          <span className={styles.monoLabel}>Autosapien Academy</span>
+          <Hairline />
+        </div>
+        <h1 className={styles.heroTitle}>
+          Research-grade books for the
+          <br />
+          people building physical&nbsp;intelligence.
+        </h1>
+        <p className={styles.heroSubtitle}>
+          Three self-contained curricula — Physical AI &amp; Humanoid Robotics,
+          CEHRS Certification Prep, and Agentic Healthcare — written for the
+          engineers, researchers, and clinicians shipping real systems.
+        </p>
+        <div className={styles.heroStats}>
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatNum}>3</span>
+            <span className={styles.heroStatLabel}>Books</span>
           </div>
-          <div className={styles.heroImage}>
-            <div className={styles.robotIllustration}>
-              <div className={styles.circuit}></div>
-              <div className={styles.circuit2}></div>
-              <div className={styles.glow}></div>
-            </div>
+          <span className={styles.heroDivider} aria-hidden="true" />
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatNum}>100</span>
+            <span className={styles.heroStatLabel}>Lessons</span>
+          </div>
+          <span className={styles.heroDivider} aria-hidden="true" />
+          <div className={styles.heroStat}>
+            <span className={styles.heroStatNum}>164+</span>
+            <span className={styles.heroStatLabel}>Hours</span>
           </div>
         </div>
       </div>
@@ -104,45 +118,74 @@ function HeroSection() {
   );
 }
 
-function BooksSection() {
+function BookCoverCard({ book }: { book: BookCover }) {
   return (
-    <section className={styles.modulesSection}>
+    <article className={styles.cover}>
+      <span className={styles.coverSpine} aria-hidden="true" />
+      <div className={styles.coverArt}>
+        <span className={styles.coverNo} aria-hidden="true">
+          {book.vol}
+        </span>
+        <div className={styles.coverTopRow}>
+          <span className={styles.coverBadge}>{book.badge}</span>
+          <span className={styles.coverVol}>VOL.&nbsp;{book.vol}</span>
+        </div>
+        <h3 className={styles.coverTitle}>{book.title}</h3>
+        <p className={styles.coverSub}>{book.subtitle}</p>
+        <span className={styles.coverWatermark} aria-hidden="true">
+          {book.code} · AUTOSAPIEN ACADEMY
+        </span>
+      </div>
+
+      <div className={styles.coverBody}>
+        <p className={styles.coverHook}>“{book.hook}”</p>
+        <p className={styles.coverDesc}>{book.description}</p>
+
+        <div className={styles.coverStats}>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>{book.modules}</span>
+            <span className={styles.statLabel}>Modules</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>{book.lessons}</span>
+            <span className={styles.statLabel}>Lessons</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>{book.totalHours}</span>
+            <span className={styles.statLabel}>Hours</span>
+          </div>
+        </div>
+
+        <div className={styles.coverFooter}>
+          <span className={styles.coverAuthor}>By {book.author}</span>
+          <Link className={styles.coverCta} to={book.to}>
+            {book.startLabel}
+            <span className={styles.ctaArrow} aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function LibrarySection() {
+  return (
+    <section className={styles.library}>
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>The Three Books</h2>
-        <p className={styles.sectionSubtitle}>
-          Each book is a complete, self-contained curriculum. Start anywhere.
-        </p>
-        <div className={styles.modulesGrid}>
+        <div className={styles.sectionHead}>
+          <div className={styles.heroEyebrow}>
+            <Hairline />
+            <span className={styles.monoLabel}>The Library</span>
+            <Hairline />
+          </div>
+          <h2 className={styles.sectionTitle}>Three research-grade books</h2>
+          <p className={styles.sectionSubtitle}>
+            Each book is a complete, self-contained curriculum. Start anywhere.
+          </p>
+        </div>
+        <div className={styles.coverGrid}>
           {BOOKS.map((book) => (
-            <div
-              key={book.to}
-              className={styles.moduleCard}
-              style={{ borderColor: book.color }}>
-              <div className={styles.moduleNumber} style={{ color: book.color }}>
-                {book.eyebrow}
-              </div>
-              <h3 className={styles.moduleTitle}>{book.title}</h3>
-              <p className={styles.moduleWeeks}>{book.subtitle}</p>
-              <p
-                style={{
-                  fontStyle: 'italic',
-                  color: 'var(--ifm-color-emphasis-700)',
-                  marginBottom: '0.75rem',
-                }}>
-                “{book.hook}”
-              </p>
-              <p>{book.description}</p>
-              <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>
-                {book.modules} modules · {book.lessons} lessons ·{' '}
-                {book.totalHours} hours
-              </p>
-              <Link
-                className={styles.primaryButton}
-                style={{ marginTop: '0.5rem', display: 'inline-block' }}
-                to={book.to}>
-                {book.startLabel} →
-              </Link>
-            </div>
+            <BookCoverCard key={book.to} book={book} />
           ))}
         </div>
       </div>
@@ -151,13 +194,12 @@ function BooksSection() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title="Home"
       description="Autosapien Academy — three research-grade books on Physical AI & Humanoid Robotics, CEHRS Certification Prep, and Agentic Healthcare.">
       <HeroSection />
-      <BooksSection />
+      <LibrarySection />
     </Layout>
   );
 }
