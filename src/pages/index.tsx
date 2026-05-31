@@ -41,8 +41,8 @@ const BOOKS: BookCover[] = [
     vol: '02',
     code: 'CEHRS',
     badge: 'Certification Prep',
-    title: 'CEHRS Certification Prep',
-    subtitle: 'NHA Certified Electronic Health Records Specialist',
+    title: 'Certified Electronic Health Records Specialist',
+    subtitle: 'NHA CEHRS Certification — Complete Exam Prep',
     description:
       'Complete preparation for the 130-question NHA CEHRS exam. All six domains, real exam content, and a 10-day countdown study plan.',
     hook:

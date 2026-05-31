@@ -1,18 +1,18 @@
 ---
-title: "CEHRS Certification Prep"
+title: "Certified Electronic Health Records Specialist"
 sidebar_label: "Introduction"
 sidebar_position: 0
 slug: /
-description: "Complete preparation for the 130-question NHA CEHRS exam. All 6 domains, real exam content, and a 10-day countdown study plan."
+description: "Complete preparation for the 130-question NHA Certified Electronic Health Records Specialist (CEHRS) exam. All 6 domains, real exam content, and a 10-day countdown study plan."
 ---
 
-# CEHRS Certification Prep
+# Certified Electronic Health Records Specialist
 
-### NHA Certified Electronic Health Records Specialist
+### NHA CEHRS Certification — Complete Exam Prep
 
 > 22% of the exam is documentation. 21% is medical terminology. 17% is HIPAA. You need to know exactly which 130 facts appear — this book tells you.
 
-Complete preparation for the 130-question NHA CEHRS exam. All 6 domains, real exam content, and a 10-day countdown study plan.
+Complete preparation for the 130-question NHA Certified Electronic Health Records Specialist (CEHRS) exam. All 6 domains, real exam content, and a 10-day countdown study plan.
 
 **Modules:** 10 · **Lessons:** 36 · **Total hours:** 44+ · **Author:** Dilawar Gopang
 

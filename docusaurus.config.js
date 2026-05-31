@@ -89,13 +89,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Academy',
+        // The Autosapien logo is the brand mark and links back to the main
+        // site. The "Academy" nav item links to the Academy home — they are
+        // deliberately two separate destinations.
         logo: {
-          alt: 'Autosapien Academy',
+          alt: 'Autosapien — back to autosapien.com',
           src: 'img/logo.png',
           srcDark: 'img/logo-footer.png',
+          href: 'https://autosapien.com',
+          target: '_self',
         },
         items: [
+          {
+            to: '/',
+            label: 'Academy',
+            position: 'left',
+            activeBaseRegex: '^/$',
+          },
           {
             to: '/physical-ai',
             label: 'Physical AI',
@@ -110,6 +120,12 @@ const config = {
             to: '/agentic-healthcare',
             label: 'Agentic Healthcare',
             position: 'left',
+          },
+          {
+            href: 'https://autosapien.com',
+            label: '← autosapien.com',
+            position: 'right',
+            target: '_self',
           },
           {
             href: 'https://github.com/DilawarShafiq/physicalaibook',
