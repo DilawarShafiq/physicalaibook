@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Hybrid records
 :::
 
-## Why this matters
-
-The "legal health record" is not the same as everything in the EHR.
-
 ## Overview
 
 The "legal health record" is not the same as everything in the EHR. Every organization must define what constitutes the legal health record — the set of documentation that would be produced in response to a legal subpoena or court order. This definition matters enormously for release of information, litigation response, and retention policy.
@@ -45,38 +41,38 @@ Legal health record (LHR): the subset of health information maintained by an org
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Legal health record (LHR)?</summary>
+<summary>Legal health record (LHR)</summary>
 
 the subset of health information maintained by an organization that is released in response to legal process; defined by each organization's policy
 
 </details>
 
 <details>
-<summary>Q2. What do you know about LHR typically includes?</summary>
+<summary>LHR typically includes</summary>
 
 clinical notes, orders, lab/imaging results, vital signs flowsheets, medication administration records (MAR), consent forms, operative reports, discharge summaries
 
 </details>
 
 <details>
-<summary>Q3. What do you know about LHR typically excludes?</summary>
+<summary>LHR typically excludes</summary>
 
 audit trails/metadata, draft documents, duplicates, incident reports, peer review/quality records (protected under state law), personal notes not in official record
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Record ownership?</summary>
+<summary>Record ownership</summary>
 
 the physical/electronic record belongs to the healthcare organization; the information belongs to the patient — this distinction is tested on CEHRS
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Hybrid records?</summary>
+<summary>Hybrid records</summary>
 
 combination of paper and electronic documentation; many facilities transitioned to EHR but still have paper components (some consent forms, some specialty records); hybrid records require defined policies for which format is authoritative
 

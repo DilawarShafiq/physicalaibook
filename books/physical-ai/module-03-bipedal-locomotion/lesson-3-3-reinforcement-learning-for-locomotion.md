@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Since 2019, RL-based locomotion policies have surpassed MPC controllers on almost every metric: robustness, terrain adaptation, energy efficiency, and max speed.
-
 ## Overview
 
 Since 2019, RL-based locomotion policies have surpassed MPC controllers on almost every metric: robustness, terrain adaptation, energy efficiency, and max speed. ETH Zurich's ANYmal results, Berkeley's learning-to-walk research, and CMU's humanoid locomotion work define the current state of the art.
@@ -53,38 +49,38 @@ In Isaac Lab (Isaac Sim), set up a basic locomotion RL training loop for a 12-DO
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about ETH Zurich ANYmal (2022)?</summary>
+<summary>ETH Zurich ANYmal (2022)</summary>
 
 RL policy trained entirely in simulation, deployed zero-shot to real robot; traverses rubble, mud, stairs — outperforms MPC on all metrics
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Key insight?</summary>
+<summary>Key insight</summary>
 
 domain randomization during training (randomize mass, friction, terrain) creates policies robust to sim-to-real gap
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Curriculum learning?</summary>
+<summary>Curriculum learning</summary>
 
 start with flat terrain, gradually increase difficulty; avoids policy collapse on hard terrain early in training
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Unitree H1 world record (2024)?</summary>
+<summary>Unitree H1 world record (2024)</summary>
 
 3.3 m/s walking speed achieved with RL policy trained in Isaac Gym; no human-designed gait pattern
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Reward function design?</summary>
+<summary>Reward function design</summary>
 
 forward velocity + alive bonus − energy consumption − joint torque limits; shaping matters enormously for behavior quality
 

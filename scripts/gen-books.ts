@@ -24,8 +24,8 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
-import { allBooks, type Book } from '../../autosapien/src/data/allBooks'
-import type { AcademyModule, Lesson, Paper } from '../../autosapien/src/data/academyData'
+import { allBooks, type Book } from '../../autosap_website/src/data/allBooks'
+import type { AcademyModule, Lesson, Paper } from '../../autosap_website/src/data/academyData'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
@@ -77,10 +77,15 @@ function lessonFileName(lesson: Lesson): string {
  * recall cue. Falls back to a truncated prefix.
  */
 function deriveCue(insight: string): string {
-  const m = insight.match(/^(.{4,72}?)(:\s| — | - | – )/)
-  if (m) return m[1].trim().replace(/[.,;]$/, '')
-  const words = insight.split(/\s+/).slice(0, 9).join(' ')
-  return words.length < insight.length ? words + '…' : words
+  // Prefer the "Topic: detail" / "Topic — detail" left-hand side as a clean label.
+  const m = insight.match(/^(.{4,80}?)(:\s| — | - | – )/)
+  if (m) return m[1].trim().replace(/[.,;:]$/, '')
+  // Otherwise use the first natural clause/sentence — never truncate mid-phrase with an ellipsis.
+  const comma = insight.indexOf(', ')
+  if (comma > 12 && comma <= 80) return insight.slice(0, comma).trim()
+  const period = insight.search(/\.\s/)
+  if (period > 12 && period <= 90) return insight.slice(0, period).trim()
+  return insight.trim()
 }
 
 /** Split an insight into a (cue, detail) pair for flashcards. */
@@ -165,12 +170,6 @@ function renderLesson(
     body.push('')
   }
 
-  // Why this matters — short framing pulled from the overview opener.
-  body.push('## Why this matters')
-  body.push('')
-  body.push(mdxSafe(firstSentence(lesson.overview)))
-  body.push('')
-
   // Overview as the main exposition.
   body.push('## Overview')
   body.push('')
@@ -210,12 +209,14 @@ function renderLesson(
   if (lesson.keyInsights && lesson.keyInsights.length) {
     body.push('## Check your understanding')
     body.push('')
-    body.push('Try to recall each answer before expanding it.')
+    body.push('Cover the answers and try to recall each point before expanding it.')
     body.push('')
     lesson.keyInsights.slice(0, 5).forEach((insight, i) => {
       const { cue, detail } = splitInsight(insight)
+      const prompt =
+        cue && cue.toLowerCase() !== detail.toLowerCase() ? cue : `Key point ${i + 1}`
       body.push('<details>')
-      body.push(`<summary>Q${i + 1}. What do you know about ${mdxSafe(cue)}?</summary>`)
+      body.push(`<summary>${mdxSafe(prompt)}</summary>`)
       body.push('')
       body.push(mdxSafe(detail))
       body.push('')

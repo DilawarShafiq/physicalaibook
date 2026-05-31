@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Right 5
 :::
 
-## Why this matters
-
-HIPAA grants patients six distinct rights regarding their health information.
-
 ## Overview
 
 HIPAA grants patients six distinct rights regarding their health information. CEHRS specialists process requests for these rights daily. Knowing the timeframes, allowable fees, and required responses for each right is essential for the exam and for daily work.
@@ -45,38 +41,38 @@ Right 1 — Access: patients may request a copy of their medical records; covere
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Right 1?</summary>
+<summary>Right 1</summary>
 
 Access: patients may request a copy of their medical records; covered entity must provide within 30 days (one 30-day extension allowed); reasonable cost-based fee permitted; must provide in requested format if readily producible; cannot deny access because balance is owed
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Right 2?</summary>
+<summary>Right 2</summary>
 
 Amendment: patients may request corrections to their records; covered entity may deny if record was not created by the entity, if the information is accurate and complete, or if it is not part of the designated record set; if denied, patient may file a statement of disagreement
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Right 3?</summary>
+<summary>Right 3</summary>
 
 Accounting of Disclosures: patients may request a list of disclosures of their PHI for the past 6 years (not including treatment, payment, or operations disclosures); must be provided within 60 days
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Right 4?</summary>
+<summary>Right 4</summary>
 
 Restrictions: patients may request restrictions on use/disclosure; covered entity does NOT have to agree EXCEPT: must agree to restrict disclosure to health plan when patient pays out-of-pocket in full and disclosure is not required by law
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Right 5?</summary>
+<summary>Right 5</summary>
 
 Confidential Communications: patients may request to receive communications by alternative means (different address, phone number); covered entity must accommodate reasonable requests without requiring explanation
 

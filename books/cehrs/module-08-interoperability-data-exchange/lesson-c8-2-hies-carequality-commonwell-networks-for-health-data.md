@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - State HIEs
 :::
 
-## Why this matters
-
-Health Information Exchanges (HIEs) are organizations that enable the electronic sharing of health information among providers.
-
 ## Overview
 
 Health Information Exchanges (HIEs) are organizations that enable the electronic sharing of health information among providers. From regional HIEs to national networks like Carequality and CommonWell, these networks are the infrastructure behind "connected care." CEHRS specialists often serve as HIE coordinators.
@@ -45,38 +41,38 @@ HIE models: directed exchange (push, like secure email for labs/referrals), quer
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about HIE models?</summary>
+<summary>HIE models</summary>
 
 directed exchange (push, like secure email for labs/referrals), query-based exchange (pull, like looking up records from another hospital), consumer-mediated exchange (patient controls sharing)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Directed exchange?</summary>
+<summary>Directed exchange</summary>
 
 most common in transitions of care; referral to specialist with records attached; discharge summary sent to primary care; uses Direct Protocol (SMTP-based secure email for healthcare)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Carequality?</summary>
+<summary>Carequality</summary>
 
 national interoperability framework connecting thousands of organizations; enables "query-retrieve" across health systems; Epic Care Everywhere, CommonWell, and most state HIEs participate
 
 </details>
 
 <details>
-<summary>Q4. What do you know about CommonWell Health Alliance?</summary>
+<summary>CommonWell Health Alliance</summary>
 
 health IT industry group (founded by Cerner, Allscripts, Athena) building a national network for patient identity matching and record sharing; interoperable with Carequality
 
 </details>
 
 <details>
-<summary>Q5. What do you know about State HIEs?</summary>
+<summary>State HIEs</summary>
 
 each state has at least one HIE (e.g., NY eHealth, Texas Health Services Authority, CalHIE); critical for Medicaid programs and public health reporting
 

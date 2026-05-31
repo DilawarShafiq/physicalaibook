@@ -18,12 +18,8 @@ By the end of this lesson you will be able to explain and apply:
 - Four collaboration modes defined
 - Power and force limiting (mode 4)
 - Speed and separation monitoring (mode 3)
-- CE marking (Europe) and UL certification (North America) for…
+- CE marking (Europe) and UL certification (North America) for collaborative robots: require third-party risk assessment demonstrating compliance with applicable standards
 :::
-
-## Why this matters
-
-ISO 10218 (Parts 1 & 2) covers safety requirements for industrial robots.
 
 ## Overview
 
@@ -45,38 +41,38 @@ ISO/TS 15066 body contact limits: transient contact at the thorax must not excee
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about ISO/TS 15066 body contact limits?</summary>
+<summary>ISO/TS 15066 body contact limits</summary>
 
 transient contact at the thorax must not exceed 65N force and 15 kN/m² pressure; limits vary by body region (head most sensitive)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Four collaboration modes defined?</summary>
+<summary>Four collaboration modes defined</summary>
 
 safety-rated monitored stop, hand guiding, speed/separation monitoring, and power/force limiting — G1 primarily needs mode 4 (P/F limiting)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Power and force limiting (mode 4)?</summary>
+<summary>Power and force limiting (mode 4)</summary>
 
 robot stops or reduces speed if sensed contact force exceeds threshold; requires joint torque sensing or external force sensor
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Speed and separation monitoring (mode 3)?</summary>
+<summary>Speed and separation monitoring (mode 3)</summary>
 
 reduce robot speed as human approaches; stops when human within minimum protective distance calculated from robot stopping time
 
 </details>
 
 <details>
-<summary>Q5. What do you know about CE marking (Europe) and UL certification (North America) for…?</summary>
+<summary>Key point 5</summary>
 
 CE marking (Europe) and UL certification (North America) for collaborative robots: require third-party risk assessment demonstrating compliance with applicable standards
 

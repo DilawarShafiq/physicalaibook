@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - HCC coding (Hierarchical Condition Categories)
 :::
 
-## Why this matters
-
-ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification) is the diagnosis code set used in the US for all healthcare billing since October 2015.
-
 ## Overview
 
 ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification) is the diagnosis code set used in the US for all healthcare billing since October 2015. CEHRS specialists do not need to be expert coders, but must understand code structure, documentation requirements, and how diagnosis codes affect reimbursement.
@@ -45,38 +41,38 @@ ICD-10-CM code structure: 3-7 alphanumeric characters; first character = letter 
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about ICD-10-CM code structure?</summary>
+<summary>ICD-10-CM code structure</summary>
 
 3-7 alphanumeric characters; first character = letter A-Z (except U); characters 2-3 = numbers (category); 4th+ characters = specificity (etiology, site, severity, laterality)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Code first/use additional code notes?</summary>
+<summary>Code first/use additional code notes</summary>
 
 ICD-10-CM has hierarchical rules; certain codes require sequencing in a specific order; underlying condition codes vs manifestation codes
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Principal diagnosis?</summary>
+<summary>Principal diagnosis</summary>
 
 the condition established after study to be chiefly responsible for the admission; determines DRG assignment and reimbursement in inpatient setting
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Coding specificity drives reimbursement?</summary>
+<summary>Coding specificity drives reimbursement</summary>
 
 "diabetes mellitus Type 2 with diabetic chronic kidney disease, stage 3" (E11.22 + N18.3) reimburses significantly higher than "diabetes mellitus" (E11.9) because it reflects higher resource utilization
 
 </details>
 
 <details>
-<summary>Q5. What do you know about HCC coding (Hierarchical Condition Categories)?</summary>
+<summary>HCC coding (Hierarchical Condition Categories)</summary>
 
 risk adjustment model used by Medicare Advantage; conditions like CHF, COPD, diabetes must be documented and coded every year to maintain accurate risk scores — affects per-member-per-month payments
 

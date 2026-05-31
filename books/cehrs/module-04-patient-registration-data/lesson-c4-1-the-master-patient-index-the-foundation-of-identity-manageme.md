@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Duplicate detection
 :::
 
-## Why this matters
-
-The Master Patient Index (MPI) is the database that uniquely identifies every patient who has ever received care at an organization.
-
 ## Overview
 
 The Master Patient Index (MPI) is the database that uniquely identifies every patient who has ever received care at an organization. It is the most critical database in the health system — errors in the MPI can result in wrong-patient medical errors, billing fraud, and HIPAA violations. CEHRS specialists are MPI custodians.
@@ -45,38 +41,38 @@ MPI purpose: assigns a unique Medical Record Number (MRN) to each patient; links
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about MPI purpose?</summary>
+<summary>MPI purpose</summary>
 
 assigns a unique Medical Record Number (MRN) to each patient; links all encounters across the organization to the correct patient identity
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Enterprise MPI (EMPI)?</summary>
+<summary>Enterprise MPI (EMPI)</summary>
 
 extends the MPI across multiple facilities within a health system; critical when patients move between hospitals, clinics, and ambulatory centers within the same network
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Duplicate records?</summary>
+<summary>Duplicate records</summary>
 
 when the same patient is registered as two separate people (different MRNs); risk: clinical data split across two records; providers see incomplete medication lists, allergies, history
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Overlay records?</summary>
+<summary>Overlay records</summary>
 
 when two patients' records are merged incorrectly — most dangerous MPI error; can result in wrong patient receiving wrong treatment; must be reported as a patient safety event
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Duplicate detection?</summary>
+<summary>Duplicate detection</summary>
 
 algorithms compare name, DOB, SSN, address, phone using probabilistic matching; CEHRS staff review potential duplicates flagged by the system
 

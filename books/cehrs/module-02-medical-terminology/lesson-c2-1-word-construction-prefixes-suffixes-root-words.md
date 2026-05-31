@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Medical terminology follows predictable rules.
-
 ## Overview
 
 Medical terminology follows predictable rules. Every term is built from a root word (the body part or condition), a prefix (modifying the beginning), and a suffix (modifying the end). Master the 50 most common word parts and you can decode almost any term you encounter — even ones you have never seen before.
@@ -53,38 +49,38 @@ Decode 20 medical terms using only the word-part rules (no lookup): cholecystect
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Combining vowel rule?</summary>
+<summary>Combining vowel rule</summary>
 
 add "o" between root and suffix when suffix begins with a consonant (cardi/o/logy); no combining vowel when suffix begins with a vowel (cardi/ac)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about High-yield prefixes?</summary>
+<summary>High-yield prefixes</summary>
 
 brady- (slow), tachy- (fast), hypo- (below/under), hyper- (above/over), peri- (around), inter- (between), intra- (within), supra- (above), sub- (below)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about High-yield suffixes?</summary>
+<summary>High-yield suffixes</summary>
 
 -itis (inflammation), -ectomy (surgical removal), -ology (study of), -plasty (surgical repair), -oscopy (visual examination), -otomy (incision into), -ostomy (surgical opening), -algia (pain)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about High-yield roots?</summary>
+<summary>High-yield roots</summary>
 
 cardi (heart), hepat (liver), nephr/ren (kidney), pneum/pulmon (lung), gastr (stomach), derm (skin), neur (nerve), oste (bone), arthr (joint)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Directional terms?</summary>
+<summary>Directional terms</summary>
 
 anterior/posterior (front/back), superior/inferior (above/below), medial/lateral (toward/away from midline), proximal/distal (near/far from point of attachment)
 

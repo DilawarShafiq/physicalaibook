@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Scenario questions
 :::
 
-## Why this matters
-
-The CEHRS exam is 130 questions in 2 hours 40 minutes — that is 74 seconds per question.
-
 ## Overview
 
 The CEHRS exam is 130 questions in 2 hours 40 minutes — that is 74 seconds per question. With strategy, that is more than enough time. Understanding how NHA writes questions — and how to approach the ones you are unsure about — is as important as knowing the content.
@@ -45,38 +41,38 @@ Question types: knowledge (recall definitions/facts), application (apply knowled
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Question types?</summary>
+<summary>Question types</summary>
 
 knowledge (recall definitions/facts), application (apply knowledge to a scenario), analysis (evaluate a situation and choose best action); most CEHRS questions are application-level
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Answer all questions?</summary>
+<summary>Answer all questions</summary>
 
 there is no penalty for guessing on the CEHRS exam; never leave a question blank; if uncertain, eliminate and choose the most defensible answer
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Elimination strategy?</summary>
+<summary>Elimination strategy</summary>
 
 HIPAA questions — eliminate any answer that violates patient rights or shares more than minimum necessary; documentation questions — eliminate any answer that involves deleting or altering documentation without an addendum
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Keywords to watch?</summary>
+<summary>Keywords to watch</summary>
 
 "most appropriate," "first," "best," "should": these words signal the question is asking for the priority action, not just any correct action
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Scenario questions?</summary>
+<summary>Scenario questions</summary>
 
 read the last sentence first to know what is being asked; then read the scenario for relevant facts; avoid reading in assumptions not stated
 

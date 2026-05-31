@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Performance dashboard
 :::
 
-## Why this matters
-
-the Autosapien agentic platform is Autosapien's HIPAA-compliant agentic AI platform — the orchestration layer that turns specialized AI capabilities into deployed Digital FTEs.
-
 ## Overview
 
 the Autosapien agentic platform is Autosapien's HIPAA-compliant agentic AI platform — the orchestration layer that turns specialized AI capabilities into deployed Digital FTEs. This lesson walks through deploying a Personal Medical Biller on the Autosapien agentic platform from configuration to live production.
@@ -45,38 +41,38 @@ the Autosapien agentic platform architecture: orchestrator model (Claude 3.5 Son
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about the Autosapien agentic platform architecture?</summary>
+<summary>the Autosapien agentic platform architecture</summary>
 
 orchestrator model (Claude 3.5 Sonnet) + tool registry (EHR, payer, clearinghouse, communication APIs) + persona system (role, permissions, escalation rules) + memory layer (per-patient claim state) + audit engine (ISO 42001 + HIPAA compliant logging)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about SKILL.md pattern?</summary>
+<summary>SKILL.md pattern</summary>
 
 each Digital FTE skill defined in a structured markdown file: role description, tool permissions, escalation triggers, output format, performance SLAs; same pattern as panaversity's SKILL.md for general Digital FTEs adapted to healthcare context
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Deployment steps?</summary>
+<summary>Deployment steps</summary>
 
 (1) configure practice profile, (2) select skills (eligibility + coding + claims + denials), (3) connect EHR integration, (4) connect payer EDI, (5) set escalation rules and dollar thresholds, (6) run test claim cycle, (7) go live with shadow mode (agent suggests, human approves) → then autonomous mode
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Shadow mode?</summary>
+<summary>Shadow mode</summary>
 
 critical for trust-building; agent runs in parallel with human workflow for 2 weeks, generating recommendations that humans review; compare agent accuracy vs human; when accuracy &gt;95%, graduate to autonomous with human spot-check
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Performance dashboard?</summary>
+<summary>Performance dashboard</summary>
 
 daily metrics per Digital FTE: claims processed, clean claim rate, denials received, appeals filed, revenue recovered, escalations to humans, cost per claim; compare against pre-automation baseline
 

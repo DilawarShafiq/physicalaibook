@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Modifier -25 automation
 :::
 
-## Why this matters
-
-Outpatient and physician practice coding is dominated by E&M (Evaluation and Management) codes.
-
 ## Overview
 
 Outpatient and physician practice coding is dominated by E&M (Evaluation and Management) codes. Since the AMA simplified E&M coding in 2021, AI can now determine the correct E&M level from the note with high accuracy — catching undercoding that leaves revenue on the table and overcoding that creates compliance risk.
@@ -45,38 +41,38 @@ Outpatient and physician practice coding is dominated by E&M (Evaluation and Man
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about 2021 AMA E&M revision?</summary>
+<summary>2021 AMA E&M revision</summary>
 
 office and outpatient E&M levels (99202-99215) now based on medical decision making (MDM) complexity OR total clinician time; simplified from the old history/exam/MDM tripod — AI handles this with high accuracy
 
 </details>
 
 <details>
-<summary>Q2. What do you know about MDM complexity levels?</summary>
+<summary>MDM complexity levels</summary>
 
 straightforward (one self-limited problem + minimal data + minimal risk), low (two self-limited or one stable chronic condition + limited data), moderate (one or more chronic conditions with exacerbation + moderate data + prescription drug management), high
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Common undercoding?</summary>
+<summary>Common undercoding</summary>
 
 physicians default to code 99213 for all established patients regardless of complexity; AI analysis of MDM elements shows many should be billed at 99214 or 99215; revenue recovery opportunity
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Procedure code extraction?</summary>
+<summary>Procedure code extraction</summary>
 
 for surgical specialties, AI extracts performed procedures from operative notes and suggests CPT codes + appropriate modifiers (-LT/-RT, -59, -51 multiple procedures, -22 increased complexity)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Modifier -25 automation?</summary>
+<summary>Modifier -25 automation</summary>
 
 when a procedure and an E&M are billed on the same day, modifier -25 is required on the E&M to indicate it was a significant separate service; AI detects this pattern and auto-applies the modifier
 

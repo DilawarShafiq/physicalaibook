@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Terminated employee access
 :::
 
-## Why this matters
-
-Every EHR user should have access to exactly the PHI they need to do their job — nothing more.
-
 ## Overview
 
 Every EHR user should have access to exactly the PHI they need to do their job — nothing more. Role-Based Access Control (RBAC) implements this principle technically. CEHRS specialists help design access roles, process access requests, and investigate inappropriate access incidents.
@@ -45,38 +41,38 @@ RBAC principle: assign access permissions to roles (ED nurse, billing specialist
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about RBAC principle?</summary>
+<summary>RBAC principle</summary>
 
 assign access permissions to roles (ED nurse, billing specialist, physician, HIM coder) not individuals; assign users to roles; access is inherited from the role
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Minimum necessary access?</summary>
+<summary>Minimum necessary access</summary>
 
 each role should have only the access required for job function; a billing specialist needs demographic and insurance data but not full clinical notes; a hospitalist does not need to see records of patients not on their panel
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Break-the-glass access?</summary>
+<summary>Break-the-glass access</summary>
 
 emergency override allowing a provider to access a patient record they don't normally have access to; always logged and always reviewed; typically requires attestation of emergency reason
 
 </details>
 
 <details>
-<summary>Q4. What do you know about VIP/celebrity records?</summary>
+<summary>VIP/celebrity records</summary>
 
 high-profile patients require additional access restriction; most EHR systems have a "sensitive patient" flag that restricts access to a specific approved list and generates audit alerts on every access
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Terminated employee access?</summary>
+<summary>Terminated employee access</summary>
 
 access must be revoked on or before the last day of employment; HR → IT workflow must be documented in policy; terminated employee who retained access = HIPAA risk
 

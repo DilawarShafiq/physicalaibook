@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Fall detection and protective response
 :::
 
-## Why this matters
-
-Real-world environments are unforgiving: wet floors, loose rugs, uneven tile, staircases, and unexpected perturbations from humans.
-
 ## Overview
 
 Real-world environments are unforgiving: wet floors, loose rugs, uneven tile, staircases, and unexpected perturbations from humans. A robot that works in a hospital must handle all of these without falling. This lesson covers terrain perception, adaptive footstep planning, and recovery controllers.
@@ -45,38 +41,38 @@ Terrain estimation: fuse depth camera + IMU + proprioceptive foot contact to bui
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Terrain estimation?</summary>
+<summary>Terrain estimation</summary>
 
 fuse depth camera + IMU + proprioceptive foot contact to build real-time local elevation map at 100Hz update rate
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Footstep planning?</summary>
+<summary>Footstep planning</summary>
 
 project safe landing zones from elevation map; use A* or MPC to plan footstep sequence that avoids obstacles and respects terrain slope limits
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Push recovery strategies?</summary>
+<summary>Push recovery strategies</summary>
 
 ankle strategy (small perturbation → ankle torque), hip strategy (larger → hip flexion), step strategy (large → take a step to new support polygon)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about MIT Terrain-Adaptive Atlas (2023)?</summary>
+<summary>MIT Terrain-Adaptive Atlas (2023)</summary>
 
 trained RL policy on diverse terrain in simulation; zero-shot deployment across grass, gravel, stairs, and slippery surfaces
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Fall detection and protective response?</summary>
+<summary>Fall detection and protective response</summary>
 
 detect impending fall at &gt;500ms before impact; robot enters protective posture — protect head, distribute impact across large body areas
 

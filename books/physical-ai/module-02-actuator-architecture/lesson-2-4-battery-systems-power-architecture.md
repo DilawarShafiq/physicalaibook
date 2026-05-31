@@ -16,14 +16,10 @@ By the end of this lesson you will be able to explain and apply:
 
 - Power budget estimate
 - Lithium-ion 21700 cells
-- Tesla Optimus uses lithium iron phosphate (LFP) cells for…
+- Tesla Optimus uses lithium iron phosphate (LFP) cells for safety; slightly lower energy density but safer in impact scenarios
 - Power delivery
 - Regenerative braking
 :::
-
-## Why this matters
-
-G1 targets 8+ hours of operation — this is the spec that enables a full hospital shift or home-care day without charging.
 
 ## Overview
 
@@ -45,38 +41,38 @@ Power budget estimate: 40-joint humanoid at moderate activity draws 800W-1.5kW a
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Power budget estimate?</summary>
+<summary>Power budget estimate</summary>
 
 40-joint humanoid at moderate activity draws 800W-1.5kW average; 8 hours → 6.4-12 kWh capacity needed
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Lithium-ion 21700 cells?</summary>
+<summary>Lithium-ion 21700 cells</summary>
 
 ~270 Wh/kg energy density; 12 kWh pack weighs ~44kg — too heavy; target 6 kWh with duty-cycle optimization
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Tesla Optimus uses lithium iron phosphate (LFP) cells for…?</summary>
+<summary>Key point 3</summary>
 
 Tesla Optimus uses lithium iron phosphate (LFP) cells for safety; slightly lower energy density but safer in impact scenarios
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Power delivery?</summary>
+<summary>Power delivery</summary>
 
 48V bus architecture standard for humanoids; reduces cable weight and I²R losses vs 24V; modern GaN inverters achieve 98%+ efficiency
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Regenerative braking?</summary>
+<summary>Regenerative braking</summary>
 
 knee flexion and ankle dorsiflexion during stair descent can recover 15-25% of locomotion energy
 

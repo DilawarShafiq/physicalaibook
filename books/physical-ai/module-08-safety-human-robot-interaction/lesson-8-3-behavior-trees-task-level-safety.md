@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - SMACH and FlexBE
 :::
 
-## Why this matters
-
-Safety is not just a hardware concern — robot behavior must be safe at the task planning level.
-
 ## Overview
 
 Safety is not just a hardware concern — robot behavior must be safe at the task planning level. Behavior Trees (BTs) provide a modular, verifiable framework for robot task execution with explicit failure handling and safety checks at every node.
@@ -45,38 +41,38 @@ Behavior Trees: directed acyclic graph of control nodes (Sequence, Fallback, Par
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Behavior Trees?</summary>
+<summary>Behavior Trees</summary>
 
 directed acyclic graph of control nodes (Sequence, Fallback, Parallel) and leaf nodes (Actions, Conditions); composable and verifiable
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Safety conditions as BT nodes?</summary>
+<summary>Safety conditions as BT nodes</summary>
 
 "CheckHumanInWorkspace" as a condition node that returns Failure if human too close; inserted as precondition for all motion sequences
 
 </details>
 
 <details>
-<summary>Q3. What do you know about BTlib and BehaviorTree.CPP?</summary>
+<summary>BTlib and BehaviorTree.CPP</summary>
 
 popular open-source BT implementations with ROS 2 integration; Nav2 (navigation) uses BTs for all decision-making
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Formal verification?</summary>
+<summary>Formal verification</summary>
 
 BTs can be model-checked against safety properties using formal methods; verify "robot never exceeds 65N contact force" across all possible execution paths
 
 </details>
 
 <details>
-<summary>Q5. What do you know about SMACH and FlexBE?</summary>
+<summary>SMACH and FlexBE</summary>
 
 alternative state machine frameworks; less modular than BTs but widely used; BTs preferred for safety-critical applications due to clear failure propagation
 

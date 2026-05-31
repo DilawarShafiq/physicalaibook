@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Agent customization per tenant
 :::
 
-## Why this matters
-
-A multi-tenant SaaS serving multiple healthcare practices must provide complete data isolation between tenants while sharing infrastructure efficiently.
-
 ## Overview
 
 A multi-tenant SaaS serving multiple healthcare practices must provide complete data isolation between tenants while sharing infrastructure efficiently. HIPAA requires that data for Practice A can never be accessible to Practice B. The architectural pattern that achieves both is schema-per-tenant or database-per-tenant with shared application layer.
@@ -45,38 +41,38 @@ Tenant isolation models: shared database (lowest cost, highest breach risk), sch
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Tenant isolation models?</summary>
+<summary>Tenant isolation models</summary>
 
 shared database (lowest cost, highest breach risk), schema-per-tenant (moderate isolation, moderate cost), database-per-tenant (highest isolation, higher cost); for HIPAA-sensitive healthcare data, database-per-tenant or at minimum schema-per-tenant required
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Tenant data models?</summary>
+<summary>Tenant data models</summary>
 
 each tenant (practice) has: practice profile (NPI, Tax ID, payer contracts), patient roster (MRN mapping), EHR integration credentials, payer portal credentials, agent configuration, billing/subscription data
 
 </details>
 
 <details>
-<summary>Q3. What do you know about EHR integration patterns?</summary>
+<summary>EHR integration patterns</summary>
 
 each tenant practice uses a different EHR (Epic, Cerner, Athena, eCW, etc.); integration layer must support multiple EHR connectors; FHIR R4 APIs enable standardized connection to certified EHRs; custom connectors needed for legacy systems
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Payer credential management?</summary>
+<summary>Payer credential management</summary>
 
 each practice has different payer contracts and portal credentials; credentials stored encrypted in per-tenant vault (HashiCorp Vault or AWS Secrets Manager per tenant); never stored in shared database
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Agent customization per tenant?</summary>
+<summary>Agent customization per tenant</summary>
 
 specialty-specific coding rules (cardiology vs primary care vs orthopedics), payer mix (Medicare-heavy vs commercial-heavy), claim dollar thresholds, communication preferences; stored as per-tenant agent configuration
 

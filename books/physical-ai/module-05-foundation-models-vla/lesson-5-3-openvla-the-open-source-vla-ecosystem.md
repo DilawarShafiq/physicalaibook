@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - OpenVLA-OFT (2025 follow-up)
 :::
 
-## Why this matters
-
-OpenVLA (June 2024, Stanford + Berkeley) is the first fully open-source VLA that matches RT-2-X performance on standard benchmarks.
-
 ## Overview
 
 OpenVLA (June 2024, Stanford + Berkeley) is the first fully open-source VLA that matches RT-2-X performance on standard benchmarks. Its release democratized VLA research: any lab can fine-tune a state-of-the-art general-purpose robot policy on their own hardware.
@@ -45,38 +41,38 @@ OpenVLA architecture: 7.5B parameters based on Prismatic VLM (SigLIP vision enco
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about OpenVLA architecture?</summary>
+<summary>OpenVLA architecture</summary>
 
 7.5B parameters based on Prismatic VLM (SigLIP vision encoder + Llama 2 language model); actions tokenized as discrete language tokens
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Performance?</summary>
+<summary>Performance</summary>
 
 matches RT-2-X on BridgeV2 benchmark, outperforms on several manipulation tasks; runs at 6 Hz on single A100 GPU, 1.5 Hz on NVIDIA Orin AGX
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Fine-tuning?</summary>
+<summary>Fine-tuning</summary>
 
 LoRA fine-tuning on 200-500 demonstrations converges in 2-4 hours on single GPU; makes task-specific adaptation practical for small labs
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Action tokenization?</summary>
+<summary>Action tokenization</summary>
 
 continuous actions discretized to 256 bins per dimension, encoded as language tokens; allows use of LLM training infrastructure directly
 
 </details>
 
 <details>
-<summary>Q5. What do you know about OpenVLA-OFT (2025 follow-up)?</summary>
+<summary>OpenVLA-OFT (2025 follow-up)</summary>
 
 parallel decoding + action chunking reduces latency to 25+ Hz; enables contact-rich, high-frequency manipulation
 

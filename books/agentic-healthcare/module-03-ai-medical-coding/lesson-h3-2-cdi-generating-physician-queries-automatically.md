@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Query response tracking
 :::
 
-## Why this matters
-
-Clinical Documentation Improvement (CDI) is the practice of querying physicians to clarify documentation that is vague, conflicting, or insufficient for accurate coding.
-
 ## Overview
 
 Clinical Documentation Improvement (CDI) is the practice of querying physicians to clarify documentation that is vague, conflicting, or insufficient for accurate coding. Traditionally CDI specialists manually review records; AI can generate query opportunities automatically from discharge documentation and route them in real-time during the hospitalization.
@@ -45,38 +41,38 @@ CDI query triggers: conflicting documentation (body of note says "sepsis" but di
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about CDI query triggers?</summary>
+<summary>CDI query triggers</summary>
 
 conflicting documentation (body of note says "sepsis" but diagnosis list says "infection"), clinical indicators without diagnosis (high WBC + antibiotics + fever but no sepsis diagnosis), vague diagnoses ("respiratory failure" vs "acute hypoxic respiratory failure")
 
 </details>
 
 <details>
-<summary>Q2. What do you know about AHIMA/ACDIS query practice guidelines?</summary>
+<summary>AHIMA/ACDIS query practice guidelines</summary>
 
 queries must be unbiased (present options without leading); must be based on clinical documentation not assumption; compliant queries ask for clarification, not new information
 
 </details>
 
 <details>
-<summary>Q3. What do you know about AI query generation?</summary>
+<summary>AI query generation</summary>
 
 LLM reads the complete record, identifies clinical indicators (lab values, vitals, medications, imaging) that suggest diagnoses not explicitly documented, generates a compliant query text presenting the clinical evidence and asking the physician to clarify
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Integration point?</summary>
+<summary>Integration point</summary>
 
 real-time CDI query generated when attending physician opens the patient's note for a new progress note entry → query displayed as EHR Best Practice Advisory → physician responds in EHR → coding agent receives response immediately
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Query response tracking?</summary>
+<summary>Query response tracking</summary>
 
 track query response rate (target &gt;85%), query agree rate (% physician agrees with suggested documentation), revenue impact per query ($X DRG improvement); this data feeds the AI model improvement loop
 

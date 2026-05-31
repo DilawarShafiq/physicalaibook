@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Centroidal MPC
 :::
 
-## Why this matters
-
-Model Predictive Control (MPC) replaced ZMP as the dominant approach for dynamic locomotion.
-
 ## Overview
 
 Model Predictive Control (MPC) replaced ZMP as the dominant approach for dynamic locomotion. MPC plans a finite horizon of future states, solves an optimization at every control step, and handles contact transitions explicitly. It enables running, stair climbing, and perturbation recovery that ZMP controllers cannot achieve.
@@ -45,38 +41,38 @@ MPC formulation: minimize cost over horizon N while satisfying dynamics constrai
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about MPC formulation?</summary>
+<summary>MPC formulation</summary>
 
 minimize cost over horizon N while satisfying dynamics constraints, friction cone constraints, and joint limits; solve at 100-1000 Hz
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Contact-implicit MPC?</summary>
+<summary>Contact-implicit MPC</summary>
 
 treats contact schedule (which foot contacts the ground when) as an optimization variable — can automatically discover new gaits
 
 </details>
 
 <details>
-<summary>Q3. What do you know about MIT Cheetah 3 (2018)?</summary>
+<summary>MIT Cheetah 3 (2018)</summary>
 
 used convex MPC at 500 Hz to achieve stable 3D running at 6 m/s with real-time re-planning on rough terrain
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Humanoid MPC?</summary>
+<summary>Humanoid MPC</summary>
 
 more complex than quadruped — 40+ joints, whole-body inertial properties, upper-body dynamics couple to leg control
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Centroidal MPC?</summary>
+<summary>Centroidal MPC</summary>
 
 reduce humanoid to centroidal dynamics (6 DOF center of mass) for planning; send outputs to whole-body QP controller for full joint commands
 

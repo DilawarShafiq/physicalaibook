@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-The final 37% of the exam.
-
 ## Overview
 
 The final 37% of the exam. HIPAA questions are the most nuanced — small differences in scenario details change the correct answer completely. Revenue cycle and IT questions reward candidates who know the exact numbers and procedures, not just general concepts.
@@ -53,38 +49,38 @@ Complete a final 30-question practice drill covering Domains 4-6. Then review th
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about HIPAA Privacy must-knows?</summary>
+<summary>HIPAA Privacy must-knows</summary>
 
 18 PHI identifiers (especially dates, geographic, device/vehicle IDs); 6 patient rights with exact timelines (30-day access, 60-day accounting); minimum necessary applies to all disclosures except treatment among providers; authorization required for psychotherapy notes always
 
 </details>
 
 <details>
-<summary>Q2. What do you know about HIPAA Security must-knows?</summary>
+<summary>HIPAA Security must-knows</summary>
 
 risk analysis is REQUIRED (not addressable); encryption makes a lost device a non-breach; breach notification: 60 days from discovery for all sizes; ≥500 = also notify media and HHS immediately; &lt;500 = annual HHS report by March 1
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Revenue cycle must-knows?</summary>
+<summary>Revenue cycle must-knows</summary>
 
 clean claim rate target &gt;95%; days in A/R target &lt;50; front-end (registration) denials are cheaper to prevent than back-end; prior authorization required before service; real-time eligibility = 270/271 transaction
 
 </details>
 
 <details>
-<summary>Q4. What do you know about ICD-10 must-knows?</summary>
+<summary>ICD-10 must-knows</summary>
 
 first character is always a letter (A-Z); 3-7 characters; decimal after 3rd character; principal diagnosis = reason for admission after study; specificity affects reimbursement
 
 </details>
 
 <details>
-<summary>Q5. What do you know about CPT must-knows?</summary>
+<summary>CPT must-knows</summary>
 
 modifier -25 for E&M same day as procedure; modifier -59 for distinct procedural service; E&M levels based on MDM complexity or time (post-2021); HCPCS Level II for supplies and drugs
 

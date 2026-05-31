@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Domains 1-3 account for 63% of the CEHRS exam.
-
 ## Overview
 
 Domains 1-3 account for 63% of the CEHRS exam. This review session hits the highest-yield facts in each domain — the specific numbers, names, and rules that appear on the exam most frequently.
@@ -53,38 +49,38 @@ Complete a 30-question practice drill covering only Domains 1-3 content. Time yo
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Documentation domain must-knows?</summary>
+<summary>Documentation domain must-knows</summary>
 
 H&P within 24 hours of admission; operative report dictated immediately; discharge summary within 30 days; delinquent records at 30 days; Joint Commission delinquency rate &lt;50%
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Amendments vs alterations?</summary>
+<summary>Amendments vs alterations</summary>
 
 never delete or overwrite clinical documentation; all corrections via addendum with original visible; late entries must be labeled as "late entry" with current date/time and reason
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Authentication?</summary>
+<summary>Authentication</summary>
 
 every entry must be authenticated (signed) by the author; co-signature requirements depend on state law and facility policy; electronic signatures are legally equivalent to handwritten signatures when compliant with e-signature laws
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Terminology domain must-knows?</summary>
+<summary>Terminology domain must-knows</summary>
 
 know the 50 most common prefixes/suffixes/roots; memorize the Joint Commission Do Not Use list; laterality must be documented for ICD-10 coding
 
 </details>
 
 <details>
-<summary>Q5. What do you know about HIM domain must-knows?</summary>
+<summary>HIM domain must-knows</summary>
 
 MPI duplicate rate target &lt;2%; overlay = two patients merged incorrectly = patient safety event; break-the-glass access always logged and always reviewed; record retention: follow the longer of federal vs state requirement
 

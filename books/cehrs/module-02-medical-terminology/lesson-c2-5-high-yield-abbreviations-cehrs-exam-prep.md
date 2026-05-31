@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-The CEHRS exam tests abbreviation recognition in documentation context.
-
 ## Overview
 
 The CEHRS exam tests abbreviation recognition in documentation context. The Joint Commission's "Do Not Use" list is also tested — certain abbreviations are banned from clinical documentation because they cause medication errors. Know both what abbreviations mean AND which ones you must never use.
@@ -53,38 +49,38 @@ Complete a 50-question abbreviation drill: given the abbreviation, write the mea
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Joint Commission "Do Not Use" abbreviations (memorize these)?</summary>
+<summary>Joint Commission "Do Not Use" abbreviations (memorize these)</summary>
 
 U (for units — can be mistaken for 0), IU (for international units — can be mistaken for IV), Q.D./Q.O.D. (write daily/every other day), trailing zeros (1.0 mg — write 1 mg), naked decimal (.5 mg — write 0.5 mg)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about High-yield medication abbreviations?</summary>
+<summary>High-yield medication abbreviations</summary>
 
 PO (by mouth), IV (intravenous), IM (intramuscular), SubQ/SQ (subcutaneous), PRN (as needed), QID (four times daily), BID (twice daily), TID (three times daily), NPO (nothing by mouth)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Vital signs abbreviations?</summary>
+<summary>Vital signs abbreviations</summary>
 
 T (temperature), P (pulse), R (respiration rate), BP (blood pressure), SpO2 (peripheral oxygen saturation), BMI (body mass index), Ht (height), Wt (weight)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Chart status abbreviations?</summary>
+<summary>Chart status abbreviations</summary>
 
 ADM (admission), D/C (discharge — also do not confuse with discontinue), Dx (diagnosis), Sx (symptoms), Tx (treatment), Hx (history), PMH (past medical history)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Care team abbreviations?</summary>
+<summary>Care team abbreviations</summary>
 
 MD (medical doctor), DO (doctor of osteopathic medicine), NP (nurse practitioner), PA (physician assistant), RN (registered nurse), LPN (licensed practical nurse), RT (respiratory therapist), PT (physical therapist)
 

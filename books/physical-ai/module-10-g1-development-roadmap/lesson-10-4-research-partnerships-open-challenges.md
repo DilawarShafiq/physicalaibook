@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Open challenges by 2030
 :::
 
-## Why this matters
-
-The humanoid robotics field is moving fastest through open collaboration.
-
 ## Overview
 
 The humanoid robotics field is moving fastest through open collaboration. The labs and companies doing the most relevant work for G1 represent both potential partners and the knowledge base that will inform G1's development.
@@ -45,38 +41,38 @@ CMU Robotics Institute: whole-body control, dexterous manipulation, ALOHA bimanu
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about CMU Robotics Institute?</summary>
+<summary>CMU Robotics Institute</summary>
 
 whole-body control, dexterous manipulation, ALOHA bimanual systems — most directly applicable to G1 manipulation stack
 
 </details>
 
 <details>
-<summary>Q2. What do you know about MIT CSAIL & Biomimetic Robotics Lab?</summary>
+<summary>MIT CSAIL & Biomimetic Robotics Lab</summary>
 
 locomotion, actuator design, contact-rich manipulation — source of QDD actuation concept; strong collaboration history with startups
 
 </details>
 
 <details>
-<summary>Q3. What do you know about ETH Zurich RSL (Robotic Systems Lab)?</summary>
+<summary>ETH Zurich RSL (Robotic Systems Lab)</summary>
 
 locomotion RL, ANYmal platform, sim-to-real — wrote most of the foundational papers G1's locomotion stack will rely on
 
 </details>
 
 <details>
-<summary>Q4. What do you know about UC Berkeley RAIL?</summary>
+<summary>UC Berkeley RAIL</summary>
 
 Diffusion Policy, ALOHA, RT-2 collaborations — leading open-source VLA ecosystem; accessible through open-source code and Berkeley researchers joining companies
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Open challenges by 2030?</summary>
+<summary>Open challenges by 2030</summary>
 
 (1) long-horizon task planning (&gt;50 step tasks), (2) robust outdoor locomotion in rain/wind/uneven terrain, (3) full 8-hour battery life with active manipulation
 

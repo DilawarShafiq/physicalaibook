@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - EHR read access provisioning
 :::
 
-## Why this matters
-
-Manual onboarding of each new practice — collecting credentials, configuring payer integrations, testing claim submission — is the growth bottleneck for healthcare AI SaaS companies.
-
 ## Overview
 
 Manual onboarding of each new practice — collecting credentials, configuring payer integrations, testing claim submission — is the growth bottleneck for healthcare AI SaaS companies. Automating onboarding to &lt;24 hours is the difference between 100 customers and 10,000 customers.
@@ -45,38 +41,38 @@ Onboarding data requirements: practice NPI, Tax ID, address, provider NPIs, EHR 
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Onboarding data requirements?</summary>
+<summary>Onboarding data requirements</summary>
 
 practice NPI, Tax ID, address, provider NPIs, EHR system + credentials, payer enrollment (EDI enrollment with each payer, ERA enrollment), portal credentials, specialty, typical claim types
 
 </details>
 
 <details>
-<summary>Q2. What do you know about EDI enrollment automation?</summary>
+<summary>EDI enrollment automation</summary>
 
 submitting enrollment forms to each payer to activate EDI claim submission and ERA receipt; most large payers have online enrollment (Availity Payer Enrollment); process takes 2-14 days; cannot be fully automated but can be tracked and managed
 
 </details>
 
 <details>
-<summary>Q3. What do you know about CAQH ProView?</summary>
+<summary>CAQH ProView</summary>
 
 the healthcare industry's universal provider credentialing database; integrates with most payer credentialing processes; automating CAQH profile maintenance reduces re-credentialing burden
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Claim submission testing?</summary>
+<summary>Claim submission testing</summary>
 
 before going live with a new practice, run 5-10 test claims through each active payer channel; verify 277 acknowledgments; verify ERA comes back correctly; validate dollar amounts before production
 
 </details>
 
 <details>
-<summary>Q5. What do you know about EHR read access provisioning?</summary>
+<summary>EHR read access provisioning</summary>
 
 API keys for EHR read access require practice administrator approval; automated workflow: send approval request → admin approves in EHR → API keys generated → agent configuration updated automatically
 

@@ -18,12 +18,8 @@ By the end of this lesson you will be able to explain and apply:
 - Hyundai partnership
 - Agility Digit
 - RoboFab (Salem, OR)
-- Digit uses a bespoke MPC-based locomotion stack with learned…
+- Digit uses a bespoke MPC-based locomotion stack with learned policies for manipulation; legs fold for confined spaces
 :::
-
-## Why this matters
-
-Boston Dynamics retired its hydraulic Atlas in April 2024 and introduced a fully electric successor — quieter, stronger, and more suitable for commercial deployment.
 
 ## Overview
 
@@ -45,38 +41,38 @@ Electric Atlas (April 2024): no published specs yet, but BD claims it is stronge
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Electric Atlas (April 2024)?</summary>
+<summary>Electric Atlas (April 2024)</summary>
 
 no published specs yet, but BD claims it is stronger and has greater range of motion than hydraulic Atlas
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Hyundai partnership?</summary>
+<summary>Hyundai partnership</summary>
 
 Atlas targeted at Hyundai/Kia automotive manufacturing lines — spot welding, parts handling, quality inspection
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Agility Digit?</summary>
+<summary>Agility Digit</summary>
 
 1.75m, 65kg, designed for logistics; deployed at Amazon fulfillment centers doing tote handling since 2023
 
 </details>
 
 <details>
-<summary>Q4. What do you know about RoboFab (Salem, OR)?</summary>
+<summary>RoboFab (Salem, OR)</summary>
 
 capacity for 10,000 Digit units/year — first humanoid-scale mass production facility in North America
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Digit uses a bespoke MPC-based locomotion stack with learned…?</summary>
+<summary>Key point 5</summary>
 
 Digit uses a bespoke MPC-based locomotion stack with learned policies for manipulation; legs fold for confined spaces
 

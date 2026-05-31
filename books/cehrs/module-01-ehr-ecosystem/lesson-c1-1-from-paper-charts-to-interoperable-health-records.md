@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - USCDI (United States Core Data for Interoperability)
 :::
 
-## Why this matters
-
-The United States spent decades drowning in paper medical records — lost charts, illegible handwriting, duplicate tests, and fax machines as the backbone of clinical communication.
-
 ## Overview
 
 The United States spent decades drowning in paper medical records — lost charts, illegible handwriting, duplicate tests, and fax machines as the backbone of clinical communication. The HITECH Act of 2009 changed everything by tying Medicare and Medicaid reimbursements to EHR adoption, triggering the fastest technology rollout in healthcare history.
@@ -45,38 +41,38 @@ HITECH Act (2009): authorized $27 billion in incentive payments through the Mean
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about HITECH Act (2009)?</summary>
+<summary>HITECH Act (2009)</summary>
 
 authorized $27 billion in incentive payments through the Meaningful Use program; drove EHR adoption from 9% (2008) to 96% of hospitals by 2021
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Meaningful Use → Advancing Care Information → Promoting Interoperability?</summary>
+<summary>Meaningful Use → Advancing Care Information → Promoting Interoperability</summary>
 
 the program renamed twice; current focus is on health information exchange and patient access via APIs
 
 </details>
 
 <details>
-<summary>Q3. What do you know about ONC (Office of the National Coordinator for Health IT)?</summary>
+<summary>ONC (Office of the National Coordinator for Health IT)</summary>
 
 federal agency that certifies EHR technology and sets interoperability standards; part of HHS
 
 </details>
 
 <details>
-<summary>Q4. What do you know about 21st Century Cures Act (2016)?</summary>
+<summary>21st Century Cures Act (2016)</summary>
 
 banned information blocking; required vendors to support FHIR R4 APIs by April 2021 so patients can access their own data
 
 </details>
 
 <details>
-<summary>Q5. What do you know about USCDI (United States Core Data for Interoperability)?</summary>
+<summary>USCDI (United States Core Data for Interoperability)</summary>
 
 the minimum dataset every certified EHR must support; includes patient demographics, vital signs, lab results, medications, allergies, clinical notes
 

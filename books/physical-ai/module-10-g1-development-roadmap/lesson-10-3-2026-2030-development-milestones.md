@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - 2028 Q2
 :::
 
-## Why this matters
-
-A concrete milestone-based roadmap with measurable acceptance criteria, from current prototype state to commercial launch.
-
 ## Overview
 
 A concrete milestone-based roadmap with measurable acceptance criteria, from current prototype state to commercial launch. Each milestone includes a "done when" definition and a key dependency.
@@ -45,38 +41,38 @@ A concrete milestone-based roadmap with measurable acceptance criteria, from cur
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about 2026 Q2?</summary>
+<summary>2026 Q2</summary>
 
 Locomotion V1: G1 walks 500m continuously on varied indoor terrain (carpet, tile, linoleum) without fall; stair-climbing (standard 7" riser) at 0.3 m/s; pass ISO/TS 15066 contact tests
 
 </details>
 
 <details>
-<summary>Q2. What do you know about 2026 Q4?</summary>
+<summary>2026 Q4</summary>
 
 Manipulation V1: complete 5 benchmark manipulation tasks at &gt;80% success rate: pick-and-place, open/close door, pour liquid, hand object to human, carry tray while walking
 
 </details>
 
 <details>
-<summary>Q3. What do you know about 2027 Q2?</summary>
+<summary>2027 Q2</summary>
 
 Integration Alpha: combined loco-manipulation for 30-minute autonomy in simulated hospital room; maintain ISO 10218-2 compliance throughout; battery life &gt;4 hours at low-activity profile
 
 </details>
 
 <details>
-<summary>Q4. What do you know about 2027 Q4?</summary>
+<summary>2027 Q4</summary>
 
 Beta Partner Deployment: 3 units deployed at 1-2 pilot hospital partners for monitored daily use; collect 1000+ hours real-world data; track failure modes and resolution time
 
 </details>
 
 <details>
-<summary>Q5. What do you know about 2028 Q2?</summary>
+<summary>2028 Q2</summary>
 
 VLA V2: fine-tuned foundation model trained on real-world G1 data; demonstrates generalization to new tasks within 30-minute teleoperation demo; 90% success on benchmark suite
 

@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Bimanual grasps
 :::
 
-## Why this matters
-
-Grasp planning — deciding how to position the hand and which fingers contact an object to achieve a stable, task-appropriate grip — has been transformed by large-scale learning.
-
 ## Overview
 
 Grasp planning — deciding how to position the hand and which fingers contact an object to achieve a stable, task-appropriate grip — has been transformed by large-scale learning. Modern approaches use category-agnostic grasp prediction networks combined with open-vocabulary detection to grasp novel objects without task-specific training.
@@ -45,38 +41,38 @@ GraspNet (2020): trained on 97,280 RGB-D images with 1.2B grasp annotations; pre
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about GraspNet (2020)?</summary>
+<summary>GraspNet (2020)</summary>
 
 trained on 97,280 RGB-D images with 1.2B grasp annotations; predicts grasp poses for novel objects in cluttered scenes; works zero-shot on new object categories
 
 </details>
 
 <details>
-<summary>Q2. What do you know about AnyGrasp (2022)?</summary>
+<summary>AnyGrasp (2022)</summary>
 
 extends GraspNet with language-conditioned grasp selection; "grasp the top of the bottle" vs "grasp the handle" produce different hand configurations
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Force closure grasps?</summary>
+<summary>Force closure grasps</summary>
 
 analytical criterion — does the set of contact forces span a space that can resist arbitrary external wrenches? Modern learned grasps approximate this
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Task-oriented grasps?</summary>
+<summary>Task-oriented grasps</summary>
 
 "use" grasps vs "move" grasps differ; pick up a hammer by handle to use it, or anywhere to move it; VLA models learn task-appropriate grasp selection
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Bimanual grasps?</summary>
+<summary>Bimanual grasps</summary>
 
 many healthcare objects (pill trays, trays of supplies) require two hands; bimanual grasp planning coordinates approach trajectories and contact timing
 

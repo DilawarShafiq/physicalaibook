@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Prompt caching
 :::
 
-## Why this matters
-
-Claude (Anthropic) is the recommended LLM for US healthcare agent applications because of its HIPAA Business Associate Agreement availability, strong instruction-following for regulated tasks, and reliable refusal of PHI-mishandling requests.
-
 ## Overview
 
 Claude (Anthropic) is the recommended LLM for US healthcare agent applications because of its HIPAA Business Associate Agreement availability, strong instruction-following for regulated tasks, and reliable refusal of PHI-mishandling requests. This lesson covers the specific engineering patterns for Claude-based healthcare agents.
@@ -45,38 +41,38 @@ Anthropic HIPAA BAA: Anthropic offers BAAs for Claude API customers via Claude f
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Anthropic HIPAA BAA?</summary>
+<summary>Anthropic HIPAA BAA</summary>
 
 Anthropic offers BAAs for Claude API customers via Claude for Enterprise; required before any PHI can be sent to the Claude API; sign before building, not after; covers Claude 3 family models
 
 </details>
 
 <details>
-<summary>Q2. What do you know about System prompt design?</summary>
+<summary>System prompt design</summary>
 
 healthcare agent system prompts must explicitly state: role and permitted actions, PHI handling instructions (never output PHI in plaintext logs), required disclaimers (not a medical advice system), escalation triggers, and compliance constraints
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Tool use design?</summary>
+<summary>Tool use design</summary>
 
 use Claude's tool_use API to give agents structured access to EHR APIs, payer APIs, and database; tools enforce data access controls (Claude can only read data the tool explicitly returns) — more secure than letting the model interpret raw database dumps
 
 </details>
 
 <details>
-<summary>Q4. What do you know about PHI in prompts?</summary>
+<summary>PHI in prompts</summary>
 
 never include more PHI in a prompt than necessary for the specific task; use patient ID + encounter ID for context rather than full name + SSN; retrieve PHI in the tool response only when needed
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Prompt caching?</summary>
+<summary>Prompt caching</summary>
 
 Anthropic's prompt caching feature caches long system prompts and reference documents (payer policy library, ICD-10 codebook) — reduces cost and latency for agents that make many calls with the same base context; cache hit rate should be &gt;80%
 

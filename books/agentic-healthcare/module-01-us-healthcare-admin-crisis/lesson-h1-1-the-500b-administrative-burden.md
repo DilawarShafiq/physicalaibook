@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - The RCM labor market
 :::
 
-## Why this matters
-
-A 2019 JAMA study found that the United States spends $812 billion — 34.2% of total healthcare expenditure — on administrative costs.
-
 ## Overview
 
 A 2019 JAMA study found that the United States spends $812 billion — 34.2% of total healthcare expenditure — on administrative costs. That is more than the entire GDP of the Netherlands. The majority of this is not clinical. It is paperwork: insurance verification, prior authorization, claim submission, denial management, and billing. AI agents can automate 60-80% of it.
@@ -45,38 +41,38 @@ JAMA 2019: US healthcare administrative costs = $812B/year (34.2% of total spend
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about JAMA 2019?</summary>
+<summary>JAMA 2019</summary>
 
 US healthcare administrative costs = $812B/year (34.2% of total spend); Canadian equivalent = 12% of spend — the gap represents ~$600B in potentially eliminable US-specific administrative waste
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Physician time?</summary>
+<summary>Physician time</summary>
 
 AMA survey finds the average physician spends 16.6 hours/week on administrative tasks including EHR documentation, prior authorization, and paperwork — equivalent to 2+ full working days
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Prior authorization alone?</summary>
+<summary>Prior authorization alone</summary>
 
 MGMA reports physicians submit 40+ prior auth requests per physician per week; 87% require phone or fax (not electronic); average 14.9 business days to complete manual PA
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Claim denial rate?</summary>
+<summary>Claim denial rate</summary>
 
 average US hospital first-pass denial rate is 10-15%; healthcare systems write off $262M annually in underpaid or unpaid claims due to incomplete denial management
 
 </details>
 
 <details>
-<summary>Q5. What do you know about The RCM labor market?</summary>
+<summary>The RCM labor market</summary>
 
 revenue cycle management employs approximately 2.5 million people in the US (billing specialists, coders, prior auth coordinators, denial managers); average fully-loaded salary $55-75k; total labor cost ~$175B/year
 

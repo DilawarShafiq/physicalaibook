@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Medicare vs commercial payers
 :::
 
-## Why this matters
-
-The revenue cycle is the administrative and clinical process by which healthcare providers track patient care episodes from registration through final payment.
-
 ## Overview
 
 The revenue cycle is the administrative and clinical process by which healthcare providers track patient care episodes from registration through final payment. A broken revenue cycle costs US hospitals billions annually in denied and underpaid claims. CEHRS specialists touch multiple points in this cycle.
@@ -45,38 +41,38 @@ Revenue cycle steps: pre-registration → registration → charge capture → me
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Revenue cycle steps?</summary>
+<summary>Revenue cycle steps</summary>
 
 pre-registration → registration → charge capture → medical coding → claim submission → payment posting → denial management → accounts receivable follow-up → patient billing
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Front-end vs back-end revenue cycle?</summary>
+<summary>Front-end vs back-end revenue cycle</summary>
 
 front-end (registration, eligibility, authorization) prevents denials before they happen; back-end (coding, billing, denials) corrects problems after the fact; front-end prevention is far cheaper
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Key revenue cycle metrics?</summary>
+<summary>Key revenue cycle metrics</summary>
 
 Days in A/R (average days to collect after billing; target &lt;50 days), clean claim rate (% of claims requiring no correction; target &gt;95%), denial rate (% of claims denied on first submission; target &lt;5%)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Charge capture?</summary>
+<summary>Charge capture</summary>
 
 the process of documenting every billable service provided; documentation in the EHR must support every charge; charge capture failures = revenue leakage; over-capture = compliance risk (fraud)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Medicare vs commercial payers?</summary>
+<summary>Medicare vs commercial payers</summary>
 
 Medicare is a federal payer with strict documentation requirements and lower reimbursement rates; commercial payers (Blue Cross, Aetna, UnitedHealth) negotiate rates via contracts; Medicaid = state-federal payer for low-income patients
 

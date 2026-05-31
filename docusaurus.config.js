@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const config = {
   title: 'Autosapien Academy',
   tagline: 'Three research-grade books on Physical AI, EHR certification, and Agentic Healthcare',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://academy.autosapien.com',
@@ -89,10 +89,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Autosapien Academy',
+        title: 'Academy',
         logo: {
-          alt: 'Autosapien Academy Logo',
-          src: 'img/logo.svg',
+          alt: 'Autosapien Academy',
+          src: 'img/logo.png',
+          srcDark: 'img/logo-footer.png',
         },
         items: [
           {

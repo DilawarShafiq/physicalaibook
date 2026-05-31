@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Peer-to-peer facilitation
 :::
 
-## Why this matters
-
-Healthcare organizations win 35% of first-level Medicare denials on appeal — but only appeal 60% of denial opportunities, leaving billions in legitimate revenue uncollected due to appeal labor costs.
-
 ## Overview
 
 Healthcare organizations win 35% of first-level Medicare denials on appeal — but only appeal 60% of denial opportunities, leaving billions in legitimate revenue uncollected due to appeal labor costs. AI can automate appeal letter generation with clinical evidence retrieval, making it economical to appeal every denial with merit.
@@ -45,38 +41,38 @@ Denial categories: coding denials (wrong code, CCI violation), medical necessity
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Denial categories?</summary>
+<summary>Denial categories</summary>
 
 coding denials (wrong code, CCI violation), medical necessity (service not covered for diagnosis), authorization (PA not obtained), eligibility (patient not covered), timely filing (claim submitted late), technical (missing information)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Medical necessity appeals?</summary>
+<summary>Medical necessity appeals</summary>
 
 strongest appeals cite clinical guidelines; AI retrieves relevant MCG (Milliman Care Guidelines), InterQual criteria, or specialty society guidelines and quotes specific criteria met by the patient's documentation
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Appeal letter generation?</summary>
+<summary>Appeal letter generation</summary>
 
 LLM reads the denial EOB reason code → retrieves relevant clinical documentation from EHR → searches policy library for applicable payer medical policy → drafts appeal letter citing specific documentation and policy language
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Appeal timeliness?</summary>
+<summary>Appeal timeliness</summary>
 
 Medicare Part B = 120 days from denial; Medicare Part A = 120 days from remittance; commercial = varies (30-180 days); AI tracks deadlines and generates appeal with buffer time before deadline
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Peer-to-peer facilitation?</summary>
+<summary>Peer-to-peer facilitation</summary>
 
 for clinical denials, payer Medical Director peer-to-peer review can overturn denial; AI generates a briefing document for the physician listing the clinical evidence, the payer policy, and the key talking points
 

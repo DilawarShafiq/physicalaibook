@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Notification to media
 :::
 
-## Why this matters
-
-A HIPAA breach is the unauthorized acquisition, access, use, or disclosure of PHI that compromises its security or privacy.
-
 ## Overview
 
 A HIPAA breach is the unauthorized acquisition, access, use, or disclosure of PHI that compromises its security or privacy. The Breach Notification Rule (added by HITECH 2009) requires specific notification to patients, HHS, and sometimes the media — on defined timelines that begin the day the breach is discovered.
@@ -45,38 +41,38 @@ Breach definition: unauthorized acquisition, access, use, or disclosure of unsec
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Breach definition?</summary>
+<summary>Breach definition</summary>
 
 unauthorized acquisition, access, use, or disclosure of unsecured (unencrypted) PHI unless the covered entity can demonstrate low probability of compromise using a 4-factor risk assessment
 
 </details>
 
 <details>
-<summary>Q2. What do you know about 4-factor risk assessment to determine if breach occurred?</summary>
+<summary>4-factor risk assessment to determine if breach occurred</summary>
 
 (1) nature and extent of PHI involved, (2) who accessed/used the PHI, (3) whether PHI was actually acquired or viewed, (4) extent to which risk has been mitigated
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Notification to affected individuals?</summary>
+<summary>Notification to affected individuals</summary>
 
 must occur without unreasonable delay, not to exceed 60 days from discovery; must include description of breach, types of PHI involved, steps individuals should take, contact information
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Notification to HHS?</summary>
+<summary>Notification to HHS</summary>
 
 breaches affecting ≥500 individuals — notify HHS within 60 days of discovery; breaches affecting &lt;500 individuals — log and submit annual report to HHS by March 1 of the following year
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Notification to media?</summary>
+<summary>Notification to media</summary>
 
 breaches affecting ≥500 individuals in a state or jurisdiction require notification to prominent media outlets in that state within 60 days; required in addition to individual notification
 

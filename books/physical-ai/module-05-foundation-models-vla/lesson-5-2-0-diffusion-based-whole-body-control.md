@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Physical Intelligence (founded by ex-Google Robotics, Stanford, CMU researchers) published π0 in October 2024 — arguably the most important robotics paper since RT-2.
-
 ## Overview
 
 Physical Intelligence (founded by ex-Google Robotics, Stanford, CMU researchers) published π0 in October 2024 — arguably the most important robotics paper since RT-2. π0 uses flow matching (a continuous-time generalization of diffusion) to generate smooth, physically realistic action sequences for whole-body control tasks.
@@ -53,38 +49,38 @@ Implement a simplified flow matching policy: define a 2D toy action space, imple
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about π0 architecture?</summary>
+<summary>π0 architecture</summary>
 
 PaliGemma 3B vision-language backbone + flow matching action expert; total ~3B parameters; runs at 50 Hz on robot
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Flow matching (vs diffusion)?</summary>
+<summary>Flow matching (vs diffusion)</summary>
 
 learns a velocity field that transforms noise → action; faster sampling (1-3 function evaluations vs 50+ for DDPM), smoother trajectories
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Training data?</summary>
+<summary>Training data</summary>
 
 10,000+ hours of teleoperation data across 7 robot platforms; tasks include laundry folding, box assembly, table clearing, egg packaging
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Whole-body result?</summary>
+<summary>Whole-body result</summary>
 
 π0 fine-tuned on 1-hour of data achieves 70%+ success on laundry folding (the hardest manipulation benchmark); previous SOTA was ~30%
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Fine-tuning efficiency?</summary>
+<summary>Fine-tuning efficiency</summary>
 
 1-10 hours of task-specific demonstrations fine-tunes the pretrained π0 to new tasks; dramatic reduction from previous 1000+ hours needed
 

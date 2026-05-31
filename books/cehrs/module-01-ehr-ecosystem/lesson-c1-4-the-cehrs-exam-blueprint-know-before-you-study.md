@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-The NHA CEHRS exam has a precise blueprint.
-
 ## Overview
 
 The NHA CEHRS exam has a precise blueprint. Knowing which domains carry the most weight — and what question types appear — lets you allocate study time efficiently. Most candidates who fail did not fail because the material was too hard; they failed because they did not know where the exam lived.
@@ -55,38 +51,38 @@ Create your personal study plan: allocate study hours proportionally to domain w
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Exam format?</summary>
+<summary>Exam format</summary>
 
 130 total questions (110 scored + 20 unscored pretest items); 2 hours 40 minutes; computer-based at PSI testing centers or online proctored
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Passing score?</summary>
+<summary>Passing score</summary>
 
 390 out of 500 (scaled); NHA does not disclose the raw score equivalent, but roughly 70-72% correct answers on scored items
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Domain 1?</summary>
+<summary>Domain 1</summary>
 
 Health Record Documentation: 22% (highest weight); chart completion, documentation requirements, EHR workflows
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Domain 2?</summary>
+<summary>Domain 2</summary>
 
 Medical Terminology and Anatomy: 21%; prefixes/suffixes/roots, body system terms, abbreviations
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Domain 3?</summary>
+<summary>Domain 3</summary>
 
 Health Information Management: 20%; MPI, release of information, record retention, data quality
 

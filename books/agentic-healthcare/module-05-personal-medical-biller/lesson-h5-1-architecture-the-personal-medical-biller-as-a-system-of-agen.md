@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Human escalation protocol
 :::
 
-## Why this matters
-
-A Personal Medical Biller is not a single agent — it is an orchestrated system of specialized sub-agents, each expert in one domain, coordinated by a master orchestrator that maintains the patient's complete billing lifecycle.
-
 ## Overview
 
 A Personal Medical Biller is not a single agent — it is an orchestrated system of specialized sub-agents, each expert in one domain, coordinated by a master orchestrator that maintains the patient's complete billing lifecycle. This architecture follows the panaversity Digital FTE model: a role-oriented AI employee with defined tools, memory, and accountability.
@@ -45,38 +41,38 @@ Master orchestrator: knows the patient's complete billing history, active claims
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Master orchestrator?</summary>
+<summary>Master orchestrator</summary>
 
 knows the patient's complete billing history, active claims, open issues, and next actions; routes work to specialized sub-agents; surfaces issues requiring human attention; generates daily briefing for the billing manager
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Sub-agents?</summary>
+<summary>Sub-agents</summary>
 
 Eligibility Agent (runs coverage checks), PA Agent (tracks authorization status), Coding Agent (reviews encounter documentation), Claims Agent (tracks claim lifecycle), Appeals Agent (manages denial resolution), Patient Communication Agent (handles patient billing questions)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Agent memory architecture?</summary>
+<summary>Agent memory architecture</summary>
 
 per-patient state stored in structured database (claim ID → status, PA number → expiry date, denial → appeal deadline); vector store for clinical documentation retrieval; conversation memory for ongoing patient interactions
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Tool inventory?</summary>
+<summary>Tool inventory</summary>
 
 EHR read API, payer EDI integration, clearinghouse API, phone/fax automation (Twilio + fax API), email automation, document generation (PDF statement, appeal letter), CRM write (update patient account notes)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Human escalation protocol?</summary>
+<summary>Human escalation protocol</summary>
 
 any action with dollar value &gt;$500, any patient complaint, any potential HIPAA violation, any regulatory ambiguity → escalate to human supervisor with full context briefing; target escalation rate &lt;10% of total actions
 

@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - DNR (Do Not Resuscitate) / DNI (Do Not Intubate) orders
 :::
 
-## Why this matters
-
-Consent documentation is legally and ethically foundational to healthcare.
-
 ## Overview
 
 Consent documentation is legally and ethically foundational to healthcare. CEHRS specialists process, scan, and maintain consent forms in the EHR. Understanding the difference between consent types — general, informed, and research — and the requirements for each is critical.
@@ -45,38 +41,38 @@ General consent for treatment: broad consent signed at registration; covers rout
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about General consent for treatment?</summary>
+<summary>General consent for treatment</summary>
 
 broad consent signed at registration; covers routine care, examination, and standard treatment; required for all patients
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Informed consent for procedures?</summary>
+<summary>Informed consent for procedures</summary>
 
 specific to each significant procedure or surgery; must document: what procedure, why, risks, benefits, alternatives, patient questions answered; must be signed before the procedure; physician responsibility
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Implied consent?</summary>
+<summary>Implied consent</summary>
 
 applies in emergency situations when patient is unconscious and no proxy available; not documented — assumed by legal standard
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Advance directives?</summary>
+<summary>Advance directives</summary>
 
 living will (what treatment the patient wants or does not want) and healthcare proxy/durable power of attorney for healthcare (who makes decisions); must be scanned into EHR and flagged as critical; state-specific forms
 
 </details>
 
 <details>
-<summary>Q5. What do you know about DNR (Do Not Resuscitate) / DNI (Do Not Intubate) orders?</summary>
+<summary>DNR (Do Not Resuscitate) / DNI (Do Not Intubate) orders</summary>
 
 must be physician-signed orders in the medical record; not just a form — requires an actual order to be actionable
 

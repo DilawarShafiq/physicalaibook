@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Open X-Embodiment (Google + 33 institutions, 2023)
 :::
 
-## Why this matters
-
-Before 2022, robotic manipulation required a separate hand-engineered controller for each task.
-
 ## Overview
 
 Before 2022, robotic manipulation required a separate hand-engineered controller for each task. You could not transfer a grasp controller to a pouring controller. The insight from GPT-3 applied to robotics: if you scale data and model size enough, a single neural network can learn to do everything.
@@ -45,38 +41,38 @@ RT-1 (Google, 2022): first demonstration that a single transformer policy traine
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about RT-1 (Google, 2022)?</summary>
+<summary>RT-1 (Google, 2022)</summary>
 
 first demonstration that a single transformer policy trained on 130,000 robot demonstrations could generalize to new tasks and objects
 
 </details>
 
 <details>
-<summary>Q2. What do you know about RT-2 (Google DeepMind, 2023)?</summary>
+<summary>RT-2 (Google DeepMind, 2023)</summary>
 
 co-trained on internet-scale vision-language data AND robot demonstrations; emergent capability: novel semantic reasoning in manipulation
 
 </details>
 
 <details>
-<summary>Q3. What do you know about RT-2 example?</summary>
+<summary>RT-2 example</summary>
 
 "place the extinct animal in front of the green object" — robot correctly identifies dinosaur toy, places it appropriately — zero-shot from language only
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Scale law for robotics?</summary>
+<summary>Scale law for robotics</summary>
 
 RT-2 used 55B parameter PaLM-E backbone; larger models generalize better but need hardware to run; a key engineering challenge
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Open X-Embodiment (Google + 33 institutions, 2023)?</summary>
+<summary>Open X-Embodiment (Google + 33 institutions, 2023)</summary>
 
 pooled 22 different robot platforms, 527 skills, 160,000 demonstrations; trained single policy that works across platforms
 

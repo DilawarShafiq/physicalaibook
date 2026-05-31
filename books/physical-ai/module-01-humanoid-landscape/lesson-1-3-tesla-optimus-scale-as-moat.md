@@ -14,16 +14,12 @@ tags: ["tesla", "optimus", "hardware", "scale"]
 
 By the end of this lesson you will be able to explain and apply:
 
-- Optimus Gen 2 weighs 57kg (11kg less than Gen…
+- Optimus Gen 2 weighs 57kg (11kg less than Gen 1)
 - Uses Tesla's custom FSD (Full Self-Driving) chip for on-board inference
 - Hand dexterity goal
-- Elon Musk projects 1,000 Optimus units in Tesla factories…
+- Elon Musk projects 1,000 Optimus units in Tesla factories by end of 2025
 - Key advantage
 :::
-
-## Why this matters
-
-Tesla's approach to humanoid robotics is inseparable from its manufacturing infrastructure.
 
 ## Overview
 
@@ -45,38 +41,38 @@ Optimus Gen 2 weighs 57kg (11kg less than Gen 1), walks 30% faster, and has impr
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Optimus Gen 2 weighs 57kg (11kg less than Gen…?</summary>
+<summary>Optimus Gen 2 weighs 57kg (11kg less than Gen 1)</summary>
 
 Optimus Gen 2 weighs 57kg (11kg less than Gen 1), walks 30% faster, and has improved 22-DOF hands with tactile sensing on all fingers
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Uses Tesla's custom FSD (Full Self-Driving) chip for on-board inference?</summary>
+<summary>Uses Tesla's custom FSD (Full Self-Driving) chip for on-board inference</summary>
 
 the same silicon that processes 1,000+ TOPS in Tesla vehicles
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Hand dexterity goal?</summary>
+<summary>Hand dexterity goal</summary>
 
 handle eggs without breaking them, thread a needle — demonstrated publicly in late 2023 demos
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Elon Musk projects 1,000 Optimus units in Tesla factories…?</summary>
+<summary>Elon Musk projects 1,000 Optimus units in Tesla factories by end of 2025</summary>
 
 Elon Musk projects 1,000 Optimus units in Tesla factories by end of 2025, scaling to "millions" by 2030
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Key advantage?</summary>
+<summary>Key advantage</summary>
 
 Tesla manufactures its own actuators, reducing BOM cost by ~40% vs. buying off-the-shelf; projects sub-$20k at volume
 

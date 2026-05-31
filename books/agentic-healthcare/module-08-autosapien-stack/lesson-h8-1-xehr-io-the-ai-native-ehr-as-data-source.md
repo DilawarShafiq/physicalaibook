@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Audit trail
 :::
 
-## Why this matters
-
-xEHR.io is Autosapien's AI-native EHR platform.
-
 ## Overview
 
 xEHR.io is Autosapien's AI-native EHR platform. Unlike legacy EHRs that were built for documentation, xEHR.io is built for AI-accessible structured data — every clinical element is exposed via FHIR R4 API, every encounter is indexed for semantic search, and every note is automatically structured for downstream coding and billing workflows.
@@ -45,38 +41,38 @@ xEHR.io FHIR R4 API: complete FHIR R4 compliance; Patient, Encounter, Condition,
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about xEHR.io FHIR R4 API?</summary>
+<summary>xEHR.io FHIR R4 API</summary>
 
 complete FHIR R4 compliance; Patient, Encounter, Condition, MedicationRequest, DiagnosticReport, Procedure, and DocumentReference resources all available via standard FHIR endpoints
 
 </details>
 
 <details>
-<summary>Q2. What do you know about AI documentation?</summary>
+<summary>AI documentation</summary>
 
 clinical notes written in xEHR.io are automatically structured by AI — symptoms, diagnoses, and procedures extracted and linked to structured data fields; reduces manual coding review time by 60%
 
 </details>
 
 <details>
-<summary>Q3. What do you know about RCM integration?</summary>
+<summary>RCM integration</summary>
 
 xEHR.io sends encounter data directly to Autosapien RCM Automation upon encounter sign-off; zero manual charge entry; claim build starts immediately when note is signed
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Smart Scheduling integration?</summary>
+<summary>Smart Scheduling integration</summary>
 
 appointment scheduling in xEHR.io triggers eligibility verification agent 48 hours before appointment; PA requirements surfaced to front desk 72 hours before appointment
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Audit trail?</summary>
+<summary>Audit trail</summary>
 
 every AI-assisted action in xEHR.io (code suggestion accepted, documentation query generated, charge suggested) is logged with the AI model version, confidence score, and human decision; full audit trail for compliance
 

@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Limitation
 :::
 
-## Why this matters
-
-Neuromorphic chips (Intel Loihi 2, IBM NorthPole) and event cameras offer a radically different compute paradigm: sparse, asynchronous, ultra-low-power processing inspired by biological neural circuits.
-
 ## Overview
 
 Neuromorphic chips (Intel Loihi 2, IBM NorthPole) and event cameras offer a radically different compute paradigm: sparse, asynchronous, ultra-low-power processing inspired by biological neural circuits. For G1, they offer a path to always-on perception that consumes milliwatts rather than watts.
@@ -45,38 +41,38 @@ Intel Loihi 2 (2022): 1 million neurons, 120 million synapses per chip, 0.5W pow
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Intel Loihi 2 (2022)?</summary>
+<summary>Intel Loihi 2 (2022)</summary>
 
 1 million neurons, 120 million synapses per chip, 0.5W power; runs spiking neural networks (SNNs) 100× more energy-efficiently than equivalent GPU ops
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Event cameras (DAVIS346, Prophesee EVK4)?</summary>
+<summary>Event cameras (DAVIS346, Prophesee EVK4)</summary>
 
 output asynchronous "events" (pixel, timestamp, polarity) when pixel brightness changes; μs latency, 120 dB dynamic range, no motion blur
 
 </details>
 
 <details>
-<summary>Q3. What do you know about SNN locomotion controller?</summary>
+<summary>SNN locomotion controller</summary>
 
 Intel/ETH Zurich collaboration (2023) — running SNN locomotion policy on Loihi 2 for ANYmal; 75× lower energy than GPU equivalent; no meaningful performance loss
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Event camera + neuromorphic?</summary>
+<summary>Event camera + neuromorphic</summary>
 
 event stream → SNN on Loihi 2 → obstacle detection at 10,000 Hz update rate in &lt;1mW; critical for detecting fast-moving hazards near humans
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Limitation?</summary>
+<summary>Limitation</summary>
 
 programming SNNs requires specialized tools (NEST, PyNN, Intel's nxSDK); most researchers lack SNN expertise; steep learning curve
 

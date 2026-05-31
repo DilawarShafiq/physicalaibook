@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Inspire Hands (used in Unitree G1 upgrade kit)
 :::
 
-## Why this matters
-
-The human hand has 27 bones, 29 joints, and over 30 muscles — producing 21 controllable DOF and extraordinary dexterity.
-
 ## Overview
 
 The human hand has 27 bones, 29 joints, and over 30 muscles — producing 21 controllable DOF and extraordinary dexterity. Modern robot hands target 16-22 DOF as a practical compromise between capability and cost/weight. Figure 02 and Tesla Optimus Gen 2 both chose 22 DOF as the G1 target.
@@ -45,38 +41,38 @@ Human hand DOF breakdown: 4 fingers × 4 DOF (MCP flexion/extension, MCP ab/addu
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Human hand DOF breakdown?</summary>
+<summary>Human hand DOF breakdown</summary>
 
 4 fingers × 4 DOF (MCP flexion/extension, MCP ab/adduction, PIP, DIP) + thumb × 5 DOF = 21 DOF total
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Tendon-driven hands (Shadow, Dexterous Hand)?</summary>
+<summary>Tendon-driven hands (Shadow, Dexterous Hand)</summary>
 
 motors proximal to hand, cables run through fingers; lightweight fingers but complex routing; Shadow Hand has 20 DOF
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Direct-drive hands (LEAP Hand)?</summary>
+<summary>Direct-drive hands (LEAP Hand)</summary>
 
 small actuators at each joint; heavier fingers but simpler control and more transparent force feedback; LEAP Hand: 16 DOF, $4k
 
 </details>
 
 <details>
-<summary>Q4. What do you know about LEAP Hand (Carnegie Mellon 2023)?</summary>
+<summary>LEAP Hand (Carnegie Mellon 2023)</summary>
 
 open-source, 3D-printable, affordable; used extensively in research; matches human-scale manipulation in most tasks
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Inspire Hands (used in Unitree G1 upgrade kit)?</summary>
+<summary>Inspire Hands (used in Unitree G1 upgrade kit)</summary>
 
 12 DOF, good dexterity, ~$8k/pair; commercially available with ROS support
 

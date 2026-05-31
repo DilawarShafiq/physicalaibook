@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Large language models understand clinical text better than any previous NLP technology.
-
 ## Overview
 
 Large language models understand clinical text better than any previous NLP technology. A well-prompted Claude or GPT-4 can read a discharge summary and suggest appropriate ICD-10-CM codes with accuracy that approaches — and in some domains exceeds — trained human coders. The engineering challenge is not the model; it is the context, the validation layer, and the workflow integration.
@@ -53,38 +49,38 @@ Build a minimal coding agent: (1) take a 500-word simulated discharge summary as
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about LLM coding approach?</summary>
+<summary>LLM coding approach</summary>
 
 feed the complete discharge summary + progress notes + operative report → ask model to identify all reportable diagnoses and procedures → model returns codes with supporting text citations → validation layer checks codes against ICD-10 tabular list
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Context engineering?</summary>
+<summary>Context engineering</summary>
 
 LLMs need the complete clinical picture; feeding only the discharge diagnosis list misses secondary diagnoses, CCs/MCCs (complication/comorbidity codes that increase DRG weight significantly)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Principal diagnosis selection?</summary>
+<summary>Principal diagnosis selection</summary>
 
 the condition "after study" chiefly responsible for admission; LLMs sometimes misidentify this as the patient's chief complaint; fine-tuning or few-shot examples on specialty-specific cases improves accuracy
 
 </details>
 
 <details>
-<summary>Q4. What do you know about MCC/CC coding impact?</summary>
+<summary>MCC/CC coding impact</summary>
 
 each additional complication or comorbidity code (sepsis, respiratory failure, acute kidney injury) can add $5,000-$15,000 in DRG reimbursement for the same admission; AI catches these more consistently than fatigued human coders
 
 </details>
 
 <details>
-<summary>Q5. What do you know about AHIMA/AHA Coding Clinic?</summary>
+<summary>AHIMA/AHA Coding Clinic</summary>
 
 official guidance on ICD-10 coding conventions; must be incorporated into AI system prompts as authoritative reference; published quarterly; subscription required
 

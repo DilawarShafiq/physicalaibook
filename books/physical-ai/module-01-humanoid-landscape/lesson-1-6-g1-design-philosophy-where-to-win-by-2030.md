@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Platform bets for 2030 readiness
 :::
 
-## Why this matters
-
-With the competitive landscape mapped, this lesson defines the design principles for Autosapien G1.
-
 ## Overview
 
 With the competitive landscape mapped, this lesson defines the design principles for Autosapien G1. The 2030 market will reward humanoids that combine genuine physical capability with safe, trustworthy operation in proximity to humans. The window is open: no incumbent has locked in the healthcare or eldercare market.
@@ -45,38 +41,38 @@ Healthcare gap: Figure/Tesla/BD are focused on manufacturing; home healthcare an
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Healthcare gap?</summary>
+<summary>Healthcare gap</summary>
 
 Figure/Tesla/BD are focused on manufacturing; home healthcare and eldercare remain wide open for a safety-first humanoid
 
 </details>
 
 <details>
-<summary>Q2. What do you know about G1 target differentiation?</summary>
+<summary>G1 target differentiation</summary>
 
 highest safety margin in the industry (compliant actuators + force limits + collision prediction), 8+ hour battery for full shift operation
 
 </details>
 
 <details>
-<summary>Q3. What do you know about The dexterity ceiling?</summary>
+<summary>The dexterity ceiling</summary>
 
 22-DOF hands (matching Figure 02) with fingertip tactile sensing is the minimum for healthcare tasks (medication handling, patient positioning)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about On-board intelligence?</summary>
+<summary>On-board intelligence</summary>
 
 proprietary foundation model for physical reasoning (no cloud dependency) is a competitive moat and a healthcare compliance requirement (HIPAA)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Platform bets for 2030 readiness?</summary>
+<summary>Platform bets for 2030 readiness</summary>
 
 (1) RL-based locomotion for real-world terrain, (2) VLA-based manipulation policies, (3) compliance-first actuators, (4) multimodal foundation model on NVIDIA AGX Orin
 

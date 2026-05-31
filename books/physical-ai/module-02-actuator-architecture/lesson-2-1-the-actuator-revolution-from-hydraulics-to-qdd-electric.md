@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Key players
 :::
 
-## Why this matters
-
-Boston Dynamics' hydraulic Atlas was an engineering marvel but hydraulics are noisy, leak-prone, and require bulky pumps.
-
 ## Overview
 
 Boston Dynamics' hydraulic Atlas was an engineering marvel but hydraulics are noisy, leak-prone, and require bulky pumps. The shift to quasi-direct drive (QDD) electric motors — pioneered by MIT's Biomimetic Robotics Lab — unlocked a new generation of robots that are quieter, cleaner, and inherently backdrivable.
@@ -45,38 +41,38 @@ MIT Mini Cheetah (2018) proved QDD motors at robot-scale: 6:1 planetary gear rat
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about MIT Mini Cheetah (2018) proved QDD motors at robot-scale?</summary>
+<summary>MIT Mini Cheetah (2018) proved QDD motors at robot-scale</summary>
 
 6:1 planetary gear ratio, 12 motors, backdrivable, 14kg total weight
 
 </details>
 
 <details>
-<summary>Q2. What do you know about QDD motors use low gear ratios (3:1 to 9:1)?</summary>
+<summary>QDD motors use low gear ratios (3:1 to 9:1)</summary>
 
 the motor spins slowly but is directly coupled to the joint; backdriving requires only small forces, making contact inherently safe
 
 </details>
 
 <details>
-<summary>Q3. What do you know about High gear ratio motors (100:1+) are strong but non-backdrivable?</summary>
+<summary>High gear ratio motors (100:1+) are strong but non-backdrivable</summary>
 
 a force applied to the output cannot spin the motor; this is dangerous in contact situations
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Torque density comparison?</summary>
+<summary>Torque density comparison</summary>
 
 QDD ~10-20 Nm/kg, SEA ~5-15 Nm/kg, hydraulic ~100+ Nm/kg — hydraulic still wins on raw torque but at 10x cost and complexity
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Key players?</summary>
+<summary>Key players</summary>
 
 T-Motor (China) supplies QDD actuators to Unitree, many startups; Moog and Parker supply to industrial robots; BD designs in-house
 

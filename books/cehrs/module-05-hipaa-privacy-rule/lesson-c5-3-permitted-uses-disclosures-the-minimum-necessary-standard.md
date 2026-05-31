@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Treatment exceptions
 :::
 
-## Why this matters
-
-HIPAA permits specific uses and disclosures of PHI without patient authorization.
-
 ## Overview
 
 HIPAA permits specific uses and disclosures of PHI without patient authorization. Understanding when authorization IS required versus when it is NOT is the core of Release of Information (ROI) work. The minimum necessary standard limits how much information flows in every permissible disclosure.
@@ -45,38 +41,38 @@ No authorization required for: TPO (Treatment, Payment, Operations), public heal
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about No authorization required for?</summary>
+<summary>No authorization required for</summary>
 
 TPO (Treatment, Payment, Operations), public health activities, victims of abuse/neglect, health oversight activities, judicial/administrative proceedings, law enforcement, decedents, research with IRB waiver, serious threats to health/safety
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Authorization REQUIRED for?</summary>
+<summary>Authorization REQUIRED for</summary>
 
 marketing (most), sale of PHI, psychotherapy notes (separate and more protective), disclosures not covered by another permissible use — including most employment purposes
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Minimum necessary standard?</summary>
+<summary>Minimum necessary standard</summary>
 
 limit PHI to the minimum amount necessary to accomplish the purpose; applies to all disclosures EXCEPT treatment among providers, patient requests for own records, and legally required disclosures
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Minimum necessary in practice?</summary>
+<summary>Minimum necessary in practice</summary>
 
 if an insurance company requests records for a specific claim, provide only the records related to that claim — not the entire chart; if HR requests a return-to-work clearance, provide only the clearance — not the full medical history
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Treatment exceptions?</summary>
+<summary>Treatment exceptions</summary>
 
 the minimum necessary standard does NOT apply to disclosures for treatment purposes among healthcare providers; a specialist can receive the full relevant record
 

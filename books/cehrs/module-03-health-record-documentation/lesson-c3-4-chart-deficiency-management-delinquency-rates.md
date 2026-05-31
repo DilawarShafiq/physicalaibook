@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Incomplete medical records are a compliance risk, a billing obstacle, and a patient safety concern.
-
 ## Overview
 
 Incomplete medical records are a compliance risk, a billing obstacle, and a patient safety concern. CEHRS specialists run the deficiency tracking system — identifying missing documentation, routing deficiency notices to providers, and monitoring delinquency rates against accreditation benchmarks.
@@ -53,38 +49,38 @@ Review a simulated discharge record containing 8 intentional deficiencies. Ident
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Chart deficiency?</summary>
+<summary>Chart deficiency</summary>
 
 any required component of the medical record that is absent or incomplete at the time of analysis; common deficiencies: missing H&P, unsigned discharge summary, incomplete operative report, missing authentication
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Deficiency analysis?</summary>
+<summary>Deficiency analysis</summary>
 
 systematic review of records at discharge to identify all deficiencies; typically performed within 24-72 hours of discharge; creates a work queue for providers
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Joint Commission delinquent record standard?</summary>
+<summary>Joint Commission delinquent record standard</summary>
 
 a record becomes delinquent 30 days after discharge if still incomplete; facilities must maintain delinquency rate below 50% of average monthly discharges
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Consequences of delinquent records?</summary>
+<summary>Consequences of delinquent records</summary>
 
 delayed billing (cannot bill incomplete records), accreditation risk (JC can cite deficiencies), medical staff privileges at risk (bylaws typically suspend privileges at &gt;20-30% delinquency rate)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about HIM workflow?</summary>
+<summary>HIM workflow</summary>
 
 identify deficiency → assign to responsible provider → track in deficiency tracking system (DTS) → send reminders → escalate to department chair → report to medical staff committee
 

@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Retrospective vs prospective CDI
 :::
 
-## Why this matters
-
-Quality measures determine reimbursement, accreditation, and public reputation.
-
 ## Overview
 
 Quality measures determine reimbursement, accreditation, and public reputation. Payers use HEDIS (Healthcare Effectiveness Data and Information Set) to evaluate health plans. CMS uses MIPS (Merit-based Incentive Payment System) to evaluate individual clinicians. All quality measures depend on accurate, complete EHR documentation.
@@ -45,38 +41,38 @@ HEDIS: maintained by NCQA; 90+ measures across domains including preventive care
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about HEDIS?</summary>
+<summary>HEDIS</summary>
 
 maintained by NCQA; 90+ measures across domains including preventive care, chronic disease management, behavioral health; health plans submit HEDIS data annually to maintain accreditation
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Examples of HEDIS measures that depend on EHR documentation?</summary>
+<summary>Examples of HEDIS measures that depend on EHR documentation</summary>
 
 breast cancer screening (documented mammogram result), diabetes HbA1c control (lab value + coding), childhood immunization status (immunization registry + EHR)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about MIPS (Merit-based Incentive Payment System)?</summary>
+<summary>MIPS (Merit-based Incentive Payment System)</summary>
 
 CMS program for Medicare physicians; scored on quality measures, promoting interoperability, improvement activities, and cost; score affects payment adjustment (+/-)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about CEHRS data abstraction?</summary>
+<summary>CEHRS data abstraction</summary>
 
 manually reviewing records to determine if measure criteria were met; requires understanding of measure specifications (what counts as numerator, denominator, exclusions)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Retrospective vs prospective CDI?</summary>
+<summary>Retrospective vs prospective CDI</summary>
 
 retrospective (after discharge, coding queries) vs prospective (real-time during the stay, CDI specialist rounds with the team); prospective CDI improves quality scores and captures revenue before the patient leaves
 

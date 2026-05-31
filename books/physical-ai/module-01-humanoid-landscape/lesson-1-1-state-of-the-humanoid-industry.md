@@ -14,18 +14,14 @@ tags: ["industry", "market", "strategy"]
 
 By the end of this lesson you will be able to explain and apply:
 
-- Goldman Sachs (2023) projects 250,000 humanoid units shipped annually…
-- Tesla, Figure, 1X, Apptronik, Agility, and Unitree all reached…
-- The dominant business model is "robots as a service"…
-- Amazon, BMW, and Hyundai are the first anchor customers,…
+- Goldman Sachs (2023) projects 250,000 humanoid units shipped annually by 2030
+- Tesla, Figure, 1X, Apptronik, Agility, and Unitree all reached deployable prototypes between 2023-2025
+- The dominant business model is "robots as a service" (RaaS), not hardware sales
+- Amazon, BMW, and Hyundai are the first anchor customers, providing real-world training data in exchange for early access
 - Key technology convergence
 
 You will then consolidate these ideas in the hands-on lab below.
 :::
-
-## Why this matters
-
-Humanoid robotics crossed a credibility threshold in 2023-2024.
 
 ## Overview
 
@@ -53,38 +49,38 @@ Build a comparison matrix of 6 major platforms across 12 dimensions: DOF, payloa
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Goldman Sachs (2023) projects 250,000 humanoid units shipped annually…?</summary>
+<summary>Goldman Sachs (2023) projects 250,000 humanoid units shipped annually by 2030</summary>
 
 Goldman Sachs (2023) projects 250,000 humanoid units shipped annually by 2030, rising to 1.4M by 2035 — a $38B market
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Tesla, Figure, 1X, Apptronik, Agility, and Unitree all reached…?</summary>
+<summary>Key point 2</summary>
 
 Tesla, Figure, 1X, Apptronik, Agility, and Unitree all reached deployable prototypes between 2023-2025
 
 </details>
 
 <details>
-<summary>Q3. What do you know about The dominant business model is "robots as a service"…?</summary>
+<summary>The dominant business model is "robots as a service" (RaaS), not hardware sales</summary>
 
 The dominant business model is "robots as a service" (RaaS), not hardware sales — Figure charges ~$100k/year per unit
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Amazon, BMW, and Hyundai are the first anchor customers,…?</summary>
+<summary>Key point 4</summary>
 
 Amazon, BMW, and Hyundai are the first anchor customers, providing real-world training data in exchange for early access
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Key technology convergence?</summary>
+<summary>Key technology convergence</summary>
 
 electric QDD actuators + transformer-based vision-language-action models made 2024 the breakthrough year
 

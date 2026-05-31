@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Critical values
 :::
 
-## Why this matters
-
-CEHRS specialists handle orders, results, and reports for diagnostic tests daily.
-
 ## Overview
 
 CEHRS specialists handle orders, results, and reports for diagnostic tests daily. Understanding what each test measures, its normal ranges, and how results are documented enables accurate data entry, correct coding, and meaningful quality reporting.
@@ -45,38 +41,38 @@ Complete blood count (CBC) components: WBC (white blood cells, normal 4.5-11.0 K
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Complete blood count (CBC) components?</summary>
+<summary>Complete blood count (CBC) components</summary>
 
 WBC (white blood cells, normal 4.5-11.0 K/μL), RBC, hemoglobin (Hgb), hematocrit (Hct), platelets; abnormal values trigger clinical alerts in EHR
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Basic metabolic panel (BMP)?</summary>
+<summary>Basic metabolic panel (BMP)</summary>
 
 sodium, potassium, chloride, CO2, BUN, creatinine, glucose, calcium; creatinine/BUN elevations indicate kidney dysfunction
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Imaging modalities?</summary>
+<summary>Imaging modalities</summary>
 
 X-ray (bone, chest), CT scan (computed tomography, cross-sectional), MRI (soft tissue detail, no radiation), ultrasound (real-time, no radiation, OB standard), PET scan (metabolic activity, cancer staging)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Radiology report structure?</summary>
+<summary>Radiology report structure</summary>
 
 indication, technique, findings, impression; the "impression" section contains the radiologist's diagnosis — what matters for coding
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Critical values?</summary>
+<summary>Critical values</summary>
 
 lab results so abnormal they require immediate clinician notification; CEHRS staff may need to relay critical values — potassium &lt;2.5 or &gt;6.5 mEq/L, blood glucose &lt;40 or &gt;500 mg/dL
 

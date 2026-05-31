@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Best practice advisories (BPAs)
 :::
 
-## Why this matters
-
-Clinical Decision Support (CDS) tools — built into EHR systems — present real-time alerts, reminders, and recommendations to clinicians.
-
 ## Overview
 
 Clinical Decision Support (CDS) tools — built into EHR systems — present real-time alerts, reminders, and recommendations to clinicians. They improve safety but are routinely over-ridden. CEHRS specialists often manage alert configuration and monitor override rates.
@@ -45,38 +41,38 @@ CDS types: drug-drug interaction alerts, drug-allergy alerts, duplicate order ch
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about CDS types?</summary>
+<summary>CDS types</summary>
 
 drug-drug interaction alerts, drug-allergy alerts, duplicate order checks, preventive care reminders (flu shot due), quality measure reminders, sepsis screening alerts
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Alert fatigue?</summary>
+<summary>Alert fatigue</summary>
 
 clinicians receive so many EHR alerts that they begin ignoring them; studies show 49-96% of medication alerts are overridden; alert fatigue is a patient safety concern
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Alert management?</summary>
+<summary>Alert management</summary>
 
 CEHRS or clinical informatics staff review alert firing rates and override rates; alerts overridden &gt;90% of the time should be reviewed for appropriateness and potentially retired
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Meaningful Use/PI requirement?</summary>
+<summary>Meaningful Use/PI requirement</summary>
 
 must implement 5 CDS interventions for 5 high-priority conditions plus one drug-drug and one drug-allergy alert; must document clinical quality measure (CQM) reporting
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Best practice advisories (BPAs)?</summary>
+<summary>Best practice advisories (BPAs)</summary>
 
 non-interruptive CDS (shown in the sidebar without stopping workflow) vs interruptive (requires clinician action before proceeding); interruptive alerts reserved for highest-risk situations
 

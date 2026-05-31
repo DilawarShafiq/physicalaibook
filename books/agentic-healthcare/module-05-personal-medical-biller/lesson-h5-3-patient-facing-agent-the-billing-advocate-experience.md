@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Balance billing protection
 :::
 
-## Why this matters
-
-The patient-facing component of the Personal Medical Biller answers questions about bills, explains EOBs, processes payments, sets up payment plans, and identifies financial assistance opportunities — eliminating the dreaded billing department phone call.
-
 ## Overview
 
 The patient-facing component of the Personal Medical Biller answers questions about bills, explains EOBs, processes payments, sets up payment plans, and identifies financial assistance opportunities — eliminating the dreaded billing department phone call. Done right, this is the highest patient satisfaction improvement in healthcare administration.
@@ -45,38 +41,38 @@ Common patient billing questions (80% of volume): "Why is my bill so high?", "Wh
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Common patient billing questions (80% of volume)?</summary>
+<summary>Common patient billing questions (80% of volume)</summary>
 
 "Why is my bill so high?", "What does my insurance cover?", "Can I set up a payment plan?", "Why did my insurance deny this?", "Is this bill correct?" — all answerable from structured claim data + EOB data
 
 </details>
 
 <details>
-<summary>Q2. What do you know about EOB (Explanation of Benefits) translation?</summary>
+<summary>EOB (Explanation of Benefits) translation</summary>
 
 EOBs use insurance industry jargon that patients cannot understand; AI agent translates EOB into plain English: "Your insurance paid $X, you owe $Y because you have a $Z deductible that wasn't met yet"
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Financial assistance screening?</summary>
+<summary>Financial assistance screening</summary>
 
 agent calculates patient's estimated bill-to-income ratio, identifies federal poverty level bracket, and auto-screens for facility charity care programs; presents options proactively rather than waiting for patient to ask
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Payment plan automation?</summary>
+<summary>Payment plan automation</summary>
 
 for balances &gt;$200, agent offers 3 payment plan options (3/6/12 months), collects payment method, sets up automatic payments, sends confirmation — without any human involvement
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Balance billing protection?</summary>
+<summary>Balance billing protection</summary>
 
 the No Surprises Act (2022) prohibits balance billing for out-of-network emergency services and certain facility services; agent cross-references charges against NSA protections and flags improper balance bills before patient communication
 

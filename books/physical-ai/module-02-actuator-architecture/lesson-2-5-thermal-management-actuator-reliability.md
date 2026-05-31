@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Thermal monitoring
 :::
 
-## Why this matters
-
-Motors generate heat.
-
 ## Overview
 
 Motors generate heat. At high duty cycles, motor winding temperature is the primary constraint on sustained performance. Without active thermal management, a humanoid operating in a warm hospital or factory will progressively derate its motors — reducing torque, speed, and eventually causing fault shutdowns.
@@ -45,38 +41,38 @@ Motor thermal model: winding temperature rises as I²R losses × thermal resista
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Motor thermal model?</summary>
+<summary>Motor thermal model</summary>
 
 winding temperature rises as I²R losses × thermal resistance; 150°C winding limit is typical for Class F insulation
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Thermal derating?</summary>
+<summary>Thermal derating</summary>
 
 most motors must reduce torque by 50% when winding temperature reaches 120°C to prevent insulation damage
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Cooling approaches?</summary>
+<summary>Cooling approaches</summary>
 
 passive (aluminum housing + fins), active air (miniature fans in joint housings), liquid (water/glycol loop through hollow shafts)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Figure 02 uses liquid-cooled actuators in high-load joints?</summary>
+<summary>Figure 02 uses liquid-cooled actuators in high-load joints</summary>
 
 adds ~2kg but allows sustained operation without derating
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Thermal monitoring?</summary>
+<summary>Thermal monitoring</summary>
 
 thermistors in each motor winding, monitored at 100Hz by joint controller; feeds into real-time torque command limits
 

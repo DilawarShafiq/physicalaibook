@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Autosapien Unworldly pattern
 :::
 
-## Why this matters
-
-One of the most dangerous failure modes in healthcare AI is accidental PHI leakage into logs, error messages, or model training data.
-
 ## Overview
 
 One of the most dangerous failure modes in healthcare AI is accidental PHI leakage into logs, error messages, or model training data. Automated PHI detection and masking at the system boundary — before any PHI enters a non-HIPAA-compliant system — is an architectural requirement.
@@ -45,38 +41,38 @@ PHI detection approaches: rule-based (regex for SSN, MRN, phone patterns), NLP (
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about PHI detection approaches?</summary>
+<summary>PHI detection approaches</summary>
 
 rule-based (regex for SSN, MRN, phone patterns), NLP (presidio/Microsoft, AWS Comprehend Medical), ML classifiers (fine-tuned BERT on PHI dataset); use ensemble of all three for healthcare agent logs
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Presidio (Microsoft)?</summary>
+<summary>Presidio (Microsoft)</summary>
 
 open-source PII/PHI detection and anonymization library; supports 50+ entity types including healthcare-specific (NPI, MRN, DEA number); Python library, production-ready, actively maintained
 
 </details>
 
 <details>
-<summary>Q3. What do you know about AWS Comprehend Medical?</summary>
+<summary>AWS Comprehend Medical</summary>
 
 managed service for extracting medical entities (conditions, medications, anatomy, PHI) from clinical text; HIPAA eligible; useful for parsing unstructured clinical notes
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Synthetic replacement?</summary>
+<summary>Synthetic replacement</summary>
 
 when masking PHI for logs or debugging, replace with realistic synthetic values (real name → consistent fake name, real DOB → shifted DOB ±1-5 years); preserves debuggability without real PHI exposure
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Autosapien Unworldly pattern?</summary>
+<summary>Autosapien Unworldly pattern</summary>
 
 audit-trail-first architecture where every agent action is logged with PHI-masked summary BEFORE execution; if the action fails, the audit shows what was attempted without real PHI in logs; ISO 42001 compatible
 

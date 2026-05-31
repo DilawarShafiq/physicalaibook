@@ -23,10 +23,6 @@ By the end of this lesson you will be able to explain and apply:
 You will then consolidate these ideas in the hands-on lab below.
 :::
 
-## Why this matters
-
-Every sim-to-real policy fails due to the "reality gap" — differences between simulation and the real world.
-
 ## Overview
 
 Every sim-to-real policy fails due to the "reality gap" — differences between simulation and the real world. Domain randomization, pioneered by OpenAI and ETH Zurich, systematically randomizes simulation parameters during training to produce policies robust to the distribution of reality.
@@ -53,38 +49,38 @@ In Isaac Lab, set up G1 locomotion training with domain randomization: define at
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about OpenAI Dactyl (2019)?</summary>
+<summary>OpenAI Dactyl (2019)</summary>
 
 trained dexterous in-hand cube manipulation using domain randomization across 100+ parameters; zero-shot transfer to real Shadow Hand — defining result
 
 </details>
 
 <details>
-<summary>Q2. What do you know about What to randomize?</summary>
+<summary>What to randomize</summary>
 
 mass (±20%), friction (uniform 0.1-1.5), damping, motor strength, sensor noise, camera exposure, object color/texture, terrain height maps
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Curriculum + randomization?</summary>
+<summary>Curriculum + randomization</summary>
 
 start with narrow randomization range, expand as policy succeeds; prevents training collapse on hard distributions early in learning
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Adaptive domain randomization (ADR)?</summary>
+<summary>Adaptive domain randomization (ADR)</summary>
 
 automatically adjust randomization range based on policy success rate; parameters that cause failure get narrower range, those that don't get wider
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Visual domain randomization?</summary>
+<summary>Visual domain randomization</summary>
 
 randomize textures, lighting, camera parameters; essential for vision-based policies; Isaac Sim 4.0 provides photorealistic randomization via ray tracing
 

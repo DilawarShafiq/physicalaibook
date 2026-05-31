@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Diabetes documentation
 :::
 
-## Why this matters
-
-Four systems with complex documentation requirements.
-
 ## Overview
 
 Four systems with complex documentation requirements. Neurological records require precise deficit documentation for stroke care. Digestive records drive complex surgical coding. Endocrine documentation (especially diabetes) is pervasive in all care settings. Reproductive documentation has specific privacy requirements.
@@ -45,38 +41,38 @@ Nervous system key terms: cerebrovascular accident (CVA/stroke), transient ische
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Nervous system key terms?</summary>
+<summary>Nervous system key terms</summary>
 
 cerebrovascular accident (CVA/stroke), transient ischemic attack (TIA), Alzheimer's disease, neuropathy (nerve damage), lumbar puncture (spinal tap), EEG (electroencephalogram)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about CNS documentation critical?</summary>
+<summary>CNS documentation critical</summary>
 
 stroke documentation must include onset time (tissue plasminogen activator tPA eligible within 4.5 hours), deficit type (aphasia, hemiplegia), and imaging results
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Digestive system key terms?</summary>
+<summary>Digestive system key terms</summary>
 
 cholecystitis (gallbladder inflammation), diverticulitis (colon pouch inflammation), Crohn's disease vs ulcerative colitis (IBD types), endoscopy (camera into GI tract), colostomy (surgical colon opening)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Endocrine key terms?</summary>
+<summary>Endocrine key terms</summary>
 
 diabetes mellitus types (Type 1 = autoimmune, Type 2 = insulin resistance), hypothyroidism vs hyperthyroidism, HbA1c (3-month blood sugar average), insulin, metformin
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Diabetes documentation?</summary>
+<summary>Diabetes documentation</summary>
 
 ICD-10 requires specificity — Type 1 vs Type 2, with or without complications, complication type (diabetic nephropathy, neuropathy, retinopathy); affects DRG assignment significantly
 

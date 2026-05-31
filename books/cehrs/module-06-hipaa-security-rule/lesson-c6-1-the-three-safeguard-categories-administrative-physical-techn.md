@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Addressable vs required safeguards
 :::
 
-## Why this matters
-
-The HIPAA Security Rule requires covered entities to implement safeguards across three categories.
-
 ## Overview
 
 The HIPAA Security Rule requires covered entities to implement safeguards across three categories. Administrative safeguards are policies and procedures. Physical safeguards protect hardware and buildings. Technical safeguards are the controls built into systems. All three must be present for compliance.
@@ -45,38 +41,38 @@ Administrative safeguards (required): security management process (risk analysis
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Administrative safeguards (required)?</summary>
+<summary>Administrative safeguards (required)</summary>
 
 security management process (risk analysis + risk management), assigned security officer, workforce training, information access management, contingency plan (data backup, disaster recovery, emergency mode)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Risk analysis?</summary>
+<summary>Risk analysis</summary>
 
 required by HIPAA — must identify where ePHI lives, threats to ePHI, vulnerabilities, and current controls; documented and updated regularly; failure to conduct risk analysis is the most commonly cited HIPAA violation
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Physical safeguards?</summary>
+<summary>Physical safeguards</summary>
 
 facility access controls (badge readers, locked server rooms), workstation use policies (screen locks, no PHI on unsecured workstations), device and media controls (encrypted laptops, mobile device management)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Technical safeguards?</summary>
+<summary>Technical safeguards</summary>
 
 access controls (unique user IDs + passwords, automatic logoff), audit controls (logging all access to ePHI), integrity controls (hash verification to detect tampering), transmission security (encryption for ePHI in transit)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Addressable vs required safeguards?</summary>
+<summary>Addressable vs required safeguards</summary>
 
 "required" must be implemented; "addressable" must be implemented OR the entity must document why it is not reasonable and what equivalent alternative was implemented instead
 

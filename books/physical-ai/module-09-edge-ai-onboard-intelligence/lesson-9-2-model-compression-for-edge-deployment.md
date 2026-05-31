@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - TensorRT
 :::
 
-## Why this matters
-
-A 7B parameter VLA model in FP32 requires 28GB of memory and inference at &lt;1 Hz on an AGX Orin — unusable.
-
 ## Overview
 
 A 7B parameter VLA model in FP32 requires 28GB of memory and inference at &lt;1 Hz on an AGX Orin — unusable. Model compression techniques (quantization, pruning, distillation) can reduce this to 4GB and 5-10 Hz without meaningful accuracy loss.
@@ -45,38 +41,38 @@ INT4 quantization (AWQ, GPTQ): reduce 7B FP16 (14GB) → 7B INT4 (3.5GB); 4× me
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about INT4 quantization (AWQ, GPTQ)?</summary>
+<summary>INT4 quantization (AWQ, GPTQ)</summary>
 
 reduce 7B FP16 (14GB) → 7B INT4 (3.5GB); 4× memory reduction, 3-4× speedup; &lt;1% accuracy drop on action prediction benchmarks
 
 </details>
 
 <details>
-<summary>Q2. What do you know about AWQ (Activation-Aware Weight Quantization)?</summary>
+<summary>AWQ (Activation-Aware Weight Quantization)</summary>
 
 identifies and preserves "salient" weights in high-precision; best INT4 method for LLM-derived VLA models; available in TensorRT-LLM
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Knowledge distillation?</summary>
+<summary>Knowledge distillation</summary>
 
 train a smaller "student" model to match outputs of a larger "teacher" VLA; Pi0-small (1B params) can approach Pi0-3B performance with distillation
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Pruning?</summary>
+<summary>Pruning</summary>
 
 remove unimportant weights (structured: remove attention heads; unstructured: zero individual weights); 20-30% of weights can often be pruned with minimal impact
 
 </details>
 
 <details>
-<summary>Q5. What do you know about TensorRT?</summary>
+<summary>TensorRT</summary>
 
 NVIDIA's inference optimizer; fuses layers, optimizes memory access patterns; typically 2-4× speedup on top of quantization for Orin deployment
 

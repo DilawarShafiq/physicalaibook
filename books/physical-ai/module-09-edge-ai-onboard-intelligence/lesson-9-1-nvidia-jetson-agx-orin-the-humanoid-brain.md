@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Memory bandwidth
 :::
 
-## Why this matters
-
-NVIDIA Jetson AGX Orin (2022) is the de facto standard compute platform for robotics AI.
-
 ## Overview
 
 NVIDIA Jetson AGX Orin (2022) is the de facto standard compute platform for robotics AI. Its combination of 275 TOPS of INT8 performance, 64GB LPDDR5 memory, and NVMe storage — in a 100W power envelope — makes it the only currently available platform that can run VLA inference on a battery-powered robot.
@@ -45,38 +41,38 @@ AGX Orin specs: 12-core Arm Cortex-A78AE CPU, 2048-core Ampere GPU with 64 Tenso
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about AGX Orin specs?</summary>
+<summary>AGX Orin specs</summary>
 
 12-core Arm Cortex-A78AE CPU, 2048-core Ampere GPU with 64 Tensor Cores, 64GB LPDDR5; 275 TOPS INT8 / 135 TOPS FP16
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Power modes?</summary>
+<summary>Power modes</summary>
 
 15W (max efficiency) to 60W (max performance); thermal design targets 100W peak; must budget power vs compute tradeoff carefully
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Model performance on AGX Orin?</summary>
+<summary>Model performance on AGX Orin</summary>
 
 LLaMA-7B INT4 at ~5 tokens/s; OpenVLA 7B quantized at ~1.5 Hz; DepthAnything at 30 FPS; Grounded DINO at 15 FPS
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Multi-module setup?</summary>
+<summary>Multi-module setup</summary>
 
 Figure 02 uses 2× Orin NX (10W each) modules — one for perception pipeline, one for motor control; avoids thermal throttling of single module
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Memory bandwidth?</summary>
+<summary>Memory bandwidth</summary>
 
 204 GB/s on AGX Orin; limits large model inference more than TOPS; quantization reduces bandwidth requirement proportionally
 

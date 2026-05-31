@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Allscripts/Veradigm
 :::
 
-## Why this matters
-
-Six vendors control over 80% of the US hospital EHR market.
-
 ## Overview
 
 Six vendors control over 80% of the US hospital EHR market. As a CEHRS specialist, you will encounter these systems throughout your career. Understanding their strengths, typical clients, and core modules is essential for both the exam and practical work.
@@ -45,38 +41,38 @@ Epic Systems: ~35% market share in US hospitals; dominates large academic medica
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Epic Systems?</summary>
+<summary>Epic Systems</summary>
 
 ~35% market share in US hospitals; dominates large academic medical centers (Mayo Clinic, Cleveland Clinic, Kaiser Permanente); known for MyChart patient portal and strong interoperability via Care Everywhere
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Oracle Health (formerly Cerner)?</summary>
+<summary>Oracle Health (formerly Cerner)</summary>
 
 ~25% market share; strong in mid-size hospitals and federal health (VA, DoD after $10B DHMSM contract); uses HealtheIntent population health platform
 
 </details>
 
 <details>
-<summary>Q3. What do you know about MEDITECH?</summary>
+<summary>MEDITECH</summary>
 
 dominant in critical access hospitals and smaller community hospitals; MEDITECH Expanse (cloud-based) is their current platform; ~15% market share
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Athenahealth?</summary>
+<summary>Athenahealth</summary>
 
 strongest in physician practices and ambulatory settings; cloud-native, subscription model; ~10% of ambulatory market; known for revenue cycle integration
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Allscripts/Veradigm?</summary>
+<summary>Allscripts/Veradigm</summary>
 
 primarily physician practices; declining market share after major hospital clients left; stronger in specialty practices
 

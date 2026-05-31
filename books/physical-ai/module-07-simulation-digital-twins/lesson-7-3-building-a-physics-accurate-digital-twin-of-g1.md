@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - State estimation bridge
 :::
 
-## Why this matters
-
-A digital twin is a live, synchronized simulation of the real robot — updated in real-time from sensor data.
-
 ## Overview
 
 A digital twin is a live, synchronized simulation of the real robot — updated in real-time from sensor data. For G1 development, the digital twin serves three purposes: visualization, predictive maintenance, and policy pre-testing before hardware deployment.
@@ -45,38 +41,38 @@ URDF → USD pipeline: convert G1's URDF (Unified Robot Description Format) to U
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about URDF → USD pipeline?</summary>
+<summary>URDF → USD pipeline</summary>
 
 convert G1's URDF (Unified Robot Description Format) to USD for Isaac Sim; NVIDIA provides isaac_ros_urdf for automated conversion
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Inertial parameters?</summary>
+<summary>Inertial parameters</summary>
 
 measured vs nominal inertia tensors for each link differ by 5-20%; use system identification (swing experiments) to measure actual parameters
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Actuator modeling?</summary>
+<summary>Actuator modeling</summary>
 
 add motor dynamics to simulation (current limiting, back-EMF, thermal derating model) for accurate torque prediction
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Sensor simulation?</summary>
+<summary>Sensor simulation</summary>
 
 add realistic noise models for each sensor based on manufacturer datasheets; IMU noise, camera calibration errors, encoder quantization
 
 </details>
 
 <details>
-<summary>Q5. What do you know about State estimation bridge?</summary>
+<summary>State estimation bridge</summary>
 
 real-time pose estimate from onboard SLAM → update digital twin state; latency &lt;50ms for useful synchronization
 

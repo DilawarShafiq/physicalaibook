@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Musculoskeletal key terms
 :::
 
-## Why this matters
-
-Three of the most heavily documented body systems in clinical records.
-
 ## Overview
 
 Three of the most heavily documented body systems in clinical records. Cardiovascular conditions are the leading cause of US hospitalizations; respiratory documentation drives many DRG assignments; musculoskeletal documentation is critical for orthopedic and physical therapy records.
@@ -45,38 +41,38 @@ Cardiovascular key terms: myocardial infarction (MI/heart attack), angina pector
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Cardiovascular key terms?</summary>
+<summary>Cardiovascular key terms</summary>
 
 myocardial infarction (MI/heart attack), angina pectoris (chest pain from coronary artery disease), arrhythmia (irregular heart rhythm), atherosclerosis (arterial plaque), echocardiogram (ultrasound of heart), coronary artery bypass graft (CABG)
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Common cardiovascular abbreviations?</summary>
+<summary>Common cardiovascular abbreviations</summary>
 
 CHF (congestive heart failure), CAD (coronary artery disease), HTN (hypertension), BP (blood pressure), EKG/ECG (electrocardiogram), PCI (percutaneous coronary intervention)
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Respiratory key terms?</summary>
+<summary>Respiratory key terms</summary>
 
 pneumonia (lung infection), COPD (chronic obstructive pulmonary disease), dyspnea (difficulty breathing), atelectasis (lung collapse), bronchospasm (airway narrowing), intubation (placement of breathing tube)
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Respiratory abbreviations?</summary>
+<summary>Respiratory abbreviations</summary>
 
 SOB (shortness of breath), O2 sat (oxygen saturation), ARDS (acute respiratory distress syndrome), ABG (arterial blood gas), BiPAP/CPAP (positive airway pressure devices)
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Musculoskeletal key terms?</summary>
+<summary>Musculoskeletal key terms</summary>
 
 fracture types (closed/open, comminuted, greenstick), sprain vs strain (ligament vs muscle/tendon), arthroplasty (joint replacement), arthroscopy (joint camera), osteoporosis (bone density loss)
 

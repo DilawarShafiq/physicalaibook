@@ -21,10 +21,6 @@ By the end of this lesson you will be able to explain and apply:
 - Guarantor vs subscriber
 :::
 
-## Why this matters
-
-Registration collects the demographic, financial, and clinical information needed for care, billing, and communication.
-
 ## Overview
 
 Registration collects the demographic, financial, and clinical information needed for care, billing, and communication. Incomplete or inaccurate registration data causes claim denials, delayed care, and HIPAA violations. Each data element has a specific purpose and validation requirement.
@@ -45,38 +41,38 @@ Required demographic fields: full legal name (match to government ID), DOB, addr
 
 ## Check your understanding
 
-Try to recall each answer before expanding it.
+Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>Q1. What do you know about Required demographic fields?</summary>
+<summary>Required demographic fields</summary>
 
 full legal name (match to government ID), DOB, address, phone, sex, race/ethnicity (required for quality reporting), SSN (optional but used for identity), emergency contact
 
 </details>
 
 <details>
-<summary>Q2. What do you know about Insurance verification?</summary>
+<summary>Insurance verification</summary>
 
 confirm coverage is active, patient is eligible, service is covered, and obtain authorization number if required before service; payer portals (Availity) used for real-time eligibility checks
 
 </details>
 
 <details>
-<summary>Q3. What do you know about Prior authorization?</summary>
+<summary>Prior authorization</summary>
 
 written approval from payer required for certain procedures, specialist visits, and inpatient admissions; must be obtained before service; authorization number documented in registration
 
 </details>
 
 <details>
-<summary>Q4. What do you know about Self-pay vs charity care?</summary>
+<summary>Self-pay vs charity care</summary>
 
 uninsured patients must be screened for financial assistance eligibility; ACA requires non-profit hospitals to have charity care policies; screening typically uses Federal Poverty Level (FPL) guidelines
 
 </details>
 
 <details>
-<summary>Q5. What do you know about Guarantor vs subscriber?</summary>
+<summary>Guarantor vs subscriber</summary>
 
 guarantor = person responsible for the bill (often the patient); subscriber = person on the insurance policy (may be a spouse or parent); both must be registered correctly
 
