@@ -46,6 +46,19 @@ This is why the recommendation is not "replace the Orin with Loihi." It is to us
 
 That niche, for G1, is **always-on safety monitoring.** Picture the Orin in a low-power sleep mode while the robot waits — and a **Loihi 2 co-processor** running continuously on event-camera input, watching for a human approaching or predicting an imminent collision. Because it draws milliwatts, it can run forever without touching the battery budget; because it updates at thousands of hertz, it can react faster than any frame-based system; and because it is independent of the main brain, it functions as a safety layer that stays awake even when the heavy compute is idle. When the co-processor detects a human entering the robot's space, it wakes the Orin. This is the cleanest way to reconcile two demands that fight on a battery: the desire for a powerful but power-hungry VLA brain, and the requirement for perception that never sleeps.
 
+The co-processor and the main brain interact as a simple wake protocol — the safety layer stays awake and rouses the Orin only when needed:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Monitoring
+    Monitoring: Loihi 2 watches event stream, Orin asleep
+    Monitoring --> Alarm: human enters space
+    Alarm: wake the Orin
+    Alarm --> Active: Orin running VLA
+    Active: full perception and control
+    Active --> Monitoring: space clear, Orin sleeps
+```
+
 ## Putting it into practice
 
 Decide whether — and where — a neuromorphic layer belongs in G1.

@@ -20,6 +20,18 @@ Memorize the cycle as an ordered chain, because the order is the point — each 
 
 A useful memory hook is to split that chain in half. The first half (registration, charge capture, coding, submission) is about getting a clean claim *out the door correctly the first time*. The second half (payment posting, denial management, A/R follow-up, patient billing) is about *chasing the money* once the claim is in the payer's hands. The earlier in the chain a problem is caught, the cheaper it is to fix — which leads directly to the next distinction.
 
+```mermaid
+flowchart LR
+    A["Pre-registration"] --> B["Registration"]
+    B --> C["Charge capture"]
+    C --> D["Medical coding"]
+    D --> E["Claim submission"]
+    E --> F["Payment posting"]
+    F --> G["Denial management"]
+    G --> H["A R follow-up"]
+    H --> I["Patient billing"]
+```
+
 ## Front-end versus back-end: prevention beats correction
 
 The single most testable idea in this lesson is the split between front-end and back-end work.

@@ -30,6 +30,14 @@ The most important Optimus number is not a spec; it is a manufacturing target. T
 
 Treat those projections with the same caution as any roadmap, but understand the logic. Tesla's plan is to use its own factories as both the first customer and the training environment: every shift a robot works generates data, and every unit built drives the cost down the manufacturing learning curve. If it works, vertical integration becomes a flywheel no one without a car company can match.
 
+```mermaid
+flowchart LR
+    F["Tesla factories deploy Optimus"] --> D["Robots generate real-world data"]
+    D --> B["Better models, more units built"]
+    B --> C["Lower BOM cost per unit"]
+    C --> F
+```
+
 ## What G1 should learn from it
 
 Tesla's lesson for G1 is sobering and clarifying. You cannot out-scale Tesla on manufacturing, and you should not try. The takeaway is that **cost and capability at volume are a structural advantage, not a feature you can bolt on later** — which is exactly why G1's strategy, developed across this module, competes on a different axis (safety and a healthcare application that Tesla is not pursuing) rather than on raw unit economics.

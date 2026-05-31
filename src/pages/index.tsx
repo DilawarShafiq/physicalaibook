@@ -30,9 +30,9 @@ const BOOKS: BookCover[] = [
       'Research-grade curriculum covering the 2024–2026 frontier — from QDD actuators to π0 VLA foundation models. Every module informs a design decision in G1.',
     hook:
       'No humanoid has yet demonstrated 8-hour unsupervised household operation. G1 will. This is the curriculum that gets us there.',
-    totalHours: '68+',
-    modules: 10,
-    lessons: 42,
+    totalHours: '73+',
+    modules: 11,
+    lessons: 45,
     to: '/physical-ai',
     startLabel: 'Open the book',
     author: 'Dilawar Gopang',
@@ -44,9 +44,9 @@ const BOOKS: BookCover[] = [
     title: 'Certified Electronic Health Records Specialist',
     subtitle: 'NHA CEHRS Certification — Complete Exam Prep',
     description:
-      'Complete preparation for the 130-question NHA CEHRS exam. All six domains, real exam content, and a 10-day countdown study plan.',
+      'Complete preparation for the 125-question NHA CEHRS exam. All six domains, real exam content, and a 10-day countdown study plan.',
     hook:
-      '22% of the exam is documentation, 21% medical terminology, 17% HIPAA. You need the exact 130 facts that appear — this book tells you which.',
+      '22% of the exam is documentation, 21% medical terminology, 17% HIPAA. You need the exact facts that appear — this book tells you which.',
     totalHours: '44+',
     modules: 10,
     lessons: 36,
@@ -64,9 +64,9 @@ const BOOKS: BookCover[] = [
       'Build, deploy, and scale AI agents that automate US healthcare administration — RCM, prior auth, coding, denial management — on the Autosapien stack.',
     hook:
       'US healthcare spends $500B a year on admin paperwork. One engineer with the right agent framework automates what a team of 20 once did by hand.',
-    totalHours: '52+',
-    modules: 8,
-    lessons: 22,
+    totalHours: '57+',
+    modules: 9,
+    lessons: 25,
     to: '/agentic-healthcare',
     startLabel: 'Open the book',
     author: 'Dilawar Gopang',
@@ -188,12 +188,12 @@ function HeroSection() {
           </div>
           <span className={styles.heroDivider} aria-hidden="true" />
           <div className={styles.heroStat}>
-            <span className={styles.heroStatNum}>100</span>
+            <span className={styles.heroStatNum}>106</span>
             <span className={styles.heroStatLabel}>Lessons</span>
           </div>
           <span className={styles.heroDivider} aria-hidden="true" />
           <div className={styles.heroStat}>
-            <span className={styles.heroStatNum}>164+</span>
+            <span className={styles.heroStatNum}>174+</span>
             <span className={styles.heroStatLabel}>Hours</span>
           </div>
         </div>

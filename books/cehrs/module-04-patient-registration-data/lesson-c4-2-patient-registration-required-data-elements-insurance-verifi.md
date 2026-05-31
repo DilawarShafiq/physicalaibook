@@ -22,7 +22,19 @@ A useful framing for the exam: every demographic field serves at least one downs
 
 Demographics establish *who* the patient is; insurance verification establishes *who pays.* Before a service is delivered, registration staff confirm four things: that **coverage is active**, that the **patient is eligible**, that the **service is covered**, and that any required **authorization number** has been obtained. This is done through **payer portals** — Availity being the common example named in the curriculum — which allow real-time eligibility checks against the insurer's records.
 
-The mechanism behind those checks is the **270/271 HIPAA transaction**, the standardized electronic eligibility exchange: the provider sends a 270 inquiry and the payer returns a 271 response. This is called **real-time eligibility (RTE)**, and it is standard practice precisely because it catches coverage problems at the front end — before they become claim denials at the back end. The exam tends to reward this front-end logic: it is far cheaper to prevent a denial at registration than to fight one after the claim is submitted.
+The mechanism behind those checks is the **270/271 HIPAA transaction**, the standardized electronic eligibility exchange: the provider sends a 270 inquiry and the payer returns a 271 response. This is called **real-time eligibility (RTE)**, and it is standard practice precisely because it catches coverage problems at the front end — before they become claim denials at the back end.
+
+```mermaid
+sequenceDiagram
+    participant R as Registration
+    participant Portal as Payer Portal
+    participant Payer
+    R->>Portal: Send 270 eligibility inquiry
+    Portal->>Payer: Forward inquiry
+    Payer->>Portal: Return 271 response
+    Portal->>R: Coverage eligibility and benefits
+    R->>R: Resolve issues before service
+``` The exam tends to reward this front-end logic: it is far cheaper to prevent a denial at registration than to fight one after the claim is submitted.
 
 ## Prior authorization and the cost of missing it
 

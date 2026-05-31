@@ -41,6 +41,17 @@ The final concept is the one that trumps every retention schedule. A **legal hol
 
 The CEHRS role here is immediate and concrete: when a hold is issued, the CEHRS specialist is **notified immediately to halt destruction.** The exam scenario to watch for is a record that has passed its retention period but is covered by a hold — the correct action is always to preserve it, because the legal hold overrides the schedule. *Retention says you may destroy; a legal hold says you must not.*
 
+```mermaid
+flowchart TD
+    A["Record reaches retention review"] --> B{"Legal hold in place"}
+    B -->|"Yes"| C["Preserve indefinitely"]
+    B -->|"No"| D{"Past longer of federal and state period"}
+    D -->|"No"| E["Continue retaining"]
+    D -->|"Yes"| F["Destroy preventing reconstruction"]
+    F --> G["Issue certificate of destruction"]
+    G --> H["Keep certificate permanently"]
+```
+
 ## Putting it into practice
 
 Build a retention reference card and rehearse the conflict-resolution logic until it is automatic.

@@ -28,6 +28,17 @@ Every multi-fingered hand answers one question first: where do the motors live? 
 
 There is a third, pragmatic option: buy a finished module. The **Inspire Hands** used in the Unitree G1 upgrade kit offer **12 DOF**, solid dexterity, ROS support, and a known price of roughly **$8k per pair**. Twelve DOF is below the healthcare target, but for early integration — getting *a* hand on the robot and writing the rest of the stack — a commercial, supported unit removes a huge amount of risk.
 
+```mermaid
+flowchart TD
+    Q["What dominates the choice?"]
+    Q -->|"Finger weight and anthropomorphic shape"| T["Tendon-driven: Shadow 20 DOF"]
+    Q -->|"Control simplicity and force transparency"| D["Direct-drive: LEAP 16 DOF"]
+    Q -->|"Time to integration"| C["Commercial module: Inspire 12 DOF"]
+    T --> Cost1["Cost: cable routing and tensioning"]
+    D --> Cost2["Cost: heavier fingers"]
+    C --> Cost3["Cost: below 22 DOF target"]
+```
+
 ## How the choice flows from the task
 
 The decision is not "which hand is best" but "which hand fits *these* tasks." Anchor on the three G1 reference tasks. Threading a needle demands fine fingertip placement and high positional resolution — it rewards DOF and clean control. Picking up an egg demands force transparency and gentle, regulated contact — it rewards backdrivable, well-sensed actuation. Handling medication demands repeatability and the ability to read grip state. Notice that all three lean toward *more* DOF and *better force feedback*, which is precisely why the G1 spec sets 22 DOF as a floor and calls for **tendon drive to keep finger weight down**, while still requiring **custom tactile sensing on all ten fingertips**. The hand spec encodes a bet: anthropomorphic finger geometry plus dense fingertip sensing is the combination healthcare manipulation needs.

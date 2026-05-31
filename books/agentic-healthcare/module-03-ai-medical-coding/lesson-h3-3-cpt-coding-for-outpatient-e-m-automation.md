@@ -16,6 +16,19 @@ Inpatient coding is about diagnoses and DRGs. Outpatient and physician-practice 
 
 The **2021 AMA E&M revision** rebuilt how office and outpatient visits (codes 99202–99215) are leveled. The old system was a tripod of history, exam, and medical decision making, with counting rules so fiddly that two coders could read the same note and disagree. The revision threw out history and exam as scoring elements and based the level on just two things: **medical decision making (MDM) complexity** *or* **total clinician time** on the day of the encounter. Pick whichever supports the higher level; document accordingly.
 
+```mermaid
+flowchart TD
+    A["Office visit note"] --> B["Assess MDM complexity"]
+    A --> C["Assess total clinician time"]
+    B --> D["Pick whichever supports higher level"]
+    C --> D
+    D --> E["E&M code 99202 to 99215"]
+    E --> F{"Same-day procedure plus E&M"}
+    F -->|"Yes"| G["Apply modifier -25"]
+    F -->|"No"| H["Submit for human approval"]
+    G --> H
+```
+
 That simplification is exactly what makes the problem tractable for an LLM. MDM and total time are both extractable from a well-written note, and the decision tree is far cleaner than the old element-counting. An AI agent handles this with high accuracy precisely because the AMA removed the ambiguity that used to trip up humans and machines alike.
 
 ## Reading MDM the way the rules do

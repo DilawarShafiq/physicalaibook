@@ -44,6 +44,20 @@ The governance rule to remember: order sets **must be reviewed and updated annua
 
 Finally, a practice the exam wants you to recognize as risky: **auto-authentication.** Some facilities allow orders to be auto-authenticated if the provider doesn't amend them within a set timeframe — effectively signing by inaction. This is **legally risky and not recommended by AHIMA**, because a signature should reflect deliberate review, not silence. If a question describes orders being "signed" automatically because no one objected, the correct read is that this practice is discouraged.
 
+The verbal and telephone order exception follows a strict sequence before the order is complete:
+
+```mermaid
+sequenceDiagram
+    participant P as Prescriber
+    participant N as Nurse or Clerk
+    participant S as EHR
+    P->>N: Give verbal or telephone order
+    N->>P: Read back and verify
+    P->>N: Confirm accuracy
+    N->>S: Enter order
+    P->>S: Authenticate within 24 to 48 hours
+```
+
 ## Putting it into practice
 
 1. Write the CPOE regulatory line in your own words: *CMS requires it for incentive-receiving Medicare hospitals; Joint Commission only recommends it.* The mandate-versus-recommendation split is a likely exam point.

@@ -25,6 +25,18 @@ Onboarding starts with data collection, and the list is fixed enough to template
 
 The art of fast onboarding is recognizing that this list splits into two halves: data you can capture in a form and provision instantly, and external processes that run on someone else's clock. Treat them differently.
 
+```mermaid
+flowchart LR
+  INTAKE["Intake form"] --> INSTANT["Instant track"]
+  INTAKE --> TRACKED["External tracked track"]
+  INSTANT --> EHR["EHR access provisioning"]
+  INSTANT --> TEST["Test claim cycle"]
+  TRACKED --> EDI["EDI enrollment 2 to 14 days"]
+  TRACKED --> CAQH["CAQH credentialing"]
+  TEST --> LIVE["Go live under 24 hours"]
+  EDI --> LIVE
+```
+
 ## The part you cannot fully automate: EDI and credentialing
 
 Be honest about the slow links, because pretending they are instant is how onboarding promises break. **EDI enrollment** — registering the practice with each payer so it can submit claims electronically and receive ERAs — is a per-payer process that **takes anywhere from 2 to 14 days** and **cannot be fully automated**. What you *can* do is automate the submission and then track it. Most large payers offer online enrollment, and **Availity Payer Enrollment** lets a practice enroll ERA/EFT with multiple health plans through a single workflow, which collapses a lot of separate paperwork. Your onboarding system should fire off these enrollments, then surface their status on a dashboard so nothing stalls silently.

@@ -14,7 +14,7 @@ description: "Build, deploy, and scale AI agents that automate US healthcare adm
 
 Build, deploy, and scale AI agents that automate US healthcare administration. RCM, prior auth, medical coding, denial management, and the complete Personal Medical Biller — on the Autosapien stack.
 
-**Modules:** 8 · **Lessons:** 22 · **Total hours:** 52+ · **Author:** Dilawar Gopang
+**Modules:** 9 · **Lessons:** 25 · **Total hours:** 52+ · **Author:** Dilawar Gopang
 
 ## Who this book is for
 
@@ -78,6 +78,12 @@ Each lesson opens with **learning objectives**, builds the ideas in **Overview**
 *xEHR.io, the Autosapien agentic platform & the RCM Automation Platform* — Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien agentic platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller.
 
 `4 hours` · `Foundational` · 2 lessons
+
+### [Module 9: Capstone: Ship a Digital FTE](./module-09-capstone-ship-digital-fte/index.md)
+
+*From Zero to a Running Eligibility Agent* — Turn the book into a deployed agent: scope a Digital FTE, build an eligibility agent end to end with Claude and real payer transactions, and take it to production safely.
+
+`5 hours` · `Advanced` · 3 lessons
 
 ---
 

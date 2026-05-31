@@ -43,6 +43,18 @@ For scenario questions, use a deliberate reading order: **read the last sentence
 
 The clock is a tool, not a threat, if you manage it. The proven method is a two-pass strategy. On the **first pass**, answer everything you know quickly, and **flag any difficult question and move on** rather than burning two minutes early. On the **second pass**, return to your flagged questions with the time you banked. Aim to have all 125 questions answered with **15 to 20 minutes remaining** so you can review flagged items and confirm nothing was left blank. At roughly 77 seconds per question, finishing early is entirely realistic if you refuse to get stuck.
 
+```mermaid
+flowchart TD
+    A["First pass begins"] --> B{"Know the answer fast"}
+    B -->|"Yes"| C["Answer and move on"]
+    B -->|"No"| D["Flag, guess, move on"]
+    C --> E{"Reached question 125"}
+    D --> E
+    E -->|"No"| B
+    E -->|"Yes, 15 to 20 min left"| F["Second pass: revisit flagged"]
+    F --> G["Confirm zero blanks"]
+```
+
 ## Putting it into practice
 
 1. Take a short practice set and label each question knowledge, application, or analysis. Confirm for yourself that application dominates, and notice how that changes your reasoning.

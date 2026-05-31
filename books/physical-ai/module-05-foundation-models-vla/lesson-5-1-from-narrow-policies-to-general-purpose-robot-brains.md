@@ -32,6 +32,16 @@ The canonical example makes it concrete. Told to "place the extinct animal in fr
 
 This is the defining property of a Vision-Language-Action (VLA) model: it inherits the semantic breadth of a vision-language model and learns to emit actions in the same forward pass.
 
+```mermaid
+flowchart LR
+    Web["Internet vision-language data"] --> Train["Co-training"]
+    Demos["Robot demonstrations"] --> Train
+    Train --> VLA["VLA model"]
+    Instr["Language instruction"] --> VLA
+    Cam["Camera image"] --> VLA
+    VLA --> Action["Robot action"]
+```
+
 ## Scale, and the cost it imposes
 
 RT-2 was built on a **55-billion-parameter PaLM-E backbone**. The pattern that holds across this lesson is a scale law for robotics: **larger models generalize better**. But that capability has a price you will pay in hardware. A 55B-parameter model is not something you run at high frequency on a battery-powered robot's onboard compute. The generalization you want and the latency you can afford pull in opposite directions, and reconciling them is a central engineering challenge — one this module returns to when we deploy VLAs on real hardware (Lesson 5.5).

@@ -16,6 +16,14 @@ Your actuator map from the last lesson tells you how much torque the robot can p
 
 The right order is: estimate average power, multiply by hours, then go shopping for cells. A 40-joint humanoid at moderate activity draws roughly **800 W to 1.5 kW average**. For 8 hours that implies **6.4–12 kWh** of usable capacity. That range is enormous, and closing it is the whole game — which is why *duty-cycle optimization* (most joints are near-idle most of the time) is as important as the cells you pick.
 
+```mermaid
+flowchart LR
+    AVG["Average power: 0.8 to 1.5 kW"] --> EN["x 8 hours = 6.4 to 12 kWh"]
+    EN --> DUTY["Duty-cycle optimization"]
+    DUTY --> TGT["Target ~6 kWh usable"]
+    TGT --> CELLS["Choose cells and pack mass"]
+```
+
 ## The mass problem, stated honestly
 
 Energy density sets a hard floor on weight. Lithium-ion **21700 cells** deliver about **270 Wh/kg**, so a naive **12 kWh** pack weighs around **44 kg** — more than the robot can carry and still be useful. The practical target is closer to **6 kWh**, reached by driving the average power down with duty-cycle management rather than by adding cells. Two levers move that number: efficient actuators (Lesson 2.1's torque-density work) and software that lets idle joints rest.

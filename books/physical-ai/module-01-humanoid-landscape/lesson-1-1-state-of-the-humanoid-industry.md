@@ -42,6 +42,18 @@ US-led companies — Figure, Tesla, Apptronik, Agility — target **$100,000-plu
 
 Chinese manufacturers — **Unitree, UBTECH, and Fourier** — target the **$20,000–$50,000 researcher and small-business segment**, betting on volume and an open ecosystem. As later lessons will show, that low price point has quietly become one of the most important forces in the field, because it determines who gets to do research at all.
 
+```mermaid
+flowchart TD
+    M["Humanoid market split"] --> US["US-led: Figure, Tesla, Apptronik, Agility"]
+    M --> CN["China-led: Unitree, UBTECH, Fourier"]
+    US --> USP["$100k+ per year"]
+    US --> USC["Enterprise industrial buyers"]
+    US --> USB["Bet: general-purpose capability"]
+    CN --> CNP["$20k to $50k"]
+    CN --> CNC["Researchers, small business"]
+    CN --> CNB["Bet: volume + open ecosystem"]
+```
+
 For G1, this map is the starting point: the enterprise segment is crowded and well-funded, the low-cost segment is a volume game, and — as Module 1 will keep returning to — there are application areas that *no one* has locked down yet.
 
 ## Putting it into practice

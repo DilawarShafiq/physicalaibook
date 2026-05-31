@@ -68,6 +68,19 @@ Trace a single order through the ecosystem to cement how the pieces connect.
 4. Add a "downtime" sidebar: paper forms during the outage, scan-and-reconcile afterward.
 5. Self-test: cover the diagram and answer aloud — "Where would I look if pharmacy never learned a patient was admitted?" (the ADT feed) and "Where would I look if lab results stopped reaching the chart?" (the interface engine).
 
+```mermaid
+sequenceDiagram
+    participant MD as "Physician CPOE"
+    participant IE as "Interface Engine"
+    participant Lab as "Laboratory"
+    participant Doc as "Clinical Documentation"
+    MD->>IE: "Lab order via HL7 v2"
+    IE->>Lab: "Translated order"
+    Lab->>IE: "Result via HL7 v2"
+    IE->>Doc: "Result filed to chart"
+    Note over MD,Doc: "ADT feed A01 admit A03 discharge A08 update keeps systems in sync"
+```
+
 ## Key takeaways
 
 - An EHR is an ecosystem of modules — registration/ADT, CPOE, clinical documentation, pharmacy, lab, radiology, scheduling, billing — connected by interfaces, not a single application.

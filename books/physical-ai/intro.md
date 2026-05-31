@@ -14,7 +14,7 @@ description: "Research-grade curriculum covering the 2024–2026 frontier. From 
 
 Research-grade curriculum covering the 2024–2026 frontier. From QDD actuators to π0 VLA foundation models — every module informs a design decision in G1.
 
-**Modules:** 10 · **Lessons:** 42 · **Total hours:** 68+ · **Author:** Dilawar Gopang
+**Modules:** 11 · **Lessons:** 45 · **Total hours:** 68+ · **Author:** Dilawar Gopang
 
 ## Who this book is for
 
@@ -89,6 +89,12 @@ Each lesson opens with **learning objectives**, builds the ideas in **Overview**
 *Architecture, Milestones & 2030 Strategy* — Synthesize everything. Define G1's technology stack, resolve the key architectural decisions, and lay out the concrete development roadmap from 2026 to commercial launch.
 
 `4 hours` · `Foundational` · 4 lessons
+
+### [Module 11: Capstone: From Platform to Working Robot](./module-11-capstone-build/index.md)
+
+*Build vs Buy, Reference Build, and Sim-to-Real* — Turn the whole curriculum into a working robot: decide whether to build or buy, bring up a real platform with its SDK and ROS 2, then train a policy in simulation and deploy it on hardware.
+
+`5 hours` · `Advanced` · 3 lessons
 
 ---
 

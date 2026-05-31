@@ -22,6 +22,13 @@ Every HIE fits one of three models, and the exam tests them by description. The 
 
 A clean memory hook: push (directed), pull (query), patient (consumer-mediated). If a question describes a doctor *sending* a referral, that is directed; if it describes a doctor *looking up* an outside record, that is query-based.
 
+```mermaid
+flowchart LR
+    P1["Provider A"] -->|"Push directed"| P2["Provider B"]
+    P3["Provider C"] -->|"Pull query-based"| HIE["Outside records"]
+    Pat["Patient"] -->|"Consumer-mediated"| Share["Controls sharing"]
+```
+
 ## Directed exchange and the Direct Protocol
 
 Directed exchange is the most common model in **transitions of care.** The everyday examples are a referral to a specialist with records attached, or a discharge summary sent to the patient's primary care provider. The technology underneath is the **Direct Protocol**, which is essentially **SMTP-based secure email built for healthcare.**

@@ -50,6 +50,14 @@ ROI is a timed activity, and tracking **request-to-delivery time** is part of th
 
 CEHRS staff are expected to track each request against its applicable clock. The contrast the exam tests is the gap between the routine 30-day window and the urgent 24-hour emergency window — knowing which clock applies to which request is the skill being measured.
 
+```mermaid
+flowchart TD
+    A["ROI request received"] --> B{"What type of request"}
+    B -->|Standard| C["Deliver within 30 days"]
+    B -->|Medical emergency| D["Deliver within 24 hours"]
+    B -->|Legal subpoena| E["Follow the court timeline"]
+```
+
 ## The workers' comp exception and authorization vs. consent
 
 Two distinctions in this lesson are favorite exam targets.

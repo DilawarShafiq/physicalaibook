@@ -24,6 +24,20 @@ FHIR defines *what* the data looks like, but a second standard governs *who* is 
 
 This is the plumbing behind the patient-controlled access the Cures Act envisioned. It is what lets **Apple Health**, patient portals, and care-coordination apps pull records directly from the EHR. For the exam, pair the two names together: FHIR is the data format, SMART on FHIR (OAuth 2.0) is the secure permission layer on top of it.
 
+```mermaid
+sequenceDiagram
+    participant Patient
+    participant App as "Third-party app"
+    participant Auth as "SMART OAuth 2.0"
+    participant EHR as "EHR FHIR R4 API"
+    App->>Auth: Request access
+    Auth->>Patient: Ask for consent
+    Patient->>Auth: Grant consent
+    Auth->>App: Return access token
+    App->>EHR: Request resource with token
+    EHR->>App: Return FHIR resource
+```
+
 ## The Cures Act Final Rule and information blocking
 
 The legal engine behind FHIR adoption is the **ONC Cures Act Final Rule (2020).** It does three things worth memorizing as a set: it **requires EHR vendors to publish FHIR R4 APIs**, it **prohibits information blocking**, and it **empowers patients to access their data through third-party apps without paying for it.**

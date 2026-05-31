@@ -53,6 +53,16 @@ A working PA agent is a six-step pipeline, and each step maps to a distinct capa
 
 The escalation step is not a fallback for failure — it is a designed feature. The agent handles the structured 80% and hands the genuinely clinical judgment calls to a human with full context.
 
+```mermaid
+flowchart TD
+    A["Detect services requiring PA"] --> B["Gather clinical documentation"]
+    B --> C["Submit via API or portal"]
+    C --> D["Poll for determination"]
+    D --> E{"Outcome"}
+    E -->|Approved or denied| F["Alert and route"]
+    E -->|Peer to peer needed| G["Escalate to human"]
+```
+
 ## Gold carding: closing the loop
 
 The smartest PA agents do more than process requests — they learn where requests can be eliminated entirely. Some payers grant **"gold card" status** to physicians with consistently high PA approval rates, exempting them from PA requirements for certain services. If your agent **tracks approval rates by payer and by physician**, it can surface gold-card opportunities: provider-payer-service combinations where the approval rate is so high that the practice should pursue an exemption. That turns the agent from a faster way of doing paperwork into a way of doing less paperwork — the highest form of automation is the request you never have to make.

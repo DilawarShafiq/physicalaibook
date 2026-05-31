@@ -18,6 +18,16 @@ If RT-2 proved that a single network can carry web knowledge into action, **π0 
 
 The split matters. The backbone supplies semantic understanding (the same lineage as the VLA models from Lesson 5.1); the action expert supplies smooth, physically realistic motion. Keeping them as distinct-but-joined modules is what lets π0 inherit a strong pretrained vision-language model while still emitting continuous control.
 
+```mermaid
+flowchart LR
+    Cam["Camera images"] --> Backbone["PaliGemma 3B backbone"]
+    Instr["Language instruction"] --> Backbone
+    Backbone --> Rep["Scene representation"]
+    Noise["Noise sample"] --> Expert["Flow-matching action expert"]
+    Rep --> Expert
+    Expert --> Action["Continuous robot actions at 50 Hz"]
+```
+
 ## Flow matching: why not just diffusion, and why not regression
 
 To understand the action expert you need to understand the spectrum of ways to generate an action.

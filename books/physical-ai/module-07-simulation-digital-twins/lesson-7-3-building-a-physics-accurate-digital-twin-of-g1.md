@@ -51,6 +51,17 @@ A static, accurate model is a *simulator*. What makes it a *twin* is synchroniza
 
 With geometry, inertia, actuators, sensors, and the sync bridge all in place, the twin pays back across G1's lifecycle:
 
+```mermaid
+flowchart LR
+    A["G1 URDF"] -->|"convert_urdf.py"| B["Instanceable USD"]
+    B --> C["Identify inertia"]
+    C --> D["Model actuators"]
+    D --> E["Add sensor noise"]
+    E --> F["Digital twin"]
+    G["Real G1 SLAM pose"] -->|"under 50 ms"| F
+    F --> G
+```
+
 - **Policy pre-testing** — run a new locomotion policy in the twin first; if it saturates a motor or destabilizes, you learn it in software, not on a robot that falls.
 - **Predictive maintenance** — track simulated load and the thermal/wear models to anticipate **joint wear patterns** and service a joint before it fails in the field.
 - **Training and procedures** — use the twin to train maintenance technicians on the correct repair steps without tying up real hardware.

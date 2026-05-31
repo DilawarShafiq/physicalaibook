@@ -52,6 +52,18 @@ This is why escalation rate is one of the three core metrics. A well-designed Di
 
 A single Digital FTE is useful, but the real architecture is a *system* of them. The platform-level pattern is a HIPAA-compliant agentic framework that orchestrates specialized sub-agents — eligibility, coding, prior auth, denials — so they hand work to each other along the revenue cycle. Autosapien builds exactly this kind of layer with public products like RCM Employee and the clinical data platform xEHR.io. The key idea is orchestration: each Digital FTE is a specialist, and a coordinating framework routes work between them and to human reviewers, all inside a compliant boundary. You design each agent as a focused role, then compose them into a workforce.
 
+```mermaid
+flowchart LR
+    O["Orchestration framework"] --> E["Eligibility Specialist"]
+    O --> P["Prior Auth Coordinator"]
+    O --> C["Medical Coder"]
+    O --> D["Denial Manager"]
+    E --> H["Human reviewer"]
+    P --> H
+    C --> H
+    D --> H
+```
+
 ## Putting it into practice
 
 Write a job description for a Digital FTE, treating it exactly as you would a human hire, so your agent has a role, tools, permissions, and measurable accountability from day one.

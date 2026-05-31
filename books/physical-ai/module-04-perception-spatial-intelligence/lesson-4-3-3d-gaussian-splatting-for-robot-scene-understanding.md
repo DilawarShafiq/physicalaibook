@@ -42,6 +42,17 @@ Second, **it fails in textureless regions** — plain white walls, blank floors 
 
 On tooling: the open-source **gsplat** library (from the nerfstudio project, Apache-2.0) is the practical CUDA-accelerated implementation most teams build on today, with meaningful speed and memory improvements over the original code. It is also worth knowing that standard 3DGS assumes a pinhole camera, which is awkward for the fisheye lenses in your sensor suite; recent work such as NVIDIA's open-sourced 3DGUT extends splatting to non-pinhole and distorted cameras, which matters if you want to splat directly from wide-angle robot cameras.
 
+```mermaid
+flowchart LR
+    SLAM["SLAM camera poses"] --> GS["Build 3DGS scene"]
+    PHOTOS["100 to 200 photos"] --> GS
+    LIDAR["LiDAR depth fallback"] --> GS
+    GS --> SEM["LangSplat CLIP features"]
+    SEM --> Q["Query find the cup"]
+    Q --> LOC["3D object location"]
+    LOC --> GRASP["Manipulation planner"]
+```
+
 ## Putting it into practice
 
 Build a queryable 3D scene and use it to locate an object by name.

@@ -40,6 +40,14 @@ The discipline mirrors the actuator-selection logic: match the cooling tier to t
 
 Thermal management is not just mechanical — it's a control loop. Put a **thermistor in each motor winding**, read it at ~**100 Hz** in the joint controller, and feed it into a **real-time limit on the torque command**. That way the robot trades a little performance to stay alive instead of faulting, and you get telemetry to find your true hot spots in the field.
 
+```mermaid
+flowchart LR
+    T["Winding thermistor"] --> R["Read at ~100 Hz in joint controller"]
+    R --> L["Real-time torque limit vs temperature"]
+    L --> M["Motor stays below derating threshold"]
+    M --> T
+```
+
 Finally, design for the long run. Commercial humanoid actuators should target **10,000+ hours MTBF**, and the **ball bearings are usually the first wear item** — heat accelerates their failure, which closes the loop: good thermal design is also good reliability design.
 
 ## Putting it into practice

@@ -42,6 +42,17 @@ The modern remedy uses **semantic segmentation to mask dynamic elements** out of
 
 Finally, G1 needs not one map but three, maintained in real time and serving different consumers. The **occupancy grid** answers "where can I step and drive?" for navigation. The **point cloud** captures detailed 3D geometry for reaching and obstacle avoidance. The **semantic map** holds object labels and positions for task planning. They are different projections of the same sensed reality, and a complete perception stack keeps all three current as the robot explores.
 
+```mermaid
+flowchart TD
+    CAM["RGB-D camera input"] --> SLAM["ORB-SLAM3 track and map"]
+    SLAM --> LC["Loop closure corrects drift"]
+    SEG["Semantic segmentation"] --> MASK["Mask dynamic objects"]
+    MASK --> SLAM
+    LC --> OCC["Occupancy grid for navigation"]
+    LC --> PC["Point cloud for reaching"]
+    LC --> SEM["Semantic map for task planning"]
+```
+
 ## Putting it into practice
 
 Stand up a working indoor SLAM pipeline and prove it holds together over a loop.

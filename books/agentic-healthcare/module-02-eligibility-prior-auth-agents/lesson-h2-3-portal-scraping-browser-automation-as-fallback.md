@@ -63,6 +63,16 @@ Portal automation is not a standalone strategy — it is one tier in a three-tie
 2. **Portal automation fallback** — for payers with no API, completing in **30–120 seconds**.
 3. **Human-in-the-loop escalation** — for everything the first two tiers cannot handle, with a target resolution of **under 4 hours**.
 
+```mermaid
+flowchart TD
+    A["Payer transaction needed"] --> B{"EDI or API available"}
+    B -->|Yes| C["Tier 1 EDI or API under 1 second"]
+    B -->|No| D{"Portal automatable"}
+    D -->|Yes| E["Tier 2 portal automation 30 to 120 seconds"]
+    D -->|No| F["Tier 3 human escalation under 4 hours"]
+    E -->|Failure detected| F
+```
+
 Those SLA targets — **EDI under 1 second, portal automation 30–120 seconds, human escalation under 4 hours** — are how you reason about the system's behavior and where the cost lives. Most volume should clear at tier one, the portal tier absorbs the tail, and humans handle only the genuine exceptions. The architecture degrades gracefully: no payer is unreachable, but cheaper paths are always preferred.
 
 ## Putting it into practice

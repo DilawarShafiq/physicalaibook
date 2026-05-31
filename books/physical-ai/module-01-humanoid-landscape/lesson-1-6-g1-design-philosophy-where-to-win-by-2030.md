@@ -34,6 +34,18 @@ G1's differentiation is a set of concrete engineering commitments, each chosen t
 
 Commitments need underlying technology bets, and G1's are the through-line of the rest of this book: **(1) RL-based locomotion** for real-world terrain, **(2) VLA-based manipulation policies**, **(3) compliance-first actuators**, and **(4) a multimodal foundation model running on NVIDIA AGX Orin.** Each is a module you will study in depth — and each was chosen because it serves the safety-first, healthcare-first thesis rather than a generic capability checklist.
 
+```mermaid
+flowchart TD
+    G["G1: safety-first healthcare humanoid"] --> S["Industry-best safety margin"]
+    G --> B["8+ hour battery life"]
+    G --> H["22-DOF tactile hands"]
+    G --> O["On-board intelligence, HIPAA-friendly"]
+    S --> B1["RL-based locomotion"]
+    H --> B2["VLA manipulation policies"]
+    S --> B3["Compliance-first actuators"]
+    O --> B4["Multimodal model on NVIDIA AGX Orin"]
+```
+
 ## The honest open problem
 
 Strategy should name its hardest unsolved problem, not hide it. Here it is: **no humanoid has yet demonstrated reliable household operation for 8 hours without human supervision.** Not Figure, not Tesla, not anyone. That capability — sustained, unsupervised, safe operation in an unstructured human space — is precisely G1's target, and the reason the rest of this curriculum exists. Everything from actuators to foundation models is in service of crossing that line.

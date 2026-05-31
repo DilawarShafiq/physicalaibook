@@ -38,6 +38,16 @@ The second year is where the program's hardest integration and its first contact
 
 **2030 — Commercial launch.** The program's terminal milestone, gated on everything above succeeding. It is named, not detailed, because its content is simply the sum of the milestones that precede it — which is exactly how a roadmap should resolve.
 
+```mermaid
+flowchart LR
+    L1["2026 Q2 Locomotion V1"] --> IA["2027 Q2 Integration Alpha"]
+    M1["2026 Q4 Manipulation V1"] --> IA
+    IA --> BD["2027 Q4 Beta Deployment"]
+    BD --> V2["2028 Q2 VLA V2"]
+    V2 --> PP["2029 Pre-production"]
+    PP --> CL["2030 Commercial Launch"]
+```
+
 ## Putting it into practice
 
 Turn this sequence into a tracking artifact your team updates weekly.

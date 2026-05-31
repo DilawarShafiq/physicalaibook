@@ -32,6 +32,15 @@ The other signals map directly onto the healthcare reference tasks. Threading a 
 
 Raw tactile data is not directly actionable; you need a model that maps it to the quantities you care about. Because DIGIT and GelSight produce *images*, the natural tool is a **convolutional neural network** — the same architecture that revolutionized vision. Trained on labeled tactile images, CNNs predict contact forces, local object geometry, and slip onset with **greater than 95% accuracy**. This is the practical payoff of the "camera as touch sensor" decision: every advance in image learning transfers to touch, and you can collect training data simply by pressing known objects against the sensor and logging the result.
 
+```mermaid
+flowchart LR
+    S["Fingertip sensor: DIGIT image at 60 FPS"] --> CNN["CNN model"]
+    CNN --> F["Predict force and geometry"]
+    CNN --> Slip["Predict slip onset"]
+    Slip --> W["Incipient-slip window 100 to 200 ms"]
+    W --> A["Action: tighten grip, re-pose, or abort"]
+```
+
 The honest recommendation for a builder follows from all of this. For **in-hand manipulation research and most healthcare prototyping**, default to **DIGIT** — it is compact enough to fit ten fingertips, open-source so you can reproduce and modify it, fast at 60 FPS, and its image output plugs straight into CNN pipelines. Reach for **BioTac** specifically when you need its multimodal signal or its FDA clearance is on your regulatory path. Reserve a bare custom GelSight build for cases where you need a sensing geometry no off-the-shelf unit provides. The mistake to avoid is treating all three as interchangeable: they measure different things, and your task — not the spec sheet — decides which difference matters.
 
 ## Putting it into practice

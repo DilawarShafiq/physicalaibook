@@ -45,6 +45,18 @@ Specs are abstract until you attach models to them. On an AGX Orin you can expec
 
 Notice the split: perception models (DepthAnything, Grounded DINO) run fast, while the big VLA policy crawls at 1.5 Hz. That gap defines your architecture. You will pair a slow, deliberate VLA "thinking" loop with a fast reactive controller on the CPU — and you will compress the VLA hard to close the gap.
 
+That split maps onto the Orin's resources directly — the GPU carries the slow neural workloads, the CPU carries the fast reactive loop:
+
+```mermaid
+flowchart LR
+    Cam["Cameras"] --> GPU["GPU and Tensor Cores"]
+    GPU --> VLA["VLA policy at 1.5 Hz"]
+    GPU --> Depth["Depth at 30 FPS"]
+    GPU --> Det["Object detection at 15 FPS"]
+    VLA -->|"intent"| CPU["CPU reactive loop"]
+    CPU --> Act["Actuators"]
+```
+
 ## The software that makes it real: Isaac ROS
 
 Raw silicon is not enough; you need accelerated software to reach these numbers. **NVIDIA Isaac ROS** provides hardware-accelerated ROS 2 packages tuned for Orin — SLAM, perception, and neural-network inference implemented as CUDA-accelerated nodes that run roughly **2–3× faster than their CPU equivalents**. The practical guidance is direct: do not hand-write CUDA for problems Isaac ROS already solves. Use its accelerated nodes for the standard perception and SLAM pipeline, and spend your scarce engineering effort on the parts that genuinely differentiate G1 — the VLA integration and the safety architecture.

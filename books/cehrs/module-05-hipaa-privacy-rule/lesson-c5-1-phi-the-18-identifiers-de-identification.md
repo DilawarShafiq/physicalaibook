@@ -37,6 +37,18 @@ Remove the identifiers correctly and the data falls outside HIPAA entirely. The 
 
 **Method 2 — Expert Determination.** A qualified statistician applies recognized methods and certifies that the **risk of re-identification is very small**. This route is more flexible than Safe Harbor — it can retain more useful data — but it requires a **credentialed expert**, which Safe Harbor does not. Memory hook: *Safe Harbor is a checklist; Expert Determination is a credential.*
 
+```mermaid
+flowchart TD
+    A["Health info plus identifier"] --> B{"Health context AND identifies person"}
+    B -->|No| C["Not PHI"]
+    B -->|Yes| D["PHI"]
+    D --> E{"Choose de-identification method"}
+    E -->|Mechanical checklist| F["Safe Harbor remove all 18 identifiers"]
+    E -->|Credentialed expert| G["Expert Determination certifies low risk"]
+    F --> H["Data falls outside HIPAA"]
+    G --> H
+```
+
 ## The gray areas: email and incidental disclosures
 
 Two practical scenarios surface repeatedly, and both have nuanced answers worth knowing.

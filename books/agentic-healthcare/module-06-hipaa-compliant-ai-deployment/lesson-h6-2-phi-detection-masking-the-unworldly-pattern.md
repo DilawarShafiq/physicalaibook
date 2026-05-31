@@ -22,6 +22,17 @@ There is no single technique that catches all PHI, so production healthcare syst
 
 **ML classifiers** — for example a BERT model fine-tuned on a PHI dataset — catch contextual cases the first two miss, where whether a token is PHI depends on the surrounding sentence.
 
+```mermaid
+flowchart LR
+    IN["Agent Text Output"] --> REGEX["Rule Based Regex"]
+    IN --> NLP["NLP Detection Presidio"]
+    IN --> ML["ML Classifier Backstop"]
+    REGEX --> MASK["Synthetic Replacement"]
+    NLP --> MASK
+    ML --> MASK
+    MASK --> LOG["Masked Audit Log"]
+```
+
 The recommendation for healthcare agent logs is not to pick one. It is to run an *ensemble*: regex for the structured slam-dunks, NLP for the linguistic cases, and an ML classifier as the contextual backstop. Each layer covers the others' blind spots, and the cost of a false negative — real PHI in a log — is high enough to justify the redundancy.
 
 ## Mask without destroying debuggability

@@ -39,6 +39,18 @@ ISO/TS 15066 defines **four collaborative operation modes**, and choosing among 
 
 **G1 primarily needs mode 4.** A delivery and assistance humanoid must be permitted to touch people, so it lives or dies by its ability to *sense and limit* contact force in real time — which is precisely the hardware and control problem Lesson 8.2 builds. Mode 3 is a valuable complement: slow down near people so that any contact mode 4 has to handle is gentle to begin with. The two layer naturally — separation monitoring keeps approach speeds low, power/force limiting catches the contact that monitoring couldn't prevent.
 
+The two modes layer as a single approach-to-contact safety loop — mode 3 keeps approach speeds low, and mode 4 catches the contact that monitoring could not prevent:
+
+```mermaid
+flowchart LR
+    A["Human approaches"] --> B["Mode 3: speed and separation monitoring"]
+    B -->|"distance shrinks"| C["Reduce robot speed"]
+    B -->|"crosses minimum distance"| H["Full stop"]
+    C --> D["Mode 4: power and force limiting"]
+    D -->|"contact force over 65 N"| H
+    D -->|"within limit"| E["Safe contact"]
+```
+
 ## Certification and the healthcare overlay
 
 Designing to the limits is necessary but not sufficient — you also have to *prove it to a regulator*. In Europe that means **CE marking**; in North America, **UL certification**. Both require a third-party risk assessment demonstrating compliance with the applicable standards. This is a documentation and evidence exercise as much as an engineering one, and it is why Lesson 8.2's emphasis on a written ISO 10218-2 risk assessment matters: the assessment *is* the deliverable the notified body reviews.

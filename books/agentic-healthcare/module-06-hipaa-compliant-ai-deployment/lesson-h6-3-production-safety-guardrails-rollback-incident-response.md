@@ -16,6 +16,17 @@ Healthcare AI agents are not toys, and their failures are not cosmetic. An agent
 
 Every agent action with an external consequence — submitting a claim, sending a patient message, making a payment, filing an appeal — must pass validation against a rule set *before* it executes. Not after. Pre-execution validation is the difference between an error you caught and an error you mailed to a patient.
 
+```mermaid
+flowchart TD
+    ACTION["Proposed Agent Action"] --> VAL{"Pre Execution Validation"}
+    VAL -->|Fail| BLOCK["Block and Audit"]
+    VAL -->|Pass| CB{"Above Dollar Threshold"}
+    CB -->|Yes| HUMAN["Human Approval Queue"]
+    CB -->|No| IDEM{"Duplicate Transaction ID"}
+    IDEM -->|Yes| SKIP["Reject Duplicate"]
+    IDEM -->|No| EXEC["Execute and Log"]
+```
+
 Crucially, the validation step itself is logged as a separate audit event. This gives you a record not just of what the agent did, but of what it *checked* before doing it — which is exactly the evidence you need when a regulator or a patient asks how the system decided to act. Treat validation as a first-class, audited gate on the path to every irreversible action, not as an `if` statement buried inside the action handler.
 
 ## Circuit breakers and idempotency

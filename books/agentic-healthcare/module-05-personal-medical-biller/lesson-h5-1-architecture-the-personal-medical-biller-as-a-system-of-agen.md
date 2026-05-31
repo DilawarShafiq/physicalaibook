@@ -29,6 +29,19 @@ The sub-agents map directly to the RCM workflows you have already studied, each 
 - **Appeals Agent** manages denial resolution.
 - **Patient Communication Agent** handles patient billing questions.
 
+```mermaid
+flowchart TD
+    ORCH["Master Orchestrator"]
+    ORCH --> ELIG["Eligibility Agent"]
+    ORCH --> PA["PA Agent"]
+    ORCH --> CODE["Coding Agent"]
+    ORCH --> CLAIM["Claims Agent"]
+    ORCH --> APPEAL["Appeals Agent"]
+    ORCH --> COMM["Patient Communication Agent"]
+    ORCH --> HUMAN["Human Supervisor"]
+    ORCH --> BRIEF["Daily Manager Briefing"]
+```
+
 The discipline here is *narrow scope*. A coding agent that only reviews documentation is far easier to test, prompt, and trust than a single agent asked to do everything from eligibility to appeals. Narrow agents have small, auditable tool sets and predictable failure modes. When something goes wrong, you know exactly which specialist to inspect. This is the same logic that makes human RCM teams specialize — and it is even more important for agents, where a sprawling responsibility set is where hallucination and error creep in.
 
 ## Memory: the difference between an agent and a chatbot

@@ -35,6 +35,17 @@ Those **277 status codes** are the agent's decision inputs, and each maps to a s
 - **A7** — payer received incorrect information; rework and resubmit.
 - **F2** — more information needed; gather and supply it.
 
+```mermaid
+flowchart TD
+    A["Claim older than 21 days"] --> B["Send 276 inquiry"]
+    B --> C["Receive 277 status code"]
+    C --> D{"Status code"}
+    D -->|"A3"| E["Wait and recheck"]
+    D -->|"A6"| F["Monitor for payment"]
+    D -->|"A7"| G["Rework and resubmit"]
+    D -->|"F2"| H["Gather and supply information"]
+```
+
 Encode this mapping explicitly. The status code is not a notification to a human queue — it is a branch in the agent's workflow, and most codes resolve to an action the agent can take or stage without a person.
 
 ## Learning payer behavior and building work queues

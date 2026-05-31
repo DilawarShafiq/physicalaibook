@@ -40,6 +40,16 @@ Assemble the letter as a retrieval pipeline rather than a single prompt, because
 3. It searches the **policy library** for the applicable payer medical policy, because you are arguing against *that payer's own published rules*.
 4. It drafts the appeal letter, citing the specific documentation and quoting the specific policy language.
 
+```mermaid
+flowchart LR
+    A["Denial EOB reason code"] --> B["Classify denial category"]
+    B --> C["Retrieve EHR documentation"]
+    C --> D["Search payer policy library"]
+    D --> E["Draft appeal with citations"]
+    E --> F["Capture outcome won lost partial"]
+    F --> G["Learning loop and prevention rules"]
+```
+
 This structure matters because it grounds every claim the letter makes in a retrievable source — chart, guideline, or policy — rather than in the model's general knowledge. An appeal that cites the payer's own policy back to them, matched against the patient's own chart, is far harder to deny a second time.
 
 ## Deadlines, peer-to-peer, and the learning loop

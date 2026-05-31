@@ -40,6 +40,19 @@ The momentum observer is your independent safety net. The wrist F/T sensor might
 
 The fastest collision response is the one you never need. **Predictive safety** moves the line of defense earlier: the trajectory planner checks every *future* configuration of the robot against a model of the workspace and refuses — or stops — motion before the robot would enter a region known to be occupied. Where the momentum observer is reactive (something already touched me), predictive checking is proactive (that path would touch something, so don't take it). This layers cleanly on top of everything above: predict to avoid contact, observe to catch the contact you couldn't predict, impedance-control to soften the contact that lands, and torque-limit to cap its force.
 
+The four layers compose into one defense-in-depth loop — each catches what the one before it missed:
+
+```mermaid
+flowchart LR
+    A["Predictive check"] -->|"path clear"| B["Impedance control"]
+    A -->|"path occupied"| S["Safety stop"]
+    B --> C["Momentum observer"]
+    C -->|"velocity error over threshold"| S
+    C -->|"no anomaly"| D["Joint torque limit"]
+    D -->|"force over 65 N"| S
+    D -->|"within limit"| E["Safe contact"]
+```
+
 ## The risk assessment ties it together
 
 None of this is certifiable without the **ISO 10218-2 risk assessment** — the document that, for every hazard scenario, estimates probability and severity and records the mitigation applied until residual risk is acceptable. This is not paperwork bolted on at the end; it is the design discipline that tells you *which* of the above layers each hazard actually needs. A pinch hazard at the elbow might be addressed by geometry and the momentum observer; a crushing hazard during medication handoff might demand the wrist F/T sensor plus soft impedance. The assessment is what a CE/UL auditor reads, and it is how you prove your layered architecture is sufficient rather than merely impressive.
