@@ -123,9 +123,10 @@ const config = {
           },
           {
             href: 'https://autosapien.com',
-            label: '← autosapien.com',
+            label: '← Back to Autosapien',
             position: 'right',
             target: '_self',
+            className: 'navbar-item-back',
           },
           {
             href: 'https://github.com/DilawarShafiq/physicalaibook',

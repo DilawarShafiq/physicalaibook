@@ -393,6 +393,23 @@ div[class^='codeBlockContainer'] {
   font-weight: 700;
 }
 
+/* ---------- "Back to Autosapien" navbar button ---------- */
+.navbar-item-back {
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem !important;
+  margin-left: 0.4rem;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar-item-back:hover {
+  background: var(--ifm-color-primary);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
 /* ---------- Breadcrumbs ---------- */
 .breadcrumbs__item--active .breadcrumbs__link {
   background: rgba(0, 133, 212, 0.08);
