@@ -80,7 +80,7 @@ every AI-assisted action in xEHR.io (code suggestion accepted, documentation que
 
 ---
 
-Next: **H8.2 the Autosapien agentic platform: Deploying Your First Healthcare Digital FTE** →
+Next: **H8.2 The Autosapien Agent Platform: Deploying Your First Healthcare Digital FTE** →
 
 *Part of Module 8: Building on the Autosapien Stack.*
 

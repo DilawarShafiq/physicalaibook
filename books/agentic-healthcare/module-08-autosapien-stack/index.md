@@ -2,16 +2,16 @@
 title: "Building on the Autosapien Stack"
 sidebar_label: "Overview"
 sidebar_position: 1
-description: "Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien agentic platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller."
+description: "Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien Agent Platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller."
 ---
 
 # Module 8: Building on the Autosapien Stack
 
-*xEHR.io, the Autosapien agentic platform & the RCM Automation Platform*
+*xEHR.io, the Autosapien Agent Platform & the RCM Automation Platform*
 
 **Duration:** 4 hours · **Level:** Foundational · **Lessons:** 2
 
-Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien agentic platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller.
+Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien Agent Platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller.
 
 ## Prerequisites
 
@@ -22,14 +22,14 @@ Autosapien's healthcare products are the reference implementation for everything
 By the end of this module you will be able to:
 
 - Navigate the Autosapien healthcare product stack end-to-end
-- Deploy a Personal Medical Biller agent using the Autosapien agentic platform
+- Deploy a Personal Medical Biller agent using the Autosapien Agent Platform
 - Integrate xEHR.io clinical data with the RCM Automation pipeline
 :::
 
 ## Lessons in this module
 
 1. [H8.1 — xEHR.io: The AI-Native EHR as Data Source](./lesson-h8-1-xehr-io-the-ai-native-ehr-as-data-source.md) · *45 min*
-2. [H8.2 — the Autosapien agentic platform: Deploying Your First Healthcare Digital FTE](./lesson-h8-2-agentic-platform-deploying-your-first-healthcare-digital-fte.md) · *55 min*
+2. [H8.2 — The Autosapien Agent Platform: Deploying Your First Healthcare Digital FTE](./lesson-h8-2-the-autosapien-agent-platform-deploying-your-first-healthcar.md) · *55 min*
 
 ---
 
