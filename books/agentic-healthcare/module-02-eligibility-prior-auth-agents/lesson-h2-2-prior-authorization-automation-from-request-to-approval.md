@@ -10,7 +10,7 @@ tags: ["prior-authorization", "CMS-rule", "FHIR-PA", "CoverMyMeds", "automation"
 
 **Duration:** 60 min · **Level:** Intermediate · **Module:** 2. Eligibility & Prior Auth Agents · **Focus:** `prior-authorization`, `CMS-rule`, `FHIR-PA`, `CoverMyMeds`, `automation`
 
-Prior authorization is where healthcare's administrative waste is most visible and most painful — the discipline of getting a payer's blessing before delivering a service it might otherwise refuse to pay for. Historically it has been a maze of phone calls, faxes, and incompatible portals: **CoverMyMeds (now part of RxBenefits)**, **Surescripts**, and a long tail of payer portals each handle different authorization types in different ways. That fragmentation is exactly why PA automation has lagged behind eligibility. But the ground is shifting. In January 2024 CMS finalized rules requiring payers to support **FHIR-based prior authorization APIs**, a landmark change that makes PA automation dramatically more feasible than it was even a year ago. This lesson is about building a PA agent that works today and is positioned for the API-driven world arriving by 2027.
+Prior authorization is where healthcare's administrative waste is most visible and most painful — the discipline of getting a payer's blessing before delivering a service it might otherwise refuse to pay for. Historically it has been a maze of phone calls, faxes, and incompatible portals: **CoverMyMeds (a McKesson company)**, **Surescripts**, and a long tail of payer portals each handle different authorization types in different ways. That fragmentation is exactly why PA automation has lagged behind eligibility. But the ground is shifting. In January 2024 CMS finalized rules requiring payers to support **FHIR-based prior authorization APIs**, a landmark change that makes PA automation dramatically more feasible than it was even a year ago. This lesson is about building a PA agent that works today and is positioned for the API-driven world arriving by 2027.
 
 ## The regulatory inflection point: CMS-0057-F
 
@@ -36,9 +36,9 @@ The FHIR-based PA standard taking shape from the CMS rule uses **FHIR R4 Claim r
 
 This is the architecture to design toward. Where a payer exposes a FHIR PA API, your agent reads the order and clinical documentation straight from the EHR, constructs a Claim resource, submits it, and consumes the ClaimResponse — a clean, structured round trip with no portal in the loop.
 
-On the pharmacy side, the analog already exists at scale. The **CoverMyMeds / RxBenefits API** is the largest pharmacy PA clearinghouse, offering a REST API for drug prior authorizations and covering roughly **95% of commercially insured lives**. For drug PAs, integrating this one clearinghouse automates a large fraction of the work through a single connection.
+On the pharmacy side, the analog already exists at scale. The **CoverMyMeds API** is the largest pharmacy PA clearinghouse, offering a REST API for drug prior authorizations and covering roughly **95% of commercially insured lives**. For drug PAs, integrating this one clearinghouse automates a large fraction of the work through a single connection.
 
-**Recommendation:** build the agent around standards-based APIs as the primary path — FHIR PA for medical services where available, and CoverMyMeds/RxBenefits for pharmacy. Treat portal automation (covered in the next lesson) as the fallback for payers that have not yet exposed an API.
+**Recommendation:** build the agent around standards-based APIs as the primary path — FHIR PA for medical services where available, and CoverMyMeds for pharmacy. Treat portal automation (covered in the next lesson) as the fallback for payers that have not yet exposed an API.
 
 ## The PA agent design
 
@@ -72,7 +72,7 @@ Design a prior authorization agent that is API-first and portal-fallback, ground
 - The CMS Interoperability and Prior Authorization Final Rule (January 2024) requires Medicare Advantage, Medicaid, and CHIP plans to implement FHIR-based PA APIs by January 2027, with 72-hour standard and 24-hour urgent response requirements — the inflection point that makes PA automation feasible.
 - A PA request is an argument, not a lookup: it must assemble provider NPI, patient/insurance ID, ICD-10, CPT/HCPCS/NDC, and clinical documentation proving prior treatments tried.
 - The emerging X-FHIR-PA standard uses FHIR R4 Claim/ClaimResponse resources and integrates with the EHR via SMART on FHIR; build toward it as the primary path.
-- For pharmacy, the CoverMyMeds/RxBenefits REST API covers ~95% of commercially insured lives — a single integration that automates a large share of drug PAs.
+- For pharmacy, the CoverMyMeds REST API covers ~95% of commercially insured lives — a single integration that automates a large share of drug PAs.
 - The PA agent is a six-step pipeline (detect → gather docs → submit → poll → alert → escalate), with human escalation for peer-to-peer review as a designed feature, not a failure mode.
 - Gold carding closes the loop: tracking approval rates by payer and physician lets the agent surface PA-exemption opportunities, eliminating requests rather than just speeding them up.
 

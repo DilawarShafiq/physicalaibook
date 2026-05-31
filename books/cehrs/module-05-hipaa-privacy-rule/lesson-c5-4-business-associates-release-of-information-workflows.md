@@ -66,7 +66,7 @@ Turn the framework into two reusable checklists you can run on any real request.
 2. **Authorization audit:** take a sample ROI authorization and tick off all eight required elements (what, from whom, to whom, purpose, expiration, signature/date, right to revoke, re-disclosure statement). If any box is empty, mark the authorization invalid and stop.
 3. **Clock assignment:** for each request, assign the correct turnaround — 30 days standard, 24 hours for a medical emergency, court timeline for a subpoena — and start a request-to-delivery timer.
 4. **Exception screen:** flag any workers' comp request and split it — release only the injury-related records without authorization; require authorization for anything unrelated.
-5. **Terminology drill:** write one sentence distinguishing authorization (specific, written, for a disclosure) from consent (general, for treatment). If you can do all five without notes, you are ready for Domain 5's ROI questions.
+5. **Terminology drill:** write one sentence distinguishing authorization (specific, written, for a disclosure) from consent (general, for treatment). If you can do all five without notes, you are ready for Domain 4's ROI questions.
 
 ## Key takeaways
 

@@ -14,9 +14,9 @@ Most candidates who fail the CEHRS exam do not fail because the material was too
 
 ## The format and the clock
 
-Know the mechanics before you book a seat. The NHA CEHRS exam is **130 total questions**, but only **110 are scored** — the other **20 are unscored pretest items** the NHA is trialing for future exams. You cannot tell which is which, so you treat all 130 as if they count. You have **2 hours 40 minutes**, and the exam is **computer-based**, delivered either at **PSI testing centers** or **online proctored**.
+Know the mechanics before you book a seat. The NHA CEHRS exam is **125 total questions**, but only **100 are scored** — the other **25 are unscored pretest items** the NHA is trialing for future exams. You cannot tell which is which, so you treat all 125 as if they count. You have **2 hours 40 minutes**, and the exam is **computer-based**, delivered either at **PSI testing centers** or **online proctored**.
 
-The practical takeaways: with 130 questions in 160 minutes you have a little over a minute per question, so pacing matters but is not brutal. And because 20 items don't count, a few questions that feel impossibly obscure may simply be pretest items — do not let them rattle you. Memory hook: *130 total, 110 scored, 20 pretest; 2 hours 40 minutes; PSI or online proctored.*
+The practical takeaways: with 125 questions in 160 minutes you have a little over a minute per question, so pacing matters but is not brutal. And because 25 items don't count, a few questions that feel impossibly obscure may simply be pretest items — do not let them rattle you. Memory hook: *125 total, 100 scored, 25 pretest; 2 hours 40 minutes; PSI or online proctored.*
 
 ## The passing score — and what it really means
 
@@ -64,7 +64,7 @@ Build your personalized, blueprint-driven study plan.
 
 ## Key takeaways
 
-- The CEHRS exam is 130 questions (110 scored + 20 unscored pretest items), timed at 2 hours 40 minutes, delivered at PSI centers or online proctored.
+- The CEHRS exam is 125 questions (100 scored + 25 unscored pretest items), timed at 2 hours 40 minutes, delivered at PSI centers or online proctored.
 - Passing is 390 out of 500 on a scaled scale; the raw equivalent is undisclosed but estimated at roughly 70–72% correct — aim above that for a safety cushion.
 - Domain weights are unequal: Documentation 22%, Terminology/Anatomy 21%, HIM 20%, Regulatory 17%, Revenue Cycle 12%, IT 8%.
 - The top three domains (Documentation, Terminology, HIM) total 63% of the exam — concentrate study time there rather than spreading it evenly.

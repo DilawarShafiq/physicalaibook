@@ -42,7 +42,7 @@ Build a six-row reference table you can reconstruct from memory under exam press
 2. In a "timeframe" column, fill only what applies: Access = 30 days (+ one 30-day extension); Accounting = 60 days, 6-year lookback. Leave the others blank — knowing which rights have no fixed clock is itself testable.
 3. In a "can the entity refuse?" column, mark **Amendment** (yes, may deny) and **Restrictions** (yes, except the paid-in-full health-plan exception) against **Access** (no, cannot deny — not even for unpaid balances).
 4. In a "key catch" column, note the standouts: Access = format if readily producible; Accounting = excludes TPO; Restrictions = mandatory out-of-pocket exception; Confidential Communications = no explanation required.
-5. Self-test: cover the table and rebuild it from the recall phrase alone. If you can place all four numbers and both "can refuse" cases correctly, you own Domain 5's patient-rights questions.
+5. Self-test: cover the table and rebuild it from the recall phrase alone. If you can place all four numbers and both "can refuse" cases correctly, you own Domain 4's patient-rights questions.
 
 ## Key takeaways
 

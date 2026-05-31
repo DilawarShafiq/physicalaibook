@@ -52,7 +52,7 @@ This lesson's lab closes the loop on the whole course: complete a **final 30-que
 1. Drill the HIPAA distinctions first — they carry the most nuance. Practice scenarios where one changed detail (treatment vs non-treatment, psychotherapy notes vs ordinary records, 500+ vs under 500) flips the answer.
 2. Memorize the security timelines as a block: 60 days for all, media + immediate HHS for 500+, annual March 1 report for under 500. Repeat until automatic.
 3. Lock the revenue cycle benchmarks (clean claim >95%, A/R &lt;50) and the coding mechanics (ICD-10 letter-first, 3-7 chars, decimal after 3rd; CPT modifiers -25 and -59).
-4. Run the 10-day calendar: **Days 1-2** Domains 1-2; **Days 3-4** Domains 3-4; **Days 5-6** Domains 5-6; **Day 7** a full-length 130-question practice exam; **Days 8-9** targeted review of your weakest areas; **Day 10** light review only — then sleep well before exam day.
+4. Run the 10-day calendar: **Days 1-2** Domains 1-2; **Days 3-4** Domains 3-4; **Days 5-6** Domains 5-6; **Day 7** a full-length 125-question practice exam; **Days 8-9** targeted review of your weakest areas; **Day 10** light review only — then sleep well before exam day.
 5. After the Day 7 full-length exam, let your error pattern, not your comfort, decide what you review on Days 8-9.
 
 ## Key takeaways
