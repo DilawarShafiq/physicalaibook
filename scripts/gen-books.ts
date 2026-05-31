@@ -30,6 +30,17 @@ import type { AcademyModule, Lesson, Paper } from '../../autosap_website/src/dat
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
 const BOOKS_DIR = path.join(REPO_ROOT, 'books')
+const AUTHORED_DIR = path.join(REPO_ROOT, 'authored')
+
+/**
+ * Authored full-prose lessons live in authored/<bookId>/<lessonIdSlug>.md and
+ * override the auto-generated outline body when present. This lets us write
+ * real lessons incrementally without losing them on the next regeneration.
+ */
+function readAuthored(bookId: string, lessonId: string): string | null {
+  const file = path.join(AUTHORED_DIR, bookId, `${lessonIdSlug(lessonId)}.md`)
+  return fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : null
+}
 
 /** Escape characters that confuse the MDX compiler in prose text. */
 function mdxSafe(text: string): string {
@@ -114,6 +125,7 @@ function renderLesson(
   position: number,
   prev: Lesson | null,
   next: Lesson | null,
+  bookId: string,
 ): string {
   const fm: string[] = ['---']
   fm.push(`title: ${yamlString(lesson.title)}`)
@@ -141,6 +153,12 @@ function renderLesson(
   }
   body.push(meta.join(' · '))
   body.push('')
+
+  const authored = readAuthored(bookId, lesson.id)
+  if (authored) {
+    body.push(authored.trim())
+    body.push('')
+  } else {
 
   // Learning objectives — derived from the topics covered by the key insights.
   if (lesson.keyInsights && lesson.keyInsights.length) {
@@ -224,6 +242,8 @@ function renderLesson(
       body.push('')
     })
   }
+
+  } // end auto-generated structured body
 
   // Papers as a References list.
   if (lesson.papers && lesson.papers.length) {
@@ -439,7 +459,7 @@ function generateBook(book: Book) {
       const next = idx < module.lessons.length - 1 ? module.lessons[idx + 1] : null
       writeFile(
         path.join(dir, lessonFileName(lesson)),
-        renderLesson(lesson, module, idx + 2, prev, next),
+        renderLesson(lesson, module, idx + 2, prev, next, book.id),
       )
       lessonCount++
     })

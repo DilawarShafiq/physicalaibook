@@ -134,11 +134,6 @@ const config = {
             className: 'navbar-item-back',
           },
           {
-            href: 'https://github.com/DilawarShafiq/physicalaibook',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
             to: '/signin',
             label: 'Sign In',
             position: 'right',
@@ -171,10 +166,7 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/DilawarShafiq/physicalaibook',
-              },
+              { label: 'Autosapien', href: 'https://autosapien.com' },
             ],
           },
         ],
