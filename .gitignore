@@ -73,3 +73,7 @@ Thumbs.db
 .temp/
 .tmp/
 "nul" 
+
+# Claude authoring pilot
+.env.pilot
+scripts/pilot/

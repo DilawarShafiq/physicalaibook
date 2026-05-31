@@ -75,7 +75,7 @@ Each lesson opens with **learning objectives**, builds the ideas in **Overview**
 
 ### [Module 8: Building on the Autosapien Stack](./module-08-autosapien-stack/index.md)
 
-*xEHR.io, the Autosapien Agent Platform & the RCM Automation Platform* — Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien Agent Platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller.
+*xEHR.io, the Autosapien agentic platform & the RCM Automation Platform* — Autosapien's healthcare products are the reference implementation for everything in this book. This module shows how xEHR.io, the Autosapien agentic platform, and the RCM Automation platform connect to deliver a complete Personal Medical Biller.
 
 `4 hours` · `Foundational` · 2 lessons
 

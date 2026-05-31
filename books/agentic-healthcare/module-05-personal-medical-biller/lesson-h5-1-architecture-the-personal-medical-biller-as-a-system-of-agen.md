@@ -37,7 +37,7 @@ Master orchestrator: knows the patient's complete billing history, active claims
 - Agent memory architecture: per-patient state stored in structured database (claim ID → status, PA number → expiry date, denial → appeal deadline); vector store for clinical documentation retrieval; conversation memory for ongoing patient interactions
 - Tool inventory: EHR read API, payer EDI integration, clearinghouse API, phone/fax automation (Twilio + fax API), email automation, document generation (PDF statement, appeal letter), CRM write (update patient account notes)
 - Human escalation protocol: any action with dollar value &gt;$500, any patient complaint, any potential HIPAA violation, any regulatory ambiguity → escalate to human supervisor with full context briefing; target escalation rate &lt;10% of total actions
-- the Autosapien Agent Platform integration: the platform provides the orchestration layer, HIPAA-compliant data handling, audit trail, and multi-tenant deployment infrastructure; sub-agents deployed as platform skills
+- the Autosapien agentic platform integration: the platform provides the orchestration layer, HIPAA-compliant data handling, audit trail, and multi-tenant deployment infrastructure; sub-agents deployed as platform skills
 
 ## Check your understanding
 

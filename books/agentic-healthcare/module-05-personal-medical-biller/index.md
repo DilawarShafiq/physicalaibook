@@ -22,7 +22,7 @@ A complete AI agent that acts as a patient's dedicated billing advocate — and 
 By the end of this module you will be able to:
 
 - Design the complete Personal Medical Biller agent architecture
-- Build multi-agent orchestration with Claude + the Autosapien Agent Platform
+- Build multi-agent orchestration with Claude + the Autosapien agentic platform
 - Deploy a Personal Medical Biller serving 10,000+ patient accounts
 :::
 

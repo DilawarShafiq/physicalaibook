@@ -1,12 +1,12 @@
 ---
-title: "The Autosapien Agent Platform: Deploying Your First Healthcare Digital FTE"
-sidebar_label: "H8.2 The Autosapien Agent Platform: Deploying Your First Healthcare Digital FTE"
+title: "Deploying Your First Healthcare Digital FTE"
+sidebar_label: "H8.2 Deploying Your First Healthcare Digital FTE"
 sidebar_position: 3
-description: "The Autosapien Agent Platform is Autosapien's HIPAA-compliant agentic AI platform — the orchestration layer that turns specialized AI capabilities into deployed Digital FTEs"
+description: "A production Digital FTE runs on a HIPAA-compliant agentic platform — the orchestration layer that turns specialized AI capabilities into deployed agents"
 tags: ["agent-platform", "Digital-FTE", "deployment", "Autosapien", "RCM-platform"]
 ---
 
-# The Autosapien Agent Platform: Deploying Your First Healthcare Digital FTE
+# Deploying Your First Healthcare Digital FTE
 
 **Duration:** 55 min · **Level:** Foundational · **Module:** 8. Building on the Autosapien Stack · **Focus:** `agent-platform`, `Digital-FTE`, `deployment`, `Autosapien`, `RCM-platform`
 
@@ -14,7 +14,7 @@ tags: ["agent-platform", "Digital-FTE", "deployment", "Autosapien", "RCM-platfor
 
 By the end of this lesson you will be able to explain and apply:
 
-- the Autosapien Agent Platform architecture
+- the Autosapien agentic platform architecture
 - SKILL.md pattern
 - Deployment steps
 - Shadow mode
@@ -23,13 +23,13 @@ By the end of this lesson you will be able to explain and apply:
 
 ## Overview
 
-The Autosapien Agent Platform is Autosapien's HIPAA-compliant agentic AI platform — the orchestration layer that turns specialized AI capabilities into deployed Digital FTEs. This lesson walks through deploying a Personal Medical Biller on the Autosapien Agent Platform from configuration to live production.
+A production Digital FTE runs on a HIPAA-compliant agentic platform — the orchestration layer that turns specialized AI capabilities into deployed agents. This lesson walks through deploying a Personal Medical Biller end to end, from configuration to live production.
 
 ## Key concepts
 
 :::note Key idea
 
-the Autosapien Agent Platform architecture: orchestrator model (Claude 3.5 Sonnet) + tool registry (EHR, payer, clearinghouse, communication APIs) + persona system (role, permissions, escalation rules) + memory layer (per-patient claim state) + audit engine (ISO 42001 + HIPAA compliant logging)
+the Autosapien agentic platform architecture: orchestrator model (Claude 3.5 Sonnet) + tool registry (EHR, payer, clearinghouse, communication APIs) + persona system (role, permissions, escalation rules) + memory layer (per-patient claim state) + audit engine (ISO 42001 + HIPAA compliant logging)
 
 :::
 
@@ -37,14 +37,14 @@ the Autosapien Agent Platform architecture: orchestrator model (Claude 3.5 Sonne
 - Deployment steps: (1) configure practice profile, (2) select skills (eligibility + coding + claims + denials), (3) connect EHR integration, (4) connect payer EDI, (5) set escalation rules and dollar thresholds, (6) run test claim cycle, (7) go live with shadow mode (agent suggests, human approves) → then autonomous mode
 - Shadow mode: critical for trust-building; agent runs in parallel with human workflow for 2 weeks, generating recommendations that humans review; compare agent accuracy vs human; when accuracy &gt;95%, graduate to autonomous with human spot-check
 - Performance dashboard: daily metrics per Digital FTE: claims processed, clean claim rate, denials received, appeals filed, revenue recovered, escalations to humans, cost per claim; compare against pre-automation baseline
-- The $300/month Medical Practice: at scale, a solo physician practice can run complete RCM for ~$300/month on the Autosapien Agent Platform — less than 1 hour of a billing specialist's time — with better outcomes
+- The $300/month Medical Practice: at scale, a solo physician practice can run complete RCM for ~$300/month on the Autosapien agentic platform — less than 1 hour of a billing specialist's time — with better outcomes
 
 ## Check your understanding
 
 Cover the answers and try to recall each point before expanding it.
 
 <details>
-<summary>the Autosapien Agent Platform architecture</summary>
+<summary>the Autosapien agentic platform architecture</summary>
 
 orchestrator model (Claude 3.5 Sonnet) + tool registry (EHR, payer, clearinghouse, communication APIs) + persona system (role, permissions, escalation rules) + memory layer (per-patient claim state) + audit engine (ISO 42001 + HIPAA compliant logging)
 

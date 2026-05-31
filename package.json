@@ -37,6 +37,7 @@
     "react-markdown": "^10.1.0"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
     "@docusaurus/module-type-aliases": "^3.10.1",
     "@docusaurus/tsconfig": "^3.10.1",
     "@docusaurus/types": "^3.10.1",
