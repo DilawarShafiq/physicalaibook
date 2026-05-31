@@ -10,81 +10,59 @@ tags: ["exam-review", "HIPAA", "revenue-cycle", "IT", "high-yield"]
 
 **Duration:** 55 min · **Level:** Advanced · **Module:** 10. CEHRS Exam Strategy & Final Review · **Focus:** `exam-review`, `HIPAA`, `revenue-cycle`, `IT`, `high-yield`
 
-:::info Learning objectives
+The final stretch of the CEHRS blueprint — Domains 4 through 6, covering Regulations, Revenue Cycle, and Information Technology — makes up the remaining **37% of the exam.** These domains reward precision. HIPAA questions in particular are the most nuanced on the entire test: a small change in a scenario's details can flip the correct answer completely. Revenue cycle and IT questions, by contrast, reward candidates who have memorized the **exact numbers and procedures** rather than general impressions. This review locks down those specifics.
 
-By the end of this lesson you will be able to explain and apply:
+## HIPAA Privacy: identifiers, rights, and the standards
 
-- HIPAA Privacy must-knows
-- HIPAA Security must-knows
-- Revenue cycle must-knows
-- ICD-10 must-knows
-- CPT must-knows
+Privacy questions turn on a handful of hard facts. There are **18 PHI identifiers** — pay special attention to the ones candidates forget: **dates, geographic information, and device or vehicle IDs.** There are **6 patient rights, each with an exact timeline** — most notably the **30-day access** right and the **60-day accounting of disclosures.** The **minimum necessary** standard applies to all disclosures **except treatment among providers**, where clinicians need the full picture to care for the patient. And one rule is absolute: **authorization is always required for psychotherapy notes** — there is no treatment exception there.
 
-You will then consolidate these ideas in the hands-on lab below.
-:::
+## HIPAA Security: required vs addressable, and breach notification
 
-## Overview
+Security questions hinge on distinctions that look small but are decisive. The **risk analysis is REQUIRED, not addressable** — a frequent trap, because much of the Security Rule is "addressable," but this one is mandatory. **Encryption turns a lost device into a non-breach**, which is why it is the single most cost-effective safeguard.
 
-The final 37% of the exam. HIPAA questions are the most nuanced — small differences in scenario details change the correct answer completely. Revenue cycle and IT questions reward candidates who know the exact numbers and procedures, not just general concepts.
+Breach notification timelines are pure memorization, and they reliably appear:
 
-## Key concepts
+- **60 days from discovery** is the deadline for breaches of **all sizes.**
+- A breach affecting **500 or more** people also requires notifying the **media and HHS immediately.**
+- A breach affecting **fewer than 500** is reported to HHS in an **annual report due by March 1.**
 
-:::note Key idea
+## Revenue Cycle: the target metrics
 
-HIPAA Privacy must-knows: 18 PHI identifiers (especially dates, geographic, device/vehicle IDs); 6 patient rights with exact timelines (30-day access, 60-day accounting); minimum necessary applies to all disclosures except treatment among providers; authorization required for psychotherapy notes always
+Revenue cycle questions reward knowing the benchmark numbers. Memorize the targets: a **clean claim rate above 95%** and **days in accounts receivable below 50.** Understand the economics — **front-end (registration) denials are cheaper to prevent than back-end denials**, so catching errors at intake is always the favored answer. Procedurally, **prior authorization is required before service**, not after, and **real-time eligibility verification uses the 270/271 transaction** pair.
 
-:::
+## Coding: ICD-10 and CPT specifics
 
-- HIPAA Security must-knows: risk analysis is REQUIRED (not addressable); encryption makes a lost device a non-breach; breach notification: 60 days from discovery for all sizes; ≥500 = also notify media and HHS immediately; &lt;500 = annual HHS report by March 1
-- Revenue cycle must-knows: clean claim rate target &gt;95%; days in A/R target &lt;50; front-end (registration) denials are cheaper to prevent than back-end; prior authorization required before service; real-time eligibility = 270/271 transaction
-- ICD-10 must-knows: first character is always a letter (A-Z); 3-7 characters; decimal after 3rd character; principal diagnosis = reason for admission after study; specificity affects reimbursement
-- CPT must-knows: modifier -25 for E&M same day as procedure; modifier -59 for distinct procedural service; E&M levels based on MDM complexity or time (post-2021); HCPCS Level II for supplies and drugs
-- IT domain must-knows: RBAC = roles not individuals; audit trails cannot be deleted; automatic logoff is a technical safeguard; HL7 v2 used in hospital messaging; FHIR R4 required since April 2021; information blocking = federal offense under Cures Act
+Coding is dense with exact rules, and the exam tests the mechanics. For **ICD-10:**
 
-:::tip Hands-on lab
+- The **first character is always a letter (A-Z).**
+- Codes are **3 to 7 characters**, with a **decimal after the 3rd character.**
+- The **principal diagnosis is the reason for admission after study.**
+- **Specificity affects reimbursement** — vague coding costs money.
 
-Complete a final 30-question practice drill covering Domains 4-6. Then review the complete 10-day study calendar: Days 1-2 (Domains 1-2), Days 3-4 (Domains 3-4), Days 5-6 (Domains 5-6), Day 7 (full-length 130-question practice exam), Days 8-9 (targeted review of weakest areas), Day 10 (light review only, sleep well, exam day)
+For **CPT**, know the high-frequency modifiers and structure: **modifier -25** for a significant, separate E&M service on the same day as a procedure; **modifier -59** for a distinct procedural service; **E&M levels** are based on **medical decision-making (MDM) complexity or time** under the post-2021 rules; and **HCPCS Level II** codes cover **supplies and drugs.**
 
-:::
+## IT and Interoperability: safeguards and standards
 
-## Check your understanding
+The IT domain blends security safeguards with interoperability standards. Lock down these facts: **RBAC (role-based access control) assigns permissions to roles, not individuals**; **audit trails cannot be deleted**; and **automatic logoff is a technical safeguard.** On standards, **HL7 v2 is used for hospital messaging**, **FHIR R4 has been required since April 2021**, and **information blocking is a federal offense under the Cures Act.** Any answer suggesting a record's audit trail can be purged, or that information blocking is merely discouraged, is wrong.
 
-Cover the answers and try to recall each point before expanding it.
+## Putting it into practice
 
-<details>
-<summary>HIPAA Privacy must-knows</summary>
+This lesson's lab closes the loop on the whole course: complete a **final 30-question practice drill covering Domains 4-6**, then execute the full **10-day study calendar.**
 
-18 PHI identifiers (especially dates, geographic, device/vehicle IDs); 6 patient rights with exact timelines (30-day access, 60-day accounting); minimum necessary applies to all disclosures except treatment among providers; authorization required for psychotherapy notes always
+1. Drill the HIPAA distinctions first — they carry the most nuance. Practice scenarios where one changed detail (treatment vs non-treatment, psychotherapy notes vs ordinary records, 500+ vs under 500) flips the answer.
+2. Memorize the security timelines as a block: 60 days for all, media + immediate HHS for 500+, annual March 1 report for under 500. Repeat until automatic.
+3. Lock the revenue cycle benchmarks (clean claim >95%, A/R &lt;50) and the coding mechanics (ICD-10 letter-first, 3-7 chars, decimal after 3rd; CPT modifiers -25 and -59).
+4. Run the 10-day calendar: **Days 1-2** Domains 1-2; **Days 3-4** Domains 3-4; **Days 5-6** Domains 5-6; **Day 7** a full-length 130-question practice exam; **Days 8-9** targeted review of your weakest areas; **Day 10** light review only — then sleep well before exam day.
+5. After the Day 7 full-length exam, let your error pattern, not your comfort, decide what you review on Days 8-9.
 
-</details>
+## Key takeaways
 
-<details>
-<summary>HIPAA Security must-knows</summary>
-
-risk analysis is REQUIRED (not addressable); encryption makes a lost device a non-breach; breach notification: 60 days from discovery for all sizes; ≥500 = also notify media and HHS immediately; &lt;500 = annual HHS report by March 1
-
-</details>
-
-<details>
-<summary>Revenue cycle must-knows</summary>
-
-clean claim rate target &gt;95%; days in A/R target &lt;50; front-end (registration) denials are cheaper to prevent than back-end; prior authorization required before service; real-time eligibility = 270/271 transaction
-
-</details>
-
-<details>
-<summary>ICD-10 must-knows</summary>
-
-first character is always a letter (A-Z); 3-7 characters; decimal after 3rd character; principal diagnosis = reason for admission after study; specificity affects reimbursement
-
-</details>
-
-<details>
-<summary>CPT must-knows</summary>
-
-modifier -25 for E&M same day as procedure; modifier -59 for distinct procedural service; E&M levels based on MDM complexity or time (post-2021); HCPCS Level II for supplies and drugs
-
-</details>
+- Domains 4-6 are the final 37%; HIPAA is the most nuanced, while revenue cycle and IT reward exact numbers.
+- Privacy: 18 PHI identifiers (watch dates, geographic, device/vehicle IDs); 6 rights (30-day access, 60-day accounting); minimum necessary applies to all disclosures except treatment among providers; psychotherapy notes always require authorization.
+- Security: risk analysis is required (not addressable); encryption makes a lost device a non-breach; breach notice is 60 days for all, with media + immediate HHS for 500+, and an annual March 1 report for under 500.
+- Revenue cycle: clean claim rate >95%, days in A/R &lt;50, prevent front-end denials, prior auth before service, eligibility via 270/271.
+- Coding: ICD-10 starts with a letter, 3-7 characters, decimal after the 3rd, principal diagnosis is the post-study reason for admission; CPT modifier -25 (E&M same day) and -59 (distinct service), E&M by MDM or time, HCPCS Level II for supplies/drugs.
+- IT: RBAC by role, audit trails undeletable, automatic logoff is a technical safeguard, HL7 v2 for hospital messaging, FHIR R4 required since April 2021, information blocking is a federal offense.
 
 ---
 

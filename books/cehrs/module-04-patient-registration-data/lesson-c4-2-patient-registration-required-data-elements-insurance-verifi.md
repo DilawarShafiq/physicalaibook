@@ -10,73 +10,49 @@ tags: ["registration", "insurance-verification", "eligibility", "demographics"]
 
 **Duration:** 45 min · **Level:** Intermediate · **Module:** 4. Patient Registration & Data Management · **Focus:** `registration`, `insurance-verification`, `eligibility`, `demographics`
 
-:::info Learning objectives
+Registration is where the entire patient record begins, and where the most expensive mistakes are made. The demographic, financial, and clinical information collected at the front desk feeds care delivery, billing, and communication all at once. Get it wrong and the consequences ripple outward: claim denials, delayed care, and HIPAA violations. The CEHRS exam treats registration as a foundational revenue-cycle skill, and it expects you to know not just *what* fields are collected but *why* each one exists and how it is validated.
 
-By the end of this lesson you will be able to explain and apply:
+## The required data elements
 
-- Required demographic fields
-- Insurance verification
-- Prior authorization
-- Self-pay vs charity care
-- Guarantor vs subscriber
-:::
+Registration starts with demographics, and each field has a specific purpose. The **full legal name** must match a government-issued ID — this is the anchor that ties the encounter to the right identity and, ultimately, to the right MPI record. Alongside the name, registration captures **date of birth, address, phone, and sex.** **Race and ethnicity** are collected specifically because they are required for quality reporting. The **Social Security number** is optional but used to strengthen identity matching, and an **emergency contact** rounds out the core set.
 
-## Overview
+A useful framing for the exam: every demographic field serves at least one downstream system. Name and DOB serve identity, address and phone serve communication, sex and race/ethnicity serve clinical care and quality reporting, and the SSN serves matching. If a field seems pointless, you have not yet found the system that depends on it.
 
-Registration collects the demographic, financial, and clinical information needed for care, billing, and communication. Incomplete or inaccurate registration data causes claim denials, delayed care, and HIPAA violations. Each data element has a specific purpose and validation requirement.
+## Verifying insurance before the patient is seen
 
-## Key concepts
+Demographics establish *who* the patient is; insurance verification establishes *who pays.* Before a service is delivered, registration staff confirm four things: that **coverage is active**, that the **patient is eligible**, that the **service is covered**, and that any required **authorization number** has been obtained. This is done through **payer portals** — Availity being the common example named in the curriculum — which allow real-time eligibility checks against the insurer's records.
 
-:::note Key idea
+The mechanism behind those checks is the **270/271 HIPAA transaction**, the standardized electronic eligibility exchange: the provider sends a 270 inquiry and the payer returns a 271 response. This is called **real-time eligibility (RTE)**, and it is standard practice precisely because it catches coverage problems at the front end — before they become claim denials at the back end. The exam tends to reward this front-end logic: it is far cheaper to prevent a denial at registration than to fight one after the claim is submitted.
 
-Required demographic fields: full legal name (match to government ID), DOB, address, phone, sex, race/ethnicity (required for quality reporting), SSN (optional but used for identity), emergency contact
+## Prior authorization and the cost of missing it
 
-:::
+Some services require more than verified coverage — they require the payer's **prior authorization**, a written approval obtained *before* the service is delivered. Prior authorization typically applies to certain procedures, specialist visits, and inpatient admissions. The resulting **authorization number is documented in registration**, where it later attaches to the claim. The timing rule is what the exam tests: authorization must be obtained *before* service. Perform the procedure first and seek approval afterward, and the payer can deny the claim outright.
 
-- Insurance verification: confirm coverage is active, patient is eligible, service is covered, and obtain authorization number if required before service; payer portals (Availity) used for real-time eligibility checks
-- Prior authorization: written approval from payer required for certain procedures, specialist visits, and inpatient admissions; must be obtained before service; authorization number documented in registration
-- Self-pay vs charity care: uninsured patients must be screened for financial assistance eligibility; ACA requires non-profit hospitals to have charity care policies; screening typically uses Federal Poverty Level (FPL) guidelines
-- Guarantor vs subscriber: guarantor = person responsible for the bill (often the patient); subscriber = person on the insurance policy (may be a spouse or parent); both must be registered correctly
-- Real-time eligibility (RTE): electronic eligibility transaction (270/271 HIPAA transaction) sent to payer before or at registration to verify coverage; standard practice to reduce front-end claim denials
+## Who is uninsured, and who is responsible for the bill
 
-## Check your understanding
+Two registration concepts round out the financial picture and both generate exam questions.
 
-Cover the answers and try to recall each point before expanding it.
+First, **self-pay and charity care.** Uninsured patients must be **screened for financial assistance eligibility.** This is not optional goodwill — the **Affordable Care Act requires non-profit hospitals to maintain charity care policies**, and screening typically uses **Federal Poverty Level (FPL) guidelines** to determine who qualifies. A patient who walks in without insurance should leave registration having been evaluated for assistance.
 
-<details>
-<summary>Required demographic fields</summary>
+Second, the **guarantor-versus-subscriber distinction**, which the exam likes because the terms are easy to confuse. The **guarantor** is the person responsible for the bill — often the patient. The **subscriber** is the person who holds the insurance policy — which may be a *spouse or parent* rather than the patient. A child seen at a clinic might be the patient, with a parent as both guarantor and subscriber. Both roles must be registered correctly, because the subscriber drives the claim and the guarantor drives collections. Memory hook: *the subscriber owns the policy; the guarantor owns the bill.*
 
-full legal name (match to government ID), DOB, address, phone, sex, race/ethnicity (required for quality reporting), SSN (optional but used for identity), emergency contact
+## Putting it into practice
 
-</details>
+Build a registration checklist you can run from memory, because that is precisely the muscle the exam measures.
 
-<details>
-<summary>Insurance verification</summary>
+1. List the required demographic fields and, beside each, the system it serves (name → identity, address → communication, race/ethnicity → quality reporting, SSN → matching).
+2. Write the four insurance-verification checks — coverage active, patient eligible, service covered, authorization obtained — as a single line.
+3. Note that real-time eligibility runs on the 270/271 transaction and that front-end verification prevents back-end denials.
+4. Define guarantor versus subscriber in one sentence each, then invent a family scenario (child patient, parent subscriber) and assign the roles correctly.
+5. Self-test: given an uninsured patient, state the required next step (screen for charity care using FPL guidelines) without prompting.
 
-confirm coverage is active, patient is eligible, service is covered, and obtain authorization number if required before service; payer portals (Availity) used for real-time eligibility checks
+## Key takeaways
 
-</details>
-
-<details>
-<summary>Prior authorization</summary>
-
-written approval from payer required for certain procedures, specialist visits, and inpatient admissions; must be obtained before service; authorization number documented in registration
-
-</details>
-
-<details>
-<summary>Self-pay vs charity care</summary>
-
-uninsured patients must be screened for financial assistance eligibility; ACA requires non-profit hospitals to have charity care policies; screening typically uses Federal Poverty Level (FPL) guidelines
-
-</details>
-
-<details>
-<summary>Guarantor vs subscriber</summary>
-
-guarantor = person responsible for the bill (often the patient); subscriber = person on the insurance policy (may be a spouse or parent); both must be registered correctly
-
-</details>
+- Required demographics include full legal name (matched to government ID), DOB, address, phone, sex, race/ethnicity (for quality reporting), optional SSN, and emergency contact — each field feeds a downstream system.
+- Insurance verification confirms coverage is active, the patient is eligible, the service is covered, and any authorization is obtained, typically via payer portals like Availity.
+- Real-time eligibility uses the 270/271 HIPAA transaction to catch coverage problems at the front end and prevent claim denials before they happen.
+- Prior authorization must be obtained *before* service; the authorization number is documented in registration.
+- The subscriber holds the insurance policy (possibly a spouse or parent); the guarantor is responsible for the bill (often the patient) — both must be registered correctly, and uninsured patients must be screened for charity care under ACA rules using FPL guidelines.
 
 ---
 

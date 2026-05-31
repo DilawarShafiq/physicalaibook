@@ -10,81 +10,73 @@ tags: ["eligibility", "270/271", "EDI", "Availity", "agent-design"]
 
 **Duration:** 55 min · **Level:** Intermediate · **Module:** 2. Eligibility & Prior Auth Agents · **Focus:** `eligibility`, `270/271`, `EDI`, `Availity`, `agent-design`
 
-:::info Learning objectives
+Insurance eligibility verification answers a deceptively simple question: is this patient covered for this service today? Done manually, the answer costs three to eight minutes of hold time per patient — a front-desk clerk on the phone with a payer, navigating an IVR menu, waiting for a representative. Done as an EDI 270/271 transaction, the same answer arrives in about 0.8 seconds. That four-orders-of-magnitude speedup is the entire reason eligibility is the first agent you should build: it is high-volume, fully structured, and almost completely automatable. An eligibility agent runs every scheduled appointment overnight, flags coverage problems before the patient ever walks in, and eliminates roughly 90% of front-desk insurance calls.
 
-By the end of this lesson you will be able to explain and apply:
+## The two transactions: 270 and 271
 
-- HIPAA 270 transaction
-- HIPAA 271 transaction
-- Availity API
-- Coverage parsing
-- Agent workflow
+Everything in real-time eligibility is a paired conversation. The provider sends a **270** — the eligibility inquiry — and the payer returns a **271** — the eligibility response. Your agent's job is to construct the first and parse the second.
 
-You will then consolidate these ideas in the hands-on lab below.
-:::
+A **270** carries the minimum needed to identify the patient and the question being asked: the provider's **NPI**, the patient's **member ID and date of birth**, and one or more **service type codes** that specify what coverage you are asking about. Service type `30` asks about general health benefit plan coverage; `1` asks specifically about medical care. You send the codes that match the appointment.
 
-## Overview
+The **271** comes back dense. It contains the **coverage status** (active, inactive, terminated), **deductible** amounts, **copay** and **coinsurance**, **benefits broken out by service type**, **coverage dates**, and **coordination of benefits (COB)** information when the patient has more than one plan. The whole point of the agent is to turn that payload into a small number of clean, actionable signals: is coverage active, how much deductible remains, and is prior authorization required.
 
-Insurance eligibility verification answers a simple question: is this patient covered for this service today? Answering it manually takes 3-8 minutes of hold time. Answering it via EDI 270/271 transaction takes 0.8 seconds. An eligibility agent checks every scheduled appointment overnight, flags coverage issues before the patient arrives, and eliminates 90% of front-desk insurance calls.
+## Choosing the integration: raw EDI vs. an API network
 
-## Key concepts
+You have two realistic ways to move 270/271 traffic, and the choice shapes the rest of the build.
 
-:::note Key idea
+The first is to **speak raw X12 EDI directly** to each payer or through a clearinghouse. This gives you maximum control but maximum surface area — you own the X12 envelope, the per-payer connection, and every quirk of formatting.
 
-HIPAA 270 transaction: eligibility inquiry; sent by provider to payer; contains: provider NPI, patient member ID + DOB, service type codes (e.g., 30=health benefit plan coverage, 1=medical care)
+The second, and the one this lesson recommends for almost every team, is to go through a **multi-payer real-time network**. **Availity** is the largest of these, reaching essentially every health plan nationwide and processing millions of healthcare transactions daily. It offers a **REST API wrapper around the underlying EDI 270/271**, authenticated via **OAuth 2.0**, at roughly **$0.05–0.15 per transaction**. For a healthcare agent, that REST surface is decisive: you make an authenticated HTTPS call with structured fields and get structured fields back, instead of hand-assembling X12 segments. Stedi and Optum offer comparable eligibility APIs; the architectural pattern is the same.
 
-:::
+**Recommendation:** build against a multi-payer network like Availity as the primary path. Reserve raw EDI for the specific payers a network cannot reach. The per-transaction fee is trivial against the labor it replaces, and a single integration buys you a thousand-plus payers instead of a thousand connections.
 
-- HIPAA 271 transaction: eligibility response; returned by payer; contains: coverage status, deductible amounts, copay, coinsurance, benefits by service type, coverage dates, coordination of benefits (COB)
-- Availity API: Availity is the largest multi-payer real-time eligibility network (1000+ payers); offers REST API wrapper around EDI 270/271; authentication via OAuth 2.0; $0.05-0.15 per transaction
-- Coverage parsing: 271 responses vary significantly by payer; deductible remaining, out-of-pocket max, and benefit-specific copays must be extracted from complex X12 EDI XML; NLP/regex parsing often required for non-standard payer responses
-- Agent workflow: nightly batch job → retrieve scheduled appointments for next 3 days → submit 270 for each patient/payer combination → parse 271 responses → flag issues (inactive coverage, coordination, prior auth required) → route alerts to front desk and scheduling
-- Edge cases agents must handle: terminated coverage effective mid-month, Medicare as secondary payer, dependent on parent's plan (age 26 cutoff), retroactive coverage changes, Medicaid spend-down
+## Parsing the 271 is the real work
 
-:::tip Hands-on lab
+The integration is the easy part. The hard part is that **271 responses vary significantly by payer**. Deductible remaining, out-of-pocket maximum, and benefit-specific copays are all nominally in the response, but they live in different places and are expressed differently across plans. The structured fields you want must be extracted from complex X12 EDI (often surfaced as XML), and for non-standard payer responses you will need **NLP or regex parsing** to pull the values reliably.
 
-Design an eligibility agent: write the data schema for a patient appointment record, define the API call to Availity (or mock), parse a sample 271 response to extract active coverage + deductible remaining + prior auth required flags, and define the three escalation paths (active/needs-PA/inactive coverage).
+This is where an LLM earns its place in the pipeline: feed it the raw response and a schema, and have it return normalized fields with the source text it relied on. But normalization is only useful if it is correct, which means you need to handle the edge cases that break naive parsers.
 
-:::
+The eligibility agent must reason about, at minimum:
 
-## Check your understanding
+- **Terminated coverage effective mid-month** — active yesterday, gone today.
+- **Medicare as the secondary payer** — the order of payers changes who you bill first.
+- **A dependent aging off a parent's plan** at the age-26 cutoff.
+- **Retroactive coverage changes** that alter status for dates already passed.
+- **Medicaid spend-down**, where eligibility depends on the patient meeting a cost threshold.
 
-Cover the answers and try to recall each point before expanding it.
+Each of these can silently flip a "covered" answer to "denied claim" weeks later if the agent misses it.
 
-<details>
-<summary>HIPAA 270 transaction</summary>
+## The agent workflow
 
-eligibility inquiry; sent by provider to payer; contains: provider NPI, patient member ID + DOB, service type codes (e.g., 30=health benefit plan coverage, 1=medical care)
+Put the pieces together and the agent runs as a nightly batch job:
 
-</details>
+1. **Retrieve scheduled appointments** for the next three days.
+2. **Submit a 270** for each patient/payer combination.
+3. **Parse the 271 responses** into normalized fields.
+4. **Flag issues** — inactive coverage, coordination of benefits, prior authorization required.
+5. **Route alerts** to the front desk and scheduling so problems are resolved before the visit.
 
-<details>
-<summary>HIPAA 271 transaction</summary>
+The flagging step resolves into **three escalation paths**, and designing them cleanly is the heart of the agent: coverage **active** (proceed normally), coverage active but **prior authorization required** (hand off to the PA agent), and coverage **inactive or terminated** (escalate to the front desk to contact the patient before the appointment). Everything the agent does funnels into one of these three outcomes.
 
-eligibility response; returned by payer; contains: coverage status, deductible amounts, copay, coinsurance, benefits by service type, coverage dates, coordination of benefits (COB)
+## Putting it into practice
 
-</details>
+Design an eligibility agent end to end, on paper first, so the schema and escalation logic are settled before you write integration code.
 
-<details>
-<summary>Availity API</summary>
+1. Write the **data schema for a patient appointment record** — the fields the agent needs: patient member ID, DOB, payer, provider NPI, appointment date, and service type codes.
+2. Define the **API call to Availity** (or a mock): the OAuth 2.0 auth step, the 270 request payload, and the expected 271 response shape.
+3. Take a **sample 271 response** and parse it to extract three things: **active coverage** status, **deductible remaining**, and a **prior-authorization-required** flag.
+4. Define the **three escalation paths** explicitly — active, needs-PA, and inactive coverage — and state what the agent does and who it notifies in each.
 
-Availity is the largest multi-payer real-time eligibility network (1000+ payers); offers REST API wrapper around EDI 270/271; authentication via OAuth 2.0; $0.05-0.15 per transaction
+You now have the design for the highest-volume, most automatable agent in the entire revenue cycle.
 
-</details>
+## Key takeaways
 
-<details>
-<summary>Coverage parsing</summary>
-
-271 responses vary significantly by payer; deductible remaining, out-of-pocket max, and benefit-specific copays must be extracted from complex X12 EDI XML; NLP/regex parsing often required for non-standard payer responses
-
-</details>
-
-<details>
-<summary>Agent workflow</summary>
-
-nightly batch job → retrieve scheduled appointments for next 3 days → submit 270 for each patient/payer combination → parse 271 responses → flag issues (inactive coverage, coordination, prior auth required) → route alerts to front desk and scheduling
-
-</details>
+- Eligibility is the first agent to build: manual verification takes 3–8 minutes of hold time; an EDI 270/271 transaction takes ~0.8 seconds, and an agent can eliminate ~90% of front-desk insurance calls.
+- The 270 (inquiry: NPI, member ID, DOB, service type codes) and 271 (response: coverage status, deductibles, copay/coinsurance, benefits, COB) are the paired transactions every eligibility agent is built around.
+- Prefer a multi-payer REST network like Availity (OAuth 2.0, ~$0.05–0.15/transaction, 1000+ payers) over hand-rolled raw EDI; reserve direct X12 for payers the network cannot reach.
+- The real engineering is parsing: 271 responses vary by payer, so normalizing deductible, out-of-pocket max, and copays often needs NLP/regex on complex X12.
+- Build for the edge cases — mid-month termination, Medicare-secondary, age-26 dependents, retroactive changes, Medicaid spend-down — or they become denied claims later.
+- The agent runs as a nightly batch (retrieve appointments → submit 270 → parse 271 → flag → route) resolving into three escalation paths: active, needs-PA, and inactive coverage.
 
 ## References
 

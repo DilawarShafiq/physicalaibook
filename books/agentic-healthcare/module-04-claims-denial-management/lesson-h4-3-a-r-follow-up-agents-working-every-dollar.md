@@ -10,73 +10,63 @@ tags: ["A/R", "claim-status", "276/277", "follow-up", "aging"]
 
 **Duration:** 50 min · **Level:** Advanced · **Module:** 4. Claims Submission & Denial Management AI · **Focus:** `A/R`, `claim-status`, `276/277`, `follow-up`, `aging`
 
-:::info Learning objectives
+Preventing denials and winning appeals matter, but a claim can be clean, accepted, and still unpaid simply because no one followed up on it. **Accounts Receivable (A/R) management** is the sustained, unglamorous pursuit of every unpaid claim until the money arrives or the account is closed for cause. It is work that rewards consistency and punishes fatigue — exactly the profile that breaks human follow-up teams, who triage by the squeakiest wheel and let aging claims slip. An A/R agent works *every* claim systematically: checking status, reworking pended claims, escalating the stuck ones, and knowing when to stop. This lesson builds it.
 
-By the end of this lesson you will be able to explain and apply:
+## Aging buckets define the rhythm
 
-- A/R aging buckets
-- Claim status check
-- 277 status codes
-- Payer-specific rules
-- Patient balance follow-up
-:::
+A/R is organized by how old a claim is, and each age band carries a different action. Your agent's core loop is driven by these buckets:
 
-## Overview
+- **0–30 days** — active adjudication; the payer is still working it, so leave it alone.
+- **31–60 days** — follow-up begins; the claim is now old enough to question.
+- **61–90 days** — escalated follow-up; something is likely stuck.
+- **91–120 days** — demand letter or appeal; the claim needs pressure.
+- **120+ days** — write-off or external collections consideration; decide whether it is still worth pursuing.
 
-Accounts Receivable (A/R) management is the sustained pursuit of unpaid claims. An A/R agent works every aging claim systematically — checking claim status, reworking pended claims, escalating to supervisors — without the fatigue and inconsistency of human follow-up teams.
+The discipline here is restraint as much as persistence: chasing a claim at day ten wastes effort on a payer that is simply still adjudicating. The agent should let the bucket dictate the action, applying energy when it will actually move the claim and not before.
 
-## Key concepts
+## Checking status with 276/277
 
-:::note Key idea
+The agent's daily heartbeat is the status check. The standard mechanism is the **HIPAA 276/277 transaction** — a 276 inquiry sent to the payer, a 277 response coming back — which gives electronic, structured claim status. Where electronic status is unavailable, the agent falls back to **Availity or payer portals** for manual lookup. The operating rule from the lesson: check the status of every claim **older than 21 days, daily**, and trigger the next action from the status code returned.
 
-A/R aging buckets: 0-30 days (active adjudication), 31-60 days (follow-up begins), 61-90 days (escalated follow-up), 91-120 days (demand letter/appeal), 120+ days (write-off or external collections consideration)
+Those **277 status codes** are the agent's decision inputs, and each maps to a specific response:
 
-:::
+- **A3** — claim received, pending; wait and recheck.
+- **A6** — payer considers the claim complete, payment forthcoming; expect payment, monitor.
+- **A7** — payer received incorrect information; rework and resubmit.
+- **F2** — more information needed; gather and supply it.
 
-- Claim status check: HIPAA 276/277 transaction for electronic claim status; Availity and payer portals for manual status; agent checks status of all claims &gt;21 days old daily and triggers workflow based on status code
-- 277 status codes: A3 (claim received, pending), A6 (payer considers claim complete, payment forthcoming), A7 (payer received incorrect information), F2 (more information needed); each status code triggers a specific agent action
-- Payer-specific rules: some payers systematically pend certain claim types for manual review (high-dollar, certain diagnosis codes, flagged providers); A/R agent learns these patterns from historical data and builds payer-specific work queues
-- Patient balance follow-up: after insurance adjudicates, patient balance must be billed; AI agent generates personalized patient statement, sends via preferred channel (mail, email, text), monitors for payment, offers payment plan if balance exceeds threshold
-- Write-off decision support: claims beyond timely filing limits or in states with balance billing restrictions cannot be pursued; AI flags these for write-off approval rather than burning follow-up resources on uncollectable accounts
+Encode this mapping explicitly. The status code is not a notification to a human queue — it is a branch in the agent's workflow, and most codes resolve to an action the agent can take or stage without a person.
 
-## Check your understanding
+## Learning payer behavior and building work queues
 
-Cover the answers and try to recall each point before expanding it.
+Payers are not uniform, and the agent's effectiveness comes from learning each one's habits. Some payers **systematically pend certain claim types** for manual review — high-dollar claims, particular diagnosis codes, claims from flagged providers. A human team rediscovers these patterns claim by claim; the agent learns them once from historical data and **builds payer-specific work queues** that anticipate the pend instead of reacting to it.
 
-<details>
-<summary>A/R aging buckets</summary>
+This is the same principle that ran through claim scrubbing and appeals: your own history is the richest source of payer intelligence, and the agent that mines it works smarter than one running on generic rules. A queue that already knows "this payer always pends high-dollar cardiology claims for review" can prepare the supporting documentation before the pend even posts.
 
-0-30 days (active adjudication), 31-60 days (follow-up begins), 61-90 days (escalated follow-up), 91-120 days (demand letter/appeal), 120+ days (write-off or external collections consideration)
+## Patient balances and knowing when to stop
 
-</details>
+Two endpoints close out the A/R lifecycle. After insurance adjudicates, the remaining **patient balance** must be billed. Here the agent generates a personalized statement, sends it through the patient's preferred channel — mail, email, or text — monitors for payment, and **offers a payment plan when the balance exceeds a threshold**. Meeting patients where they are, on their channel, with a realistic plan, collects more than a stack of identical paper statements.
 
-<details>
-<summary>Claim status check</summary>
+The other endpoint is the **write-off decision**, and getting it right is what keeps the agent efficient. Some claims genuinely cannot be pursued — those past **timely filing limits**, or those in **states with balance billing restrictions** that bar collection. The agent should **flag these for write-off approval** rather than burning follow-up cycles on uncollectable accounts. Knowing when to stop is as valuable as knowing when to push: every hour spent on a truly dead claim is an hour stolen from a recoverable one. Keep the write-off as a *recommendation* to a human approver, not an automatic action, so accountability stays with a person.
 
-HIPAA 276/277 transaction for electronic claim status; Availity and payer portals for manual status; agent checks status of all claims &gt;21 days old daily and triggers workflow based on status code
+## Putting it into practice
 
-</details>
+Build an A/R follow-up agent driven by aging buckets and status codes.
 
-<details>
-<summary>277 status codes</summary>
+1. Load your open claims and bucket each by age (0–30, 31–60, 61–90, 91–120, 120+), with the bucket selecting the next action.
+2. Implement a daily status check via 276/277 for every claim older than 21 days, parsing the 277 response code.
+3. Map each status code to an action — A3 monitor, A6 monitor for payment, A7 rework and resubmit, F2 gather and supply information.
+4. Mine historical data to build payer-specific work queues for claim types that are systematically pended.
+5. Add the two endpoints: a patient-balance workflow with preferred-channel statements and threshold-triggered payment plans, and a write-off recommender that flags timely-filing and balance-billing-restricted claims for human approval.
 
-A3 (claim received, pending), A6 (payer considers claim complete, payment forthcoming), A7 (payer received incorrect information), F2 (more information needed); each status code triggers a specific agent action
+## Key takeaways
 
-</details>
-
-<details>
-<summary>Payer-specific rules</summary>
-
-some payers systematically pend certain claim types for manual review (high-dollar, certain diagnosis codes, flagged providers); A/R agent learns these patterns from historical data and builds payer-specific work queues
-
-</details>
-
-<details>
-<summary>Patient balance follow-up</summary>
-
-after insurance adjudicates, patient balance must be billed; AI agent generates personalized patient statement, sends via preferred channel (mail, email, text), monitors for payment, offers payment plan if balance exceeds threshold
-
-</details>
+- A/R is the systematic pursuit of unpaid claims; its payoff comes from consistency, which is where human follow-up teams fail and an agent excels.
+- Aging buckets (0–30 through 120+) set the rhythm — apply effort when it will move the claim, and leave actively-adjudicating claims alone.
+- The 276/277 transaction is the status heartbeat; check every claim older than 21 days daily and branch on the 277 code (A3, A6, A7, F2).
+- Learn payer-specific pend patterns from your own history and build work queues that anticipate manual review rather than react to it.
+- Bill patient balances on the patient's preferred channel and offer payment plans above a threshold to lift collection.
+- Recommend — never auto-execute — write-offs for timely-filing and balance-billing-restricted claims, so follow-up effort goes only where dollars are recoverable.
 
 ---
 

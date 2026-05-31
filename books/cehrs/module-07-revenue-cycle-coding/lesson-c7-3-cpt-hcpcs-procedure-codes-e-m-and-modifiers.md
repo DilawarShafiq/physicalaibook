@@ -10,73 +10,76 @@ tags: ["CPT", "HCPCS", "E&M", "modifiers", "procedure-codes"]
 
 **Duration:** 50 min · **Level:** Intermediate · **Module:** 7. Revenue Cycle & Coding Basics · **Focus:** `CPT`, `HCPCS`, `E&M`, `modifiers`, `procedure-codes`
 
-:::info Learning objectives
+If ICD-10-CM answers "what is wrong with the patient," CPT answers "what did the provider do about it." CPT — Current Procedural Terminology — codes describe every service a provider performs, and among them one family is billed more than any other: Evaluation and Management codes, the E&M codes used for office visits, hospital visits, and consultations. Because E&M is so common and because its level is chosen directly from documentation, this is the corner of coding where a CEHRS specialist's understanding of the record translates most directly into correct, defensible billing.
 
-By the end of this lesson you will be able to explain and apply:
+## How CPT is organized
 
-- CPT code structure
-- E&M coding (post-2021 AMA revision)
-- Medical decision making components
-- HCPCS Level II codes
-- Modifiers
-:::
+CPT codes are **5-digit numeric codes**, and they are grouped into sections you can recognize by their leading digits:
 
-## Overview
+- **E&M** — 99XXX (the most frequently billed family)
+- **Anesthesia** — 00XXX–01XXX
+- **Surgery** — 10XXX–69XXX
+- **Radiology** — 70XXX–79XXX
+- **Pathology and Lab** — 80XXX–89XXX
+- **Medicine** — 90XXX–99XXX
 
-CPT (Current Procedural Terminology) codes describe every service a provider performs. E&M (Evaluation and Management) codes are the most frequently billed CPT codes — used for office visits, hospital visits, and consultations. CEHRS specialists must understand how documentation drives E&M level selection.
+A memory hook: the 99XXX block bookends the system — E&M sits at the very top of the numbering, and the medicine section runs back up into the 99000s. When you see a five-digit code starting with 99, think "a visit or an encounter-level service," not a procedure.
 
-## Key concepts
+## E&M after the 2021 overhaul
 
-:::note Key idea
+The way E&M levels are chosen changed substantially in the 2021 AMA revision, and the exam reflects the current rules. For outpatient E&M — codes **99202–99215** — the level is now based on **either** of two things, the provider's choice:
 
-CPT code structure: 5-digit numeric codes; organized by category: E&M (99XXX), anesthesia (00XXX-01XXX), surgery (10XXX-69XXX), radiology (70XXX-79XXX), lab (80XXX-89XXX), medicine (90XXX-99XXX)
+- the complexity of **medical decision making (MDM)**, or
+- the **total time** the provider spent on the encounter that day.
 
-:::
+The old method, which scored history and physical exam and MDM together, is gone for these codes. History and exam still happen and must be medically appropriate, but they no longer set the level. This simplification is the single most important update to know.
 
-- E&M coding (post-2021 AMA revision): outpatient E&M levels (99202-99215) now based on either medical decision making (MDM) complexity OR total provider time; documentation requirements simplified vs old history/exam/MDM method
-- Medical decision making components: number and complexity of problems, amount/complexity of data reviewed, risk of complications/morbidity — rated as straightforward, low, moderate, or high
-- HCPCS Level II codes: alphanumeric codes (A0000-Z9999) for products, supplies, and services not in CPT; used for durable medical equipment (DME), ambulance services, injected drugs, orthotics
-- Modifiers: two-digit codes appended to CPT to provide additional information; common modifiers: -25 (significant separate E&M on day of procedure), -59 (distinct procedural service), -LT/-RT (left/right side), -52 (reduced services)
-- Claim denial from E&M issues: upcoding (billing higher level than documented = fraud risk), downcoding (billing lower level = revenue loss), missing modifier -25 (E&M denied when billed same day as procedure without modifier)
+**Medical decision making** is rated as straightforward, low, moderate, or high, based on three components:
 
-## Check your understanding
+- the **number and complexity of problems** addressed,
+- the **amount and complexity of data** reviewed (labs, records, tests), and
+- the **risk** of complications or morbidity from the patient's problems and the management chosen.
 
-Cover the answers and try to recall each point before expanding it.
+**Total time** is the alternative path: count the provider's face-to-face and non-face-to-face time on the day of the visit, and the visit level is the one whose time threshold is met or exceeded. The practical consequence for documentation is that a record must clearly support whichever path was used — either the MDM elements or a stated total time.
 
-<details>
-<summary>CPT code structure</summary>
+## HCPCS Level II: what CPT does not cover
 
-5-digit numeric codes; organized by category: E&M (99XXX), anesthesia (00XXX-01XXX), surgery (10XXX-69XXX), radiology (70XXX-79XXX), lab (80XXX-89XXX), medicine (90XXX-99XXX)
+CPT does not describe everything that gets billed. **HCPCS Level II codes** — alphanumeric, running across the A0000–Z9999 range — fill the gaps for products, supplies, and services CPT omits. Their domain is durable medical equipment (DME), ambulance services, injected drugs, and orthotics. A simple split to remember: **CPT for what the provider does, HCPCS Level II for the things and supplies involved.**
 
-</details>
+## Modifiers and the denials they prevent
 
-<details>
-<summary>E&M coding (post-2021 AMA revision)</summary>
+A **modifier** is a two-digit code appended to a CPT code to add information without changing the underlying procedure. The high-yield ones to recognize:
 
-outpatient E&M levels (99202-99215) now based on either medical decision making (MDM) complexity OR total provider time; documentation requirements simplified vs old history/exam/MDM method
+- **-25** — a significant, separately identifiable E&M service on the same day as a procedure
+- **-59** — a distinct procedural service
+- **-LT / -RT** — left side / right side
+- **-52** — reduced services
 
-</details>
+Modifiers are not decoration; missing or wrong modifiers cause denials. The exam ties E&M problems directly to revenue outcomes:
 
-<details>
-<summary>Medical decision making components</summary>
+- **Upcoding** — billing a higher level than the documentation supports — is a fraud risk.
+- **Downcoding** — billing a lower level than was warranted — is simply lost revenue.
+- **A missing -25 modifier** — when an E&M visit is billed on the same day as a procedure but is not flagged as separately identifiable — gets the E&M denied.
 
-number and complexity of problems, amount/complexity of data reviewed, risk of complications/morbidity — rated as straightforward, low, moderate, or high
+That last scenario is the classic worked example: a patient comes in, the provider does a separate evaluation and also performs a minor procedure; without modifier -25 on the E&M code, the payer assumes the visit was just part of the procedure and denies it. The fix is documentation that shows the E&M was genuinely separate, plus the modifier that says so.
 
-</details>
+## Putting it into practice
 
-<details>
-<summary>HCPCS Level II codes</summary>
+Drill the structure and the denial logic together, since the exam pairs them.
 
-alphanumeric codes (A0000-Z9999) for products, supplies, and services not in CPT; used for durable medical equipment (DME), ambulance services, injected drugs, orthotics
+1. Write the CPT section ranges as a quick-reference card: 99XXX E&M, 00–01XXX anesthesia, 10–69XXX surgery, 70–79XXX radiology, 80–89XXX lab, 90–99XXX medicine. Quiz yourself by code, by section, both directions.
+2. State, in one sentence, the post-2021 outpatient E&M rule: level is set by MDM complexity OR total time — not by history and exam.
+3. List the three MDM components (problems, data, risk) and the four MDM levels (straightforward, low, moderate, high).
+4. Write the three E&M denial failure modes — upcoding (fraud), downcoding (lost revenue), missing -25 (E&M denied same day as a procedure) — and for the -25 case, describe what documentation rescues the claim. If you can do all four, you have Domain 5's procedure-coding questions.
 
-</details>
+## Key takeaways
 
-<details>
-<summary>Modifiers</summary>
-
-two-digit codes appended to CPT to provide additional information; common modifiers: -25 (significant separate E&M on day of procedure), -59 (distinct procedural service), -LT/-RT (left/right side), -52 (reduced services)
-
-</details>
+- CPT codes are 5 digits, grouped by leading digits: E&M (99XXX), anesthesia (00–01XXX), surgery (10–69XXX), radiology (70–79XXX), lab (80–89XXX), medicine (90–99XXX).
+- After the 2021 revision, outpatient E&M (99202–99215) levels are set by either medical decision making complexity OR total provider time — history and exam no longer determine the level.
+- MDM has three components — number/complexity of problems, amount/complexity of data, and risk — rated straightforward, low, moderate, or high.
+- HCPCS Level II codes (alphanumeric, A0000–Z9999) cover what CPT does not: DME, ambulance, injected drugs, orthotics.
+- Modifiers add information to CPT codes: -25 (separate E&M with a procedure), -59 (distinct service), -LT/-RT (sides), -52 (reduced services).
+- E&M denial traps: upcoding is a fraud risk, downcoding loses revenue, and a missing -25 modifier gets the E&M denied when billed the same day as a procedure.
 
 ---
 

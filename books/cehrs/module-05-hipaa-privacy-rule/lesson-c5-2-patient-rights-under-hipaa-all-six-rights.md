@@ -10,73 +10,47 @@ tags: ["patient-rights", "access", "amendment", "accounting", "HIPAA"]
 
 **Duration:** 55 min · **Level:** Intermediate · **Module:** 5. HIPAA Privacy Rule · **Focus:** `patient-rights`, `access`, `amendment`, `accounting`, `HIPAA`
 
-:::info Learning objectives
+HIPAA does not just restrict what a healthcare organization can do with your records — it grants patients a set of affirmative rights they can exercise on demand. There are exactly **six** of them, and a CEHRS specialist processes requests for these rights as routine daily work. The exam rewards precise recall here: not just the name of each right, but the **timeframes, allowable fees, and required responses** attached to it. Vague familiarity will not survive a well-written question. This lesson walks through all six in order, with the specific numbers the exam loves to test.
 
-By the end of this lesson you will be able to explain and apply:
+## Rights 1 and 2: Access and Amendment
 
-- Right 1
-- Right 2
-- Right 3
-- Right 4
-- Right 5
-:::
+**Right 1 — Access.** Patients may request a copy of their medical records, and the covered entity must respond **within 30 days**, with **one 30-day extension** permitted if needed. A **reasonable, cost-based fee** is allowed — but it can only cover actual costs like labor for copying, supplies, and postage. Two rules the exam tests directly: the records must be provided **in the format the patient requests if it is readily producible**, and access **cannot be denied because the patient owes a balance**. Money owed is a billing matter; it never blocks the right of access.
 
-## Overview
+**Right 2 — Amendment.** Patients may request that their records be **corrected**. Crucially, the covered entity is *not* obligated to agree. It may **deny an amendment** if the record was not created by the entity, if the information is already accurate and complete, or if it is not part of the designated record set. When an amendment is denied, the patient's recourse is to **file a statement of disagreement**, which then travels with the record. Memory hook: *Access cannot be refused; Amendment can be.*
 
-HIPAA grants patients six distinct rights regarding their health information. CEHRS specialists process requests for these rights daily. Knowing the timeframes, allowable fees, and required responses for each right is essential for the exam and for daily work.
+## Rights 3 and 4: Accounting and Restrictions
 
-## Key concepts
+**Right 3 — Accounting of Disclosures.** Patients may request a list of disclosures of their PHI going back **6 years**. The important exclusion: this accounting does **not** include disclosures for **treatment, payment, or operations (TPO)** — the everyday flow of healthcare. It captures the unusual disclosures, not the routine ones. The covered entity must provide the accounting **within 60 days** — note this is a longer window than the 30-day access timeframe, a contrast the exam exploits.
 
-:::note Key idea
+**Right 4 — Restrictions.** Patients may request restrictions on how their PHI is used or disclosed. The general rule is that the covered entity **does not have to agree** — but there is one mandatory exception worth memorizing word for word: the entity **must agree to restrict disclosure to a health plan when the patient pays out-of-pocket in full** and the disclosure is not otherwise required by law. So if a patient pays cash for a service and asks you not to tell their insurer, you must honor that. Memory hook: *paid in full, out of pocket — the insurer doesn't get told.*
 
-Right 1 — Access: patients may request a copy of their medical records; covered entity must provide within 30 days (one 30-day extension allowed); reasonable cost-based fee permitted; must provide in requested format if readily producible; cannot deny access because balance is owed
+## Rights 5 and 6: Confidential Communications and Fundraising Opt-Out
 
-:::
+**Right 5 — Confidential Communications.** Patients may request to receive communications by **alternative means or at alternative locations** — a different mailing address, a different phone number, a message that does not reveal sensitive details. The covered entity **must accommodate reasonable requests** and, importantly, **cannot require the patient to explain why**. A patient escaping an abusive situation, for instance, should never have to justify wanting calls sent to a different number.
 
-- Right 2 — Amendment: patients may request corrections to their records; covered entity may deny if record was not created by the entity, if the information is accurate and complete, or if it is not part of the designated record set; if denied, patient may file a statement of disagreement
-- Right 3 — Accounting of Disclosures: patients may request a list of disclosures of their PHI for the past 6 years (not including treatment, payment, or operations disclosures); must be provided within 60 days
-- Right 4 — Restrictions: patients may request restrictions on use/disclosure; covered entity does NOT have to agree EXCEPT: must agree to restrict disclosure to health plan when patient pays out-of-pocket in full and disclosure is not required by law
-- Right 5 — Confidential Communications: patients may request to receive communications by alternative means (different address, phone number); covered entity must accommodate reasonable requests without requiring explanation
-- Right 6 — Opt Out of Fundraising: patients may opt out of receiving fundraising communications from their healthcare provider at any time; opt-out must be honored in future communications
+**Right 6 — Opt Out of Fundraising.** Patients may **opt out of fundraising communications** from their provider at **any time**, and once they opt out, that choice **must be honored in future communications**. This is the most commonly forgotten of the six rights precisely because it feels minor — but the exam includes it specifically to see whether you know the list is complete at six.
 
-## Check your understanding
+## Why the numbers matter
 
-Cover the answers and try to recall each point before expanding it.
+Many CEHRS questions are constructed around a single timeframe or fee detail dropped into a realistic scenario. The four numbers that carry the most weight: **30 days** (access response, plus one 30-day extension), **60 days** (accounting of disclosures), **6 years** (the accounting lookback period), and the **TPO exclusion** that keeps routine disclosures off the accounting list. Confusing the 30-day access clock with the 60-day accounting clock is one of the most common avoidable errors. Anchor each number to its right and you defuse an entire category of trick questions.
 
-<details>
-<summary>Right 1</summary>
+## Putting it into practice
 
-Access: patients may request a copy of their medical records; covered entity must provide within 30 days (one 30-day extension allowed); reasonable cost-based fee permitted; must provide in requested format if readily producible; cannot deny access because balance is owed
+Build a six-row reference table you can reconstruct from memory under exam pressure.
 
-</details>
+1. List the six rights down the left in order: **Access, Amendment, Accounting, Restrictions, Confidential Communications, Fundraising Opt-Out.** Use the first letters to make a recall phrase you find sticky.
+2. In a "timeframe" column, fill only what applies: Access = 30 days (+ one 30-day extension); Accounting = 60 days, 6-year lookback. Leave the others blank — knowing which rights have no fixed clock is itself testable.
+3. In a "can the entity refuse?" column, mark **Amendment** (yes, may deny) and **Restrictions** (yes, except the paid-in-full health-plan exception) against **Access** (no, cannot deny — not even for unpaid balances).
+4. In a "key catch" column, note the standouts: Access = format if readily producible; Accounting = excludes TPO; Restrictions = mandatory out-of-pocket exception; Confidential Communications = no explanation required.
+5. Self-test: cover the table and rebuild it from the recall phrase alone. If you can place all four numbers and both "can refuse" cases correctly, you own Domain 5's patient-rights questions.
 
-<details>
-<summary>Right 2</summary>
+## Key takeaways
 
-Amendment: patients may request corrections to their records; covered entity may deny if record was not created by the entity, if the information is accurate and complete, or if it is not part of the designated record set; if denied, patient may file a statement of disagreement
-
-</details>
-
-<details>
-<summary>Right 3</summary>
-
-Accounting of Disclosures: patients may request a list of disclosures of their PHI for the past 6 years (not including treatment, payment, or operations disclosures); must be provided within 60 days
-
-</details>
-
-<details>
-<summary>Right 4</summary>
-
-Restrictions: patients may request restrictions on use/disclosure; covered entity does NOT have to agree EXCEPT: must agree to restrict disclosure to health plan when patient pays out-of-pocket in full and disclosure is not required by law
-
-</details>
-
-<details>
-<summary>Right 5</summary>
-
-Confidential Communications: patients may request to receive communications by alternative means (different address, phone number); covered entity must accommodate reasonable requests without requiring explanation
-
-</details>
+- There are exactly **six** patient rights: Access, Amendment, Accounting of Disclosures, Restrictions, Confidential Communications, and Opt Out of Fundraising.
+- **Access:** respond within **30 days** (one 30-day extension); reasonable cost-based fee allowed; provide in requested format if readily producible; **cannot deny for an unpaid balance.**
+- **Amendment** can be denied (record not created by the entity, already accurate, or outside the designated record set) — the patient may then file a **statement of disagreement.**
+- **Accounting of Disclosures** covers **6 years**, **excludes TPO**, and must be provided within **60 days**; **Restrictions** are generally optional except the mandatory **out-of-pocket / health-plan** exception.
+- **Confidential Communications** must accommodate reasonable requests **without requiring an explanation**, and patients may **opt out of fundraising at any time**, with the opt-out honored going forward.
 
 ---
 

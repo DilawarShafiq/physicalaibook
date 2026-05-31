@@ -10,73 +10,60 @@ tags: ["ICD-10-CM", "diagnosis-codes", "DRG", "HCC", "coding"]
 
 **Duration:** 55 min · **Level:** Intermediate · **Module:** 7. Revenue Cycle & Coding Basics · **Focus:** `ICD-10-CM`, `diagnosis-codes`, `DRG`, `HCC`, `coding`
 
-:::info Learning objectives
+Since October 2015, every diagnosis in US healthcare billing has been recorded in one code set: ICD-10-CM — the International Classification of Diseases, 10th Revision, Clinical Modification. You do not need to become an expert coder to pass the CEHRS exam or to do the job well. What you need is to read a code, understand what its structure is telling you, and recognize when a physician's documentation is too vague to support a specific code — because that gap is where reimbursement is lost and where your work makes the difference.
 
-By the end of this lesson you will be able to explain and apply:
+## How to read an ICD-10-CM code
 
-- ICD-10-CM code structure
-- Code first/use additional code notes
-- Principal diagnosis
-- Coding specificity drives reimbursement
-- HCC coding (Hierarchical Condition Categories)
-:::
+Every ICD-10-CM code is **3 to 7 alphanumeric characters**, and the position of each character carries meaning. Learn the anatomy and you can decode a code you have never seen:
 
-## Overview
+- The **first character is always a letter** (A through Z, with U reserved), pointing to a category or body system.
+- **Characters 2 and 3 are numbers**, naming the broad category of disease, condition, or injury.
+- The **4th character onward adds specificity** — etiology (the cause), site (where in the body), severity, and laterality (left, right, or bilateral).
 
-ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification) is the diagnosis code set used in the US for all healthcare billing since October 2015. CEHRS specialists do not need to be expert coders, but must understand code structure, documentation requirements, and how diagnosis codes affect reimbursement.
+The governing principle is to code to the highest level of specificity the documentation supports. Think of the code as a funnel: the first three characters say roughly *what* is wrong, and everything after narrows it to *exactly* what, where, and how bad. A memory hook: **letter, two numbers, then the details.**
 
-## Key concepts
+## Specificity is not bureaucracy — it is money
 
-:::note Key idea
+The reason specificity matters is financial, and the exam tests this through worked comparisons. Take the example straight from the curriculum:
 
-ICD-10-CM code structure: 3-7 alphanumeric characters; first character = letter A-Z (except U); characters 2-3 = numbers (category); 4th+ characters = specificity (etiology, site, severity, laterality)
+- "Diabetes mellitus" with no further detail codes to **E11.9** (Type 2 diabetes without complications).
+- "Diabetes mellitus Type 2 with diabetic chronic kidney disease, stage 3" codes to **E11.22 + N18.3.**
 
-:::
+The second version reimburses significantly higher than the first — not because the coder did anything clever, but because the more specific code reflects a sicker patient consuming more resources. The documentation earned the higher payment by describing reality more completely. This is the heart of what a CEHRS specialist watches for: vague documentation that codes to a low-specificity catch-all when the patient's actual condition is far more involved.
 
-- Code first/use additional code notes: ICD-10-CM has hierarchical rules; certain codes require sequencing in a specific order; underlying condition codes vs manifestation codes
-- Principal diagnosis: the condition established after study to be chiefly responsible for the admission; determines DRG assignment and reimbursement in inpatient setting
-- Coding specificity drives reimbursement: "diabetes mellitus Type 2 with diabetic chronic kidney disease, stage 3" (E11.22 + N18.3) reimburses significantly higher than "diabetes mellitus" (E11.9) because it reflects higher resource utilization
-- HCC coding (Hierarchical Condition Categories): risk adjustment model used by Medicare Advantage; conditions like CHF, COPD, diabetes must be documented and coded every year to maintain accurate risk scores — affects per-member-per-month payments
-- Query process: when documentation is insufficient for accurate coding, coders or CDI specialists send a clinical documentation improvement (CDI) query to the physician; CEHRS staff may route queries; AHIMA and ACDIS have query practice guidelines
+Notice also that the second example used **two codes in a particular order.** ICD-10-CM has hierarchical rules expressed as **"code first" and "use additional code" notes** — instructions that tell you to sequence an underlying condition before its manifestation. You will not be assigning these sequences yourself, but you must recognize that the order is not arbitrary and that the rules live in the code book's notes.
 
-## Check your understanding
+## Principal diagnosis and the inpatient stakes
 
-Cover the answers and try to recall each point before expanding it.
+In the inpatient setting, one diagnosis matters above all others: the **principal diagnosis** — defined as the condition established *after study* to be chiefly responsible for the admission. The phrase "after study" is the tested detail: the principal diagnosis is not necessarily the admitting complaint or the first thing noticed; it is the conclusion reached once the workup is complete.
 
-<details>
-<summary>ICD-10-CM code structure</summary>
+It matters because the principal diagnosis drives **DRG (diagnosis-related group) assignment**, and the DRG largely determines inpatient reimbursement. A weak or imprecise principal diagnosis can mean the hospital is paid for a less complex case than it actually treated.
 
-3-7 alphanumeric characters; first character = letter A-Z (except U); characters 2-3 = numbers (category); 4th+ characters = specificity (etiology, site, severity, laterality)
+## HCC coding and the annual documentation rhythm
 
-</details>
+A second financial model worth knowing is **HCC — Hierarchical Condition Categories** — the risk-adjustment model used by Medicare Advantage. The mechanic to remember: chronic conditions like CHF, COPD, and diabetes must be documented and coded **every year** to keep the patient's risk score accurate, because those scores drive per-member-per-month payments. A condition that was documented last year but not this year effectively disappears from the risk picture. This is why "the diagnosis has to be captured again this year" is a real workflow concern, not redundant paperwork.
 
-<details>
-<summary>Code first/use additional code notes</summary>
+## When documentation falls short: the query
 
-ICD-10-CM has hierarchical rules; certain codes require sequencing in a specific order; underlying condition codes vs manifestation codes
+The bridge between vague documentation and a defensible code is the **query.** When the record does not contain enough detail to assign an accurate code, a coder or a clinical documentation improvement (CDI) specialist sends a **CDI query** to the physician asking for clarification — for example, asking whether the documented kidney disease is related to the diabetes, and at what stage. CEHRS staff may route these queries. The practice is governed: AHIMA and ACDIS publish query practice guidelines, and the cardinal rule is that a query clarifies the record — it must never lead the physician toward a particular answer.
 
-</details>
+## Putting it into practice
 
-<details>
-<summary>Principal diagnosis</summary>
+Practice decoding and the specificity logic with the data you already have.
 
-the condition established after study to be chiefly responsible for the admission; determines DRG assignment and reimbursement in inpatient setting
+1. Diagram the example E11.22: first character E (a letter = endocrine category), characters 1-1 as the numeric category, and the 4th+ characters (.22) carrying the specificity. Write what each segment tells you.
+2. Place E11.9 and "E11.22 + N18.3" side by side and write one sentence explaining why the second reimburses more — tie it to resource utilization, not to coder skill.
+3. List three HCC conditions (CHF, COPD, diabetes) and write the rule beside them: "must be re-documented and coded each year to maintain the risk score."
+4. Write a one-line description of when a CDI query is triggered and the one thing it must never do (lead the provider). If you can do all four, you have Domain 5's diagnosis-coding questions.
 
-</details>
+## Key takeaways
 
-<details>
-<summary>Coding specificity drives reimbursement</summary>
-
-"diabetes mellitus Type 2 with diabetic chronic kidney disease, stage 3" (E11.22 + N18.3) reimburses significantly higher than "diabetes mellitus" (E11.9) because it reflects higher resource utilization
-
-</details>
-
-<details>
-<summary>HCC coding (Hierarchical Condition Categories)</summary>
-
-risk adjustment model used by Medicare Advantage; conditions like CHF, COPD, diabetes must be documented and coded every year to maintain accurate risk scores — affects per-member-per-month payments
-
-</details>
+- ICD-10-CM codes are 3-7 characters: first character is a letter (category/body system), characters 2-3 are numbers, and the 4th+ characters add specificity — etiology, site, severity, laterality.
+- Specificity drives reimbursement: E11.9 (unspecified Type 2 diabetes) pays less than E11.22 + N18.3 (Type 2 diabetes with stage 3 diabetic CKD) because it reflects fewer resources.
+- "Code first" and "use additional code" notes impose sequencing rules between underlying conditions and manifestations.
+- The principal diagnosis is the condition established *after study* to be chiefly responsible for admission; it drives DRG assignment and inpatient reimbursement.
+- HCC (Hierarchical Condition Categories) is Medicare Advantage's risk model — chronic conditions must be coded every year to maintain accurate risk scores and PMPM payments.
+- When documentation is insufficient, a CDI query asks the physician to clarify; AHIMA/ACDIS guidelines require queries to clarify, never to lead.
 
 ---
 

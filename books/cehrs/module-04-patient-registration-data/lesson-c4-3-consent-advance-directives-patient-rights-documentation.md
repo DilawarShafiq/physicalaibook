@@ -10,73 +10,51 @@ tags: ["consent", "advance-directives", "DNR", "patient-rights", "documentation"
 
 **Duration:** 45 min · **Level:** Intermediate · **Module:** 4. Patient Registration & Data Management · **Focus:** `consent`, `advance-directives`, `DNR`, `patient-rights`, `documentation`
 
-:::info Learning objectives
+Consent is where law, ethics, and documentation meet. Before a patient is examined or a procedure is performed, the record must show that the right kind of permission was given — and the requirements differ depending on what is being consented to. CEHRS specialists are the people who process, scan, and maintain these forms in the EHR, so the exam expects you to distinguish the consent types cleanly and to know which documents demand special handling. Confuse a general consent with an informed consent, or a directive with an order, and you have a compliance gap.
 
-By the end of this lesson you will be able to explain and apply:
+## General versus informed consent
 
-- General consent for treatment
-- Informed consent for procedures
-- Implied consent
-- Advance directives
-- DNR (Do Not Resuscitate) / DNI (Do Not Intubate) orders
-:::
+The two consent types you will handle most often sit at opposite ends of a spectrum, and the exam tests the contrast directly.
 
-## Overview
+**General consent for treatment** is the broad permission a patient signs *at registration.* It covers routine care, examination, and standard treatment, and it is **required for all patients.** Think of it as the umbrella that lets the ordinary business of care proceed.
 
-Consent documentation is legally and ethically foundational to healthcare. CEHRS specialists process, scan, and maintain consent forms in the EHR. Understanding the difference between consent types — general, informed, and research — and the requirements for each is critical.
+**Informed consent for procedures** is far narrower and far more demanding. It is **specific to each significant procedure or surgery**, and it must document a defined set of elements: **what** the procedure is, **why** it is being done, the **risks**, the **benefits**, the **alternatives**, and confirmation that the **patient's questions were answered.** It must be **signed before the procedure**, and obtaining it is the **physician's responsibility** — not the registration clerk's. The memory hook: *general consent gets you in the door; informed consent gets you into the operating room, and it requires the full risks-benefits-alternatives conversation.*
 
-## Key concepts
+## When consent is assumed: implied consent
 
-:::note Key idea
+There is a third category that exists precisely because the other two cannot always apply. **Implied consent** governs emergency situations in which the patient is **unconscious and no proxy is available** to speak for them. In that scenario, consent is **assumed by legal standard** — and notably, it is **not documented**, because there is no one available to sign. The exam point is subtle but important: implied consent is the one consent type that produces *no signed form*, because the law presumes a reasonable person would want life-saving care. If a question describes an unconscious emergency patient with no decision-maker present, implied consent is the answer.
 
-General consent for treatment: broad consent signed at registration; covers routine care, examination, and standard treatment; required for all patients
+## Advance directives — and why they are flagged as critical
 
-:::
+Advance directives let patients control their care *in advance* of a moment when they can no longer speak for themselves, and they come in two forms worth keeping straight. A **living will** specifies **what treatment the patient does or does not want.** A **healthcare proxy** — also called a **durable power of attorney for healthcare** — names **who makes decisions** on the patient's behalf. One is about *what*; the other is about *who.*
 
-- Informed consent for procedures: specific to each significant procedure or surgery; must document: what procedure, why, risks, benefits, alternatives, patient questions answered; must be signed before the procedure; physician responsibility
-- Implied consent: applies in emergency situations when patient is unconscious and no proxy available; not documented — assumed by legal standard
-- Advance directives: living will (what treatment the patient wants or does not want) and healthcare proxy/durable power of attorney for healthcare (who makes decisions); must be scanned into EHR and flagged as critical; state-specific forms
-- DNR (Do Not Resuscitate) / DNI (Do Not Intubate) orders: must be physician-signed orders in the medical record; not just a form — requires an actual order to be actionable
-- Minor consent exceptions: most healthcare requires parental consent for minors; exceptions vary by state but typically include: STI treatment, substance abuse treatment, mental health emergency, and reproductive services
+For the CEHRS specialist, the handling requirement is the testable part: advance directives must be **scanned into the EHR and flagged as critical**, so that any clinician opening the chart immediately sees them. They are also **state-specific forms**, meaning the document that is valid in one state may differ from another's. Treating an advance directive as just another scanned page — rather than a critically flagged one — defeats its entire purpose.
 
-## Check your understanding
+## Directives are not orders: DNR and DNI
 
-Cover the answers and try to recall each point before expanding it.
+A point the exam likes to probe is the difference between a *wish* and an *order.* **DNR (Do Not Resuscitate)** and **DNI (Do Not Intubate)** must be **physician-signed orders in the medical record** — not merely a form the patient filled out. A signed advance directive expressing a wish to avoid resuscitation is meaningful, but it is **not actionable** until a physician converts it into an actual order. Memory hook: *a directive states a preference; a DNR/DNI is only operative when it is a signed physician order.* This distinction has real clinical stakes, because a code team acts on orders, not on filed preferences.
 
-<details>
-<summary>General consent for treatment</summary>
+## Consent for minors
 
-broad consent signed at registration; covers routine care, examination, and standard treatment; required for all patients
+Finally, minors. The general rule is that **most healthcare requires parental consent** for a patient who is a minor. But there are **exceptions that vary by state**, and the curriculum names the categories that typically appear: **STI treatment, substance abuse treatment, mental health emergencies, and reproductive services.** The exam will not expect you to recite a specific state's statute, but it does expect you to recognize that these sensitive categories are the common places where a minor may consent on their own. The framing to hold: *parental consent is the default for minors, with carved-out exceptions for specific sensitive services that differ by state.*
 
-</details>
+## Putting it into practice
 
-<details>
-<summary>Informed consent for procedures</summary>
+Turn the consent landscape into a sorting exercise, because exam questions are almost always "which type applies here?"
 
-specific to each significant procedure or surgery; must document: what procedure, why, risks, benefits, alternatives, patient questions answered; must be signed before the procedure; physician responsibility
+1. Make a four-row table: general, informed, implied, advance directive. For each, write when it applies and whether it produces a signed document.
+2. Under informed consent, list the required elements — procedure, reason, risks, benefits, alternatives, questions answered — and note it is the physician's job.
+3. Write a one-line rule for implied consent: unconscious emergency, no proxy, not documented.
+4. Separate "directive" from "order": jot that a DNR/DNI is only actionable as a signed physician order, and that advance directives must be scanned and flagged as critical.
+5. Self-test with scenarios: an unconscious ED patient, a teenager seeking STI treatment, a surgical patient before an operation — name the correct consent concept for each without looking.
 
-</details>
+## Key takeaways
 
-<details>
-<summary>Implied consent</summary>
-
-applies in emergency situations when patient is unconscious and no proxy available; not documented — assumed by legal standard
-
-</details>
-
-<details>
-<summary>Advance directives</summary>
-
-living will (what treatment the patient wants or does not want) and healthcare proxy/durable power of attorney for healthcare (who makes decisions); must be scanned into EHR and flagged as critical; state-specific forms
-
-</details>
-
-<details>
-<summary>DNR (Do Not Resuscitate) / DNI (Do Not Intubate) orders</summary>
-
-must be physician-signed orders in the medical record; not just a form — requires an actual order to be actionable
-
-</details>
+- General consent (signed at registration, required for all patients) covers routine care; informed consent is procedure-specific and must document the procedure, reason, risks, benefits, alternatives, and answered questions — signed before the procedure, and the physician's responsibility.
+- Implied consent applies in emergencies when the patient is unconscious with no proxy; it is assumed by legal standard and not documented.
+- Advance directives split into the living will (what treatment) and the healthcare proxy / durable power of attorney (who decides); they are state-specific and must be scanned into the EHR and flagged as critical.
+- DNR and DNI must be physician-signed orders to be actionable — a directive alone is not an order.
+- Minors generally require parental consent, with state-varying exceptions for STI treatment, substance abuse treatment, mental health emergencies, and reproductive services.
 
 ---
 

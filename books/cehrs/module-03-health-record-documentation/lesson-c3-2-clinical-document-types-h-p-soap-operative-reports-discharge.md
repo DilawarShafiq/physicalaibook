@@ -10,73 +10,56 @@ tags: ["H&P", "SOAP", "operative-report", "discharge-summary", "documentation"]
 
 **Duration:** 55 min · **Level:** Intermediate · **Module:** 3. Health Record Documentation · **Focus:** `H&P`, `SOAP`, `operative-report`, `discharge-summary`, `documentation`
 
-:::info Learning objectives
+Every clinical document in a medical record has three things the exam wants you to know: who is allowed to author it, how quickly it must be completed, and what content it must contain. These are not arbitrary house rules — they are set by accrediting bodies, principally the **Joint Commission** and **CMS Conditions of Participation (CoP)**, and CEHRS specialists monitor compliance with them daily. This lesson walks through the major document types in the order a hospital stay produces them, from the History & Physical at admission to the discharge summary at the end, and anchors each to its authorship requirement, timeframe, and required components.
 
-By the end of this lesson you will be able to explain and apply:
+## History & Physical: the admission anchor
 
-- History & Physical (H&P)
-- SOAP note format
-- Operative report
-- Discharge summary
-- Consultation report
-:::
+The **History & Physical (H&P)** is the foundational admission document, and its timing rule is a high-yield fact. Under **CMS Conditions of Participation, the H&P must be completed within 24 hours of admission.** There is an important alternative: an H&P performed **within 30 days before admission** is acceptable, provided a **24-hour update note** confirms the patient's status hasn't materially changed. Either way, it must be in the record before surgery or a procedure requiring anesthesia.
 
-## Overview
+Authorship is restricted to a **physician, NP, or PA.** The required components form a standard skeleton worth memorizing: chief complaint, HPI (history of present illness), PMH (past medical history), medications, allergies, ROS (review of systems), physical exam, assessment, and plan. The memory hook: *the H&P answers "why is this patient here and what's the plan," and it must exist within 24 hours.*
 
-Each type of clinical document has defined authorship requirements, completion timeframes, and content standards. Accrediting bodies (Joint Commission, CMS Conditions of Participation) set mandatory requirements. CEHRS specialists monitor compliance with these requirements daily.
+## SOAP: the format of the progress note
 
-## Key concepts
+Between admission and discharge, providers document the patient's course in progress notes, and the standard structure is **SOAP**:
 
-:::note Key idea
+- **S — Subjective:** what the patient reports (symptoms, history, complaints in their own words).
+- **O — Objective:** measurable findings (vital signs, exam findings, lab and imaging results).
+- **A — Assessment:** the provider's diagnosis or clinical impression.
+- **P — Plan:** the treatment plan going forward.
 
-History & Physical (H&P): required within 24 hours of admission (CMS CoP); or within 30 days pre-admission with 24-hour update note; must be completed by physician/NP/PA; components: chief complaint, HPI, PMH, medications, allergies, ROS, physical exam, assessment, plan
+SOAP is not a document type with its own timeframe so much as a *format* — but the exam tests whether you can correctly sort a piece of information into the right letter. "Patient states pain is 7/10" is Subjective; "BP 150/95" is Objective; "likely community-acquired pneumonia" is Assessment; "start IV antibiotics, repeat chest X-ray in 48 hours" is Plan.
 
-:::
+## Operative reports: dictate immediately, brief note if delayed
 
-- SOAP note format: Subjective (patient report), Objective (measurements/findings), Assessment (diagnosis/impression), Plan (treatment plan); standard format for progress notes
-- Operative report: must be completed immediately after surgery (immediate dictation) or within 24 hours; if delayed, brief operative note (complications, blood loss, key findings) required immediately; author = surgeon
-- Discharge summary: required for hospitalizations &gt;48 hours; must be completed within 30 days of discharge per Joint Commission (within 24 hours is best practice); required components: reason for admission, significant findings, procedures, condition at discharge, discharge instructions, follow-up plan
-- Consultation report: requested by attending physician when specialist opinion needed; must document: requesting physician, reason for consult, findings, recommendations; timeliness varies by urgency
-- Nursing documentation: care plans, nursing assessments, medication administration record (MAR), intake/output records, vital signs flowsheets — all part of the legal health record and subject to same amendment rules
+Surgical documentation carries the tightest timing expectation. The full **operative report** must be completed **immediately after surgery (immediate dictation), or within 24 hours.** The catch the exam tests: if the full report is *delayed* for any reason, a **brief operative note must be written immediately** — capturing complications, blood loss, and key findings — so that anyone caring for the patient in the interim isn't flying blind. The author is always the **surgeon.** Memory hook: *no patient leaves the OR undocumented — if the full report is late, the brief op note is not optional.*
 
-## Check your understanding
+## Discharge summaries: the closing document
 
-Cover the answers and try to recall each point before expanding it.
+The **discharge summary** is required for hospitalizations longer than 48 hours. The Joint Commission completion standard is **within 30 days of discharge**, though **within 24 hours is best practice** (and many hospitals' bylaws require faster turnaround). Note that this 30-day figure aligns with the broader rule that the entire medical record must be completed within 30 days of discharge.
 
-<details>
-<summary>History & Physical (H&P)</summary>
+Its required components describe the whole episode and the path forward: reason for admission, significant findings, procedures performed, condition at discharge, discharge instructions, and the follow-up plan. The discharge summary is the document the *next* provider reads, so completeness here directly affects continuity of care.
 
-required within 24 hours of admission (CMS CoP); or within 30 days pre-admission with 24-hour update note; must be completed by physician/NP/PA; components: chief complaint, HPI, PMH, medications, allergies, ROS, physical exam, assessment, plan
+## Consultations and nursing documentation
 
-</details>
+Two more categories round out the chart. A **consultation report** is generated when the attending physician requests a specialist's opinion. It must document the requesting physician, the reason for the consult, the findings, and the recommendations; timeliness scales with urgency — a STAT cardiology consult is held to a far tighter clock than a routine one.
 
-<details>
-<summary>SOAP note format</summary>
+**Nursing documentation** is easy to underestimate but fully part of the legal health record. It includes care plans, nursing assessments, the **medication administration record (MAR)**, intake/output records, and vital signs flowsheets. Critically, all of it is subject to the **same amendment rules** as physician documentation — never deleted, only corrected by dated, authored addendum. If an exam question implies nursing notes are somehow informal or outside the legal record, that is incorrect.
 
-Subjective (patient report), Objective (measurements/findings), Assessment (diagnosis/impression), Plan (treatment plan); standard format for progress notes
+## Putting it into practice
 
-</details>
+1. Build a one-page document grid with four columns: document type, author, timeframe, required components. Fill in H&P (physician/NP/PA, 24 hours), operative report (surgeon, immediate/24 hours), and discharge summary (physician, 30 days/24-hour best practice).
+2. Drill SOAP sorting: take ten lines from a sample note and label each S, O, A, or P. Mismatching Subjective and Objective is the most common error — practice until it is reflexive.
+3. Memorize the operative-report exception by writing the trigger-and-response pair: *full report delayed → brief op note immediately (complications, blood loss, key findings).*
+4. Trace one simulated admission end to end, listing which document is created at each stage and which discipline authors it, including the nursing MAR and flowsheets so you remember they belong to the legal record.
 
-<details>
-<summary>Operative report</summary>
+## Key takeaways
 
-must be completed immediately after surgery (immediate dictation) or within 24 hours; if delayed, brief operative note (complications, blood loss, key findings) required immediately; author = surgeon
-
-</details>
-
-<details>
-<summary>Discharge summary</summary>
-
-required for hospitalizations &gt;48 hours; must be completed within 30 days of discharge per Joint Commission (within 24 hours is best practice); required components: reason for admission, significant findings, procedures, condition at discharge, discharge instructions, follow-up plan
-
-</details>
-
-<details>
-<summary>Consultation report</summary>
-
-requested by attending physician when specialist opinion needed; must document: requesting physician, reason for consult, findings, recommendations; timeliness varies by urgency
-
-</details>
+- The H&P must be completed within 24 hours of admission (or done within 30 days pre-admission with a 24-hour update note), authored by a physician/NP/PA, and contains chief complaint, HPI, PMH, meds, allergies, ROS, exam, assessment, and plan.
+- SOAP is the standard progress-note format: Subjective (patient report), Objective (findings), Assessment (diagnosis), Plan (treatment).
+- Operative reports are completed immediately or within 24 hours; if delayed, a brief operative note (complications, blood loss, key findings) is required immediately, authored by the surgeon.
+- Discharge summaries are required for stays over 48 hours and completed within 30 days (24 hours is best practice), covering reason for admission, findings, procedures, condition, instructions, and follow-up.
+- Consultation reports document the requesting physician, reason, findings, and recommendations, with timeliness driven by urgency.
+- Nursing documentation — care plans, assessments, MAR, I/O, flowsheets — is part of the legal health record and follows the same amendment rules as all other documentation.
 
 ---
 

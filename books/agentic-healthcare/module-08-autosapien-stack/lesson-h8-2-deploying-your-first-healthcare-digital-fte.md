@@ -10,73 +10,67 @@ tags: ["agent-platform", "Digital-FTE", "deployment", "Autosapien", "RCM-platfor
 
 **Duration:** 55 min · **Level:** Foundational · **Module:** 8. Building on the Autosapien Stack · **Focus:** `agent-platform`, `Digital-FTE`, `deployment`, `Autosapien`, `RCM-platform`
 
-:::info Learning objectives
+Knowing how to design an agent and running one in production are different skills. A production Digital FTE — a software worker that performs a full-time role rather than a single task — does not run as a loose script. It runs on an orchestration layer that turns specialized AI capabilities into a deployed, supervised, auditable agent. For Autosapien's healthcare work, that layer is **a HIPAA-compliant agentic platform**, and this lesson walks through using it to deploy a **Personal Medical Biller** end to end: from configuration, through a deliberate trust-building period, to live autonomous production.
 
-By the end of this lesson you will be able to explain and apply:
+## The anatomy of the platform
 
-- the Autosapien agentic platform architecture
-- SKILL.md pattern
-- Deployment steps
-- Shadow mode
-- Performance dashboard
-:::
+The platform is best understood as five cooperating components, each solving a distinct problem.
 
-## Overview
+- **An orchestrator model** sits at the center — Claude 3.5 Sonnet — deciding what to do next and when to call out for help.
+- **A tool registry** gives the orchestrator hands: connections to the **EHR, payer, clearinghouse, and communication APIs** it needs to actually move a claim through the world.
+- **A persona system** defines who the agent *is*: its role, its permissions, and its escalation rules — the boundaries that keep an autonomous worker inside its lane.
+- **A memory layer** holds **per-patient claim state**, so the agent remembers where each claim stands rather than treating every interaction as new.
+- **An audit engine** records everything with **ISO 42001 and HIPAA-compliant logging**, so the agent's behavior is always accountable.
 
-A production Digital FTE runs on a HIPAA-compliant agentic platform — the orchestration layer that turns specialized AI capabilities into deployed agents. This lesson walks through deploying a Personal Medical Biller end to end, from configuration to live production.
+Together these turn a capable model into a governed employee. The model reasons; the registry acts; the persona constrains; the memory persists; the audit engine remembers.
 
-## Key concepts
+## Defining the worker with SKILL.md
 
-:::note Key idea
+A Digital FTE's job is not buried in code — it is written down in a structured markdown file, the **SKILL.md pattern**. Each skill specifies a **role description, tool permissions, escalation triggers, output format, and performance SLAs**. This is the same pattern Panaversity uses in its SKILL.md for general Digital FTEs, adapted here to the healthcare context.
 
-the Autosapien agentic platform architecture: orchestrator model (Claude 3.5 Sonnet) + tool registry (EHR, payer, clearinghouse, communication APIs) + persona system (role, permissions, escalation rules) + memory layer (per-patient claim state) + audit engine (ISO 42001 + HIPAA compliant logging)
+The value of putting the job description in a readable file is that it makes the agent's contract explicit and editable. When you want the Personal Medical Biller to escalate differently, or to produce output in a different format, or to hold itself to a different SLA, you are editing a specification, not rewiring a program. The skill file is the boundary between what the agent may do and what it may not.
 
-:::
+## Deploying the Personal Medical Biller
 
-- SKILL.md pattern: each Digital FTE skill defined in a structured markdown file: role description, tool permissions, escalation triggers, output format, performance SLAs; same pattern as panaversity's SKILL.md for general Digital FTEs adapted to healthcare context
-- Deployment steps: (1) configure practice profile, (2) select skills (eligibility + coding + claims + denials), (3) connect EHR integration, (4) connect payer EDI, (5) set escalation rules and dollar thresholds, (6) run test claim cycle, (7) go live with shadow mode (agent suggests, human approves) → then autonomous mode
-- Shadow mode: critical for trust-building; agent runs in parallel with human workflow for 2 weeks, generating recommendations that humans review; compare agent accuracy vs human; when accuracy &gt;95%, graduate to autonomous with human spot-check
-- Performance dashboard: daily metrics per Digital FTE: claims processed, clean claim rate, denials received, appeals filed, revenue recovered, escalations to humans, cost per claim; compare against pre-automation baseline
-- The $300/month Medical Practice: at scale, a solo physician practice can run complete RCM for ~$300/month on the Autosapien agentic platform — less than 1 hour of a billing specialist's time — with better outcomes
+Deployment follows a deliberate sequence, each step adding capability or connectivity before the agent ever touches a real claim:
 
-## Check your understanding
+1. **Configure the practice profile** — the identity and context the agent operates within.
+2. **Select skills** — for a Personal Medical Biller, that means eligibility, coding, claims, and denials.
+3. **Connect the EHR integration**, so the agent can read clinical and encounter data.
+4. **Connect the payer EDI**, so it can transact with insurers.
+5. **Set escalation rules and dollar thresholds**, defining when the agent must hand off to a human.
+6. **Run a test claim cycle** to confirm the wiring before anything is live.
+7. **Go live in shadow mode** — agent suggests, human approves — and only then graduate to **autonomous mode**.
 
-Cover the answers and try to recall each point before expanding it.
+That final step is intentionally two-staged, and the staging is the point.
 
-<details>
-<summary>the Autosapien agentic platform architecture</summary>
+## Earning autonomy through shadow mode
 
-orchestrator model (Claude 3.5 Sonnet) + tool registry (EHR, payer, clearinghouse, communication APIs) + persona system (role, permissions, escalation rules) + memory layer (per-patient claim state) + audit engine (ISO 42001 + HIPAA compliant logging)
+You do not flip a new Digital FTE to fully autonomous on day one. **Shadow mode** is the trust-building mechanism: for **two weeks**, the agent runs in parallel with the existing human workflow, generating recommendations that humans review. During this period you can directly compare the agent's accuracy against the humans doing the same work. The graduation rule is concrete — **when accuracy exceeds 95%, the agent moves to autonomous mode with human spot-checks**. Trust here is not assumed; it is measured, and the metric decides.
 
-</details>
+Once live, the agent is watched through a **performance dashboard** that reports daily metrics per Digital FTE: **claims processed, clean claim rate, denials received, appeals filed, revenue recovered, escalations to humans, and cost per claim**. Crucially, every one of these is compared against the **pre-automation baseline**. The dashboard does not just describe what the agent did; it proves whether the agent is better than what came before.
 
-<details>
-<summary>SKILL.md pattern</summary>
+## The economics that make it matter
 
-each Digital FTE skill defined in a structured markdown file: role description, tool permissions, escalation triggers, output format, performance SLAs; same pattern as panaversity's SKILL.md for general Digital FTEs adapted to healthcare context
+All of this orchestration exists to deliver an outcome that was previously impossible at small scale. At scale, a **solo physician practice can run complete RCM for roughly $300 a month** on the platform — **less than the cost of one hour of a billing specialist's time** — and do it with **better outcomes**. The significance is not only the price. It is that the smallest practices, the ones least able to staff a billing department, gain access to the same revenue-cycle capability that large health systems pay teams to provide. The orchestration layer is what makes a single capable agent affordable enough to be every practice's biller.
 
-</details>
+## Putting it into practice
 
-<details>
-<summary>Deployment steps</summary>
+Deploy a Personal Medical Biller in your head end to end, naming each platform component and gating decision as you go.
 
-(1) configure practice profile, (2) select skills (eligibility + coding + claims + denials), (3) connect EHR integration, (4) connect payer EDI, (5) set escalation rules and dollar thresholds, (6) run test claim cycle, (7) go live with shadow mode (agent suggests, human approves) → then autonomous mode
+1. Sketch the five platform components — orchestrator (Claude 3.5 Sonnet), tool registry (EHR, payer, clearinghouse, communication APIs), persona system, memory layer (per-patient claim state), audit engine (ISO 42001 + HIPAA logging) — and write one sentence on what breaks if each is missing.
+2. Draft a SKILL.md skeleton for the Personal Medical Biller with its five sections: role description, tool permissions, escalation triggers, output format, performance SLAs.
+3. Walk the seven deployment steps in order, and for steps 5 (escalation rules and dollar thresholds) and 7 (shadow then autonomous), write the specific decision you would make for a solo practice.
+4. Define your shadow-mode exit test: two weeks in parallel, compare agent vs. human accuracy, graduate to autonomous with spot-checks when accuracy exceeds 95%. Then list the seven dashboard metrics you would watch against the pre-automation baseline.
 
-</details>
+## Key takeaways
 
-<details>
-<summary>Shadow mode</summary>
-
-critical for trust-building; agent runs in parallel with human workflow for 2 weeks, generating recommendations that humans review; compare agent accuracy vs human; when accuracy &gt;95%, graduate to autonomous with human spot-check
-
-</details>
-
-<details>
-<summary>Performance dashboard</summary>
-
-daily metrics per Digital FTE: claims processed, clean claim rate, denials received, appeals filed, revenue recovered, escalations to humans, cost per claim; compare against pre-automation baseline
-
-</details>
+- A production Digital FTE runs on a HIPAA-compliant agentic platform built from five parts: an orchestrator model (Claude 3.5 Sonnet), a tool registry (EHR, payer, clearinghouse, communication APIs), a persona system, a per-patient memory layer, and an ISO 42001 + HIPAA-compliant audit engine.
+- Each skill is defined in a SKILL.md file specifying role, tool permissions, escalation triggers, output format, and performance SLAs — the same pattern Panaversity uses for general Digital FTEs, adapted to healthcare.
+- Deployment is a seven-step sequence: configure practice profile, select skills (eligibility + coding + claims + denials), connect EHR, connect payer EDI, set escalation rules and dollar thresholds, run a test claim cycle, then go live in shadow mode before autonomous mode.
+- Shadow mode builds trust by running the agent in parallel with humans for two weeks; when accuracy exceeds 95%, the agent graduates to autonomous with human spot-checks.
+- A performance dashboard tracks daily per-FTE metrics — claims processed, clean claim rate, denials received, appeals filed, revenue recovered, escalations, cost per claim — always against the pre-automation baseline.
+- At scale, a solo physician practice can run complete RCM for about $300/month — less than an hour of a billing specialist's time — with better outcomes.
 
 ---
 

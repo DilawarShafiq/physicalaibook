@@ -10,73 +10,49 @@ tags: ["nervous-system", "digestive", "endocrine", "reproductive", "terminology"
 
 **Duration:** 60 min · **Level:** Foundational · **Module:** 2. Medical Terminology & Body Systems · **Focus:** `nervous-system`, `digestive`, `endocrine`, `reproductive`, `terminology`
 
-:::info Learning objectives
+Four more body systems round out the high-yield terminology, and each carries documentation requirements that go beyond simple vocabulary. Neurological records demand precise deficit documentation because stroke care is time-critical. Digestive records drive some of the most complex surgical coding. Endocrine documentation — diabetes above all — turns up in nearly every care setting. And reproductive documentation comes with both specialized terminology and heightened privacy expectations. The exam tests not just what these terms mean, but why their documentation has to be exact.
 
-By the end of this lesson you will be able to explain and apply:
+## Nervous system: time and deficits matter
 
-- Nervous system key terms
-- CNS documentation critical
-- Digestive system key terms
-- Endocrine key terms
-- Diabetes documentation
-:::
+Begin with the vocabulary. A **cerebrovascular accident** (CVA) is a stroke; a **transient ischemic attack** (TIA) is a temporary, warning-sign version that resolves on its own. **Alzheimer's disease** is the progressive dementia you will see flagged on long-term records, **neuropathy** is nerve damage, a **lumbar puncture** (spinal tap) samples cerebrospinal fluid, and an **EEG** (electroencephalogram) records the brain's electrical activity.
 
-## Overview
+What makes neurological documentation distinctive is its time sensitivity. **Stroke documentation must capture onset time**, because eligibility for clot-dissolving tissue plasminogen activator (tPA) hinges on a 4.5-hour window from symptom onset. The record must also specify the **deficit type** — *aphasia* (loss of language), *hemiplegia* (one-sided paralysis) — and include imaging results. Miss the onset time and you have not just a documentation gap but a record that cannot support a critical treatment decision. For the exam, the memory hook is "stroke = clock": onset time, deficit, imaging.
 
-Four systems with complex documentation requirements. Neurological records require precise deficit documentation for stroke care. Digestive records drive complex surgical coding. Endocrine documentation (especially diabetes) is pervasive in all care settings. Reproductive documentation has specific privacy requirements.
+## Digestive system: terms that drive surgical coding
 
-## Key concepts
+Digestive terminology is dense with inflammatory conditions that sound alike and code differently. **Cholecystitis** is inflammation of the gallbladder (*chole-* bile, *cyst* sac, *-itis* inflammation). **Diverticulitis** is inflammation of the small pouches that form in the colon wall. **Crohn's disease** and **ulcerative colitis** are the two types of inflammatory bowel disease (IBD) — distinct entities that must be documented by name, not lumped together. On the procedural side, **endoscopy** is camera examination of the GI tract, and a **colostomy** is a surgical opening of the colon to the abdominal wall — note the *-ostomy* suffix signaling a created opening.
 
-:::note Key idea
+Because so many of these conditions lead to surgery, the precision of digestive documentation flows straight into procedural coding accuracy. Vague terminology here is what generates coder queries downstream.
 
-Nervous system key terms: cerebrovascular accident (CVA/stroke), transient ischemic attack (TIA), Alzheimer's disease, neuropathy (nerve damage), lumbar puncture (spinal tap), EEG (electroencephalogram)
+## Endocrine system: diabetes is everywhere
 
-:::
+No condition appears across more charts than diabetes, which makes endocrine terminology unavoidable. **Diabetes mellitus** comes in types you must keep separate: **Type 1** is autoimmune (the body attacks insulin-producing cells), **Type 2** is insulin resistance. **Hypothyroidism** (underactive thyroid) and **hyperthyroidism** (overactive) are the classic *hypo-/hyper-* pair. **HbA1c** is the three-month average blood sugar marker, and the medications **insulin** and **metformin** anchor most diabetes treatment plans.
 
-- CNS documentation critical: stroke documentation must include onset time (tissue plasminogen activator tPA eligible within 4.5 hours), deficit type (aphasia, hemiplegia), and imaging results
-- Digestive system key terms: cholecystitis (gallbladder inflammation), diverticulitis (colon pouch inflammation), Crohn's disease vs ulcerative colitis (IBD types), endoscopy (camera into GI tract), colostomy (surgical colon opening)
-- Endocrine key terms: diabetes mellitus types (Type 1 = autoimmune, Type 2 = insulin resistance), hypothyroidism vs hyperthyroidism, HbA1c (3-month blood sugar average), insulin, metformin
-- Diabetes documentation: ICD-10 requires specificity — Type 1 vs Type 2, with or without complications, complication type (diabetic nephropathy, neuropathy, retinopathy); affects DRG assignment significantly
-- Reproductive system: OB documentation uses specific terminology — gravida (number of pregnancies), para (number of deliveries), VBAC (vaginal birth after cesarean), APGAR score (newborn assessment at 1 and 5 minutes)
+The documentation rule is the part the exam loves, and it has real money attached. **Diabetes coding in ICD-10 requires specificity** on three axes: Type 1 versus Type 2, with or without complications, and the specific complication when present — diabetic *nephropathy* (kidney), *neuropathy* (nerve), or *retinopathy* (eye). That specificity significantly affects DRG assignment, because "Type 2 diabetes with diabetic neuropathy" reflects far higher resource use than "diabetes" alone. When the documentation does not name the type or the complication, that is a query waiting to happen.
 
-## Check your understanding
+## Reproductive system: specialized terms and privacy
 
-Cover the answers and try to recall each point before expanding it.
+Obstetric documentation uses its own shorthand that you must read fluently. **Gravida** is the number of pregnancies; **para** is the number of deliveries — a "gravida 3, para 2" patient has been pregnant three times and delivered twice. **VBAC** stands for vaginal birth after cesarean, a specific delivery scenario with its own risk documentation. The **APGAR score** assesses the newborn's condition at 1 and 5 minutes after birth, scoring appearance, pulse, grimace, activity, and respiration.
 
-<details>
-<summary>Nervous system key terms</summary>
+Beyond terminology, reproductive records carry **specific privacy requirements** — they are among the categories of health information often treated as especially sensitive. As a CEHRS specialist, recognizing that reproductive documentation may warrant heightened access controls is part of handling it correctly.
 
-cerebrovascular accident (CVA/stroke), transient ischemic attack (TIA), Alzheimer's disease, neuropathy (nerve damage), lumbar puncture (spinal tap), EEG (electroencephalogram)
+## Putting it into practice
 
-</details>
+Build four labeled term banks — nervous, digestive, endocrine, reproductive — and stress-test the documentation rules that go with each.
 
-<details>
-<summary>CNS documentation critical</summary>
+1. List every key term from this lesson under the correct system, with its plain-English meaning and any word parts you can decode (e.g., *cholecystitis* = bile + sac + inflammation).
+2. For the nervous system, write a one-line "stroke documentation" checklist from memory: onset time (tPA within 4.5 hours), deficit type (aphasia, hemiplegia), imaging.
+3. For endocrine, write three diabetes diagnoses at increasing specificity — "diabetes," "Type 2 diabetes," "Type 2 diabetes with diabetic neuropathy" — and note how each would change a coder's work.
+4. For reproductive, define gravida, para, VBAC, and APGAR, and write one sentence on why these records may need heightened privacy handling. Quiz yourself in both directions until recall is automatic.
 
-stroke documentation must include onset time (tissue plasminogen activator tPA eligible within 4.5 hours), deficit type (aphasia, hemiplegia), and imaging results
+## Key takeaways
 
-</details>
-
-<details>
-<summary>Digestive system key terms</summary>
-
-cholecystitis (gallbladder inflammation), diverticulitis (colon pouch inflammation), Crohn's disease vs ulcerative colitis (IBD types), endoscopy (camera into GI tract), colostomy (surgical colon opening)
-
-</details>
-
-<details>
-<summary>Endocrine key terms</summary>
-
-diabetes mellitus types (Type 1 = autoimmune, Type 2 = insulin resistance), hypothyroidism vs hyperthyroidism, HbA1c (3-month blood sugar average), insulin, metformin
-
-</details>
-
-<details>
-<summary>Diabetes documentation</summary>
-
-ICD-10 requires specificity — Type 1 vs Type 2, with or without complications, complication type (diabetic nephropathy, neuropathy, retinopathy); affects DRG assignment significantly
-
-</details>
+- Nervous system: CVA (stroke), TIA, Alzheimer's, neuropathy, lumbar puncture, EEG — and stroke documentation must capture onset time (tPA within 4.5 hours), deficit type, and imaging.
+- Digestive: distinguish cholecystitis, diverticulitis, and the two IBD types (Crohn's vs ulcerative colitis); endoscopy and colostomy are common procedural terms that drive complex coding.
+- Endocrine centers on diabetes: separate Type 1 (autoimmune) from Type 2 (insulin resistance), and know HbA1c as the 3-month average; hypo-/hyperthyroidism is the classic prefix pair.
+- Diabetes coding demands specificity — type, presence of complications, and complication type (nephropathy, neuropathy, retinopathy) — and that specificity significantly affects DRG assignment.
+- Reproductive/OB terms: gravida (pregnancies), para (deliveries), VBAC, and APGAR (newborn assessment at 1 and 5 minutes); these records carry specific privacy requirements.
+- Across all four systems, precise terminology is not optional — it is what makes the record codable and the documentation defensible.
 
 ---
 
