@@ -22,10 +22,12 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
   },
+  themes: ['@docusaurus/theme-mermaid'],
   trailingSlash: false,
 
   i18n: {
@@ -92,6 +94,9 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: true,
         respectPrefersColorScheme: false,
+      },
+      mermaid: {
+        theme: { light: 'dark', dark: 'dark' },
       },
       navbar: {
         // The Autosapien logo is the brand mark and links back to the main

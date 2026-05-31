@@ -22,6 +22,15 @@ The field has consolidated around two stacks with different strengths. Your job 
 
 **The G1 decision rule:** train locomotion at scale in **Isaac Lab**, fine-tune contact-rich manipulation in **MuJoCo/MJX**, and bridge to hardware over **ROS 2**. Use the right tool per phase rather than forcing one to do everything.
 
+```mermaid
+flowchart LR
+  A["Isaac Lab<br/>parallel RL — train"] -->|policy| B["Export"]
+  B --> C["MuJoCo / MJX<br/>contact fine-tune"]
+  C --> D["ROS 2 bridge"]
+  D --> E["Real robot"]
+  E -.->|telemetry / data| A
+```
+
 ## Stand up Isaac Lab
 
 Isaac Lab installs on top of Isaac Sim. The current path uses a pip-based Isaac Sim plus the Isaac Lab repo and its helper script:

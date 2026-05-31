@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 520" role="img" aria-label="Generic humanoid joint and degrees-of-freedom map">
+  <style>
+    .bone { stroke:#9fb2c6; stroke-width:6; stroke-linecap:round; fill:none; }
+    .joint { fill:#0085d4; stroke:#cfe9f9; stroke-width:2; }
+    .lbl { fill:#cfe9f9; font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:600; }
+    .dof { fill:#9fb2c6; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.04em; }
+    .lead { stroke:#3a4756; stroke-width:1; }
+    .ttl { fill:#eef3f8; font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; font-weight:800; }
+  </style>
+  <text class="ttl" x="20" y="28">Humanoid joint &amp; DOF map (generic)</text>
+
+  <!-- skeleton bones -->
+  <!-- spine -->
+  <line class="bone" x1="200" y1="110" x2="200" y2="250"/>
+  <!-- shoulders -->
+  <line class="bone" x1="150" y1="135" x2="250" y2="135"/>
+  <!-- left arm -->
+  <line class="bone" x1="150" y1="135" x2="120" y2="205"/>
+  <line class="bone" x1="120" y1="205" x2="135" y2="270"/>
+  <!-- right arm -->
+  <line class="bone" x1="250" y1="135" x2="280" y2="205"/>
+  <line class="bone" x1="280" y1="205" x2="265" y2="270"/>
+  <!-- hips -->
+  <line class="bone" x1="165" y1="250" x2="235" y2="250"/>
+  <!-- left leg -->
+  <line class="bone" x1="165" y1="250" x2="160" y2="350"/>
+  <line class="bone" x1="160" y1="350" x2="160" y2="445"/>
+  <line class="bone" x1="160" y1="445" x2="185" y2="465"/>
+  <!-- right leg -->
+  <line class="bone" x1="235" y1="250" x2="240" y2="350"/>
+  <line class="bone" x1="240" y1="350" x2="240" y2="445"/>
+  <line class="bone" x1="240" y1="445" x2="215" y2="465"/>
+
+  <!-- head -->
+  <circle class="joint" cx="200" cy="90" r="18"/>
+
+  <!-- joints -->
+  <circle class="joint" cx="200" cy="135" r="7"/>
+  <circle class="joint" cx="200" cy="250" r="7"/>
+  <circle class="joint" cx="150" cy="135" r="7"/>
+  <circle class="joint" cx="250" cy="135" r="7"/>
+  <circle class="joint" cx="120" cy="205" r="6"/>
+  <circle class="joint" cx="280" cy="205" r="6"/>
+  <circle class="joint" cx="135" cy="270" r="6"/>
+  <circle class="joint" cx="265" cy="270" r="6"/>
+  <circle class="joint" cx="165" cy="250" r="7"/>
+  <circle class="joint" cx="235" cy="250" r="7"/>
+  <circle class="joint" cx="160" cy="350" r="7"/>
+  <circle class="joint" cx="240" cy="350" r="7"/>
+  <circle class="joint" cx="160" cy="445" r="7"/>
+  <circle class="joint" cx="240" cy="445" r="7"/>
+
+  <!-- labels: right side -->
+  <line class="lead" x1="258" y1="135" x2="320" y2="120"/>
+  <text class="lbl" x="324" y="118">Shoulder</text><text class="dof" x="324" y="132">3–4 DOF · ~80 Nm</text>
+  <line class="lead" x1="286" y1="205" x2="330" y2="200"/>
+  <text class="lbl" x="334" y="198">Elbow</text>
+  <line class="lead" x1="271" y1="270" x2="330" y2="278"/>
+  <text class="lbl" x="334" y="276">Wrist / hand</text><text class="dof" x="334" y="290">fingers 1–5 Nm, tendon</text>
+  <line class="lead" x1="242" y1="350" x2="320" y2="360"/>
+  <text class="lbl" x="324" y="358">Knee</text><text class="dof" x="324" y="372">150–250 Nm cont · biggest motor</text>
+  <line class="lead" x1="242" y1="445" x2="320" y2="452"/>
+  <text class="lbl" x="324" y="450">Ankle</text><text class="dof" x="324" y="464">200+ Nm peak · impact 3–5× BW</text>
+
+  <!-- labels: left side -->
+  <line class="lead" x1="200" y1="178" x2="60" y2="190"/>
+  <text class="lbl" x="20" y="188">Spine</text><text class="dof" x="20" y="202">2–3 DOF</text>
+  <line class="lead" x1="165" y1="250" x2="60" y2="268"/>
+  <text class="lbl" x="20" y="266">Hip</text><text class="dof" x="20" y="280">3 DOF · ~300 Nm</text>
+</svg>
