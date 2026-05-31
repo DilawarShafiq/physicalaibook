@@ -112,28 +112,6 @@ const config = {
             activeBaseRegex: '^/$',
           },
           {
-            to: '/physical-ai',
-            label: 'Physical AI',
-            position: 'left',
-          },
-          {
-            to: '/cehrs',
-            label: 'CEHRS Prep',
-            position: 'left',
-          },
-          {
-            to: '/agentic-healthcare',
-            label: 'Agentic Healthcare',
-            position: 'left',
-          },
-          {
-            href: 'https://autosapien.com',
-            label: '← Back to Autosapien',
-            position: 'right',
-            target: '_self',
-            className: 'navbar-item-back',
-          },
-          {
             to: '/signin',
             label: 'Sign In',
             position: 'right',
