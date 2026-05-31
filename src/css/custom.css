@@ -393,6 +393,13 @@ div[class^='codeBlockContainer'] {
   font-weight: 700;
 }
 
+/* ---------- Enlarge the "Academy" navbar brand link ---------- */
+.navbar-academy-link {
+  font-size: 1.15rem;
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+}
+
 /* ---------- "Back to Autosapien" navbar button ---------- */
 .navbar-item-back {
   border: 1px solid var(--ifm-color-primary);

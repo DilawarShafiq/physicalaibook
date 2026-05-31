@@ -51,6 +51,34 @@ function mdxSafe(text: string): string {
     .replace(/\}/g, '&#125;')
 }
 
+/**
+ * Make authored Markdown safe for the MDX compiler: escape `<`, `{`, `}`
+ * (which MDX reads as JSX/expressions) in prose, while leaving fenced code
+ * blocks and inline `code` spans untouched so commands still render verbatim.
+ */
+function mdxSafeMarkdown(md: string): string {
+  let inFence = false
+  return md
+    .split('\n')
+    .map((line) => {
+      if (/^\s*(```|~~~)/.test(line)) {
+        inFence = !inFence
+        return line
+      }
+      if (inFence) return line
+      // Escape only outside inline code spans (delimited by backticks).
+      return line
+        .split(/(`[^`]*`)/g)
+        .map((part) =>
+          part.startsWith('`') && part.endsWith('`')
+            ? part
+            : part.replace(/</g, '&lt;').replace(/\{/g, '&#123;').replace(/\}/g, '&#125;'),
+        )
+        .join('')
+    })
+    .join('\n')
+}
+
 /** Produce a valid double-quoted YAML scalar from any JS string. */
 function yamlString(text: string): string {
   return JSON.stringify(text)
@@ -156,7 +184,7 @@ function renderLesson(
 
   const authored = readAuthored(bookId, lesson.id)
   if (authored) {
-    body.push(authored.trim())
+    body.push(mdxSafeMarkdown(authored.trim()))
     body.push('')
   } else {
 

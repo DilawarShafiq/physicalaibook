@@ -110,6 +110,7 @@ const config = {
             label: 'Academy',
             position: 'left',
             activeBaseRegex: '^/$',
+            className: 'navbar-academy-link',
           },
           {
             to: '/signin',
