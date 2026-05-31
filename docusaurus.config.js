@@ -88,6 +88,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         // The Autosapien logo is the brand mark and links back to the main
         // site. The "Academy" nav item links to the Academy home — they are
