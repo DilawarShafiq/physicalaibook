@@ -117,16 +117,6 @@ const config = {
             activeBaseRegex: '^/$',
             className: 'navbar-academy-link',
           },
-          {
-            to: '/signin',
-            label: 'Sign In',
-            position: 'right',
-          },
-          {
-            to: '/signup',
-            label: 'Sign Up',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -138,13 +128,6 @@ const config = {
               { label: 'Physical AI & Humanoid Robotics', to: '/physical-ai' },
               { label: 'CEHRS Certification Prep', to: '/cehrs' },
               { label: 'AI Healthcare Employees', to: '/agentic-healthcare' },
-            ],
-          },
-          {
-            title: 'Account',
-            items: [
-              { label: 'Sign In', to: '/signin' },
-              { label: 'Sign Up', to: '/signup' },
             ],
           },
           {
