@@ -4,7 +4,6 @@ import React from 'react';
 // spreading these, ejected MDXComponents silently drop heading anchors and
 // admonition theming.
 import OriginalMDXComponents from '@theme-original/MDXComponents';
-import ChapterTools from '../components/ChapterTools/ChapterTools';
 
 // Custom MDX components for the textbook
 const MDXComponents = {
@@ -66,15 +65,6 @@ const MDXComponents = {
         {children}
       </table>
     </div>
-  ),
-
-  // Chapter tools component
-  'chapter-tools': ({ chapterId = 'current', title = 'Current Chapter', ...props }) => (
-    <ChapterTools 
-      chapterId={chapterId} 
-      title={title}
-      {...props}
-    />
   ),
 
   // Admonition components
