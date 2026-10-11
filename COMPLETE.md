@@ -79,7 +79,7 @@ Runs at: http://localhost:8000
 
 ### API Key (Already Set!)
 ```env
-GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg
+GOOGLE_API_KEY=your-google-api-key
 GEMINI_MODEL=gemini-2.0-flash-exp
 ```
 

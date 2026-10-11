@@ -78,7 +78,7 @@ Once backend is running:
 ## 🔑 Your API Key (Already Set!)
 
 ```
-GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg
+GOOGLE_API_KEY=your-google-api-key
 ```
 
 ---

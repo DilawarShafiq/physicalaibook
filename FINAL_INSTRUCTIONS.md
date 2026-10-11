@@ -120,7 +120,7 @@ physicalaibook/
 ## 🔑 Your API Key (Already Configured!)
 
 ```env
-GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg
+GOOGLE_API_KEY=your-google-api-key
 GEMINI_MODEL=gemini-2.0-flash-exp
 ```
 

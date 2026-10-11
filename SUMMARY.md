@@ -99,7 +99,7 @@ response = client.chat.completions.create(
 ✅ **Environment Setup**
 - Frontend `.env.local` configured
 - Backend `.env` with Google API key set
-- `GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg`
+- `GOOGLE_API_KEY=your-google-api-key`
 - `GEMINI_MODEL=gemini-2.0-flash-exp`
 - SQLite database path configured
 - CORS origins set
@@ -260,7 +260,7 @@ Runs at: http://localhost:8000
 
 Your Google Gemini API key is already configured:
 ```env
-GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg
+GOOGLE_API_KEY=your-google-api-key
 ```
 
 Using OpenAI SDK for compatibility:

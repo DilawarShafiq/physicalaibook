@@ -78,7 +78,7 @@ QDRANT_URL=http://localhost:6333
 QDRANT_API_KEY=
 
 # Google Gemini
-GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg
+GOOGLE_API_KEY=your-google-api-key
 GEMINI_MODEL=gemini-2.0-flash-exp
 
 # JWT

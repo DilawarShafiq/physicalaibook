@@ -82,7 +82,7 @@ API runs at http://localhost:8000
 
 Your API key is already set in `backend/.env`:
 ```env
-GOOGLE_API_KEY=AIzaSyAV9ynWcw7Z3554ovVYMalpX_fEuhnY-lg
+GOOGLE_API_KEY=your-google-api-key
 GEMINI_MODEL=gemini-2.0-flash-exp
 ```
 
